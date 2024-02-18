@@ -9,7 +9,7 @@ Area, Bar, Pie, Financial, ColorPicker, ColorMapping, Editor } from './pages';
 import './App.css';
 
 const App = () => {
-    const activeMenu = false;
+    const activeMenu = true;
     return (
         <div>
             <BrowserRouter>
