@@ -47,7 +47,7 @@ const App = () => {
                             <Navbar/>
                         </div>
 
-                    </div>
+                    
                     <div>
                         <Routes>
                             {/* Dashboard*/}
@@ -77,6 +77,7 @@ const App = () => {
 
 
                         </Routes>
+                    </div>
                     </div>
                 </div>
             </BrowserRouter>
