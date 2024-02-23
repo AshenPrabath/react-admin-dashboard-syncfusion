@@ -4,9 +4,6 @@ import { ChartComponent, SeriesCollectionDirective, SeriesDirective, Inject, Dat
 import { lineCustomSeries, LinePrimaryXAxis, LinePrimaryYAxis } from '../../data/dummy';
 import { useStateContext } from '../../context/ContextProvider';
 
-
-
-
 const LineChart = () => {
   const {currentMode} = useStateContext();
   const tooltip = { enable: true }
