@@ -576,7 +576,22 @@ export const links = [
         name: 'pie',
         icon: <FiPieChart />,
       },
-      
+      // {
+      //   name: 'financial',
+      //   icon: <RiStockLine />,
+      // },
+      // {
+      //   name: 'color-mapping',
+      //   icon: <BsBarChart />,
+      // },
+      // {
+      //   name: 'pyramid',
+      //   icon: <GiLouvrePyramid />,
+      // },
+      // {
+      //   name: 'stacked',
+      //   icon: <AiOutlineBarChart />,
+      // },
     ],
   },
 ];
@@ -588,6 +603,7 @@ export const cartData = [
     name: 'butterscotch ice-cream',
     category: 'Milk product',
     price: '$250',
+    items:1
   },
   {
     image:
@@ -595,14 +611,25 @@ export const cartData = [
     name: 'Supreme fresh tomato',
     category: 'Vegetable Item',
     price: '$450',
+    items:3
   },
   {
     image:
       product7,
     name: 'Red color candy',
     category: 'Food Item',
-    price: '$190',
+    price: '$200',
+    items:2
   },
+  {
+    image:
+      product7,
+    name: 'Red color candy',
+    category: 'Food Item',
+    price: '$200',
+    items:2
+  }
+  
 ];
 
 export const chatData = [

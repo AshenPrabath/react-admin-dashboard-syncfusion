@@ -33,17 +33,22 @@ export const ContextProvider = ({ children }) => {
     const handleClick = (clicked) => {
         setIsClicked({ ...initialState, [clicked]: true });
     }
+    const handleClose = () => {
+        setIsClicked({ ...initialState,});
+    }
     return (
         <StateContext.Provider
             value={{
                 activeMenu,setActiveMenu,
                 isClicked,setIsClicked,
-                handleClick,
+                handleClick,handleClose,
                 screenSize,setScreenSize,
                 currentColor,
                 currentMode,themeSettings, 
                 setThemeSettings,
-                setMode,setColor
+                setMode,setColor,
+                
+
             }}>
             {children}
         </StateContext.Provider>

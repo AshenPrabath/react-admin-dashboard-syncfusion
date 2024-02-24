@@ -28,7 +28,7 @@ const Pie = () => {
       >
       <Inject services={[AccumulationLegend,AccumulationTooltip,AccumulationDataLabel]}/>
       <AccumulationSeriesCollectionDirective>
-        <AccumulationSeriesDirective dataSource={pieChartData} xName='x' yName='y' dataLabel={{visible:true}} >
+        <AccumulationSeriesDirective dataSource={pieChartData} xName='x' yName='y' dataLabel={{ visible:true}} >
         </AccumulationSeriesDirective>
       </AccumulationSeriesCollectionDirective>
     </AccumulationChartComponent>;
