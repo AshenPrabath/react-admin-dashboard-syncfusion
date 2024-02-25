@@ -634,6 +634,33 @@ export const cartData = [
 
 export const chatData = [
   {
+    image: avatar,
+    person: "John Doe",
+    message: "Hey there! How's it going? I hope you're doing well. Just wanted to catch up and see how things are.",
+    time: "10:00 AM"
+  },
+  {
+    image: avatar2,
+    person: "Jane Smith",
+    message: "Hi! How are you?",
+    time: "10:05 AM"
+  },
+  {
+    image: avatar3,
+    person: "Mike Johnson",
+    message: "I'm good, thanks! How about you? I've been quite busy lately with work.",
+    time: "10:10 AM"
+  },
+  {
+    image: avatar4,
+    person: "Emily Williams",
+    message: "Great! Let's catch up soon. I have some exciting news to share!",
+    time: "10:15 AM"
+  }
+]
+
+export const notificationData = [
+  {
     image:
       avatar2,
     message: 'Roman Joined the Team!',
@@ -661,7 +688,7 @@ export const chatData = [
     desc: 'Assign her new tasks',
     time: '1:12 AM',
   },
-];
+]
 
 export const earningData = [
   {

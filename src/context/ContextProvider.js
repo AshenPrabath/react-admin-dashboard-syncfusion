@@ -34,7 +34,7 @@ export const ContextProvider = ({ children }) => {
         setIsClicked({ ...initialState, [clicked]: true });
     }
     const handleClose = () => {
-        setIsClicked({ ...initialState,});
+        setIsClicked({ ...initialState});
     }
     return (
         <StateContext.Provider
