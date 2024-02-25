@@ -1,8 +1,10 @@
 import React from 'react'
 import { GoDotFill } from 'react-icons/go';
 import { Stacked, Button, SparkLine, LineChart, OrdersTable } from '../components';
-import { earningData, SparklineAreaData, recentOrdersData } from '../data/dummy';
+import { earningData, SparklineAreaData, recentOrdersData, productsPerformanceData } from '../data/dummy';
+import ProgressBar from '../components/ProgressBar';
 import { useStateContext } from '../context/ContextProvider';
+
 
 const Ecommerce = () => {
 
@@ -137,10 +139,43 @@ const Ecommerce = () => {
         </div>
       </div>
       <div className='flex flex-wrap lg:flex-nowrap'>
-        <div className='bg-white dark:text-gray-200 dark:bg-secondary-dark-bg m-3 p-12 rounded-2xl lg:w-7/12 sm:w-full '>
-          <p className='text-xl font-semibold pb-4'>Products Performsssssssssance</p>
+        <div className='bg-white dark:text-gray-200 dark:bg-secondary-dark-bg m-3 p-12 rounded-2xl lg:w-8/12 sm:w-full '>
+          <p className='text-xl font-semibold pb-4'>Products Performance</p>
+          <div className=''>
+            <div className=''>
+              {productsPerformanceData.map((item, index) => (
+                <div key={index} className='flex flex-wrap justify-start items-center pb-4'>
+                    <div className='flex items-center w-9/12'>
+                      <img className='w-24 h-20 rounded-md mr-5 object-cover ' src={item.ProductImage} alt={item.name} />
+                      <div>
+                        <p className='text-xl text-gray-600 dark:text-gray-100 font-base overflow-hidden overflow-ellipsis whitespace-nowrap max-w-[360px]'>
+                          {item.productTitle}
+                        </p>
+                        <p className='text-gray-500 text-sm pt-1'>
+                          {item.categories}
+                        </p>
+                      </div>
+                    </div>
+                    <div className='flex items-center justify-start w-3/12 '>
+                      <div className='w-1/2 '>
+                        <p className='pb-2'>{item.ratingString}</p>
+                        <ProgressBar percentage={item.ratingPercentage} color={item.barColor} />
+                        <p className='pt-2 text-sm'> {item.ratingPercentage} % Sold  </p>
+                      </div>
+                      <div className='pl-10 w-1/2'>
+                        <p className='text-gray-400'>Earnings</p>
+
+                        <p className='font-bold'>${item.Earnings.toString()}</p>
+                      </div>
+                    </div>
+                  
+
+                </div>
+              ))}
+            </div>
+          </div>
         </div>
-        <div className='bg-white dark:text-gray-200 dark:bg-secondary-dark-bg m-3 p-12 rounded-2xl lg:w-5/12 sm:w-full'>
+        <div className='bg-white dark:text-gray-200 dark:bg-secondary-dark-bg m-3 p-12 rounded-2xl lg:w-4/12 sm:w-full'>
           <p className='text-xl font-semibold pb-4'>Products Performasssssssnce</p>
         </div>
       </div>

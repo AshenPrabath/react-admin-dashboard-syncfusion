@@ -2274,6 +2274,49 @@ export const recentOrdersData = [
   },
   
 ];
+export const productsPerformanceData = [
+  {
+    OrderID: 10248,
+    productTitle: 'Is it good butterscotch ice-cream?',
+    categories: 'Ice-Cream, Milk, Powder',
+    ratingString: 'Good',
+    ratingPercentage: 65,
+    Earnings: 546000,
+    barColor: '#8BE78B',
+    ProductImage:
+      product6,
+  },
+  {
+    OrderID: 10250,
+    productTitle: 'Refreshing Lemonade',
+    categories: 'Beverage, Lemon, Drink',
+    ratingString: 'Very Good',
+    ratingPercentage: 80,
+    Earnings: 380000,
+    barColor: '#00CED1',
+    ProductImage: product2,
+  },
+  {
+    OrderID: 10251,
+    productTitle: 'Tasty Pepperoni Pizza',
+    categories: 'Pizza, Pepperoni, Italian',
+    ratingString: 'Excellent',
+    ratingPercentage: 92,
+    Earnings: 620000,
+    barColor: '#FF6347',
+    ProductImage: product3,
+  },
+  {
+    OrderID: 10252,
+    productTitle: 'Soothing Chamomile Tea',
+    categories: 'Tea, Chamomile, Herbal',
+    ratingString: 'Good',
+    ratingPercentage: 70,
+    Earnings: 450000,
+    barColor: '#DA70D6',
+    ProductImage: product4,
+  }
+]
 
 export const ordersData = [
   {
