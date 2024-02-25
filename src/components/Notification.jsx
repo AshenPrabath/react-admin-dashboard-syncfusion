@@ -8,7 +8,8 @@ const Notification = () => {
   const { handleClose, currentColor } = useStateContext();
 
   return (
-    <div className='absolute top-16 right-28 h-auto dark:text-gray-200 bg-white dark:[#484B52] w-350 shadow-xl rounded-lg z-50 dark:bg-secondary-dark-bg'>
+    <div className='absolute top-16 right-28 h-auto dark:text-gray-200 bg-white dark:[#484B52] w-350 shadow-xl rounded-lg z-50 dark:bg-secondary-dark-bg'
+    style={{ transition: 'opacity 0.5s ease-in-out' }}>
       <div className='flex justify-between items-center p-4 ml-4 '>
         <p className='font-semibold text-xl'>
           Notifications
@@ -29,7 +30,7 @@ const Notification = () => {
         <div className=' flex justify-center ' >
           <div>
             {notificationData.map((item, index) => (
-              <div key={index} className='flex  p-3 border-b-1 hover:cursor-pointer '>
+              <div key={index} className='flex  p-3 border-b-1 hover:cursor-pointer hover:bg-slate-50 dark:hover:bg-slate-900'>
                 <img className='w-16 h-16 rounded-full mr-5 object-cover ' src={item.image} alt={item.name} />
                 <div className='w-full'>
                   <h2 className='font-bold text-sm  '>{item.message}</h2>

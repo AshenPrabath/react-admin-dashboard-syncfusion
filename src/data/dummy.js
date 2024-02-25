@@ -922,6 +922,12 @@ export const themeColors = [
     name: 'orange-theme',
   },
 ];
+export const userProfileInfoData = {
+  image: avatar4,
+  userName: "James Smith" ,
+  designation: "Administrator",
+  email: 'info.jamessmith.com',
+}
 
 export const userProfileData = [
   {
@@ -936,14 +942,14 @@ export const userProfileData = [
     title: 'My Inbox',
     desc: 'Messages & Emails',
     iconColor: 'rgb(0, 194, 146)',
-    iconBg: 'rgb(235, 250, 242)',
+    iconBg: '#EBFAF2',
   },
   {
     icon: <FiCreditCard />,
     title: 'My Tasks',
     desc: 'To-do and Daily Tasks',
     iconColor: 'rgb(255, 244, 229)',
-    iconBg: 'rgb(254, 201, 15)',
+    iconBg: '#FEC90F',
   },
 ];
 

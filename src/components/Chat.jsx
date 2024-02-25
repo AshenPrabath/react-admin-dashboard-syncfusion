@@ -29,7 +29,7 @@ const Chat = () => {
         <div className=' flex justify-center ' >
           <div>
             {chatData.map((item, index) => (
-              <div key={index} className='flex  p-3 border-b-1 items-center hover:cursor-pointer'>
+              <div key={index} className='flex  p-3 border-b-1 items-center hover:cursor-pointer hover:bg-slate-50 dark:hover:bg-slate-900'>
                 <img className='w-16 h-16 rounded-full mr-5 object-cover ' src={item.image} alt={item.name} />
                 <div className='w-full'>
                   <h2 className='font-bold text-sm '>{item.person}</h2>
