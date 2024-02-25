@@ -3,8 +3,8 @@ import React from 'react'
 import { BsCurrencyDollar } from 'react-icons/bs';
 import { GoDotFill } from 'react-icons/go';
 
-import { Stacked, Pie, Button, SparkLine } from '../components';
-import { earningData, SparklineAreaData, ecomPieChartData } from '../data/dummy';
+import { Stacked, Button, SparkLine, LineChart, OrdersTable } from '../components';
+import { earningData, SparklineAreaData, recentOrdersData } from '../data/dummy';
 
 import { useStateContext } from '../context/ContextProvider';
 
@@ -17,7 +17,7 @@ const Ecommerce = () => {
 
       {/*----- Hero Section ----*/}
 
-      <div className='flex flex-wrap lg:flex-nowrap justify-center'>
+      <div className='flex flex-wrap justify-center'>
         <div className='bg-white dark:text-gray-200 dark:bg-secondary-dark-bg h-44 rounded-xl w-full lg:w-80 p-8 pt-9 m-3 bg-hero-pattern bg-no-repeat bg-cover bg-center'>
           <div className='flex justify-between items-center'>
             <div>
@@ -63,8 +63,8 @@ const Ecommerce = () => {
 
       {/*----- revenue Section ----*/}
 
-      <div className='flex gap-10 flex-wrap justify-center'>
-        <div className='bg-white dark:text-gray-200 dark:bg-secondary-dark-bg m-3 p-4 rounded-2xl md:w-780'>
+      <div className='flex flex-wrap lg:flex-nowrap'>
+        <div className='bg-white dark:text-gray-200 dark:bg-secondary-dark-bg m-3 p-4 rounded-2xl lg:w-3/5 sm:w-full'>
           <div className='flex justify-between'>
             <p className='font-semibold text-xl'>Revenue Updates</p>
             <div className='flex items-center gap-4'>
@@ -130,8 +130,17 @@ const Ecommerce = () => {
           </div>
 
         </div>
+        <div className='bg-white dark:text-gray-200 dark:bg-secondary-dark-bg m-3 p-4 rounded-2xl lg:w-2/5 sm:w-full'>
+          <p className='text-xl font-semibold pb-4'>Revenue Growth</p>
+        <LineChart/>
+        </div>
+        
 
       </div>
+      <div className='bg-white dark:text-gray-200 dark:bg-secondary-dark-bg m-3 p-12 rounded-2xl w-full'>
+          <p className='text-xl font-semibold pb-4'>Recent Orders</p>
+        <OrdersTable dataSource={recentOrdersData}/>
+        </div>
     </div>
   )
 }

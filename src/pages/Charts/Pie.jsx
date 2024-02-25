@@ -2,15 +2,11 @@ import React from 'react'
 import { AccumulationChartComponent, AccumulationSeriesCollectionDirective, AccumulationSeriesDirective, Inject, AccumulationLegend, AccumulationChart, AccumulationDataLabel, AccumulationTooltip } from '@syncfusion/ej2-react-charts';
 import { pieChartData, pieCustomSeries } from '../../data/dummy';
 import { useStateContext } from '../../context/ContextProvider';
-import { Header } from '../../components'
-
-
+import { Header, LineChart} from '../../components'
 
 
 const Pie = () => {
   const { currentMode } = useStateContext();
- 
-
   return (
     <div className='m-4 md:m-10 mt-24 p-10 bg-white dark:bg-secondary-dark-bg rounded-3xl'>
       <Header category="Pie chart" title="Distribution of Business Expenses" />

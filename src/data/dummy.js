@@ -2204,6 +2204,77 @@ export const employeesData = [
       avatar2,
   },
 ];
+export const recentOrdersData = [
+  {
+    OrderID: 10248,
+    CustomerName: 'Vinet',
+
+    TotalAmount: 32.38,
+    OrderItems: 'Fresh Tomato',
+    Location: 'USA',
+    Status: 'pending',
+    StatusBg: '#FB9678',
+    ProductImage:
+      product6,
+  },
+  {
+    OrderID: 345653,
+    CustomerName: 'Carson Darrin',
+    TotalAmount: 56.34,
+    OrderItems: 'Butter Scotch',
+    Location: 'Delhi',
+    Status: 'complete',
+    StatusBg: '#8BE78B',
+    ProductImage:
+      product5,
+  },
+  {
+    OrderID: 345653,
+    CustomerName: 'Carson Darrin',
+    TotalAmount: 56.34,
+    OrderItems: 'Butter Scotch',
+    Location: 'Delhi',
+    Status: 'complete',
+    StatusBg: '#8BE78B',
+    ProductImage:
+      product5,
+  },
+  {
+    OrderID: 10248,
+    CustomerName: 'Vinet',
+
+    TotalAmount: 32.38,
+    OrderItems: 'Fresh Tomato',
+    Location: 'USA',
+    Status: 'pending',
+    StatusBg: '#FB9678',
+    ProductImage:
+      product6,
+  },
+  {
+    OrderID: 345653,
+    CustomerName: 'Carson Darrin',
+    TotalAmount: 56.34,
+    OrderItems: 'Butter Scotch',
+    Location: 'Delhi',
+    Status: 'complete',
+    StatusBg: '#8BE78B',
+    ProductImage:
+      product5,
+  },
+  {
+    OrderID: 390457,
+    CustomerName: 'Fran Perez',
+    TotalAmount: 93.31,
+    OrderItems: 'Candy Gucci',
+    Location: 'New York',
+    Status: 'active',
+    StatusBg: '#03C9D7',
+    ProductImage:
+      product7,
+  },
+  
+];
 
 export const ordersData = [
   {
@@ -3122,6 +3193,7 @@ export const scheduleData = [
     CategoryColor: '#7fa900',
   },
 ];
+
 
 export const lineChartData = [
   [

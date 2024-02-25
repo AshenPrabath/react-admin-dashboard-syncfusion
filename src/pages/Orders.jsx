@@ -1,31 +1,13 @@
 import React from 'react'
-import { GridComponent, ColumnsDirective, ColumnDirective, Resize, Sort, ContextMenu, Filter, Page, ExcelExport, PdfExport, Edit, Inject, Search, Toolbar } from '@syncfusion/ej2-react-grids';
-import { ordersData, ordersGrid } from '../data/dummy';
-import { Header } from '../components';
-import { useStateContext } from '../context/ContextProvider';
-
+import { ordersData} from '../data/dummy';
+import { Header, OrdersTable } from '../components';
 
 const Orders = () => {
-  const {currentMode} = useStateContext();
 
   return (
     <div className='m-2 md:m-10 p-2 md:p-10 bg-white rounded-3xl dark:bg-secondary-dark-bg'>
       <Header category="Page" title="Orders" />
-      <GridComponent
-        id='gridcomp'
-        dataSource={ordersData}
-        allowPaging={true}
-        allowSorting={true}
-        toolbar={['Search']}
-        
-      >
-        <ColumnsDirective>
-          {ordersGrid.map((item, index) => (
-            <ColumnDirective key={index} {...item} />
-          ))}
-        </ColumnsDirective>
-        <Inject services={[Resize, Sort, ContextMenu, Filter, Page, ExcelExport, PdfExport, Edit, Search, Toolbar]}/>
-      </GridComponent>
+      <OrdersTable dataSource={ordersData}/>
     </div>
   )
 }
