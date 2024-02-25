@@ -10,15 +10,15 @@ const Stacked = ({ width, height }) => {
   const overridePrimaryXAxis = (baseDataset) => {
     return {
       ...baseDataset,
-      labelStyle: { color: currentMode == "Dark" ? '#FFF' : '#33373E' },
+      labelStyle: { color: currentMode === "Dark" ? '#FFF' : '#33373E' },
     };
   };
   const overridePrimaryYAxis = (baseDataset) => {
     return {
       ...baseDataset,
-      majorGridLines: { width: 1, color: currentMode == "Dark" ? '#FFF' : '#33373E' },
-      minorGridLines: { width: 1, color: currentMode == "Dark" ? '#FFF' : '#33373E' },
-      labelStyle: { color: currentMode == "Dark" ? '#FFF' : '#33373E' },
+      majorGridLines: { width: 1, color: currentMode === "Dark" ? '#FFF' : '#33373E' },
+      minorGridLines: { width: 1, color: currentMode === "Dark" ? '#FFF' : '#33373E' },
+      labelStyle: { color: currentMode === "Dark" ? '#FFF' : '#33373E' },
     };
   };
   return (

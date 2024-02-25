@@ -1,8 +1,8 @@
 import React from 'react'
-import { AccumulationChartComponent, AccumulationSeriesCollectionDirective, AccumulationSeriesDirective, Inject, AccumulationLegend, AccumulationChart, AccumulationDataLabel, AccumulationTooltip } from '@syncfusion/ej2-react-charts';
-import { pieChartData, pieCustomSeries } from '../../data/dummy';
+import { AccumulationChartComponent, AccumulationSeriesCollectionDirective, AccumulationSeriesDirective, Inject, AccumulationLegend, AccumulationDataLabel, AccumulationTooltip } from '@syncfusion/ej2-react-charts';
+import { pieChartData } from '../../data/dummy';
 import { useStateContext } from '../../context/ContextProvider';
-import { Header, LineChart} from '../../components'
+import { Header} from '../../components'
 
 
 const Pie = () => {

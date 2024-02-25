@@ -1,23 +1,19 @@
 import React from 'react'
-
-import { BsCurrencyDollar } from 'react-icons/bs';
 import { GoDotFill } from 'react-icons/go';
-
 import { Stacked, Button, SparkLine, LineChart, OrdersTable } from '../components';
 import { earningData, SparklineAreaData, recentOrdersData } from '../data/dummy';
-
 import { useStateContext } from '../context/ContextProvider';
 
 const Ecommerce = () => {
 
-  const {currentColor} = useStateContext();
+  const { currentColor } = useStateContext();
 
   return (
     <div className='mt-12'>
 
       {/*----- Hero Section ----*/}
 
-      <div className='flex flex-wrap justify-center'>
+      <div className='flex flex-wrap justify-between '>
         <div className='bg-white dark:text-gray-200 dark:bg-secondary-dark-bg h-44 rounded-xl w-full lg:w-80 p-8 pt-9 m-3 bg-hero-pattern bg-no-repeat bg-cover bg-center'>
           <div className='flex justify-between items-center'>
             <div>
@@ -35,7 +31,7 @@ const Ecommerce = () => {
             />
           </div>
         </div>
-        <div className='flex m-3 flex-wrap justify-center gap-1 items-center'>
+        <div className='flex m-3 flex-wrap justify-center gap-1 items-center '>
           {earningData.map((item) => (
             <div key={item.title} className='bg-white dark:text-gray-200 dark:bg-secondary-dark-bg md:w-56 p-4 pt-9 rounded-2xl'>
               <button style={{
@@ -79,7 +75,7 @@ const Ecommerce = () => {
             </div>
           </div>
           <div className='mt-10 flex gap-10 flex-wrap justify-center'>
-            <div className='border-r-1 border-color m-4 pr-10'>
+            <div className=' m-4 pr-10'>
 
               <div>
                 <p>
@@ -113,34 +109,41 @@ const Ecommerce = () => {
               </div>
               <div className='mt-10'>
                 <Button
-                color="white"
-                bgColor={currentColor}
-                text="Download Report"
-                borderRadius="10px"
+                  color="white"
+                  bgColor={currentColor}
+                  text="Download Report"
+                  borderRadius="10px"
                 />
               </div>
             </div>
             <div >
               <Stacked
-              width="320px"
-              height="360px"
+                width="320px"
+                height="360px"
               />
             </div>
-
           </div>
-
         </div>
-        <div className='bg-white dark:text-gray-200 dark:bg-secondary-dark-bg m-3 p-4 rounded-2xl lg:w-2/5 sm:w-full'>
+
+        <div className='bg-white dark:text-gray-200 dark:bg-secondary-dark-bg m-3 p-4 rounded-2xl lg:w-2/5 w-full '>
           <p className='text-xl font-semibold pb-4'>Revenue Growth</p>
-        <LineChart/>
+          <LineChart />
         </div>
-        
-
       </div>
-      <div className='bg-white dark:text-gray-200 dark:bg-secondary-dark-bg m-3 p-12 rounded-2xl w-full'>
+      <div className='p-4'>
+        <div className='bg-white dark:text-gray-200 dark:bg-secondary-dark-bg p-8 rounded-2xl w-full'>
           <p className='text-xl font-semibold pb-4'>Recent Orders</p>
-        <OrdersTable dataSource={recentOrdersData}/>
+          <OrdersTable dataSource={recentOrdersData} />
         </div>
+      </div>
+      <div className='flex flex-wrap lg:flex-nowrap'>
+        <div className='bg-white dark:text-gray-200 dark:bg-secondary-dark-bg m-3 p-12 rounded-2xl lg:w-7/12 sm:w-full '>
+          <p className='text-xl font-semibold pb-4'>Products Performsssssssssance</p>
+        </div>
+        <div className='bg-white dark:text-gray-200 dark:bg-secondary-dark-bg m-3 p-12 rounded-2xl lg:w-5/12 sm:w-full'>
+          <p className='text-xl font-semibold pb-4'>Products Performasssssssnce</p>
+        </div>
+      </div>
     </div>
   )
 }

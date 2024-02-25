@@ -11,6 +11,7 @@ const OrdersTable = ({dataSource}) => {
         allowPaging={true}
         allowSorting={true}
         toolbar={['Search' ]}
+       
         
       >
         <ColumnsDirective>
