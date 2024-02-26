@@ -9,6 +9,7 @@ import { useStateContext } from '../context/ContextProvider';
 const Ecommerce = () => {
 
   const { currentColor } = useStateContext();
+  const shadowSettings ="shadow-md";
 
   return (
     <div className='mt-12'>
@@ -16,7 +17,7 @@ const Ecommerce = () => {
       {/*----- Hero Section ----*/}
 
       <div className='flex flex-wrap justify-between '>
-        <div className='bg-white dark:text-gray-200 dark:bg-secondary-dark-bg h-44 rounded-xl w-full lg:w-80 p-8 pt-9 m-3 bg-hero-pattern bg-no-repeat bg-cover bg-center'>
+        <div className={`bg-white dark:text-gray-200 dark:bg-secondary-dark-bg h-44 rounded-xl w-full lg:w-80 p-8 pt-9 m-3 bg-hero-pattern bg-no-repeat bg-cover bg-center ${shadowSettings}`}>
           <div className='flex justify-between items-center'>
             <div>
               <p className='font-bold text-gray-400'>Earnings</p>
@@ -35,7 +36,7 @@ const Ecommerce = () => {
         </div>
         <div className='flex m-3 flex-wrap justify-center gap-1 items-center '>
           {earningData.map((item) => (
-            <div key={item.title} className='bg-white dark:text-gray-200 dark:bg-secondary-dark-bg md:w-56 p-4 pt-9 rounded-2xl'>
+            <div key={item.title} className={`bg-white dark:text-gray-200 dark:bg-secondary-dark-bg md:w-56 p-4 pt-9 rounded-2xl ${shadowSettings} `}>
               <button style={{
                 color: item.iconColor, backgroundColor: item.iconBg
               }}
@@ -58,11 +59,12 @@ const Ecommerce = () => {
           ))}
         </div>
       </div>
+      {/*----- End of Hero Section ----*/}
 
       {/*----- revenue Section ----*/}
 
       <div className='flex flex-wrap lg:flex-nowrap'>
-        <div className='bg-white dark:text-gray-200 dark:bg-secondary-dark-bg m-3 p-4 rounded-2xl lg:w-3/5 sm:w-full'>
+        <div className={`bg-white dark:text-gray-200 dark:bg-secondary-dark-bg m-3 p-4 rounded-2xl lg:w-3/5 sm:w-full ${shadowSettings}`}>
           <div className='flex justify-between'>
             <p className='font-semibold text-xl'>Revenue Updates</p>
             <div className='flex items-center gap-4'>
@@ -127,19 +129,27 @@ const Ecommerce = () => {
           </div>
         </div>
 
-        <div className='bg-white dark:text-gray-200 dark:bg-secondary-dark-bg m-3 p-4 rounded-2xl lg:w-2/5 w-full '>
+        <div className={`bg-white dark:text-gray-200 dark:bg-secondary-dark-bg m-3 p-4 rounded-2xl lg:w-2/5 w-full ${shadowSettings}`}>
           <p className='text-xl font-semibold pb-4'>Revenue Growth</p>
           <LineChart />
         </div>
       </div>
+      {/*----- End of revenue Section ----*/}
+
+      {/*----- Recent Orders Section ----*/}
       <div className='m-3'>
-        <div className='bg-white dark:text-gray-200 dark:bg-secondary-dark-bg p-8 rounded-2xl w-full'>
+        <div className={`bg-white dark:text-gray-200 dark:bg-secondary-dark-bg p-8 rounded-2xl w-full  shadow-2xl ${shadowSettings} `}>
           <p className='text-xl font-semibold pb-4'>Recent Orders</p>
           <OrdersTable dataSource={recentOrdersData} />
         </div>
       </div>
+      {/*----- End Of Recent Orders Section ----*/}
+
+      {/*----- Performance & Transactions Section ----*/}
+
       <div className='flex flex-wrap lg:flex-nowrap'>
-        <div className='bg-white dark:text-gray-200 dark:bg-secondary-dark-bg m-3 lg:p-12 p-6 rounded-2xl lg:w-8/12 sm:w-full '>
+
+        <div className={`bg-white dark:text-gray-200 dark:bg-secondary-dark-bg m-3 lg:p-12 p-6 rounded-2xl lg:w-8/12 sm:w-full shadow-2xl ${shadowSettings} `}>
           <p className='text-xl font-semibold pb-4'>Products Performance</p>
           {productsPerformanceData.map((item, index) => (
             <div key={index} className='flex flex-wrap justify-start items-center pb-4 '>
@@ -167,10 +177,9 @@ const Ecommerce = () => {
               </div>
             </div>
           ))}
-
-
         </div>
-        <div className='bg-white dark:text-gray-200 dark:bg-secondary-dark-bg m-3 p-12 rounded-2xl lg:w-4/12 sm:w-full w-full items-center'>
+
+        <div className={`bg-white dark:text-gray-200 dark:bg-secondary-dark-bg m-3 p-12 rounded-2xl lg:w-4/12 sm:w-full w-full items-center shadow-lg ${shadowSettings}`}>
           <div className='flex justify-between items-center pb-4'>
           <p className='text-xl font-semibold'>Recent Transactions</p>
           {recentTransactionsData.length > 7 && (
@@ -204,6 +213,8 @@ const Ecommerce = () => {
           </div>
         </div>
       </div>
+      {/*-----End Of Performance & Transactions Section ----*/}
+
     </div>
   )
 }
