@@ -1,13 +1,13 @@
 import React from 'react';
 import { AiOutlineCalendar, AiOutlineShoppingCart, AiOutlineAreaChart, AiOutlineBarChart, AiOutlineStock } from 'react-icons/ai';
 import { FiShoppingBag, FiEdit, FiPieChart, FiBarChart, FiCreditCard, FiStar, FiShoppingCart } from 'react-icons/fi';
-import { BsKanban, BsBoxSeam, BsCurrencyDollar, BsShield, BsChatLeft } from 'react-icons/bs';
-import { BiColorFill } from 'react-icons/bi';
+import { BsKanban, BsBoxSeam, BsCurrencyDollar, BsShield, BsChatLeft, BsPaypal, BsBank, BsCash } from 'react-icons/bs';
+import { FaCcAmex } from "react-icons/fa";
+import { BiColorFill, BiLogoVenmo } from 'react-icons/bi';
 import { IoMdContacts } from 'react-icons/io';
-import { RiContactsLine} from 'react-icons/ri';
+import { RiContactsLine } from 'react-icons/ri';
 import { MdOutlineSupervisorAccount } from 'react-icons/md';
 import { HiOutlineRefresh } from 'react-icons/hi';
-import { TiTick } from 'react-icons/ti';
 import { GrLocation } from 'react-icons/gr';
 import avatar from './avatar.jpg';
 import avatar2 from './avatar2.jpg';
@@ -394,7 +394,7 @@ export const
   };
 
 export const LinePrimaryYAxis = {
-  labelFormat: '{value}%',
+  labelFormat: '$ {value}K',
   rangePadding: 'None',
   minimum: 0,
   maximum: 100,
@@ -602,7 +602,7 @@ export const cartData = [
     name: 'butterscotch ice-cream',
     category: 'Milk product',
     price: '$250',
-    items:1
+    items: 1
   },
   {
     image:
@@ -610,7 +610,7 @@ export const cartData = [
     name: 'Supreme fresh tomato',
     category: 'Vegetable Item',
     price: '$450',
-    items:3
+    items: 3
   },
   {
     image:
@@ -618,7 +618,7 @@ export const cartData = [
     name: 'Red color candy',
     category: 'Food Item',
     price: '$200',
-    items:2
+    items: 2
   },
   {
     image:
@@ -626,9 +626,9 @@ export const cartData = [
     name: 'Red color candy',
     category: 'Food Item',
     price: '$200',
-    items:2
+    items: 2
   }
-  
+
 ];
 
 export const chatData = [
@@ -725,57 +725,6 @@ export const earningData = [
     title: 'Refunds',
     iconColor: 'rgb(0, 194, 146)',
     iconBg: 'rgb(235, 250, 242)',
-    pcColor: 'red-600',
-  },
-];
-
-export const recentTransactions = [
-  {
-    icon: <BsCurrencyDollar />,
-    amount: '+$350',
-    title: 'Paypal Transfer',
-    desc: 'Money Added',
-    iconColor: '#03C9D7',
-    iconBg: '#E5FAFB',
-    pcColor: 'green-600',
-  },
-  {
-    icon: <BsShield />,
-    amount: '-$560',
-    desc: 'Bill Payment',
-    title: 'Wallet',
-    iconColor: 'rgb(0, 194, 146)',
-    iconBg: 'rgb(235, 250, 242)',
-    pcColor: 'red-600',
-  },
-  {
-    icon: <FiCreditCard />,
-    amount: '+$350',
-    title: 'Credit Card',
-    desc: 'Money reversed',
-    iconColor: 'rgb(255, 244, 229)',
-    iconBg: 'rgb(254, 201, 15)',
-
-    pcColor: 'green-600',
-  },
-  {
-    icon: <TiTick />,
-    amount: '+$350',
-    title: 'Bank Transfer',
-    desc: 'Money Added',
-
-    iconColor: 'rgb(228, 106, 118)',
-    iconBg: 'rgb(255, 244, 229)',
-    pcColor: 'green-600',
-  },
-  {
-    icon: <BsCurrencyDollar />,
-    amount: '-$50',
-    percentage: '+38%',
-    title: 'Refund',
-    desc: 'Payment Sent',
-    iconColor: '#03C9D7',
-    iconBg: '#E5FAFB',
     pcColor: 'red-600',
   },
 ];
@@ -923,7 +872,7 @@ export const themeColors = [
 ];
 export const userProfileInfoData = {
   image: avatar4,
-  userName: "James Smith" ,
+  userName: "James Smith",
   designation: "Administrator",
   email: 'info.jamessmith.com',
 }
@@ -2272,7 +2221,7 @@ export const recentOrdersData = [
     ProductImage:
       product7,
   },
-  
+
 ];
 export const productsPerformanceData = [
   {
@@ -2316,7 +2265,7 @@ export const productsPerformanceData = [
     barColor: '#DA70D6',
     ProductImage: product4,
   }
-]
+];
 
 export const ordersData = [
   {
@@ -3239,32 +3188,32 @@ export const scheduleData = [
 
 export const lineChartData = [
   [
-    { x: new Date(2005, 0, 1), y: 21 },
-    { x: new Date(2006, 0, 1), y: 36 },
-    { x: new Date(2007, 0, 1), y: 24 },
-    { x: new Date(2008, 0, 1), y: 38 },
-    { x: new Date(2009, 0, 1), y: 70 },
-    { x: new Date(2010, 0, 1), y: 57 },
-    { x: new Date(2011, 0, 1), y: 54 },
+    { x: new Date(2017, 0, 1), y: 21 },
+    { x: new Date(2018, 0, 1), y: 36 },
+    { x: new Date(2019, 0, 1), y: 24 },
+    { x: new Date(2020, 0, 1), y: 38 },
+    { x: new Date(2021, 0, 1), y: 70 },
+    { x: new Date(2022, 0, 1), y: 57 },
+    { x: new Date(2023, 0, 1), y: 54 },
   ],
   [
-    { x: new Date(2005, 0, 1), y: 28 },
-    { x: new Date(2006, 0, 1), y: 44 },
-    { x: new Date(2007, 0, 1), y: 78},
-    { x: new Date(2008, 0, 1), y: 50 },
-    { x: new Date(2009, 0, 1), y: 66 },
-    { x: new Date(2010, 0, 1), y: 48 },
-    { x: new Date(2011, 0, 1), y: 84 },
+    { x: new Date(2017, 0, 1), y: 28 },
+    { x: new Date(2018, 0, 1), y: 44 },
+    { x: new Date(2019, 0, 1), y: 78 },
+    { x: new Date(2020, 0, 1), y: 50 },
+    { x: new Date(2021, 0, 1), y: 66 },
+    { x: new Date(2022, 0, 1), y: 48 },
+    { x: new Date(2023, 0, 1), y: 84 },
   ],
 
   [
-    { x: new Date(2005, 0, 1), y: 10 },
-    { x: new Date(2006, 0, 1), y: 20 },
-    { x: new Date(2007, 0, 1), y: 30 },
-    { x: new Date(2008, 0, 1), y: 90 },
-    { x: new Date(2009, 0, 1), y: 50 },
-    { x: new Date(2010, 0, 1), y: 70 },
-    { x: new Date(2011, 0, 1), y: 100 },
+    { x: new Date(2017, 0, 1), y: 10 },
+    { x: new Date(2018, 0, 1), y: 20 },
+    { x: new Date(2019, 0, 1), y: 30 },
+    { x: new Date(2020, 0, 1), y: 90 },
+    { x: new Date(2021, 0, 1), y: 50 },
+    { x: new Date(2022, 0, 1), y: 70 },
+    { x: new Date(2023, 0, 1), y: 100 },
   ],
 ];
 export const dropdownData = [
@@ -3279,6 +3228,66 @@ export const dropdownData = [
     Id: '3',
     Time: 'May 2021',
   },
+];
+
+export const recentTransactionsData = [
+  {
+    Method: "Paypal Transfer",
+    Desc: "Money Added",
+    Amount: "+$350",
+    fontColor: "#00eb10",
+    icon: <BsPaypal/>
+  },
+  {
+    Method: "Amex Transfer",
+    Desc: "Bill Payment",
+    Amount: "-$560",
+    fontColor: "#e80000",
+    icon: <FaCcAmex/>
+  },
+  {
+    Method: "Venmo Transfer",
+    Desc: "Rent Payment",
+    Amount: "+$1200",
+    fontColor: "#00eb10",
+    icon: <BiLogoVenmo/>
+  },
+  {
+    Method: "Bank Transfer",
+    Desc: "Salary Deposit",
+    Amount: "+$2500",
+    fontColor: "#00eb10",
+    icon: <BsBank/>
+  },
+  {
+    Method: "Cash Withdrawal",
+    Desc: "ATM Withdrawal",
+    Amount: "-$100",
+    fontColor: "#e80000",
+    icon: <BsCash/>
+  },
+  {
+    Method: "Cash Withdrawal",
+    Desc: "ATM Withdrawal",
+    Amount: "+$100",
+    fontColor: "#00eb10",
+    icon: <BsCash/>
+  },
+  {
+    Method: "Cash Withdrawal",
+    Desc: "ATM Withdrawal",
+    Amount: "-$100",
+    fontColor: "#e80000",
+    icon: <BsCash/>
+  },
+  {
+    Method: "Cash Withdrawal",
+    Desc: "ATM Withdrawal",
+    Amount: "-$100",
+    fontColor: "#e80000",
+    icon: <BsCash/>
+  }
+
 ];
 export const SparklineAreaData = [
   { x: 1, y: 2 },

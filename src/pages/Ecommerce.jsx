@@ -1,7 +1,7 @@
 import React from 'react'
 import { GoDotFill } from 'react-icons/go';
 import { Stacked, Button, SparkLine, LineChart, OrdersTable } from '../components';
-import { earningData, SparklineAreaData, recentOrdersData, productsPerformanceData } from '../data/dummy';
+import { earningData, SparklineAreaData, recentOrdersData, productsPerformanceData, recentTransactionsData } from '../data/dummy';
 import ProgressBar from '../components/ProgressBar';
 import { useStateContext } from '../context/ContextProvider';
 
@@ -141,42 +141,67 @@ const Ecommerce = () => {
       <div className='flex flex-wrap lg:flex-nowrap'>
         <div className='bg-white dark:text-gray-200 dark:bg-secondary-dark-bg m-3 lg:p-12 p-6 rounded-2xl lg:w-8/12 sm:w-full '>
           <p className='text-xl font-semibold pb-4'>Products Performance</p>
-          <div className=''>
-            <div className=''>
-              {productsPerformanceData.map((item, index) => (
-                <div key={index} className='flex flex-wrap justify-start items-center pb-4 '>
-                    <div className='flex items-center lg:w-9/12'>
-                      <img className='w-24 h-20 rounded-md mr-5 object-cover ' src={item.ProductImage} alt={item.name} />
-                      <div>
-                        <p className='text-xl text-gray-600 dark:text-gray-100 font-base '>
-                          {item.productTitle}
-                        </p>
-                        <p className='text-gray-500 text-sm pt-1'>
-                          {item.categories}
-                        </p>
-                      </div>
-                    </div>
-                    <div className='flex items-center justify-between  lg:w-3/12 w-full lg:pt-0 pt-2'>
-                      <div className=' w-1/2 pr-2'>
-                        <p className='pb-2'>{item.ratingString}</p>
-                        <ProgressBar percentage={item.ratingPercentage} color={item.barColor} />
-                        <p className='pt-2 text-sm'> {item.ratingPercentage} % Sold  </p>
-                      </div>
-                      <div className=''>
-                        <p className='text-gray-400'>Earnings</p>
-
-                        <p className='font-bold'>${item.Earnings.toString()}</p>
-                      </div>
-                    </div>
-                  
-
+          {productsPerformanceData.map((item, index) => (
+            <div key={index} className='flex flex-wrap justify-start items-center pb-4 '>
+              <div className='flex items-center lg:w-9/12'>
+                <img className='w-24 h-20 rounded-md mr-5 object-cover ' src={item.ProductImage} alt={item.name} />
+                <div>
+                  <p className='text-xl text-gray-600 dark:text-gray-100 font-base '>
+                    {item.productTitle}
+                  </p>
+                  <p className='text-gray-500 text-sm pt-1'>
+                    {item.categories}
+                  </p>
                 </div>
-              ))}
+              </div>
+              <div className='flex items-center justify-between  lg:w-3/12 w-full lg:pt-0 pt-2'>
+                <div className=' w-1/2 pr-2'>
+                  <p className='pb-2'>{item.ratingString}</p>
+                  <ProgressBar percentage={item.ratingPercentage} color={item.barColor} />
+                  <p className='pt-2 text-sm'> {item.ratingPercentage} % Sold  </p>
+                </div>
+                <div className=''>
+                  <p className='text-gray-400'>Earnings</p>
+                  <p className='font-bold'>${item.Earnings.toString()}</p>
+                </div>
+              </div>
             </div>
-          </div>
+          ))}
+
+
         </div>
-        <div className='bg-white dark:text-gray-200 dark:bg-secondary-dark-bg m-3 p-12 rounded-2xl lg:w-4/12 sm:w-full'>
-          <p className='text-xl font-semibold pb-4'>Recent Transactions</p>
+        <div className='bg-white dark:text-gray-200 dark:bg-secondary-dark-bg m-3 p-12 rounded-2xl lg:w-4/12 sm:w-full w-full items-center'>
+          <div className='flex justify-between items-center pb-4'>
+          <p className='text-xl font-semibold'>Recent Transactions</p>
+          {recentTransactionsData.length > 7 && (
+            <p className=" text-gray-500 hover:cursor-pointer hover:underline ">View All</p>
+        )}
+        </div>
+          {recentTransactionsData.slice(0, 6).map((item, index) => (
+            <div key={index} className='flex flex-wrap justify-start items-center pb-4  '>
+              <div className='flex  items-center justify-between w-full'>
+                <div className='flex items-center '>
+                  <div className='text-3xl'>
+                    {item.icon}
+                  </div>
+                  <div className='pl-6'>
+                    <p className='text-lg text-gray-600 dark:text-gray-100 font-base '>
+                      {item.Method}
+                    </p>
+                    <p className='text-xs text-gray-600 dark:text-gray-100 font-base '>
+                      {item.Desc}
+                    </p>
+                  </div>
+                </div>
+                <p className={`text-base text-[${item.fontColor}] dark:text`}>
+                  {item.Amount}
+                </p>
+              </div>
+            </div>
+          ))}
+          <div className='flex text-sm text-gray-500 pt-3 justify-end items-center'>
+          {recentTransactionsData.length.toString()} recent Transactions
+          </div>
         </div>
       </div>
     </div>
