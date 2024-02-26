@@ -1,14 +1,14 @@
 import React from 'react';
-import { FaStar } from "react-icons/fa";
+import { Link } from 'react-router-dom';
 import { RatingStars } from '../components'
 // import product1 from "../data/product1.jpg";
 
-const ProductCard = ({ image, title, category, price, rating }) => {
+const ProductCard = ({ index, image, title, category, price, rating }) => {
     return (
         <div className='w-full bg-white dark:text-gray-200 dark:bg-secondary-dark-bg rounded-lg shadow-lg h-full'>
-            <div className=' h-full justify-between '>
-                <div className='md:h-2/3 h-1/2' >
-                    <img src={image} className='rounded-t-lg h-full w-full object-cover' />
+            <Link to={`/product/${index}`} className=' h-full justify-between '>
+                <div className='' >
+                    <img src={image} className='rounded-t-lg W-60 h-60 object-cover' />
                 </div>
                 <div className='p-4 md:h-1/3 h-1/2 '>
                     <p className='text-base font-semibold'>{title}</p>
@@ -20,7 +20,7 @@ const ProductCard = ({ image, title, category, price, rating }) => {
                         </div>
                     </div>
                 </div>
-            </div>
+            </Link>
         </div>
     )
 }

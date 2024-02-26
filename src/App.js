@@ -3,15 +3,14 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import { FiSettings } from 'react-icons/fi';
 import { TooltipComponent } from '@syncfusion/ej2-react-popups';
 
-import { Navbar, Sidebar, ThemeSettings} from './components';
-import { Ecommerce, Orders, Calendar, Employees, Line, Customers, Kanban,Area, Bar, Pie, ColorPicker, Editor } from './pages';
+import { Navbar, Sidebar, ThemeSettings } from './components';
+import { Ecommerce, Orders, Calendar, Employees, Line, Customers, Kanban, Area, Bar, Pie, ColorPicker, Editor, ProductDetails, Shop} from './pages';
 import './App.css';
 
 import { useStateContext } from './context/ContextProvider';
-import Shop from './pages/Shop';
 
 const App = () => {
-    const { activeMenu, themeSettings, setThemeSettings, currentColor, currentMode} = useStateContext();
+    const { activeMenu, themeSettings, setThemeSettings, currentColor, currentMode } = useStateContext();
     return (
         <div className={currentMode === 'Dark' ? 'dark' : ''}>
             <BrowserRouter>
@@ -54,7 +53,7 @@ const App = () => {
 
                         <div>
                             {themeSettings && <ThemeSettings />}
-                            
+
                             <Routes>
                                 {/* Dashboard*/}
                                 <Route path='/' element={<Ecommerce />} />
@@ -77,6 +76,9 @@ const App = () => {
                                 <Route path='/area' element={<Area />} />
                                 <Route path='/bar' element={<Bar />} />
                                 <Route path='/pie' element={<Pie />} />
+
+                                <Route path="/shop" element={<Shop/>} />
+                                <Route path="/product/:id" element={<ProductDetails/>} />
 
 
                             </Routes>
