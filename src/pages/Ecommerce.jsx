@@ -132,7 +132,7 @@ const Ecommerce = () => {
           <LineChart />
         </div>
       </div>
-      <div className='p-4'>
+      <div className='m-3'>
         <div className='bg-white dark:text-gray-200 dark:bg-secondary-dark-bg p-8 rounded-2xl w-full'>
           <p className='text-xl font-semibold pb-4'>Recent Orders</p>
           <OrdersTable dataSource={recentOrdersData} />
@@ -176,7 +176,7 @@ const Ecommerce = () => {
           </div>
         </div>
         <div className='bg-white dark:text-gray-200 dark:bg-secondary-dark-bg m-3 p-12 rounded-2xl lg:w-4/12 sm:w-full'>
-          <p className='text-xl font-semibold pb-4'>Products Performasssssssnce</p>
+          <p className='text-xl font-semibold pb-4'>Recent Transactions</p>
         </div>
       </div>
     </div>
