@@ -1,7 +1,7 @@
 import React from 'react';
 import { AiOutlineCalendar, AiOutlineShoppingCart, AiOutlineAreaChart, AiOutlineBarChart, AiOutlineStock } from 'react-icons/ai';
 import { FiShoppingBag, FiEdit, FiPieChart, FiBarChart, FiCreditCard, FiStar, FiShoppingCart } from 'react-icons/fi';
-import { BsKanban, BsBoxSeam, BsCurrencyDollar, BsShield, BsChatLeft, BsPaypal, BsBank, BsCash } from 'react-icons/bs';
+import { BsKanban, BsBoxSeam, BsCurrencyDollar, BsShield, BsChatLeft, BsPaypal, BsBank, BsCash, BsShop} from 'react-icons/bs';
 import { FaCcAmex } from "react-icons/fa";
 import { BiColorFill, BiLogoVenmo } from 'react-icons/bi';
 import { IoMdContacts } from 'react-icons/io';
@@ -531,6 +531,10 @@ export const links = [
       {
         name: 'customers',
         icon: <RiContactsLine />,
+      },
+      {
+        name: 'shop',
+        icon: <BsShop />,
       },
     ],
   },

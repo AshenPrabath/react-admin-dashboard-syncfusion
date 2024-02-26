@@ -8,6 +8,7 @@ import { Ecommerce, Orders, Calendar, Employees, Line, Customers, Kanban,Area, B
 import './App.css';
 
 import { useStateContext } from './context/ContextProvider';
+import Shop from './pages/Shop';
 
 const App = () => {
     const { activeMenu, themeSettings, setThemeSettings, currentColor, currentMode} = useStateContext();
@@ -63,6 +64,7 @@ const App = () => {
                                 <Route path='/orders' element={<Orders />} />
                                 <Route path='/employees' element={<Employees />} />
                                 <Route path='/customers' element={<Customers />} />
+                                <Route path='/shop' element={<Shop />} />
 
                                 {/* Dashboard*/}
                                 <Route path='/kanban' element={<Kanban />} />
