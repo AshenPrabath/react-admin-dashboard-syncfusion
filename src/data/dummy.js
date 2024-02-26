@@ -1,7 +1,7 @@
 import React from 'react';
 import { AiOutlineCalendar, AiOutlineShoppingCart, AiOutlineAreaChart, AiOutlineBarChart, AiOutlineStock } from 'react-icons/ai';
 import { FiShoppingBag, FiEdit, FiPieChart, FiBarChart, FiCreditCard, FiStar, FiShoppingCart } from 'react-icons/fi';
-import { BsKanban, BsBoxSeam, BsCurrencyDollar, BsShield, BsChatLeft, BsPaypal, BsBank, BsCash, BsShop} from 'react-icons/bs';
+import { BsKanban, BsBoxSeam, BsCurrencyDollar, BsShield, BsChatLeft, BsPaypal, BsBank, BsCash, BsShop } from 'react-icons/bs';
 import { FaCcAmex } from "react-icons/fa";
 import { BiColorFill, BiLogoVenmo } from 'react-icons/bi';
 import { IoMdContacts } from 'react-icons/io';
@@ -20,6 +20,8 @@ import product4 from './product4.jpg';
 import product5 from './product5.jpg';
 import product6 from './product6.jpg';
 import product7 from './product7.jpg';
+import product8 from './product8.jpg';
+import product9 from './product9.jpg';
 
 export const gridOrderImage = (props) => (
   <div>
@@ -2156,11 +2158,542 @@ export const employeesData = [
       avatar2,
   },
 ];
+
+export const productImages = [
+  [
+    product1,
+    product2,
+    product3
+  ],
+  [
+    product4,
+    product5,
+    product6
+  ],
+  [
+    product7,
+    product8,
+    product9
+  ],
+  [
+    product7,
+    product8,
+    product9
+  ],
+  [
+    product7,
+    product8,
+    product9
+  ],
+  [
+    product1,
+    product2,
+    product3
+  ],
+  [
+    product4,
+    product5,
+    product6
+  ],
+  [
+    product7,
+    product8,
+    product9
+  ],
+  [
+    product7,
+    product8,
+    product9
+  ],
+  [
+    product7,
+    product8,
+    product9
+  ],
+  [
+    product1,
+    product2,
+    product3
+  ],
+  [
+    product4,
+    product5,
+    product6
+  ],
+  [
+    product7,
+    product8,
+    product9
+  ],
+  [
+    product7,
+    product8,
+    product9
+  ],
+  [
+    product7,
+    product8,
+    product9
+  ],
+];
+
+export const productReviews = [
+  [
+    { username: 'p1user com1', rating: 5, review: 'Best running shoes I\'ve ever owned!' },
+    { username: 'p1user com1', rating: 4, review: 'Great shoes, very comfortable.' }
+  ],
+  [
+    { username: 'p2user com1', rating: 5, review: 'Best running shoes I\'ve ever owned!' },
+    { username: 'p2user com2', rating: 4, review: 'Great shoes, very comfortable.' }
+  ],
+  [
+    { username: 'p3user com1', rating: 4.5, review: 'Excellent quality, highly recommended.' },
+    { username: 'p3user com2', rating: 4, review: 'Comfortable shoes, but a bit narrow.' }
+  ],
+  [
+    { username: 'p4user com1', rating: 4, review: 'Good shoes for the price.' },
+    { username: 'p4user com2', rating: 3.5, review: 'Decent quality, but could be more comfortable.' }
+  ],
+  [
+    { username: 'p5user com1', rating: 3.5, review: 'Not bad, but not the best fit for me.' },
+    { username: 'p5user com2', rating: 4, review: 'Nice design, comfortable to wear.' }
+  ],
+  [
+    { username: 'p6user com1', rating: 4.5, review: 'Perfect shoes for my daily runs.' },
+    { username: 'p6user com2', rating: 5, review: 'Absolutely love them, great support.' }
+  ],
+  [
+    { username: 'p7user com1', rating: 3, review: 'Okay shoes, nothing special.' },
+    { username: 'p7user com2', rating: 4, review: 'Good value for the price.' }
+  ],
+  [
+    { username: 'p8user com1', rating: 4, review: 'Stylish and comfortable, would recommend.' },
+    { username: 'p8user com2', rating: 4.5, review: 'Great for casual wear, very versatile.' }
+  ],
+  [
+    { username: 'p9user com1', rating: 4.5, review: 'Excellent grip, perfect for hiking.' },
+    { username: 'p9user com2', rating: 5, review: 'Top-notch quality, worth every penny.' }
+  ],
+  [
+    { username: 'p10user com1', rating: 5, review: 'Amazing shoes, exceeded my expectations!' },
+    { username: 'p10user com2', rating: 4.5, review: 'Highly durable, great for intense workouts.' }
+  ],
+  [
+    { username: 'p11user com1', rating: 3.5, review: 'Decent shoes, but a bit stiff.' },
+    { username: 'p11user com2', rating: 4, review: 'Good support, but took some time to break in.' }
+  ],
+  [
+    { username: 'p12user com1', rating: 4, review: 'Comfortable and lightweight, great for everyday wear.' },
+    { username: 'p12user com2', rating: 4.5, review: 'Impressed with the quality, would buy again.' }
+  ],
+  [
+    { username: 'p13user com1', rating: 3.5, review: 'Average shoes, nothing extraordinary.' },
+    { username: 'p13user com2', rating: 4, review: 'Satisfied with the purchase, decent performance.' }
+  ],
+  [
+    { username: 'p14user com1', rating: 4.5, review: 'Perfect fit, love the color!' },
+    { username: 'p14user com2', rating: 5, review: 'Exceptional comfort, great for long walks.' }
+  ],
+  [
+    { username: 'p15user com1', rating: 4, review: 'Nice design, but could be more durable.' },
+    { username: 'p15user com2', rating: 4.5, review: 'Good overall performance, satisfied with the purchase.' }
+  ]
+];
+
+export const productColors = [
+  [
+    { colorName: 'Black', colorCode: '#000000' },
+    { colorName: 'White', colorCode: '#FFFFFF' },
+  ],
+  [
+    { colorName: 'Red', colorCode: '#FF0000' },
+    { colorName: 'Green', colorCode: '#00FF00' },
+    { colorName: 'Blue', colorCode: '#0000FF' },
+  ],
+  [
+    { colorName: 'Yellow', colorCode: '#FFFF00' },
+    { colorName: 'Purple', colorCode: '#800080' },
+  ],
+  [
+    { colorName: 'Orange', colorCode: '#FFA500' },
+  ],
+  [
+    { colorName: 'Pink', colorCode: '#FFC0CB' },
+    { colorName: 'Cyan', colorCode: '#00FFFF' },
+    { colorName: 'Magenta', colorCode: '#FF00FF' },
+  ],
+  [
+    { colorName: 'Lime', colorCode: '#00FF00' },
+  ],
+  [
+    { colorName: 'Teal', colorCode: '#008080' },
+    { colorName: 'Slate Gray', colorCode: '#708090' },
+  ],
+  [
+    { colorName: 'Olive', colorCode: '#808000' },
+    { colorName: 'Maroon', colorCode: '#800000' },
+  ],
+  [
+    { colorName: 'Navy', colorCode: '#000080' },
+  ],
+  [
+    { colorName: 'Indigo', colorCode: '#4B0082' },
+  ],
+  [
+    { colorName: 'Turquoise', colorCode: '#40E0D0' },
+    { colorName: 'Lavender', colorCode: '#E6E6FA' },
+  ],
+  [
+    { colorName: 'Beige', colorCode: '#F5F5DC' },
+  ],
+  [
+    { colorName: 'Silver', colorCode: '#C0C0C0' },
+    { colorName: 'Gold', colorCode: '#FFD700' },
+  ],
+  [
+    { colorName: 'Crimson', colorCode: '#DC143C' },
+    { colorName: 'Aquamarine', colorCode: '#7FFFD4' },
+  ],
+  [
+    { colorName: 'Violet', colorCode: '#EE82EE' },
+    { colorName: 'Azure', colorCode: '#007FFF' },
+    { colorName: 'Salmon', colorCode: '#FA8072' },
+  ]
+];
+
+export const productSizes = [
+  [
+    { sizeName: '8 inches', sizeCode: '8in' },
+    { sizeName: '9 inches', sizeCode: '9in' },
+    { sizeName: '10 inches', sizeCode: '10in' },
+    { sizeName: '11 inches', sizeCode: '11in' },
+  ],
+  [
+    { sizeName: '12 inches', sizeCode: '12in' },
+    { sizeName: '13 inches', sizeCode: '13in' },
+    { sizeName: '14 inches', sizeCode: '14in' },
+    { sizeName: '15 inches', sizeCode: '15in' },
+  ],
+  [
+    { sizeName: '16 inches', sizeCode: '16in' },
+    { sizeName: '17 inches', sizeCode: '17in' },
+    { sizeName: '18 inches', sizeCode: '18in' },
+    { sizeName: '19 inches', sizeCode: '19in' },
+    { sizeName: '20 inches', sizeCode: '20in' },
+  ],
+  [
+    { sizeName: '21 inches', sizeCode: '21in' },
+    { sizeName: '22 inches', sizeCode: '22in' },
+    { sizeName: '23 inches', sizeCode: '23in' },
+    { sizeName: '24 inches', sizeCode: '24in' },
+    { sizeName: '25 inches', sizeCode: '25in' },
+  ],
+  [
+    { sizeName: '26 inches', sizeCode: '26in' },
+    { sizeName: '27 inches', sizeCode: '27in' },
+    { sizeName: '28 inches', sizeCode: '28in' },
+    { sizeName: '29 inches', sizeCode: '29in' },
+    { sizeName: '30 inches', sizeCode: '30in' },
+  ],
+  [
+    { sizeName: '31 inches', sizeCode: '31in' },
+    { sizeName: '32 inches', sizeCode: '32in' },
+    { sizeName: '33 inches', sizeCode: '33in' },
+    { sizeName: '34 inches', sizeCode: '34in' },
+    { sizeName: '35 inches', sizeCode: '35in' },
+    { sizeName: '36 inches', sizeCode: '36in' },
+  ],
+  [
+    { sizeName: '37 inches', sizeCode: '37in' },
+    { sizeName: '38 inches', sizeCode: '38in' },
+    { sizeName: '39 inches', sizeCode: '39in' },
+    { sizeName: '40 inches', sizeCode: '40in' },
+    { sizeName: '41 inches', sizeCode: '41in' },
+    { sizeName: '42 inches', sizeCode: '42in' },
+  ],
+  [
+    { sizeName: '43 inches', sizeCode: '43in' },
+    { sizeName: '44 inches', sizeCode: '44in' },
+    { sizeName: '45 inches', sizeCode: '45in' },
+    { sizeName: '46 inches', sizeCode: '46in' },
+    { sizeName: '47 inches', sizeCode: '47in' },
+    { sizeName: '48 inches', sizeCode: '48in' },
+  ],
+  [
+    { sizeName: '49 inches', sizeCode: '49in' },
+    { sizeName: '50 inches', sizeCode: '50in' },
+    { sizeName: '51 inches', sizeCode: '51in' },
+    { sizeName: '52 inches', sizeCode: '52in' },
+    { sizeName: '53 inches', sizeCode: '53in' },
+    { sizeName: '54 inches', sizeCode: '54in' },
+  ],
+  [
+    { sizeName: '55 inches', sizeCode: '55in' },
+    { sizeName: '56 inches', sizeCode: '56in' },
+    { sizeName: '57 inches', sizeCode: '57in' },
+    { sizeName: '58 inches', sizeCode: '58in' },
+    { sizeName: '59 inches', sizeCode: '59in' },
+    { sizeName: '60 inches', sizeCode: '60in' },
+  ],
+  [
+    { sizeName: '61 inches', sizeCode: '61in' },
+    { sizeName: '62 inches', sizeCode: '62in' },
+    { sizeName: '63 inches', sizeCode: '63in' },
+    { sizeName: '64 inches', sizeCode: '64in' },
+    { sizeName: '65 inches', sizeCode: '65in' },
+    { sizeName: '66 inches', sizeCode: '66in' },
+  ],
+  [
+    { sizeName: '67 inches', sizeCode: '67in' },
+    { sizeName: '68 inches', sizeCode: '68in' },
+    { sizeName: '69 inches', sizeCode: '69in' },
+    { sizeName: '70 inches', sizeCode: '70in' },
+    { sizeName: '71 inches', sizeCode: '71in' },
+    { sizeName: '72 inches', sizeCode: '72in' },
+  ],
+  [
+    { sizeName: '73 inches', sizeCode: '73in' },
+    { sizeName: '74 inches', sizeCode: '74in' },
+    { sizeName: '75 inches', sizeCode: '75in' },
+    { sizeName: '76 inches', sizeCode: '76in' },
+    { sizeName: '77 inches', sizeCode: '77in' },
+    { sizeName: '78 inches', sizeCode: '78in' },
+  ],
+  [
+    { sizeName: '79 inches', sizeCode: '79in' },
+    { sizeName: '80 inches', sizeCode: '80in' },
+    { sizeName: '81 inches', sizeCode: '81in' },
+    { sizeName: '82 inches', sizeCode: '82in' },
+    { sizeName: '83 inches', sizeCode: '83in' },
+    { sizeName: '84 inches', sizeCode: '84in' },
+  ],
+  [
+    { sizeName: '73 inches', sizeCode: '73in' },
+    { sizeName: '74 inches', sizeCode: '74in' },
+    { sizeName: '75 inches', sizeCode: '75in' },
+    { sizeName: '76 inches', sizeCode: '76in' },
+    { sizeName: '77 inches', sizeCode: '77in' },
+    { sizeName: '78 inches', sizeCode: '78in' },
+  ]
+];
+
+
+export const productsData = [
+  {
+    productId: 0,
+    productImages: productImages[0],
+    productName: 'Men\'s Running Shoes',
+    productDesc: 'Lightweight and breathable shoes for running enthusiasts.',
+    productCategory: 'Running Shoes',
+    ProductPrice: 89.99,
+    productRating: 4,
+    productColors: productColors[0],
+    productSizes: productSizes[0],
+    productQuantity: 5,
+    productStock: 100,
+    productReviews: productReviews[0],
+  },
+  {
+    productId: 1,
+    productImages: productImages[1],
+    productName: 'Men\'s Running Shoes',
+    productDesc: 'Lightweight and breathable shoes for running enthusiasts.',
+    productCategory: 'Running Shoes',
+    ProductPrice: 89.99,
+    productRating: 5,
+    productColors: productColors[1],
+    productSizes: productSizes[1],
+    productQuantity: 5,
+    productStock: 100,
+    productReviews: productReviews[1],
+  },
+  {
+    productId: 2,
+    productImages: productImages[2],
+    productName: 'Men\'s Running Shoes',
+    productDesc: 'Lightweight and breathable shoes for running enthusiasts.',
+    productCategory: 'Running Shoes',
+    ProductPrice: 89.99,
+    productRating: 3,
+    productColors: productColors[2],
+    productSizes: productSizes[2],
+    productQuantity: 5,
+    productStock: 100,
+    productReviews: productReviews[2],
+  },{
+    productId: 3,
+    productImages: productImages[3],
+    productName: 'Men\'s Running Shoes',
+    productDesc: 'Lightweight and breathable shoes for running enthusiasts.',
+    productCategory: 'Running Shoes',
+    ProductPrice: 89.99,
+    productRating: 3,
+    productColors: productColors[3],
+    productSizes: productSizes[3],
+    productQuantity: 5,
+    productStock: 100,
+    productReviews: productReviews[3],
+  },
+  {
+    productId: 4,
+    productImages: productImages[4],
+    productName: 'Men\'s Soccer Cleats',
+    productDesc: 'Specially designed cleats for agility and control on the soccer field.',
+    productCategory: 'Soccer Cleats',
+    ProductPrice: 99.99,
+    productRating: 4.6,
+    productColors: productColors[4],
+    productSizes: productSizes[4],
+    productQuantity: 7,
+    productStock: 110,
+    productReviews: productReviews[4],
+  },
+  {
+    productId: 5,
+    productImages: productImages[5],
+    productName: 'Women\'s Running Shoes',
+    productDesc: 'Comfortable and supportive shoes for long-distance running.',
+    productCategory: 'Running Shoes',
+    ProductPrice: 94.99,
+    productRating: 4.4,
+    productColors: productColors[5],
+    productSizes: productSizes[5],
+    productQuantity: 9,
+    productStock: 105,
+    productReviews: productReviews[5],
+  },
+  {
+    productId: 6,
+    productImages: productImages[6],
+    productName: 'Men\'s Hiking Boots',
+    productDesc: 'Sturdy boots designed for rugged trails and outdoor adventures.',
+    productCategory: 'Hiking Boots',
+    ProductPrice: 149.99,
+    productRating: 4.8,
+    productColors: productColors[6],
+    productSizes: productSizes[6],
+    productQuantity: 12,
+    productStock: 95,
+    productReviews: productReviews[6],
+  },
+  {
+    productId: 7,
+    productImages: productImages[7],
+    productName: 'Women\'s Yoga Shoes',
+    productDesc: 'Flexible and grippy shoes perfect for yoga and Pilates sessions.',
+    productCategory: 'Yoga Shoes',
+    ProductPrice: 69.99,
+    productRating: 4.7,
+    productColors: productColors[7],
+    productSizes: productSizes[7],
+    productQuantity: 6,
+    productStock: 85,
+    productReviews: productReviews[7],
+  },
+  {
+    productId: 8,
+    productImages: productImages[8],
+    productName: 'Men\'s Tennis Shoes',
+    productDesc: 'Supportive and lightweight shoes designed for agility on the tennis court.',
+    productCategory: 'Tennis Shoes',
+    ProductPrice: 119.99,
+    productRating: 4.5,
+    productColors: productColors[8],
+    productSizes: productSizes[8],
+    productQuantity: 11,
+    productStock: 100,
+    productReviews: productReviews[8],
+  },
+  {
+    productId: 9,
+    productImages: productImages[9],
+    productName: 'Women\'s Volleyball Shoes',
+    productDesc: 'Breathable shoes with excellent traction for indoor volleyball matches.',
+    productCategory: 'Volleyball Shoes',
+    ProductPrice: 89.99,
+    productRating: 4.6,
+    productColors: productColors[9],
+    productSizes: productSizes[9],
+    productQuantity: 7,
+    productStock: 95,
+    productReviews: productReviews[9],
+  },
+  {
+    productId: 10,
+    productImages: productImages[10],
+    productName: 'Men\'s Golf Shoes',
+    productDesc: 'Waterproof and stable shoes designed for comfort and performance on the golf course.',
+    productCategory: 'Golf Shoes',
+    ProductPrice: 139.99,
+    productRating: 4.7,
+    productColors: productColors[10],
+    productSizes: productSizes[10],
+    productQuantity: 9,
+    productStock: 105,
+    productReviews: productReviews[10],
+  },
+  {
+    productId: 11,
+    productImages: productImages[11],
+    productName: 'Women\'s Dance Sneakers',
+    productDesc: 'Sleek and supportive sneakers perfect for dance rehearsals and performances.',
+    productCategory: 'Dance Sneakers',
+    ProductPrice: 79.99,
+    productRating: 4.3,
+    productColors: productColors[11],
+    productSizes: productSizes[11],
+    productQuantity: 5,
+    productStock: 90,
+    productReviews: productReviews[11],
+  },
+  {
+    productId: 12,
+    productImages: productImages[12],
+    productName: 'Men\'s CrossFit Shoes',
+    productDesc: 'Durable shoes with excellent grip for high-intensity CrossFit workouts.',
+    productCategory: 'CrossFit Shoes',
+    ProductPrice: 109.99,
+    productRating: 4.4,
+    productColors: productColors[12],
+    productSizes: productSizes[12],
+    productQuantity: 8,
+    productStock: 100,
+    productReviews: productReviews[12],
+  },
+  {
+    productId: 13,
+    productImages: productImages[13],
+    productName: 'Women\'s Track Spikes',
+    productDesc: 'Lightweight and responsive spikes for sprinting and track competitions.',
+    productCategory: 'Track Spikes',
+    ProductPrice: 79.99,
+    productRating: 4.8,
+    productColors: productColors[13],
+    productSizes: productSizes[13],
+    productQuantity: 7,
+    productStock: 95,
+    productReviews: productReviews[13],
+  },
+  {
+    productId: 14,
+    productImages: productImages[14],
+    productName: 'Men\'s Skate Shoes',
+    productDesc: 'Stylish and durable shoes designed for skateboarding and urban wear.',
+    productCategory: 'Skate Shoes',
+    ProductPrice: 89.99,
+    productRating: 4.6,
+    productColors: productColors[14],
+    productSizes: productSizes[14],
+    productQuantity: 6,
+    productStock: 80,
+    productReviews: productReviews[14],
+  },
+];
+
 export const recentOrdersData = [
   {
     OrderID: 10248,
     CustomerName: 'Vinet',
-
     TotalAmount: 32.38,
     OrderItems: 'Fresh Tomato',
     Location: 'USA',
@@ -3240,56 +3773,56 @@ export const recentTransactionsData = [
     Desc: "Money Added",
     Amount: "+$350",
     fontColor: "#00eb10",
-    icon: <BsPaypal/>
+    icon: <BsPaypal />
   },
   {
     Method: "Amex Transfer",
     Desc: "Bill Payment",
     Amount: "-$560",
     fontColor: "#e80000",
-    icon: <FaCcAmex/>
+    icon: <FaCcAmex />
   },
   {
     Method: "Venmo Transfer",
     Desc: "Rent Payment",
     Amount: "+$1200",
     fontColor: "#00eb10",
-    icon: <BiLogoVenmo/>
+    icon: <BiLogoVenmo />
   },
   {
     Method: "Bank Transfer",
     Desc: "Salary Deposit",
     Amount: "+$2500",
     fontColor: "#00eb10",
-    icon: <BsBank/>
+    icon: <BsBank />
   },
   {
     Method: "Cash Withdrawal",
     Desc: "ATM Withdrawal",
     Amount: "-$100",
     fontColor: "#e80000",
-    icon: <BsCash/>
+    icon: <BsCash />
   },
   {
     Method: "Cash Withdrawal",
     Desc: "ATM Withdrawal",
     Amount: "+$100",
     fontColor: "#00eb10",
-    icon: <BsCash/>
+    icon: <BsCash />
   },
   {
     Method: "Cash Withdrawal",
     Desc: "ATM Withdrawal",
     Amount: "-$100",
     fontColor: "#e80000",
-    icon: <BsCash/>
+    icon: <BsCash />
   },
   {
     Method: "Cash Withdrawal",
     Desc: "ATM Withdrawal",
     Amount: "-$100",
     fontColor: "#e80000",
-    icon: <BsCash/>
+    icon: <BsCash />
   }
 
 ];
