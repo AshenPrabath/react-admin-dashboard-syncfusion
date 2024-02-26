@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { FaArrowLeft, FaArrowRight } from 'react-icons/fa';
+import { IoIosArrowDropleftCircle, IoIosArrowDroprightCircle  } from "react-icons/io";
 import product1 from '../data/product1.jpg';
 import product2 from '../data/product2.jpg';
 import product3 from '../data/product3.jpg';
@@ -22,9 +23,9 @@ const ImageSlider = ({ images }) => {
   };
 
   return (
-    <div className="relative w-2/5 bg-red-200">
+    <div className="relative w-2/5">
         <div className='w-full h-auto'>
-        <img className="rounded-t-lg aspect-square w-full overflow-hidden object-cover" src={images[currentImageIndex]} alt={`Slide ${currentImageIndex + 1}`} />
+        <img className="rounded-3xl aspect-square w-full overflow-hidden object-cover" src={images[currentImageIndex]} alt={`Slide ${currentImageIndex + 1}`} />
         </div>
       <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2 flex space-x-2">
         {images.map((_, index) => (
@@ -35,11 +36,11 @@ const ImageSlider = ({ images }) => {
           />
         ))}
       </div>
-      <div className="absolute top-1/2 left-0 transform -translate-y-1/2">
-        <button className="prev-button" onClick={goToPreviousSlide}><FaArrowLeft /></button>
+      <div className="absolute top-1/2 left-0 transform -translate-y-1/2 p-4 text-3xl opacity-50">
+        <button className="prev-button" onClick={goToPreviousSlide}><IoIosArrowDropleftCircle /></button>
       </div>
-      <div className="absolute top-1/2 right-0 transform -translate-y-1/2">
-        <button className="next-button" onClick={goToNextSlide}><FaArrowRight /></button>
+      <div className="absolute top-1/2 right-0 transform -translate-y-1/2 p-4 text-3xl opacity-50">
+        <button className="next-button" onClick={goToNextSlide}><IoIosArrowDroprightCircle /></button>
       </div>
     </div>
   );
