@@ -121,7 +121,7 @@ const ProductDetails = () => {
                                 <Button
                                     color="white"
                                     bgColor="#fc7f03"
-                                    text="Another Button"
+                                    text="Add to cart"
                                     borderRadius="10px"
                                     size="md"
                                     width="full"
