@@ -3103,122 +3103,122 @@ export const productColors = [
 
 export const productStarsData=[
   [
-    { starsLabel:'1 Star', value:96},
-    { starsLabel:'2 Star', value:63},
-    { starsLabel:'3 Star', value:16},
-    { starsLabel:'4 Star', value:6},
-    { starsLabel:'5 Star', value:4},
+    { stars:1, value:4},
+    { stars:2, value:10},
+    { stars:3, value:25},
+    { stars:4, value:86},
+    { stars:5, value:108},
   ],
   [
-    { starsLabel: '1 Star', value: 71 },
-    { starsLabel: '2 Star', value: 34 },
-    { starsLabel: '3 Star', value: 89 },
-    { starsLabel: '4 Star', value: 12 },
-    { starsLabel: '5 Star', value: 56 }
+    { stars: 1, value: 59 },
+    { stars: 2, value: 22 },
+    { stars: 3, value: 38 },
+    { stars: 4, value: 77 },
+    { stars: 5, value: 91 }
   ]
   ,
   [
-    { starsLabel: '1 Star', value: 42 },
-    { starsLabel: '2 Star', value: 78 },
-    { starsLabel: '3 Star', value: 23 },
-    { starsLabel: '4 Star', value: 68 },
-    { starsLabel: '5 Star', value: 91 }
+    { stars: 1, value: 13 },
+    { stars: 2, value: 47 },
+    { stars: 3, value: 64 },
+    { stars: 4, value: 30 },
+    { stars: 5, value: 82 }
   ]
   ,
   [
-    { starsLabel: '1 Star', value: 19 },
-    { starsLabel: '2 Star', value: 83 },
-    { starsLabel: '3 Star', value: 50 },
-    { starsLabel: '4 Star', value: 77 },
-    { starsLabel: '5 Star', value: 10 }
+    { stars: 1, value: 24 },
+    { stars: 2, value: 76 },
+    { stars: 3, value: 41 },
+    { stars: 4, value: 50 },
+    { stars: 5, value: 95 }
   ]
   ,
   [
-    { starsLabel: '1 Star', value: 95 },
-    { starsLabel: '2 Star', value: 28 },
-    { starsLabel: '3 Star', value: 14 },
-    { starsLabel: '4 Star', value: 65 },
-    { starsLabel: '5 Star', value: 37 }
+    { stars: 1, value: 7 },
+    { stars: 2, value: 53 },
+    { stars: 3, value: 88 },
+    { stars: 4, value: 33 },
+    { stars: 5, value: 69 }
   ]
   ,
   [
-    { starsLabel: '1 Star', value: 8 },
-    { starsLabel: '2 Star', value: 54 },
-    { starsLabel: '3 Star', value: 46 },
-    { starsLabel: '4 Star', value: 29 },
-    { starsLabel: '5 Star', value: 61 }
+    { stars: 1, value: 36 },
+    { stars: 2, value: 49 },
+    { stars: 3, value: 17 },
+    { stars: 4, value: 84 },
+    { stars: 5, value: 12 }
   ]
   ,
   [
-    { starsLabel: '1 Star', value: 75 },
-    { starsLabel: '2 Star', value: 33 },
-    { starsLabel: '3 Star', value: 69 },
-    { starsLabel: '4 Star', value: 92 },
-    { starsLabel: '5 Star', value: 18 }
+    { stars: 1, value: 80 },
+    { stars: 2, value: 25 },
+    { stars: 3, value: 63 },
+    { stars: 4, value: 28 },
+    { stars: 5, value: 40 }
   ]
   ,
   [
-    { starsLabel: '1 Star', value: 25 },
-    { starsLabel: '2 Star', value: 84 },
-    { starsLabel: '3 Star', value: 60 },
-    { starsLabel: '4 Star', value: 5 },
-    { starsLabel: '5 Star', value: 47 }
+    { stars: 1, value: 42 },
+    { stars: 2, value: 74 },
+    { stars: 3, value: 9 },
+    { stars: 4, value: 61 },
+    { stars: 5, value: 57 }
   ]
   ,
   [
-    { starsLabel: '1 Star', value: 82 },
-    { starsLabel: '2 Star', value: 15 },
-    { starsLabel: '3 Star', value: 81 },
-    { starsLabel: '4 Star', value: 79 },
-    { starsLabel: '5 Star', value: 2 }
+    { stars: 1, value: 18 },
+    { stars: 2, value: 71 },
+    { stars: 3, value: 35 },
+    { stars: 4, value: 83 },
+    { stars: 5, value: 96 }
   ]
   ,
   [
-    { starsLabel: '1 Star', value: 41 },
-    { starsLabel: '2 Star', value: 7 },
-    { starsLabel: '3 Star', value: 72 },
-    { starsLabel: '4 Star', value: 55 },
-    { starsLabel: '5 Star', value: 97 }
+    { stars: 1, value: 68 },
+    { stars: 2, value: 10 },
+    { stars: 3, value: 55 },
+    { stars: 4, value: 23 },
+    { stars: 5, value: 87 }
   ]
   ,
   [
-    { starsLabel: '1 Star', value: 11 },
-    { starsLabel: '2 Star', value: 66 },
-    { starsLabel: '3 Star', value: 48 },
-    { starsLabel: '4 Star', value: 39 },
-    { starsLabel: '5 Star', value: 85 }
+    { stars: 1, value: 14 },
+    { stars: 2, value: 46 },
+    { stars: 3, value: 90 },
+    { stars: 4, value: 31 },
+    { stars: 5, value: 79 }
   ]
   ,
   [
-    { starsLabel: '1 Star', value: 31 },
-    { starsLabel: '2 Star', value: 70 },
-    { starsLabel: '3 Star', value: 58 },
-    { starsLabel: '4 Star', value: 3 },
-    { starsLabel: '5 Star', value: 22 }
+    { stars: 1, value: 62 },
+    { stars: 2, value: 29 },
+    { stars: 3, value: 72 },
+    { stars: 4, value: 37 },
+    { stars: 5, value: 16 }
   ]
   ,
   [
-    { starsLabel: '1 Star', value: 53 },
-    { starsLabel: '2 Star', value: 94 },
-    { starsLabel: '3 Star', value: 26 },
-    { starsLabel: '4 Star', value: 80 },
-    { starsLabel: '5 Star', value: 62 }
+    { stars: 1, value: 85 },
+    { stars: 2, value: 20 },
+    { stars: 3, value: 51 },
+    { stars: 4, value: 6 },
+    { stars: 5, value: 98 }
   ]
   ,
   [
-    { starsLabel: '1 Star', value: 36 },
-    { starsLabel: '2 Star', value: 76 },
-    { starsLabel: '3 Star', value: 20 },
-    { starsLabel: '4 Star', value: 59 },
-    { starsLabel: '5 Star', value: 45 }
+    { stars: 1, value: 43 },
+    { stars: 2, value: 75 },
+    { stars: 3, value: 27 },
+    { stars: 4, value: 54 },
+    { stars: 5, value: 3 }
   ]
   ,
   [
-    { starsLabel: '1 Star', value: 49 },
-    { starsLabel: '2 Star', value: 88 },
-    { starsLabel: '3 Star', value: 63 },
-    { starsLabel: '4 Star', value: 4 },
-    { starsLabel: '5 Star', value: 27 }
+    { stars: 1, value: 65 },
+    { stars: 2, value: 11 },
+    { stars: 3, value: 48 },
+    { stars: 4, value: 44 },
+    { stars: 5, value: 92 }
   ]
 ];
 

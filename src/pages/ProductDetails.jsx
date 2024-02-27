@@ -16,7 +16,25 @@ const ProductDetails = () => {
     const product = productsData[id];
     let dataSource = Array.from({ length: product.productQuantity }, (_, index) => index + 1);
     let headerText = [{ text: "Product Info" }, { text: "Reviews" }];
-    let totalReviews = product.productStars.reduce((acc, curr) => acc + curr.value, 0)
+
+    let sumStarsValue = 0;
+    let totalReviews = 0;
+    product.productStars.forEach((star) => {
+        sumStarsValue += star.stars * star.value;
+        totalReviews += star.value;
+    });
+
+    const totalValue = product.productStars.reduce((acc, curr) => acc + curr.value * curr.stars, 0);
+
+    const averageValue = totalValue / totalReviews;
+    const finalValue = sumStarsValue / totalReviews;
+    const [progressWidth, setProgressWidth] = useState(0);
+
+
+    useState(() => {
+        setProgressWidth((averageValue / 5) * 100);
+    }, [averageValue]);
+
     return (
         <div>
             <div className='m-6 mt-24 md:m-8 p-10 bg-white dark:bg-secondary-dark-bg rounded-3xl dark:text-white '>
@@ -39,7 +57,7 @@ const ProductDetails = () => {
                         </div>
                         <div className='flex items-center py-3 gap-4'>
                             <RatingStars rating={product.productRating} />
-                            <p className='text-sm text-gray-400 dark:text-gray-400 underline cursor-pointer'>{product.productRating} reviews</p>
+                            <p className='text-sm text-gray-400 dark:text-gray-400 underline cursor-pointer'>{totalReviews} reviews</p>
                         </div>
                         <div className=' border-t-1 border-b-1 border-gray-600'>
                             <div className=' items-center pt-2 '>
@@ -127,16 +145,38 @@ const ProductDetails = () => {
                             <TabItemDirective header={headerText[1]}
                                 content={() => {
                                     return <div className='text-xl  p-10'>
-                                        {product.productRating}
-                                        {totalReviews}
-                                        <div>
-                                            {/* Mapping and displaying productStars */}
-                                            {product.productStars.map((star, index) => (
-                                                <div key={index}>
-                                                    <p>{star.starsLabel}: {star.value}</p>
+                                        <p className='text-xl font-semibold'>Customer Reviews ({totalReviews})</p>
+                                        <div className='flex justify-between py-6 w-full '>
+                                            <div className=' w-3/5'>
+                                                <p className='text-7xl font-semibold '>{finalValue.toFixed(1)}</p>
+                                                <div className='text-7xl pt-4'>
+                                                    <RatingStars rating={finalValue.toFixed(0)} size="2xl" />
                                                 </div>
-                                            ))}
+                                                <p className='text-lg font-base pt-4'> All reviews come from verified purchasers </p>
+                                            </div>
+                                            <div className="flex flex-col justify-between w-2/5">
+
+                                                {product.productStars.slice().reverse().map((star, index) => (
+                                                    <div key={index}>
+                                                        <div className='flex w-full items-center'>
+                                                            
+                                                                <p className='text-base'>{`${star.stars} `}</p>
+                                                                <p className='text-base pr-5'>&nbsp;stars</p>
+                                                            
+                                                            <div className='flex w-full items-center'>
+                                                                <div className="bg-gray-200 dark:bg-gray-800 h-3 w-full rounded-lg overflow-hidden">
+                                                                    <div className="bg-black rounded-full dark:bg-white h-full" style={{ width: `${((star.value) / totalReviews) * 100}%` }}></div>
+                                                                </div>
+                                                            </div>
+                                                            <p className='text-base pl-2 w-1/12'>{`${star.value} `}</p>
+
+                                                        </div>
+                                                    </div>
+                                                ))}
+                                            </div>
                                         </div>
+
+
                                     </div>;
                                 }} />
                         </TabItemsDirective>
