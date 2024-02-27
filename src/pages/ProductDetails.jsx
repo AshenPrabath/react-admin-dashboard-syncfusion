@@ -1,14 +1,14 @@
 import React, { useState } from 'react';
 import { useParams } from 'react-router-dom';
 import { productsData } from '../data/dummy';
-import { Header } from '../components';
-import { ImageSlider } from '../components';
-import { RatingStars } from '../components';
+import { Header, ImageSlider, RatingStars, Button } from '../components';
 import { TooltipComponent } from '@syncfusion/ej2-react-popups';
 import { DropDownListComponent } from '@syncfusion/ej2-react-dropdowns';
+import { useStateContext } from '../context/ContextProvider';
 
 
 const ProductDetails = () => {
+    const { currentColor } = useStateContext();
     const [selectedColor, setSelectedColor] = useState(null);
     const [selectedSize, setSelectedSize] = useState(null);
     const { id } = useParams();
@@ -22,17 +22,17 @@ const ProductDetails = () => {
 
                 <ImageSlider images={product.productImages} />
 
-                <div className='w-1/2 pr-6 pl-6 '>
+                <div className='w-1/2 pr-6 pl-8 '>
                     <div className='flex items-center gap-2'>
                         {product.productStock === 0 ? (
-                            <p className='bg-red-400 py-1 px-2 text-sm font-bold text-white rounded-md'>Out of Stock</p>
+                            <p className='bg-red-400 py-1 px-2 text-xs font-base text-white rounded-md'>Out of Stock</p>
                         ) : (
-                            <p className='bg-green-400 py-1 px-2 text-sm font-bold text-white rounded-md'>In Stock</p>
+                            <p className='bg-green-400 py-1 px-2 text-xs font-base text-white rounded-md'>In Stock</p>
                         )}
-                        <p className='text-sm font-semibold text-gray-400 dark:text-gray-400'>{product.productCategory}</p>
+                        <p className='text-sm  text-gray-400 dark:text-gray-400'>{product.productCategory}</p>
                     </div>
                     <div className=''>
-                        <p className='text-4xl font-bold pt-4'>{product.productName}</p>
+                        <p className='text-4xl font-bold pt-2'>{product.productName}</p>
                         <p className='text-sm text-gray-400 dark:text-gray-400 pt-3'>{product.productDesc}</p>
                         <p className='text-4xl font-bold pt-3'> ${product.productPrice}</p>
                     </div>
@@ -80,15 +80,35 @@ const ProductDetails = () => {
                                 ))}
                             </div>
                             <div className='pt-3'>
-                                <p className='font-bold text-sm'>Quantity:</p>
+                                <p className='font-bold text-sm pb-2'>Quantity:</p>
                                 <div className='border-2 w-1/3 rounded-lg px-2 dark:bg-gray-600 dark:text-white dark:border-gray-600'>
-                                   <DropDownListComponent dataSource={dataSource} />
+                                    <DropDownListComponent dataSource={dataSource} value={dataSource[0]} />
                                 </div>
                             </div>
                         </div>
                     </div>
-
-
+                    <div className='flex mt-5 gap-3 '>
+                        <div className='w-1/2'>
+                        <Button
+                            color="white"
+                            bgColor={currentColor}
+                            text="Place Order"
+                            borderRadius="10px"
+                            size="md"
+                            width="full" // Add margin to separate the buttons
+                        />
+                        </div>
+                        <div className='w-1/2'>
+                        <Button
+                            color="white"
+                            bgColor="#fc7f03"
+                            text="Another Button"
+                            borderRadius="10px"
+                            size="md"
+                            width="full"
+                        />
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
