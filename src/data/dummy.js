@@ -3101,6 +3101,127 @@ export const productColors = [
   ]
 ];
 
+export const productStarsData=[
+  [
+    { starsLabel:'1 Star', value:96},
+    { starsLabel:'2 Star', value:63},
+    { starsLabel:'3 Star', value:16},
+    { starsLabel:'4 Star', value:6},
+    { starsLabel:'5 Star', value:4},
+  ],
+  [
+    { starsLabel: '1 Star', value: 71 },
+    { starsLabel: '2 Star', value: 34 },
+    { starsLabel: '3 Star', value: 89 },
+    { starsLabel: '4 Star', value: 12 },
+    { starsLabel: '5 Star', value: 56 }
+  ]
+  ,
+  [
+    { starsLabel: '1 Star', value: 42 },
+    { starsLabel: '2 Star', value: 78 },
+    { starsLabel: '3 Star', value: 23 },
+    { starsLabel: '4 Star', value: 68 },
+    { starsLabel: '5 Star', value: 91 }
+  ]
+  ,
+  [
+    { starsLabel: '1 Star', value: 19 },
+    { starsLabel: '2 Star', value: 83 },
+    { starsLabel: '3 Star', value: 50 },
+    { starsLabel: '4 Star', value: 77 },
+    { starsLabel: '5 Star', value: 10 }
+  ]
+  ,
+  [
+    { starsLabel: '1 Star', value: 95 },
+    { starsLabel: '2 Star', value: 28 },
+    { starsLabel: '3 Star', value: 14 },
+    { starsLabel: '4 Star', value: 65 },
+    { starsLabel: '5 Star', value: 37 }
+  ]
+  ,
+  [
+    { starsLabel: '1 Star', value: 8 },
+    { starsLabel: '2 Star', value: 54 },
+    { starsLabel: '3 Star', value: 46 },
+    { starsLabel: '4 Star', value: 29 },
+    { starsLabel: '5 Star', value: 61 }
+  ]
+  ,
+  [
+    { starsLabel: '1 Star', value: 75 },
+    { starsLabel: '2 Star', value: 33 },
+    { starsLabel: '3 Star', value: 69 },
+    { starsLabel: '4 Star', value: 92 },
+    { starsLabel: '5 Star', value: 18 }
+  ]
+  ,
+  [
+    { starsLabel: '1 Star', value: 25 },
+    { starsLabel: '2 Star', value: 84 },
+    { starsLabel: '3 Star', value: 60 },
+    { starsLabel: '4 Star', value: 5 },
+    { starsLabel: '5 Star', value: 47 }
+  ]
+  ,
+  [
+    { starsLabel: '1 Star', value: 82 },
+    { starsLabel: '2 Star', value: 15 },
+    { starsLabel: '3 Star', value: 81 },
+    { starsLabel: '4 Star', value: 79 },
+    { starsLabel: '5 Star', value: 2 }
+  ]
+  ,
+  [
+    { starsLabel: '1 Star', value: 41 },
+    { starsLabel: '2 Star', value: 7 },
+    { starsLabel: '3 Star', value: 72 },
+    { starsLabel: '4 Star', value: 55 },
+    { starsLabel: '5 Star', value: 97 }
+  ]
+  ,
+  [
+    { starsLabel: '1 Star', value: 11 },
+    { starsLabel: '2 Star', value: 66 },
+    { starsLabel: '3 Star', value: 48 },
+    { starsLabel: '4 Star', value: 39 },
+    { starsLabel: '5 Star', value: 85 }
+  ]
+  ,
+  [
+    { starsLabel: '1 Star', value: 31 },
+    { starsLabel: '2 Star', value: 70 },
+    { starsLabel: '3 Star', value: 58 },
+    { starsLabel: '4 Star', value: 3 },
+    { starsLabel: '5 Star', value: 22 }
+  ]
+  ,
+  [
+    { starsLabel: '1 Star', value: 53 },
+    { starsLabel: '2 Star', value: 94 },
+    { starsLabel: '3 Star', value: 26 },
+    { starsLabel: '4 Star', value: 80 },
+    { starsLabel: '5 Star', value: 62 }
+  ]
+  ,
+  [
+    { starsLabel: '1 Star', value: 36 },
+    { starsLabel: '2 Star', value: 76 },
+    { starsLabel: '3 Star', value: 20 },
+    { starsLabel: '4 Star', value: 59 },
+    { starsLabel: '5 Star', value: 45 }
+  ]
+  ,
+  [
+    { starsLabel: '1 Star', value: 49 },
+    { starsLabel: '2 Star', value: 88 },
+    { starsLabel: '3 Star', value: 63 },
+    { starsLabel: '4 Star', value: 4 },
+    { starsLabel: '5 Star', value: 27 }
+  ]
+];
+
 export const productSizes = [
   [
     { sizeName: '8 inches', sizeCode: '8in' },
@@ -3227,6 +3348,7 @@ export const productsData = [
     productCategory: 'Running Shoes',
     productPrice: 89.99,
     productRating: 4,
+    productStars: productStarsData[0],
     productColors: productColors[0],
     productSizes: productSizes[0],
     productQuantity: 5,
@@ -3242,6 +3364,7 @@ export const productsData = [
     productCategory: 'Running Shoes',
     productPrice: 89.99,
     productRating: 5,
+    productStars: productStarsData[1],
     productColors: productColors[1],
     productSizes: productSizes[1],
     productQuantity: 5,
@@ -3257,6 +3380,7 @@ export const productsData = [
     productCategory: 'Running Shoes',
     productPrice: 89.99,
     productRating: 3,
+    productStars: productStarsData[2],
     productColors: productColors[2],
     productSizes: productSizes[2],
     productQuantity: 5,
@@ -3271,6 +3395,7 @@ export const productsData = [
     productCategory: 'Running Shoes',
     productPrice: 89.99,
     productRating: 3,
+    productStars: productStarsData[3],
     productColors: productColors[3],
     productSizes: productSizes[3],
     productQuantity: 5,
@@ -3286,6 +3411,7 @@ export const productsData = [
     productCategory: 'Soccer Cleats',
     productPrice: 99.99,
     productRating: 3,
+    productStars: productStarsData[4],
     productColors: productColors[4],
     productSizes: productSizes[4],
     productQuantity: 7,
@@ -3301,6 +3427,7 @@ export const productsData = [
     productCategory: 'Running Shoes',
     productPrice: 94.99,
     productRating: 3,
+    productStars: productStarsData[5],
     productColors: productColors[5],
     productSizes: productSizes[5],
     productQuantity: 9,
@@ -3316,6 +3443,7 @@ export const productsData = [
     productCategory: 'Hiking Boots',
     productPrice: 149.99,
     productRating: 2,
+    productStars: productStarsData[6],
     productColors: productColors[6],
     productSizes: productSizes[6],
     productQuantity: 12,
@@ -3331,6 +3459,7 @@ export const productsData = [
     productCategory: 'Yoga Shoes',
     productPrice: 69.99,
     productRating: 5,
+    productStars: productStarsData[7],
     productColors: productColors[7],
     productSizes: productSizes[7],
     productQuantity: 6,
@@ -3346,6 +3475,7 @@ export const productsData = [
     productCategory: 'Tennis Shoes',
     productPrice: 119.99,
     productRating: 4,
+    productStars: productStarsData[8],
     productColors: productColors[8],
     productSizes: productSizes[8],
     productQuantity: 11,
@@ -3361,6 +3491,7 @@ export const productsData = [
     productCategory: 'Volleyball Shoes',
     productPrice: 89.99,
     productRating: 1,
+    productStars: productStarsData[9],
     productColors: productColors[9],
     productSizes: productSizes[9],
     productQuantity: 7,
@@ -3376,6 +3507,7 @@ export const productsData = [
     productCategory: 'Golf Shoes',
     productPrice: 139.99,
     productRating: 5,
+    productStars: productStarsData[10],
     productColors: productColors[10],
     productSizes: productSizes[10],
     productQuantity: 9,
@@ -3391,6 +3523,7 @@ export const productsData = [
     productCategory: 'Dance Sneakers',
     productPrice: 79.99,
     productRating: 3,
+    productStars: productStarsData[11],
     productColors: productColors[11],
     productSizes: productSizes[11],
     productQuantity: 5,
@@ -3406,6 +3539,7 @@ export const productsData = [
     productCategory: 'CrossFit Shoes',
     productPrice: 109.99,
     productRating: 4,
+    productStars: productStarsData[12],
     productColors: productColors[12],
     productSizes: productSizes[12],
     productQuantity: 8,
@@ -3421,6 +3555,7 @@ export const productsData = [
     productCategory: 'Track Spikes',
     productPrice: 79.99,
     productRating: 4,
+    productStars: productStarsData[13],
     productColors: productColors[13],
     productSizes: productSizes[13],
     productQuantity: 7,
@@ -3436,6 +3571,7 @@ export const productsData = [
     productCategory: 'Skate Shoes',
     productPrice: 89.99,
     productRating: 5,
+    productStars: productStarsData[14],
     productColors: productColors[14],
     productSizes: productSizes[14],
     productQuantity: 6,

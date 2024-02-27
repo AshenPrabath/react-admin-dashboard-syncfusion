@@ -6,7 +6,6 @@ import { TooltipComponent } from '@syncfusion/ej2-react-popups';
 import { DropDownListComponent } from '@syncfusion/ej2-react-dropdowns';
 import { useStateContext } from '../context/ContextProvider';
 import { TabComponent, TabItemDirective, TabItemsDirective } from '@syncfusion/ej2-react-navigations';
-import { Tab, Tabs, TabPanel, Box } from '@mui/material';
 
 
 const ProductDetails = () => {
@@ -17,8 +16,7 @@ const ProductDetails = () => {
     const product = productsData[id];
     let dataSource = Array.from({ length: product.productQuantity }, (_, index) => index + 1);
     let headerText = [{ text: "Product Info" }, { text: "Reviews" }];
-    
-
+    let totalReviews = product.productStars.reduce((acc, curr) => acc + curr.value, 0)
     return (
         <div>
             <div className='m-6 mt-24 md:m-8 p-10 bg-white dark:bg-secondary-dark-bg rounded-3xl dark:text-white '>
@@ -117,25 +115,32 @@ const ProductDetails = () => {
             </div>
             <div className='m-2 md:m-8 mt-24 p-10 bg-white dark:bg-secondary-dark-bg rounded-3xl dark:text-white'>
                 <div>
-                <TabComponent heightAdjustMode='Auto'>
-                    <TabItemsDirective>
-                        <TabItemDirective
-                            header={headerText[0]}
-                            content={() => {
-                                return <div className='text-xl  p-10'>
-                                    <div className="max-h-[780px] overflow-y-auto border border-gray-300 p-9" dangerouslySetInnerHTML={{ __html: product.productInfo }} />
-                                </div>;
-                            }} />
-                        <TabItemDirective header={headerText[1]}
-                            content={() => {
-                                return <div className='text-xl  p-10'>
-                                    <div className="max-h-[780px] overflow-y-auto border border-gray-300 p-9" />
-                                    
-                                    
+                    <TabComponent >
+                        <TabItemsDirective>
+                            <TabItemDirective
+                                header={headerText[0]}
+                                content={() => {
+                                    return <div className='text-xl  p-10'>
+                                        <div className="max-h-[780px] overflow-y-auto border dark:text-white border-gray-300 p-9" dangerouslySetInnerHTML={{ __html: product.productInfo }} />
                                     </div>;
-                            }} />
-                    </TabItemsDirective>
-                </TabComponent>
+                                }} />
+                            <TabItemDirective header={headerText[1]}
+                                content={() => {
+                                    return <div className='text-xl  p-10'>
+                                        {product.productRating}
+                                        {totalReviews}
+                                        <div>
+                                            {/* Mapping and displaying productStars */}
+                                            {product.productStars.map((star, index) => (
+                                                <div key={index}>
+                                                    <p>{star.starsLabel}: {star.value}</p>
+                                                </div>
+                                            ))}
+                                        </div>
+                                    </div>;
+                                }} />
+                        </TabItemsDirective>
+                    </TabComponent>
                 </div>
             </div>
         </div>
