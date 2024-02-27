@@ -1,11 +1,13 @@
 import React, { useState } from 'react';
 import { useParams } from 'react-router-dom';
-import { productsData } from '../data/dummy';
+import { productsData, productInfo } from '../data/dummy';
 import { Header, ImageSlider, RatingStars, Button } from '../components';
 import { TooltipComponent } from '@syncfusion/ej2-react-popups';
 import { DropDownListComponent } from '@syncfusion/ej2-react-dropdowns';
 import { useStateContext } from '../context/ContextProvider';
 import { TabComponent, TabItemDirective, TabItemsDirective } from '@syncfusion/ej2-react-navigations';
+import { Tab, Tabs, TabPanel, Box } from '@mui/material';
+
 
 const ProductDetails = () => {
     const { currentColor } = useStateContext();
@@ -15,6 +17,8 @@ const ProductDetails = () => {
     const product = productsData[id];
     let dataSource = Array.from({ length: product.productQuantity }, (_, index) => index + 1);
     let headerText = [{ text: "Product Info" }, { text: "Reviews" }];
+    
+
     return (
         <div>
             <div className='m-6 mt-24 md:m-8 p-10 bg-white dark:bg-secondary-dark-bg rounded-3xl dark:text-white '>
@@ -112,30 +116,27 @@ const ProductDetails = () => {
                 </div>
             </div>
             <div className='m-2 md:m-8 mt-24 p-10 bg-white dark:bg-secondary-dark-bg rounded-3xl dark:text-white'>
+                <div>
                 <TabComponent heightAdjustMode='Auto'>
                     <TabItemsDirective>
                         <TabItemDirective
                             header={headerText[0]}
                             content={() => {
-                                return <div className='text-xl bg-red-100'>
-                                    {product.productDesc}
-                                    {product.productDesc}
-                                    {product.productDesc}
-                                    {product.productDesc}
-                                    {product.productDesc}
+                                return <div className='text-xl  p-10'>
+                                    <div className="max-h-[780px] overflow-y-auto border border-gray-300 p-9" dangerouslySetInnerHTML={{ __html: product.productInfo }} />
                                 </div>;
                             }} />
-                        <TabItemDirective header={headerText[1]} content={() => {
-                                return <div className='text-xl bg-red-100'>
-                                    {product.productDesc}
-                                    {product.productDesc}
-                                    {product.productDesc}
-                                    {product.productDesc}
-                                    {product.productDesc}
-                                </div>;
-                            }}/>
+                        <TabItemDirective header={headerText[1]}
+                            content={() => {
+                                return <div className='text-xl  p-10'>
+                                    <div className="max-h-[780px] overflow-y-auto border border-gray-300 p-9" />
+                                    
+                                    
+                                    </div>;
+                            }} />
                     </TabItemsDirective>
                 </TabComponent>
+                </div>
             </div>
         </div>
     );
