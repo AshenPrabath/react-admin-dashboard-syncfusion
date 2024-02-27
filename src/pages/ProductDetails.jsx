@@ -139,7 +139,7 @@ const ProductDetails = () => {
                                 header={headerText[0]}
                                 content={() => {
                                     return <div className='text-xl  p-10'>
-                                        <div className="max-h-[780px] overflow-y-auto border dark:text-white border-gray-300 p-9" dangerouslySetInnerHTML={{ __html: product.productInfo }} />
+                                        <div className="max-h-[1900px] overflow-y-auto border dark:text-white border-gray-300 p-9" dangerouslySetInnerHTML={{ __html: product.productInfo }} />
                                     </div>;
                                 }} />
                             <TabItemDirective header={headerText[1]}
