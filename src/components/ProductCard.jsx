@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { RatingStars } from '../components'
+import { RatingStars } from '../components';
 // import product1 from "../data/product1.jpg";
 
 const ProductCard = ({ index, image, title, category, price, rating }) => {

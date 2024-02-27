@@ -42,6 +42,7 @@ module.exports = {
         'hero-pattern':
           "url('https://i.ibb.co/5YnBGS4/Hero-Image.png')",
       },
+      
     },
   },
   plugins: [],
