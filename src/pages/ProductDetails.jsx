@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { useParams } from 'react-router-dom';
 import { productsData, productInfo } from '../data/dummy';
-import { Header, ImageSlider, RatingStars, Button } from '../components';
+import { Header, ImageSlider, RatingStars, Button, ImagesViewer } from '../components';
 import { TooltipComponent } from '@syncfusion/ej2-react-popups';
 import { DropDownListComponent } from '@syncfusion/ej2-react-dropdowns';
 import { useStateContext } from '../context/ContextProvider';
@@ -29,6 +29,13 @@ const ProductDetails = () => {
     const averageValue = totalValue / totalReviews;
     const finalValue = sumStarsValue / totalReviews;
     const [progressWidth, setProgressWidth] = useState(0);
+
+    const [selectedImages, setSelectedImages] = useState([]);
+    const [selectedImageIndex, setSelectedImageIndex] = useState(0);
+
+    const handleImageClick = (images) => {
+      setSelectedImages(images);
+    };
 
 
     useState(() => {
@@ -159,21 +166,47 @@ const ProductDetails = () => {
                                                 {product.productStars.slice().reverse().map((star, index) => (
                                                     <div key={index}>
                                                         <div className='flex w-full items-center'>
-                                                            
-                                                                <p className='text-base'>{`${star.stars} `}</p>
-                                                                <p className='text-base pr-5'>&nbsp;stars</p>
-                                                            
+
+                                                            <p className='text-base'>{`${star.stars} `}</p>
+                                                            <p className='text-base pr-5'>&nbsp;stars</p>
+
                                                             <div className='flex w-full items-center'>
                                                                 <div className="bg-gray-200 dark:bg-gray-800 h-3 w-full rounded-lg overflow-hidden">
                                                                     <div className="bg-black rounded-full dark:bg-white h-full" style={{ width: `${((star.value) / totalReviews) * 100}%` }}></div>
                                                                 </div>
                                                             </div>
                                                             <p className='text-base pl-2 w-1/12'>{`${star.value} `}</p>
-
                                                         </div>
                                                     </div>
                                                 ))}
                                             </div>
+                                        </div>
+                                        <div className='border-t-1'>
+                                            {product.productReviews.map((review, index) => (
+                                                <div key={index}>
+                                                    <div className=' w-full items-center border-b-1 py-3'>
+                                                        <div className='flex gap-3 pb-3'>
+                                                            <RatingStars rating={review.rating} size={"xs"} />
+                                                            <p className='text-sm text-gray-400'>{`${review.username} `}</p>
+                                                        </div>
+                                                        <p className='text-base'>{`${review.review} `}</p>
+                                                        <div className='flex gap-2 pt-3'>
+                                                            {review.images.map((image, index) => (
+                                                                <img
+                                                                    src={image}
+                                                                    key={index}
+                                                                    className='w-20 h-20 rounded-lg  cursor-pointer'
+                                                                    onClick={() => {
+                                                                        handleImageClick(review.images);
+                                                                        setSelectedImageIndex(index);
+                                                                    }}
+                                                                />
+                                                            ))}     
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            ))}
+                                            {selectedImages.length > 0 && <ImagesViewer images={selectedImages} onClose={setSelectedImages} overrideImageIndex={selectedImageIndex} />}
                                         </div>
 
 

@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
 import { IoIosArrowDropleftCircle, IoIosArrowDroprightCircle } from "react-icons/io";
 
-const ImageSlider = ({ images }) => {
-    const [currentImageIndex, setCurrentImageIndex] = useState(0);
+const ImageSlider = ({ images, overrideImageIndex=0 }) => {
+    const [currentImageIndex, setCurrentImageIndex] = useState(overrideImageIndex);
 
     const goToPreviousSlide = () => {
         const newIndex = (currentImageIndex === 0) ? images.length - 1 : currentImageIndex - 1;
