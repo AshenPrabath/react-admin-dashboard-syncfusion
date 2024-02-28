@@ -17,6 +17,7 @@ const Shop = () => {
                     price={item.productPrice} 
                     rating={item.productRating}
                     index={index}
+                    productStars={item.productStars}
                     />
                 ))}
             </div>

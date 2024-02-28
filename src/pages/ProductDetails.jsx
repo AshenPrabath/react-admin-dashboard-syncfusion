@@ -27,7 +27,7 @@ const ProductDetails = () => {
     const totalValue = product.productStars.reduce((acc, curr) => acc + curr.value * curr.stars, 0);
 
     const averageValue = totalValue / totalReviews;
-    const finalValue = sumStarsValue / totalReviews;
+    const finalRating = sumStarsValue / totalReviews;
     const [progressWidth, setProgressWidth] = useState(0);
 
     const [selectedImages, setSelectedImages] = useState([]);
@@ -63,7 +63,7 @@ const ProductDetails = () => {
                             <p className='text-4xl font-bold pt-3'> ${product.productPrice}</p>
                         </div>
                         <div className='flex items-center py-3 gap-4'>
-                            <RatingStars rating={product.productRating} />
+                            <RatingStars rating={finalRating.toFixed(0)} />
                             <p className='text-sm text-gray-400 dark:text-gray-400 underline cursor-pointer'>{totalReviews} reviews</p>
                         </div>
                         <div className=' border-t-1 border-b-1 border-gray-600'>
@@ -155,9 +155,9 @@ const ProductDetails = () => {
                                         <p className='text-xl font-semibold'>Customer Reviews ({totalReviews})</p>
                                         <div className='flex justify-between py-6 w-full '>
                                             <div className=' w-3/5'>
-                                                <p className='text-7xl font-semibold '>{finalValue.toFixed(1)}</p>
+                                                <p className='text-7xl font-semibold '>{finalRating.toFixed(1)}</p>
                                                 <div className='text-7xl pt-4'>
-                                                    <RatingStars rating={finalValue.toFixed(0)} size="2xl" />
+                                                    <RatingStars rating={finalRating.toFixed(0)} size="2xl" />
                                                 </div>
                                                 <p className='text-lg font-base pt-4'> All reviews come from verified purchasers </p>
                                             </div>
