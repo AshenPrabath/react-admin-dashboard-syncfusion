@@ -126,16 +126,16 @@ export const gridProductImage = (props) => (
   </div>
 );
 
-export const gridProductActions = (rowData, onEdit) => (
-  <div>
-    <button onClick={() => onEdit(rowData)}>
-      <MdOutlineEdit />
-    </button>
-    <button onClick={()=>{}}>
-    <MdOutlineDelete/>
-    </button>
-  </div>
-);
+// export const gridProductActions = (rowData, onEdit) => (
+//   <div>
+//     <button onClick={() => onEdit(rowData)}>
+//       <MdOutlineEdit />
+//     </button>
+//     <button onClick={()=>{}}>
+//     <MdOutlineDelete/>
+//     </button>
+//   </div>
+// );
 
 
 export const gridOrderStatus = (props) => (
@@ -1051,14 +1051,12 @@ export const productsGrid =[
     editType: 'numericedit',
   },
   {
-    field: 'Actions',
-    template: gridProductActions,
-    headerText: 'Actions',
-    format: 'C2',
+    field: 'ItemsSold',
+    headerText: 'Items Sold',
     width: '150',
     textAlign: 'Center',
-    editType: 'numericedit',
-  }
+  },
+  
 ]
 
 export const ordersGrid = [
@@ -4230,6 +4228,7 @@ export const productsData = [
     productSizes: productSizes[0],
     productQuantity: 5,
     productStock: 50,
+    itemsSold:64,
     productReviews: productReviews[0],
   },
   {
@@ -4246,6 +4245,7 @@ export const productsData = [
     productSizes: productSizes[1],
     productQuantity: 5,
     productStock: 100,
+    itemsSold:80,
     productReviews: productReviews[1],
   },
   {
@@ -4262,6 +4262,7 @@ export const productsData = [
     productSizes: productSizes[2],
     productQuantity: 5,
     productStock: 100,
+    itemsSold:297,
     productReviews: productReviews[2],
   }, {
     productId: 3,
@@ -4277,6 +4278,7 @@ export const productsData = [
     productSizes: productSizes[3],
     productQuantity: 5,
     productStock: 0,
+    itemsSold:650,
     productReviews: productReviews[3],
   },
   {
@@ -4293,6 +4295,7 @@ export const productsData = [
     productSizes: productSizes[4],
     productQuantity: 7,
     productStock: 110,
+    itemsSold:643,
     productReviews: productReviews[4],
   },
   {
@@ -4309,6 +4312,7 @@ export const productsData = [
     productSizes: productSizes[5],
     productQuantity: 9,
     productStock: 105,
+    itemsSold:14,
     productReviews: productReviews[5],
   },
   {
@@ -4325,6 +4329,7 @@ export const productsData = [
     productSizes: productSizes[6],
     productQuantity: 12,
     productStock: 95,
+    itemsSold:69,
     productReviews: productReviews[6],
   },
   {
@@ -4341,6 +4346,7 @@ export const productsData = [
     productSizes: productSizes[7],
     productQuantity: 6,
     productStock: 85,
+    itemsSold:65,
     productReviews: productReviews[7],
   },
   {
@@ -4357,6 +4363,7 @@ export const productsData = [
     productSizes: productSizes[8],
     productQuantity: 11,
     productStock: 100,
+    itemsSold:74,
     productReviews: productReviews[8],
   },
   {
@@ -4373,6 +4380,7 @@ export const productsData = [
     productSizes: productSizes[9],
     productQuantity: 7,
     productStock: 95,
+    itemsSold:50,
     productReviews: productReviews[9],
   },
   {
@@ -4389,6 +4397,7 @@ export const productsData = [
     productSizes: productSizes[10],
     productQuantity: 9,
     productStock: 105,
+    itemsSold:64,
     productReviews: productReviews[10],
   },
   {
@@ -4405,6 +4414,7 @@ export const productsData = [
     productSizes: productSizes[11],
     productQuantity: 5,
     productStock: 90,
+    itemsSold:64,
     productReviews: productReviews[11],
   },
   {
@@ -4421,6 +4431,7 @@ export const productsData = [
     productSizes: productSizes[12],
     productQuantity: 8,
     productStock: 100,
+    itemsSold:64,
     productReviews: productReviews[12],
   },
   {
@@ -4437,6 +4448,7 @@ export const productsData = [
     productSizes: productSizes[13],
     productQuantity: 7,
     productStock: 95,
+    itemsSold:61,
     productReviews: productReviews[13],
   },
   {
@@ -4453,6 +4465,7 @@ export const productsData = [
     productSizes: productSizes[14],
     productQuantity: 6,
     productStock: 80,
+    itemsSold:61,
     productReviews: productReviews[14],
   },
 ];
@@ -4581,6 +4594,7 @@ export const productsTableData = [
     ProductCategory:productsData[0].productCategory,
     Price:productsData[0].productPrice,
     ProductStock:productsData[0].productStock,
+    ItemsSold:productsData[0].itemsSold,
   },
   {
     ProductImage: productsData[1].productImages[0].productImages[0],
@@ -4588,6 +4602,8 @@ export const productsTableData = [
     ProductCategory: productsData[1].productCategory,
     Price: productsData[1].productPrice,
     ProductStock: productsData[1].productStock,
+    ItemsSold:productsData[1].itemsSold,
+
   },
   {
     ProductImage: productsData[2].productImages[0].productImages[0],
@@ -4595,6 +4611,8 @@ export const productsTableData = [
     ProductCategory: productsData[2].productCategory,
     Price: productsData[2].productPrice,
     ProductStock: productsData[2].productStock,
+    ItemsSold:productsData[2].itemsSold,
+
   },
   {
     ProductImage: productsData[3].productImages[0].productImages[0],
@@ -4602,6 +4620,8 @@ export const productsTableData = [
     ProductCategory: productsData[3].productCategory,
     Price: productsData[3].productPrice,
     ProductStock: productsData[3].productStock,
+    ItemsSold:productsData[3].itemsSold,
+
   },
   {
     ProductImage: productsData[4].productImages[0].productImages[0],
@@ -4609,6 +4629,8 @@ export const productsTableData = [
     ProductCategory: productsData[4].productCategory,
     Price: productsData[4].productPrice,
     ProductStock: productsData[4].productStock,
+    ItemsSold:productsData[4].itemsSold,
+
   },
   {
     ProductImage: productsData[5].productImages[0].productImages[0],
@@ -4616,6 +4638,8 @@ export const productsTableData = [
     ProductCategory: productsData[5].productCategory,
     Price: productsData[5].productPrice,
     ProductStock: productsData[5].productStock,
+    ItemsSold:productsData[5].itemsSold,
+
   },
   {
     ProductImage: productsData[6].productImages[0].productImages[0],
@@ -4623,6 +4647,8 @@ export const productsTableData = [
     ProductCategory: productsData[6].productCategory,
     Price: productsData[6].productPrice,
     ProductStock: productsData[6].productStock,
+    ItemsSold:productsData[6].itemsSold,
+
   },
   {
     ProductImage: productsData[7].productImages[0].productImages[0],
@@ -4630,6 +4656,8 @@ export const productsTableData = [
     ProductCategory: productsData[7].productCategory,
     Price: productsData[7].productPrice,
     ProductStock: productsData[7].productStock,
+    ItemsSold:productsData[8].itemsSold,
+
   },
   {
     ProductImage: productsData[8].productImages[0].productImages[0],
@@ -4637,6 +4665,8 @@ export const productsTableData = [
     ProductCategory: productsData[8].productCategory,
     Price: productsData[8].productPrice,
     ProductStock: productsData[8].productStock,
+    ItemsSold:productsData[8].itemsSold,
+
   },
   {
     ProductImage: productsData[9].productImages[0].productImages[0],
@@ -4644,6 +4674,8 @@ export const productsTableData = [
     ProductCategory: productsData[9].productCategory,
     Price: productsData[9].productPrice,
     ProductStock: productsData[9].productStock,
+    ItemsSold:productsData[9].itemsSold,
+
   },
   {
     ProductImage: productsData[10].productImages[0].productImages[0],
@@ -4651,6 +4683,8 @@ export const productsTableData = [
     ProductCategory: productsData[10].productCategory,
     Price: productsData[10].productPrice,
     ProductStock: productsData[10].productStock,
+    ItemsSold:productsData[10].itemsSold,
+
   },
   {
     ProductImage: productsData[11].productImages[0].productImages[0],
@@ -4658,6 +4692,8 @@ export const productsTableData = [
     ProductCategory: productsData[11].productCategory,
     Price: productsData[11].productPrice,
     ProductStock: productsData[11].productStock,
+    ItemsSold:productsData[11].itemsSold,
+
   },
   {
     ProductImage: productsData[12].productImages[0].productImages[0],
@@ -4665,6 +4701,8 @@ export const productsTableData = [
     ProductCategory: productsData[12].productCategory,
     Price: productsData[12].productPrice,
     ProductStock: productsData[12].productStock,
+    ItemsSold:productsData[12].itemsSold,
+
   },
   {
     ProductImage: productsData[13].productImages[0].productImages[0],
@@ -4672,6 +4710,8 @@ export const productsTableData = [
     ProductCategory: productsData[13].productCategory,
     Price: productsData[13].productPrice,
     ProductStock: productsData[13].productStock,
+    ItemsSold:productsData[13].itemsSold,
+
   },
   {
     ProductImage: productsData[14].productImages[0].productImages[0],
@@ -4679,6 +4719,8 @@ export const productsTableData = [
     ProductCategory: productsData[14].productCategory,
     Price: productsData[14].productPrice,
     ProductStock: productsData[14].productStock,
+    ItemsSold:productsData[14].itemsSold,
+
   }
 ]
 
