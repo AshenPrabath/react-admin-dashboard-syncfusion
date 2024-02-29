@@ -24,6 +24,14 @@ import product8 from './product8.jpg';
 import product9 from './product9.jpg';
 import product10 from './product10.jpg';
 
+import Product1_1 from '../data/Products/Product1/Product1 (1).jpg';
+import Product1_2 from '../data/Products/Product1/Product1 (2).jpg';
+import Product1_3 from '../data/Products/Product1/Product1 (3).jpg';
+import Product1_4 from '../data/Products/Product1/Product1 (4).jpg';
+import Product1D_1 from '../data/Products/Product1/Product1D (1).jpg';
+import Product1D_2 from '../data/Products/Product1/Product1D (2).jpg';
+
+
 export const gridOrderImage = (props) => (
   <div>
     <img
@@ -2900,80 +2908,94 @@ export const productsInfo = [
 
 export const productImages = [
   [
-    product1,
-    product2,
-    product3,
-    product5
+    {
+      productImages:[Product1_1,Product1_2,Product1_3,Product1_4],
+      productDetailImages:[Product1D_1,Product1D_2]
+    }
   ],
   [
-    product4,
-    product5,
-    product6
+    {
+      productImages:[product5,product7,product1,],
+      productDetailImages:[product6,product2,product3,product5]
+    }
   ],
   [
-    product7,
-    product8,
-    product9
+    {
+      productImages:[product3,product3,product3,product5],
+      productDetailImages:[product1,product2,product3,product5]
+    }
   ],
   [
-    product7,
-    product8,
-    product9
+    {
+      productImages:[product2],
+      productDetailImages:[product1,product2,product3,product5]
+    }
   ],
   [
-    product7,
-    product8,
-    product9
+    {
+      productImages:[product8,product2,product3,product5],
+      productDetailImages:[product1,product2,product3,product5]
+    }
   ],
   [
-    product1,
-    product2,
-    product3
+    {
+      productImages:[product1,product2,product3,product5],
+      productDetailImages:[product1,product2,product3,product5]
+    }
   ],
   [
-    product4,
-    product5,
-    product6
+    {
+      productImages:[product1,product2,product3,product5],
+      productDetailImages:[product1,product2,product3,product5]
+    }
   ],
   [
-    product7,
-    product8,
-    product9
+    {
+      productImages:[product1,product2,product3,product5],
+      productDetailImages:[product1,product2,product3,product5]
+    }
   ],
   [
-    product7,
-    product8,
-    product9
+    {
+      productImages:[product1,product2,product3,product5],
+      productDetailImages:[product1,product2,product3,product5]
+    }
   ],
   [
-    product7,
-    product8,
-    product9
+    {
+      productImages:[product1,product2,product3,product5],
+      productDetailImages:[product1,product2,product3,product5]
+    }
   ],
   [
-    product1,
-    product2,
-    product3
+    {
+      productImages:[product1,product2,product3,product5],
+      productDetailImages:[product1,product2,product3,product5]
+    }
   ],
   [
-    product4,
-    product5,
-    product6
+    {
+      productImages:[product1,product2,product3,product5],
+      productDetailImages:[product1,product2,product3,product5]
+    }
   ],
   [
-    product7,
-    product8,
-    product9
+    {
+      productImages:[product1,product2,product3,product5],
+      productDetailImages:[product1,product2,product3,product5]
+    }
   ],
   [
-    product7,
-    product8,
-    product9
+    {
+      productImages:[product1,product2,product3,product5],
+      productDetailImages:[product1,product2,product3,product5]
+    }
   ],
   [
-    product7,
-    product8,
-    product9
+    {
+      productImages:[product1,product2,product3,product5],
+      productDetailImages:[product1,product2,product3,product5]
+    }
   ],
 ];
 

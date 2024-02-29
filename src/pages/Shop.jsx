@@ -11,7 +11,7 @@ const Shop = () => {
                 {productsData.map((item,index)=>(    
                     <ProductCard 
                     key={index} 
-                    image={item.productImages[0]} 
+                    image={item.productImages[0].productImages[0]} 
                     title={item.productName} 
                     category={item.productCategory} 
                     price={item.productPrice} 

@@ -7,7 +7,6 @@ import { DropDownListComponent } from '@syncfusion/ej2-react-dropdowns';
 import { useStateContext } from '../context/ContextProvider';
 import { TabComponent, TabItemDirective, TabItemsDirective } from '@syncfusion/ej2-react-navigations';
 
-
 const ProductDetails = () => {
     const { currentColor } = useStateContext();
     const [selectedColor, setSelectedColor] = useState(null);
@@ -47,7 +46,7 @@ const ProductDetails = () => {
             <div className='m-6 mt-24 md:m-8 p-10 bg-white dark:bg-secondary-dark-bg rounded-3xl dark:text-white '>
                 <Header category="Page" title="Product Details" />
                 <div className='flex rounded-3xl'>
-                    <ImageSlider images={product.productImages} />
+                    <ImageSlider images={product.productImages[0].productImages} />
                     <div className='w-1/2 pr-6 pl-8 '>
                         <div className='flex items-center gap-2'>
                             {product.productStock === 0 ? (
@@ -145,8 +144,8 @@ const ProductDetails = () => {
                             <TabItemDirective
                                 header={headerText[0]}
                                 content={() => {
-                                    return <div className='text-xl  p-10'>
-                                        <div className="max-h-[1900px] overflow-y-auto border dark:text-white border-gray-300 p-9" dangerouslySetInnerHTML={{ __html: product.productInfo }} />
+                                    return <div className='text-xl  pt-10 '>
+                                        <div className="max-h-[1900px] overflow-y-auto border rounded-lg dark:text-white border-gray-300 p-5" dangerouslySetInnerHTML={{ __html: product.productInfo }} />
                                     </div>;
                                 }} />
                             <TabItemDirective header={headerText[1]}
@@ -215,6 +214,24 @@ const ProductDetails = () => {
                         </TabItemsDirective>
                     </TabComponent>
                 </div>
+            </div>
+            <div className='m-2 md:m-8 mt-24 p-10 bg-white dark:bg-secondary-dark-bg rounded-3xl dark:text-white'>
+                <div className=''>
+                    {product.productImages[0].productDetailImages.map((image,index)=>(
+                        <div key={index}>
+                            <img
+                                src={image}
+                                className='w-full h-full rounded-lg cursor-pointer'
+                                onClick={() => {
+                                    handleImageClick(product.productImages[0].productDetailImages);
+                                    setSelectedImageIndex(index);
+                                }}
+                            />
+                        </div>
+                    ))}
+
+                </div>
+                
             </div>
         </div>
     );
