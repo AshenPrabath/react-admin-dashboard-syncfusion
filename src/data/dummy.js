@@ -3083,92 +3083,63 @@ export const productImages = [
 
 export const reviewImages = [
   [
-    product1,
-    product2,
-    product3,
-    product5,
-    product5,
+    Product1_1,Product1_2,Product1_3,Product1_4
   ],
   [
-    product4,
-    product5,
-    product5,
-    product5,
-    product6,
+    [Product2_1,Product2_2,Product2_3,Product2_4,Product2_5],
   ],
   [
-    product7,
-    product8,
-    product9
+    
   ],
   [
-    product7,
-    product8,
-    product9
+    Product4_1,Product4_2,Product4_3,Product4_4
   ],
   [
 
   ],
   [
-    product1,
-    product2,
-    product3
+    Product5_1,Product5_2,Product5_3
   ],
   [
-    product4,
-    product5,
-    product6
+    Product8_1,Product8_2,Product8_3,Product8_4,Product8_5,Product8_6
   ],
   [
-    product7,
-    product8,
-    product9
+    Product9_1,Product9_2,Product9_3
   ],
   [
-    product7,
-    product8,
-    product9
+    Product6_1,Product6_2,Product6_3,Product6_4
   ],
   [
-    product7,
+    Product3_5,
 
   ],
   [
-    product1,
-    product2,
-    product3
+    Product8_1,Product8_2,Product8_3,Product8_4
   ],
   [
-    product4,
-    product5,
-    product6
+    Product6_1,Product6_2,Product6_3,Product6_4
   ],
   [
-    product7,
-    product8,
-    product9
+    Product3_3,Product3_4,Product2_5
   ],
   [
-    product7,
-    product8,
-    product9
+    Product6_2,Product6_3
   ],
   [
-    product7,
-    product9
+    
   ],
 ];
 export const productReviews = [
   [
     {
       username: 'Sophie Thompson',
-      images: [product6, product8, product3],
+      images: [Product1_1,Product1_2,Product1_3,Product1_4],
       rating: 5,
       review: 'Absolutely love these shoes! They provide excellent support and cushioning, making them perfect for long runs. Plus, they look stylish and have held up well over time. Highly recommend!'
     },
     {
       username: 'Benjamin Wilson',
-      images: [product9, product7, product2],
+      images: [Product3_3,Product3_4,Product2_5],
       rating: 4,
       review: 'Great shoes for everyday wear. They offer a comfortable fit and adequate support for various activities. The design is sleek, and I\'ve received compliments on them. Overall, satisfied with my purchase.'
     },
@@ -3180,13 +3151,13 @@ export const productReviews = [
     },
     {
       username: 'William Brown',
-      images: [product8, product3, product6, product1, product9],
+      images: [Product8_1,Product8_2,Product8_3,Product8_4],
       rating: 5,
       review: 'Excellent performance! These shoes offer exceptional comfort and support for my workouts. The cushioning is just right, and they look stylish too. Highly recommend!'
     },
     {
       username: 'Isabella Garcia',
-      images: [product7, product9, product1],
+      images: [Product1_1,Product1_2,Product1_3,Product1_4],
       rating: 4,
       review: 'Comfortable fit, stylish design. These shoes provide a comfortable fit and look great with any outfit. The support is decent, making them suitable for various activities. Overall, satisfied.'
     },
@@ -3198,13 +3169,13 @@ export const productReviews = [
     },
     {
       username: 'Sophia Martinez',
-      images: [product4, product7],
+      images: [Product8_1,Product8_2,Product8_3,Product8_4,Product8_5,Product8_6],
       rating: 4,
       review: 'Good overall performance. These shoes offer decent comfort and support for my workouts. The design is modern, and they\'ve held up well over time. Overall, satisfied.'
     },
     {
       username: 'Alexander Rodriguez',
-      images: [product3, product8, product1, product5],
+      images: [Product3_5],
       rating: 5,
       review: 'Exceptional quality! These shoes offer unparalleled comfort and support for long walks and runs. The build quality is excellent, and they look stylish too. Highly recommend!'
     },
@@ -3216,7 +3187,7 @@ export const productReviews = [
     },
     {
       username: 'Daniel Wilson',
-      images: [product1, product7],
+      images: [Product3_3,Product3_4,Product2_5],
       rating: 5,
       review: 'Amazing shoes! They offer exceptional comfort and support for my runs. The cushioning is just right, and they look stylish too. Highly recommend!'
     }
@@ -3224,19 +3195,19 @@ export const productReviews = [
   [
     {
       username: 'Olivia Taylor',
-      images: [product8, product9, product3, product1, product5],
+      images: [Product6_1,Product6_2,Product6_3,Product6_4],
       rating: 5,
       review: 'Fantastic shoes, highly recommended! They provide excellent support and cushioning for long runs. Plus, they look sleek and have held up well over time. Couldn\'t be happier with my purchase!'
     },
     {
       username: 'Ethan Martinez',
-      images: [product4, product7, product1, product2],
+      images: [Product8_1,Product8_2,Product8_3,Product8_4],
       rating: 4,
       review: 'Good value for money. These shoes offer decent comfort and support for the price. The design is modern, and they\'ve held up well with regular use. Overall, satisfied.'
     },
     {
       username: 'Sophia Rodriguez',
-      images: [product5, product8, product9, product1],
+      images: [],
       rating: 4,
       review: 'Comfortable fit, stylish design. These shoes provide a comfortable fit and look great with any outfit. The support is decent, making them suitable for various activities. Overall, satisfied.'
     },
@@ -3248,13 +3219,13 @@ export const productReviews = [
     },
     {
       username: 'Emma Smith',
-      images: [product2],
+      images: [],
       rating: 4,
       review: 'Good overall performance. These shoes offer decent comfort and support for my workouts. The design is modern, and they\'ve held up well over time. Overall, satisfied.'
     },
     {
       username: 'Daniel Brown',
-      images: [product3, product8, product1, product4],
+      images: [Product8_1,Product8_2,Product8_3,Product8_4,Product8_5,Product8_6],
       rating: 5,
       review: 'Exceptional quality! These shoes offer unparalleled comfort and support for long walks and runs. The build quality is excellent, and they look stylish too. Highly recommend!'
     },
@@ -3266,19 +3237,19 @@ export const productReviews = [
     },
     {
       username: 'Sophie Taylor',
-      images: [product1, product7, product5, product3],
+      images: [],
       rating: 5,
       review: 'Amazing shoes! They offer exceptional comfort and support for my runs. The cushioning is just right, and they look stylish too. Highly recommend!'
     },
     {
       username: 'Benjamin Martinez',
-      images: [product8, product9],
+      images: [],
       rating: 5,
       review: 'Fantastic shoes, highly recommended! They provide excellent support and cushioning for long runs. Plus, they look sleek and have held up well over time. Couldn\'t be happier with my purchase!'
     },
     {
       username: 'Emma Garcia',
-      images: [product4, product7, product1],
+      images: [Product6_3],
       rating: 4,
       review: 'Good value for money. These shoes offer decent comfort and support for the price. The design is modern, and they\'ve held up well with regular use. Overall, satisfied.'
     }
