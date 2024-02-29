@@ -7,7 +7,7 @@ import { FaCcAmex } from "react-icons/fa";
 import { BiColorFill, BiLogoVenmo } from 'react-icons/bi';
 import { IoMdContacts } from 'react-icons/io';
 import { RiContactsLine } from 'react-icons/ri';
-import { MdOutlineSupervisorAccount } from 'react-icons/md';
+import { MdOutlineSupervisorAccount, MdOutlineEdit, MdOutlineDeleteOutline, MdOutlineDelete  } from 'react-icons/md';
 import { HiOutlineRefresh } from 'react-icons/hi';
 import { GrLocation } from 'react-icons/gr';
 import avatar from './avatar.jpg';
@@ -110,18 +110,39 @@ import Product10D_6 from '../data/Products/Product10/Product10D (6).jpg';
 export const gridOrderImage = (props) => (
   <div>
     <img
-      className="rounded-xl h-20 md:ml-3 object-contain"
+      className="rounded-xl h-14 w-14 md:ml-3 object-contain"
+      src={props.ProductImage}
+      alt="order-item"
+    />
+  </div>
+);
+export const gridProductImage = (props) => (
+  <div>
+    <img
+      className="rounded-xl h-14 w-14 md:ml-3 object-contain"
       src={props.ProductImage}
       alt="order-item"
     />
   </div>
 );
 
+export const gridProductActions = (rowData, onEdit) => (
+  <div>
+    <button onClick={() => onEdit(rowData)}>
+      <MdOutlineEdit />
+    </button>
+    <button onClick={()=>{}}>
+    <MdOutlineDelete/>
+    </button>
+  </div>
+);
+
+
 export const gridOrderStatus = (props) => (
   <button
     type="button"
     style={{ background: props.StatusBg }}
-    className="text-white py-1 px-2 capitalize rounded-2xl text-md"
+    className="text-white py-0.5 px-3 capitalize rounded-2xl text-md"
   >
     {props.Status}
   </button>
@@ -995,6 +1016,50 @@ export const userProfileData = [
     iconBg: '#FEC90F',
   },
 ];
+export const productsGrid =[
+  {
+    headerText: 'Image',
+    template: gridProductImage,
+    textAlign: 'Center',
+    width: '120',
+  },
+  {
+    field: 'ProductName',
+    headerText: 'Product Name',
+    width: '150',
+    textAlign: 'Center',
+  },
+  {
+    field: 'ProductCategory',
+    headerText: 'Category',
+    width: '150',
+    textAlign: 'Center',
+  },
+  {
+    field: 'Price',
+    headerText: 'Price',
+    format: 'C2',
+    width: '150',
+    textAlign: 'Center',
+    editType: 'numericedit',
+  },
+  {
+    field: 'ProductStock',
+    headerText: 'Stock',
+    width: '150',
+    textAlign: 'Center',
+    editType: 'numericedit',
+  },
+  {
+    field: 'Actions',
+    template: gridProductActions,
+    headerText: 'Actions',
+    format: 'C2',
+    width: '150',
+    textAlign: 'Center',
+    editType: 'numericedit',
+  }
+]
 
 export const ordersGrid = [
   {
@@ -4394,71 +4459,74 @@ export const productsData = [
 
 export const recentOrdersData = [
   {
-    OrderID: 10248,
-    CustomerName: 'Vinet',
-    TotalAmount: 32.38,
-    OrderItems: 'Fresh Tomato',
+    OrderID: 944895,
+    CustomerName: 'Lulia albu',
+    TotalAmount: 17.99,
+    OrderItems: 'Merrell Jungle Moc',
     Location: 'USA',
-    Status: 'pending',
-    StatusBg: '#FB9678',
-    ProductImage:
-      product6,
-  },
-  {
-    OrderID: 345653,
-    CustomerName: 'Carson Darrin',
-    TotalAmount: 56.34,
-    OrderItems: 'Butter Scotch',
-    Location: 'Delhi',
-    Status: 'complete',
-    StatusBg: '#8BE78B',
-    ProductImage:
-      product5,
-  },
-  {
-    OrderID: 345653,
-    CustomerName: 'Carson Darrin',
-    TotalAmount: 56.34,
-    OrderItems: 'Butter Scotch',
-    Location: 'Delhi',
-    Status: 'complete',
-    StatusBg: '#8BE78B',
-    ProductImage:
-      product5,
-  },
-  {
-    OrderID: 10248,
-    CustomerName: 'Vinet',
-
-    TotalAmount: 32.38,
-    OrderItems: 'Fresh Tomato',
-    Location: 'USA',
-    Status: 'pending',
-    StatusBg: '#FB9678',
-    ProductImage:
-      product6,
-  },
-  {
-    OrderID: 345653,
-    CustomerName: 'Carson Darrin',
-    TotalAmount: 56.34,
-    OrderItems: 'Butter Scotch',
-    Location: 'Delhi',
-    Status: 'complete',
-    StatusBg: '#8BE78B',
-    ProductImage:
-      product5,
-  },
-  {
-    OrderID: 390457,
-    CustomerName: 'Fran Perez',
-    TotalAmount: 93.31,
-    OrderItems: 'Candy Gucci',
-    Location: 'New York',
     Status: 'active',
     StatusBg: '#03C9D7',
-    ProductImage:
-      product7,
+    ProductImage: Product6_1,
+  },
+  {
+    OrderID: 874534,
+    CustomerName: 'Danai',
+    TotalAmount: 122.99,
+    OrderItems: 'Nike Air Max 90',
+    Location: 'USA',
+    Status: 'canceled',
+    StatusBg: '#FF5C8E',
+    ProductImage: Product7_1,
+  },
+  {
+    OrderID: 38489,
+    CustomerName: 'Miron',
+    TotalAmount: 87.99,
+    OrderItems: 'Adidas Stan Smith',
+    Location: 'USA',
+    Status: 'active',
+    StatusBg: '#03C9D7',
+    ProductImage: Product8_1,
+  },
+  {
+    OrderID: 24546,
+    CustomerName: 'Frank',
+    TotalAmount: 84.99,
+    OrderItems: 'Converse Chuck 70',
+    Location: 'Delhi',
+    Status: 'complete',
+    StatusBg: '#8BE78B',
+    ProductImage: Product9_1,
+  },
+  {
+    OrderID: 874534,
+    CustomerName: 'Danai',
+    TotalAmount: 122.99,
+    OrderItems: 'New Balance 574',
+    Location: 'USA',
+    Status: 'canceled',
+    StatusBg: '#FF5C8E',
+    ProductImage: Product10_1,
+  },
+  {
+    OrderID: 10248,
+    CustomerName: 'Vinet',
+    TotalAmount: 32.38,
+    OrderItems: 'Vans Authentic',
+    Location: 'USA',
+    Status: 'pending',
+    StatusBg: '#FB9678',
+    ProductImage: Product1_1,
+  },
+  {
+    OrderID: 345653,
+    CustomerName: 'Carson Darrin',
+    TotalAmount: 56.34,
+    OrderItems: 'Nike React Element 55',
+    Location: 'Delhi',
+    Status: 'complete',
+    StatusBg: '#8BE78B',
+    ProductImage: Product2_1,
   },
 
 ];
@@ -4505,6 +4573,114 @@ export const productsPerformanceData = [
     ProductImage: product4,
   }
 ];
+
+export const productsTableData = [
+  {
+    ProductImage: productsData[0].productImages[0].productImages[0],
+    ProductName:productsData[0].productName,
+    ProductCategory:productsData[0].productCategory,
+    Price:productsData[0].productPrice,
+    ProductStock:productsData[0].productStock,
+  },
+  {
+    ProductImage: productsData[1].productImages[0].productImages[0],
+    ProductName: productsData[1].productName,
+    ProductCategory: productsData[1].productCategory,
+    Price: productsData[1].productPrice,
+    ProductStock: productsData[1].productStock,
+  },
+  {
+    ProductImage: productsData[2].productImages[0].productImages[0],
+    ProductName: productsData[2].productName,
+    ProductCategory: productsData[2].productCategory,
+    Price: productsData[2].productPrice,
+    ProductStock: productsData[2].productStock,
+  },
+  {
+    ProductImage: productsData[3].productImages[0].productImages[0],
+    ProductName: productsData[3].productName,
+    ProductCategory: productsData[3].productCategory,
+    Price: productsData[3].productPrice,
+    ProductStock: productsData[3].productStock,
+  },
+  {
+    ProductImage: productsData[4].productImages[0].productImages[0],
+    ProductName: productsData[4].productName,
+    ProductCategory: productsData[4].productCategory,
+    Price: productsData[4].productPrice,
+    ProductStock: productsData[4].productStock,
+  },
+  {
+    ProductImage: productsData[5].productImages[0].productImages[0],
+    ProductName: productsData[5].productName,
+    ProductCategory: productsData[5].productCategory,
+    Price: productsData[5].productPrice,
+    ProductStock: productsData[5].productStock,
+  },
+  {
+    ProductImage: productsData[6].productImages[0].productImages[0],
+    ProductName: productsData[6].productName,
+    ProductCategory: productsData[6].productCategory,
+    Price: productsData[6].productPrice,
+    ProductStock: productsData[6].productStock,
+  },
+  {
+    ProductImage: productsData[7].productImages[0].productImages[0],
+    ProductName: productsData[7].productName,
+    ProductCategory: productsData[7].productCategory,
+    Price: productsData[7].productPrice,
+    ProductStock: productsData[7].productStock,
+  },
+  {
+    ProductImage: productsData[8].productImages[0].productImages[0],
+    ProductName: productsData[8].productName,
+    ProductCategory: productsData[8].productCategory,
+    Price: productsData[8].productPrice,
+    ProductStock: productsData[8].productStock,
+  },
+  {
+    ProductImage: productsData[9].productImages[0].productImages[0],
+    ProductName: productsData[9].productName,
+    ProductCategory: productsData[9].productCategory,
+    Price: productsData[9].productPrice,
+    ProductStock: productsData[9].productStock,
+  },
+  {
+    ProductImage: productsData[10].productImages[0].productImages[0],
+    ProductName: productsData[10].productName,
+    ProductCategory: productsData[10].productCategory,
+    Price: productsData[10].productPrice,
+    ProductStock: productsData[10].productStock,
+  },
+  {
+    ProductImage: productsData[11].productImages[0].productImages[0],
+    ProductName: productsData[11].productName,
+    ProductCategory: productsData[11].productCategory,
+    Price: productsData[11].productPrice,
+    ProductStock: productsData[11].productStock,
+  },
+  {
+    ProductImage: productsData[12].productImages[0].productImages[0],
+    ProductName: productsData[12].productName,
+    ProductCategory: productsData[12].productCategory,
+    Price: productsData[12].productPrice,
+    ProductStock: productsData[12].productStock,
+  },
+  {
+    ProductImage: productsData[13].productImages[0].productImages[0],
+    ProductName: productsData[13].productName,
+    ProductCategory: productsData[13].productCategory,
+    Price: productsData[13].productPrice,
+    ProductStock: productsData[13].productStock,
+  },
+  {
+    ProductImage: productsData[14].productImages[0].productImages[0],
+    ProductName: productsData[14].productName,
+    ProductCategory: productsData[14].productCategory,
+    Price: productsData[14].productPrice,
+    ProductStock: productsData[14].productStock,
+  }
+]
 
 export const ordersData = [
   {

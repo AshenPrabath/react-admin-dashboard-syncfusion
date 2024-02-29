@@ -15,6 +15,7 @@ export { default as ChartsHeader } from './ChartsHeader';
 export { default as Header } from './Header';
 export { default as Doughnut } from '../components/Charts/Doughnut';
 export { default as OrdersTable } from '../components/Tables/OrdersTable';
+export { default as ProductsTable } from '../components/Tables/ProductsTable';
 export { default as ProductCard } from '../components/ProductCard';
 export { default as RatingStars } from '../components/RatingStars';
 export { default as ImageSlider } from '../components/ImageSlider';
