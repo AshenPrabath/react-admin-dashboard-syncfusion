@@ -31,6 +31,88 @@ import Product1_4 from '../data/Products/Product1/Product1 (4).jpg';
 import Product1D_1 from '../data/Products/Product1/Product1D (1).jpg';
 import Product1D_2 from '../data/Products/Product1/Product1D (2).jpg';
 
+import Product2_1 from '../data/Products/Product2/Product2 (1).jpg';
+import Product2_2 from '../data/Products/Product2/Product2 (2).jpg';
+import Product2_3 from '../data/Products/Product2/Product2 (3).jpg';
+import Product2_4 from '../data/Products/Product2/Product2 (4).jpg';
+import Product2_5 from '../data/Products/Product2/Product2 (5).jpg';
+import Product2D_1 from '../data/Products/Product2/Product2D (1).jpg';
+import Product2D_2 from '../data/Products/Product2/Product2D (2).jpg';
+import Product2D_3 from '../data/Products/Product2/Product2D (3).jpg';
+import Product2D_4 from '../data/Products/Product2/Product2D (4).jpg';
+
+import Product3_1 from '../data/Products/Product3/Product3 (1).jpg';
+import Product3_2 from '../data/Products/Product3/Product3 (2).jpg';
+import Product3_3 from '../data/Products/Product3/Product3 (3).jpg';
+import Product3_4 from '../data/Products/Product3/Product3 (4).jpg';
+import Product3_5 from '../data/Products/Product3/Product3 (5).jpg';
+import Product3D_1 from '../data/Products/Product3/Product3D (1).jpg';
+
+import Product4_1 from '../data/Products/Product4/Product4 (1).jpg';
+import Product4_2 from '../data/Products/Product4/Product4 (2).jpg';
+import Product4_3 from '../data/Products/Product4/Product4 (3).jpg';
+import Product4_4 from '../data/Products/Product4/Product4 (4).jpg';
+import Product4D_1 from '../data/Products/Product4/product4D (1).jpg';
+import Product4D_2 from '../data/Products/Product4/product4D (2).jpg';
+import Product4D_3 from '../data/Products/Product4/product4D (3).jpg';
+import Product4D_4 from '../data/Products/Product4/product4D (4).jpg';
+
+import Product5_1 from '../data/Products/Product5/Product5 (1).jpg';
+import Product5_2 from '../data/Products/Product5/Product5 (2).jpg';
+import Product5_3 from '../data/Products/Product5/Product5 (3).jpg';
+import Product5D_1 from '../data/Products/Product5/Product5D (1).jpg';
+import Product5D_2 from '../data/Products/Product5/Product5D (2).jpg';
+
+import Product6_1 from '../data/Products/Product6/Product6 (1).jpg';
+import Product6_2 from '../data/Products/Product6/Product6 (2).jpg';
+import Product6_3 from '../data/Products/Product6/Product6 (3).jpg';
+import Product6_4 from '../data/Products/Product6/Product6 (4).jpg';
+import Product6D_1 from '../data/Products/Product6/Product6D (1).jpg';
+import Product6D_2 from '../data/Products/Product6/Product6D (2).jpg';
+import Product6D_3 from '../data/Products/Product6/Product6D (3).jpg';
+import Product6D_4 from '../data/Products/Product6/Product6D (4).jpg';
+
+import Product7_1 from '../data/Products/Product7/Product7 (1).jpg';
+import Product7_2 from '../data/Products/Product7/Product7 (2).jpg';
+import Product7_3 from '../data/Products/Product7/Product7 (3).jpg';
+import Product7_4 from '../data/Products/Product7/Product7 (4).jpg';
+import Product7D_1 from '../data/Products/Product7/Product7D (1).jpg';
+
+import Product8_1 from '../data/Products/Product8/Product8 (1).jpg';
+import Product8_2 from '../data/Products/Product8/Product8 (2).jpg';
+import Product8_3 from '../data/Products/Product8/Product8 (3).jpg';
+import Product8_4 from '../data/Products/Product8/Product8 (4).jpg';
+import Product8_5 from '../data/Products/Product8/Product8 (5).jpg';
+import Product8_6 from '../data/Products/Product8/Product8 (6).jpg';
+import Product8D_1 from '../data/Products/Product8/Product8D (1).jpg';
+import Product8D_2 from '../data/Products/Product8/Product8D (2).jpg';
+import Product8D_3 from '../data/Products/Product8/Product8D (3).jpg';
+import Product8D_4 from '../data/Products/Product8/Product8D (4).jpg';
+
+import Product9_1 from '../data/Products/Product9/Product9 (1).jpg';
+import Product9_2 from '../data/Products/Product9/Product9 (2).jpg';
+import Product9_3 from '../data/Products/Product9/Product9 (3).jpg';
+import Product9D_1 from '../data/Products/Product9/Product9D (1).jpg';
+
+import Product10_1 from '../data/Products/Product10/Product10 (1).jpg';
+import Product10_2 from '../data/Products/Product10/Product10 (2).jpg';
+import Product10_3 from '../data/Products/Product10/Product10 (3).jpg';
+import Product10_4 from '../data/Products/Product10/Product10 (4).jpg';
+import Product10D_1 from '../data/Products/Product10/Product10D (1).jpg';
+import Product10D_2 from '../data/Products/Product10/Product10D (2).jpg';
+import Product10D_3 from '../data/Products/Product10/Product10D (3).jpg';
+import Product10D_4 from '../data/Products/Product10/Product10D (4).jpg';
+import Product10D_5 from '../data/Products/Product10/Product10D (5).jpg';
+import Product10D_6 from '../data/Products/Product10/Product10D (6).jpg';
+
+
+
+
+
+
+
+
+
 
 export const gridOrderImage = (props) => (
   <div>
@@ -2915,86 +2997,86 @@ export const productImages = [
   ],
   [
     {
-      productImages:[product5,product7,product1,],
-      productDetailImages:[product6,product2,product3,product5]
+      productImages:[Product2_1,Product2_2,Product2_3,Product2_4,Product2_5],
+      productDetailImages:[Product2D_1,Product2D_2,Product2D_3,Product2D_4]
     }
   ],
   [
     {
-      productImages:[product3,product3,product3,product5],
-      productDetailImages:[product1,product2,product3,product5]
+      productImages:[Product3_1,Product3_2,Product3_3,Product3_4,Product2_5],
+      productDetailImages:[Product3D_1]
     }
   ],
   [
     {
-      productImages:[product2],
-      productDetailImages:[product1,product2,product3,product5]
+      productImages:[Product4_1,Product4_2,Product4_3,Product4_4],
+      productDetailImages:[Product4D_1,Product4D_2,Product4D_3,Product4D_4]
     }
   ],
   [
     {
-      productImages:[product8,product2,product3,product5],
-      productDetailImages:[product1,product2,product3,product5]
+      productImages:[Product5_1,Product5_2,Product5_3],
+      productDetailImages:[Product5D_1,Product5D_2]
     }
   ],
   [
     {
-      productImages:[product1,product2,product3,product5],
-      productDetailImages:[product1,product2,product3,product5]
+      productImages:[Product6_1,Product6_2,Product6_3,Product6_4],
+      productDetailImages:[Product6D_1,Product6D_2,Product6D_3,Product6D_4]
     }
   ],
   [
     {
-      productImages:[product1,product2,product3,product5],
-      productDetailImages:[product1,product2,product3,product5]
+      productImages:[Product7_1,Product7_2,Product7_3,Product7_4],
+      productDetailImages:[Product7D_1]
     }
   ],
   [
     {
-      productImages:[product1,product2,product3,product5],
-      productDetailImages:[product1,product2,product3,product5]
+      productImages:[Product8_1,Product8_2,Product8_3,Product8_4,Product8_5,Product8_6],
+      productDetailImages:[Product8D_1,Product8D_2,Product8D_3,Product8D_4]
     }
   ],
   [
     {
-      productImages:[product1,product2,product3,product5],
-      productDetailImages:[product1,product2,product3,product5]
+      productImages:[Product9_1,Product9_2,Product9_3],
+      productDetailImages:[Product9D_1]
     }
   ],
   [
     {
-      productImages:[product1,product2,product3,product5],
-      productDetailImages:[product1,product2,product3,product5]
+      productImages:[Product10_1,Product10_2,Product10_3,Product10_4],
+      productDetailImages:[Product10D_1,Product10D_2,Product10D_3,Product10D_4,Product10D_5,Product10D_6]
     }
   ],
   [
     {
-      productImages:[product1,product2,product3,product5],
-      productDetailImages:[product1,product2,product3,product5]
+      productImages:[Product6_1,Product6_2,Product6_3,Product6_4],
+      productDetailImages:[Product6D_1,Product6D_2,Product6D_3,Product6D_4]
     }
   ],
   [
     {
-      productImages:[product1,product2,product3,product5],
-      productDetailImages:[product1,product2,product3,product5]
+      productImages:[Product4_1,Product4_2,Product4_3,Product4_4,Product3_5],
+      productDetailImages:[Product4D_1,Product4D_2,Product4D_3,Product4D_4]
     }
   ],
   [
     {
-      productImages:[product1,product2,product3,product5],
-      productDetailImages:[product1,product2,product3,product5]
+      productImages:[Product10_1,Product10_2,Product10_3,Product10_4],
+      productDetailImages:[Product10D_1,Product10D_2,Product10D_3,Product10D_4,Product10D_5,Product10D_6]
     }
   ],
   [
     {
-      productImages:[product1,product2,product3,product5],
-      productDetailImages:[product1,product2,product3,product5]
+      productImages:[Product5_1,Product5_2,Product5_3],
+      productDetailImages:[Product5D_1,Product5D_2]
     }
   ],
   [
     {
-      productImages:[product1,product2,product3,product5],
-      productDetailImages:[product1,product2,product3,product5]
+      productImages:[Product2_1,Product2_2,Product2_3,Product2_4,Product2_5],
+      productDetailImages:[Product2D_1,Product2D_2,Product2D_3,Product2D_4]
     }
   ],
 ];

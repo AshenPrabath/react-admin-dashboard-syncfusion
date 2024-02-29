@@ -21,7 +21,7 @@ const ImageSlider = ({ images, overrideImageIndex=0 }) => {
     return (
         <div className=" w-5/12 ">
             <div className='w-full h-auto'>
-                <img className="rounded-3xl aspect-square w-full overflow-hidden object-cover" src={images[currentImageIndex]} alt={`Slide ${currentImageIndex + 1}`} />
+                <img className="rounded-3xl aspect-square w-full overflow-hidden object-contain" src={images[currentImageIndex]} alt={`Slide ${currentImageIndex + 1}`} />
             </div>
             <div className='flex items-center justify-between pt-4'>
                 <div className='text-3xl opacity-50'>
@@ -30,7 +30,7 @@ const ImageSlider = ({ images, overrideImageIndex=0 }) => {
                 <div className='flex space-x-2 hover:cursor-pointer'>
                     {images.map((image, index) => (
                         <img src={image} key={index}
-                            className={`h-12 w-12 rounded-lg  shadow-lg ${index === currentImageIndex ? 'opacity-100' : 'opacity-30'} `}
+                            className={`h-12 w-12 rounded-lg  shadow-lg object-cover ${index === currentImageIndex ? 'opacity-100' : 'opacity-30'} `}
                             onClick={() => handleDotClick(index)} />
                     ))}
                 </div>

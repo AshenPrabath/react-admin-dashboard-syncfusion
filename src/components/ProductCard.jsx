@@ -17,8 +17,8 @@ const ProductCard = ({ index, image, title, category, price, rating, productStar
     return (
         <div className='w-full bg-white dark:text-gray-200 dark:bg-secondary-dark-bg rounded-lg shadow-lg h-full'>
             <Link to={`/product/${index}`} className=' h-full justify-between '>
-                <div className='bg-red-200 justify-center' >
-                    <img src={image} className='rounded-t-lg aspect-square w-full object-cover' />
+                <div className='justify-center' >
+                    <img src={image} className='rounded-t-lg aspect-square w-full object-contain p-5' />
                 </div>
                 <div className='p-4 md:h-1/3 h-1/2 '>
                     <p className='text-base font-semibold'>{title}</p>
