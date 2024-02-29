@@ -194,7 +194,7 @@ const ProductDetails = () => {
                                                                 <img
                                                                     src={image}
                                                                     key={index}
-                                                                    className='w-20 h-20 rounded-lg  cursor-pointer'
+                                                                    className='w-20 h-20 rounded-lg  cursor-pointer object-contain'
                                                                     onClick={() => {
                                                                         handleImageClick(review.images);
                                                                         setSelectedImageIndex(index);

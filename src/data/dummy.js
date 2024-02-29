@@ -2,6 +2,7 @@ import React from 'react';
 import { AiOutlineCalendar, AiOutlineShoppingCart, AiOutlineAreaChart, AiOutlineBarChart, AiOutlineStock } from 'react-icons/ai';
 import { FiShoppingBag, FiEdit, FiPieChart, FiBarChart, FiCreditCard, FiStar, FiShoppingCart } from 'react-icons/fi';
 import { BsKanban, BsBoxSeam, BsCurrencyDollar, BsShield, BsChatLeft, BsPaypal, BsBank, BsCash, BsShop } from 'react-icons/bs';
+import { GiRunningShoe } from "react-icons/gi";
 import { FaCcAmex } from "react-icons/fa";
 import { BiColorFill, BiLogoVenmo } from 'react-icons/bi';
 import { IoMdContacts } from 'react-icons/io';
@@ -106,18 +107,10 @@ import Product10D_5 from '../data/Products/Product10/Product10D (5).jpg';
 import Product10D_6 from '../data/Products/Product10/Product10D (6).jpg';
 
 
-
-
-
-
-
-
-
-
 export const gridOrderImage = (props) => (
   <div>
     <img
-      className="rounded-xl h-20 md:ml-3"
+      className="rounded-xl h-20 md:ml-3 object-contain"
       src={props.ProductImage}
       alt="order-item"
     />
@@ -618,9 +611,13 @@ export const links = [
         icon: <AiOutlineShoppingCart />,
       },
       {
-        name: 'employees',
-        icon: <IoMdContacts />,
+        name: 'Products',
+        icon: <GiRunningShoe />,
       },
+      // {
+      //   name: 'employees',
+      //   icon: <IoMdContacts />,
+      // },
       {
         name: 'customers',
         icon: <RiContactsLine />,
@@ -629,6 +626,7 @@ export const links = [
         name: 'shop',
         icon: <BsShop />,
       },
+      
     ],
   },
   {
@@ -2991,155 +2989,155 @@ export const productsInfo = [
 export const productImages = [
   [
     {
-      productImages:[Product1_1,Product1_2,Product1_3,Product1_4],
-      productDetailImages:[Product1D_1,Product1D_2]
+      productImages: [Product1_1, Product1_2, Product1_3, Product1_4],
+      productDetailImages: [Product1D_1, Product1D_2]
     }
   ],
   [
     {
-      productImages:[Product2_1,Product2_2,Product2_3,Product2_4,Product2_5],
-      productDetailImages:[Product2D_1,Product2D_2,Product2D_3,Product2D_4]
+      productImages: [Product2_1, Product2_2, Product2_3, Product2_4, Product2_5],
+      productDetailImages: [Product2D_1, Product2D_2, Product2D_3, Product2D_4]
     }
   ],
   [
     {
-      productImages:[Product3_1,Product3_2,Product3_3,Product3_4,Product2_5],
-      productDetailImages:[Product3D_1]
+      productImages: [Product3_1, Product3_2, Product3_3, Product3_4, Product2_5],
+      productDetailImages: [Product3D_1]
     }
   ],
   [
     {
-      productImages:[Product4_1,Product4_2,Product4_3,Product4_4],
-      productDetailImages:[Product4D_1,Product4D_2,Product4D_3,Product4D_4]
+      productImages: [Product4_1, Product4_2, Product4_3, Product4_4],
+      productDetailImages: [Product4D_1, Product4D_2, Product4D_3, Product4D_4]
     }
   ],
   [
     {
-      productImages:[Product5_1,Product5_2,Product5_3],
-      productDetailImages:[Product5D_1,Product5D_2]
+      productImages: [Product5_1, Product5_2, Product5_3],
+      productDetailImages: [Product5D_1, Product5D_2]
     }
   ],
   [
     {
-      productImages:[Product6_1,Product6_2,Product6_3,Product6_4],
-      productDetailImages:[Product6D_1,Product6D_2,Product6D_3,Product6D_4]
+      productImages: [Product6_1, Product6_2, Product6_3, Product6_4],
+      productDetailImages: [Product6D_1, Product6D_2, Product6D_3, Product6D_4]
     }
   ],
   [
     {
-      productImages:[Product7_1,Product7_2,Product7_3,Product7_4],
-      productDetailImages:[Product7D_1]
+      productImages: [Product7_1, Product7_2, Product7_3, Product7_4],
+      productDetailImages: [Product7D_1]
     }
   ],
   [
     {
-      productImages:[Product8_1,Product8_2,Product8_3,Product8_4,Product8_5,Product8_6],
-      productDetailImages:[Product8D_1,Product8D_2,Product8D_3,Product8D_4]
+      productImages: [Product8_1, Product8_2, Product8_3, Product8_4, Product8_5, Product8_6],
+      productDetailImages: [Product8D_1, Product8D_2, Product8D_3, Product8D_4]
     }
   ],
   [
     {
-      productImages:[Product9_1,Product9_2,Product9_3],
-      productDetailImages:[Product9D_1]
+      productImages: [Product9_1, Product9_2, Product9_3],
+      productDetailImages: [Product9D_1]
     }
   ],
   [
     {
-      productImages:[Product10_1,Product10_2,Product10_3,Product10_4],
-      productDetailImages:[Product10D_1,Product10D_2,Product10D_3,Product10D_4,Product10D_5,Product10D_6]
+      productImages: [Product10_1, Product10_2, Product10_3, Product10_4],
+      productDetailImages: [Product10D_1, Product10D_2, Product10D_3, Product10D_4, Product10D_5, Product10D_6]
     }
   ],
   [
     {
-      productImages:[Product6_1,Product6_2,Product6_3,Product6_4],
-      productDetailImages:[Product6D_1,Product6D_2,Product6D_3,Product6D_4]
+      productImages: [Product6_1, Product6_2, Product6_3, Product6_4],
+      productDetailImages: [Product6D_1, Product6D_2, Product6D_3, Product6D_4]
     }
   ],
   [
     {
-      productImages:[Product4_1,Product4_2,Product4_3,Product4_4,Product3_5],
-      productDetailImages:[Product4D_1,Product4D_2,Product4D_3,Product4D_4]
+      productImages: [Product4_1, Product4_2, Product4_3, Product4_4, Product3_5],
+      productDetailImages: [Product4D_1, Product4D_2, Product4D_3, Product4D_4]
     }
   ],
   [
     {
-      productImages:[Product10_1,Product10_2,Product10_3,Product10_4],
-      productDetailImages:[Product10D_1,Product10D_2,Product10D_3,Product10D_4,Product10D_5,Product10D_6]
+      productImages: [Product10_1, Product10_2, Product10_3, Product10_4],
+      productDetailImages: [Product10D_1, Product10D_2, Product10D_3, Product10D_4, Product10D_5, Product10D_6]
     }
   ],
   [
     {
-      productImages:[Product5_1,Product5_2,Product5_3],
-      productDetailImages:[Product5D_1,Product5D_2]
+      productImages: [Product5_1, Product5_2, Product5_3],
+      productDetailImages: [Product5D_1, Product5D_2]
     }
   ],
   [
     {
-      productImages:[Product2_1,Product2_2,Product2_3,Product2_4,Product2_5],
-      productDetailImages:[Product2D_1,Product2D_2,Product2D_3,Product2D_4]
+      productImages: [Product2_1, Product2_2, Product2_3, Product2_4, Product2_5],
+      productDetailImages: [Product2D_1, Product2D_2, Product2D_3, Product2D_4]
     }
   ],
 ];
 
 export const reviewImages = [
   [
-    Product1_1,Product1_2,Product1_3,Product1_4
+    Product1_1, Product1_2, Product1_3, Product1_4
   ],
   [
-    [Product2_1,Product2_2,Product2_3,Product2_4,Product2_5],
-  ],
-  [
-    
-  ],
-  [
-    Product4_1,Product4_2,Product4_3,Product4_4
+    [Product2_1, Product2_2, Product2_3, Product2_4, Product2_5],
   ],
   [
 
   ],
   [
-    Product5_1,Product5_2,Product5_3
+    Product4_1, Product4_2, Product4_3, Product4_4
   ],
   [
-    Product8_1,Product8_2,Product8_3,Product8_4,Product8_5,Product8_6
+
   ],
   [
-    Product9_1,Product9_2,Product9_3
+    Product5_1, Product5_2, Product5_3
   ],
   [
-    Product6_1,Product6_2,Product6_3,Product6_4
+    Product8_1, Product8_2, Product8_3, Product8_4, Product8_5, Product8_6
+  ],
+  [
+    Product9_1, Product9_2, Product9_3
+  ],
+  [
+    Product6_1, Product6_2, Product6_3, Product6_4
   ],
   [
     Product3_5,
 
   ],
   [
-    Product8_1,Product8_2,Product8_3,Product8_4
+    Product8_1, Product8_2, Product8_3, Product8_4
   ],
   [
-    Product6_1,Product6_2,Product6_3,Product6_4
+    Product6_1, Product6_2, Product6_3, Product6_4
   ],
   [
-    Product3_3,Product3_4,Product2_5
+    Product3_3, Product3_4, Product2_5
   ],
   [
-    Product6_2,Product6_3
+    Product6_2, Product6_3
   ],
   [
-    
+
   ],
 ];
 export const productReviews = [
   [
     {
       username: 'Sophie Thompson',
-      images: [Product1_1,Product1_2,Product1_3,Product1_4],
+      images: [Product1_1, Product1_2, Product1_3, Product1_4],
       rating: 5,
       review: 'Absolutely love these shoes! They provide excellent support and cushioning, making them perfect for long runs. Plus, they look stylish and have held up well over time. Highly recommend!'
     },
     {
       username: 'Benjamin Wilson',
-      images: [Product3_3,Product3_4,Product2_5],
+      images: [Product3_3, Product3_4, Product2_5],
       rating: 4,
       review: 'Great shoes for everyday wear. They offer a comfortable fit and adequate support for various activities. The design is sleek, and I\'ve received compliments on them. Overall, satisfied with my purchase.'
     },
@@ -3151,13 +3149,13 @@ export const productReviews = [
     },
     {
       username: 'William Brown',
-      images: [Product8_1,Product8_2,Product8_3,Product8_4],
+      images: [Product8_1, Product8_2, Product8_3, Product8_4],
       rating: 5,
       review: 'Excellent performance! These shoes offer exceptional comfort and support for my workouts. The cushioning is just right, and they look stylish too. Highly recommend!'
     },
     {
       username: 'Isabella Garcia',
-      images: [Product1_1,Product1_2,Product1_3,Product1_4],
+      images: [Product1_1, Product1_2, Product1_3, Product1_4],
       rating: 4,
       review: 'Comfortable fit, stylish design. These shoes provide a comfortable fit and look great with any outfit. The support is decent, making them suitable for various activities. Overall, satisfied.'
     },
@@ -3169,7 +3167,7 @@ export const productReviews = [
     },
     {
       username: 'Sophia Martinez',
-      images: [Product8_1,Product8_2,Product8_3,Product8_4,Product8_5,Product8_6],
+      images: [Product8_1, Product8_2, Product8_3, Product8_4, Product8_5, Product8_6],
       rating: 4,
       review: 'Good overall performance. These shoes offer decent comfort and support for my workouts. The design is modern, and they\'ve held up well over time. Overall, satisfied.'
     },
@@ -3187,7 +3185,7 @@ export const productReviews = [
     },
     {
       username: 'Daniel Wilson',
-      images: [Product3_3,Product3_4,Product2_5],
+      images: [Product3_3, Product3_4, Product2_5],
       rating: 5,
       review: 'Amazing shoes! They offer exceptional comfort and support for my runs. The cushioning is just right, and they look stylish too. Highly recommend!'
     }
@@ -3195,13 +3193,13 @@ export const productReviews = [
   [
     {
       username: 'Olivia Taylor',
-      images: [Product6_1,Product6_2,Product6_3,Product6_4],
+      images: [Product6_1, Product6_2, Product6_3, Product6_4],
       rating: 5,
       review: 'Fantastic shoes, highly recommended! They provide excellent support and cushioning for long runs. Plus, they look sleek and have held up well over time. Couldn\'t be happier with my purchase!'
     },
     {
       username: 'Ethan Martinez',
-      images: [Product8_1,Product8_2,Product8_3,Product8_4],
+      images: [Product8_1, Product8_2, Product8_3, Product8_4],
       rating: 4,
       review: 'Good value for money. These shoes offer decent comfort and support for the price. The design is modern, and they\'ve held up well with regular use. Overall, satisfied.'
     },
@@ -3225,7 +3223,7 @@ export const productReviews = [
     },
     {
       username: 'Daniel Brown',
-      images: [Product8_1,Product8_2,Product8_3,Product8_4,Product8_5,Product8_6],
+      images: [Product8_1, Product8_2, Product8_3, Product8_4, Product8_5, Product8_6],
       rating: 5,
       review: 'Exceptional quality! These shoes offer unparalleled comfort and support for long walks and runs. The build quality is excellent, and they look stylish too. Highly recommend!'
     },
@@ -4512,723 +4510,404 @@ export const ordersData = [
   {
     OrderID: 10248,
     CustomerName: 'Vinet',
-
     TotalAmount: 32.38,
-    OrderItems: 'Fresh Tomato',
+    OrderItems: 'Adidas Ultra Boost',
     Location: 'USA',
     Status: 'pending',
     StatusBg: '#FB9678',
-    ProductImage:
-      product6,
+    ProductImage: Product1_1,
   },
   {
     OrderID: 345653,
     CustomerName: 'Carson Darrin',
     TotalAmount: 56.34,
-    OrderItems: 'Butter Scotch',
+    OrderItems: 'Nike Air Jordan',
     Location: 'Delhi',
     Status: 'complete',
     StatusBg: '#8BE78B',
-    ProductImage:
-      product5,
+    ProductImage: Product2_1,
   },
   {
     OrderID: 390457,
     CustomerName: 'Fran Perez',
     TotalAmount: 93.31,
-    OrderItems: 'Candy Gucci',
+    OrderItems: 'Puma RS-X',
     Location: 'New York',
     Status: 'active',
     StatusBg: '#03C9D7',
-    ProductImage:
-      product7,
+    ProductImage: Product3_1,
   },
   {
     OrderID: 893486,
     CustomerName: 'Anika Viseer',
     TotalAmount: 93.31,
-    OrderItems: 'Night Lamp',
+    OrderItems: 'Adidas Superstar',
     Location: 'Germany',
     Status: 'canceled',
     StatusBg: '#FF5C8E',
-    ProductImage:
-      product4,
+    ProductImage: Product4_1,
   },
   {
     OrderID: 748975,
     CustomerName: 'Miron Vitold',
     TotalAmount: 23.99,
-    OrderItems: 'Healthcare Erbology',
+    OrderItems: 'Converse Chuck Taylor',
     Location: 'Spain',
     Status: 'rejected',
     StatusBg: 'red',
-    ProductImage:
-      product1,
+    ProductImage: Product5_1,
   },
   {
     OrderID: 94757,
     CustomerName: 'Omar Darobe',
     TotalAmount: 95.99,
-    OrderItems: 'Makeup Lancome Rouge',
+    OrderItems: 'Vans Old Skool',
     Location: 'USA',
     Status: 'canceled',
     StatusBg: '#FF5C8E',
-    ProductImage:
-      product2,
+    ProductImage: Product6_1,
   },
   {
     OrderID: 944895,
     CustomerName: 'Lulia albu',
     TotalAmount: 17.99,
-    OrderItems: 'Skincare',
+    OrderItems: 'New Balance 990',
     Location: 'USA',
     Status: 'active',
     StatusBg: '#03C9D7',
-    ProductImage:
-      product3,
+    ProductImage: Product7_1,
   },
   {
     OrderID: 845954,
     CustomerName: 'Penjani',
     TotalAmount: 59.99,
-    OrderItems: 'Headphone',
+    OrderItems: 'Under Armour HOVR',
     Location: 'USA',
     Status: 'complete',
     StatusBg: '#8BE78B',
-    ProductImage:
-      product4,
-  },
-  {
-    OrderID: 845954,
-    CustomerName: 'Jie Yan',
-    TotalAmount: 87.99,
-    OrderItems: 'Shoes',
-    Location: 'USA',
-    Status: 'pending',
-    StatusBg: '#FB9678',
-    ProductImage:
-      'https://cdn.shopclues.com/images1/thumbnails/104158/320/320/148648730-104158193-1592481791.jpg',
+    ProductImage: Product8_1,
   },
   {
     OrderID: 874534,
     CustomerName: 'Danai',
     TotalAmount: 122.99,
-    OrderItems: 'Watch',
+    OrderItems: 'Reebok Nano',
     Location: 'USA',
     Status: 'canceled',
     StatusBg: '#FF5C8E',
-    ProductImage:
-      'https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/pop-womens-garmin-watches-1641919013.jpg?crop=0.502xw:1.00xh;0.250xw,0&resize=640:*',
+    ProductImage: Product9_1,
   },
   {
     OrderID: 38489,
     CustomerName: 'Miron',
     TotalAmount: 87.99,
-    OrderItems: 'Ice Cream',
+    OrderItems: 'Skechers Go Walk',
     Location: 'USA',
     Status: 'active',
     StatusBg: '#03C9D7',
-    ProductImage:
-      'https://images.immediate.co.uk/production/volatile/sites/30/2020/08/dairy-free-ice-cream-eae372d.jpg',
+    ProductImage: Product10_1,
   },
   {
     OrderID: 24546,
     CustomerName: 'Frank',
     TotalAmount: 84.99,
-    OrderItems: 'Pan Cake',
+    OrderItems: 'Adidas NMD',
     Location: 'Delhi',
     Status: 'complete',
     StatusBg: '#8BE78B',
-    ProductImage:
-      'https://images.unsplash.com/photo-1576618148400-f54bed99fcfd?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1480&q=80',
+    ProductImage: Product1_1,
   },
   {
     OrderID: 874534,
     CustomerName: 'Danai',
     TotalAmount: 122.99,
-    OrderItems: 'Watch',
+    OrderItems: 'Adidas Stan Smith',
     Location: 'USA',
     Status: 'canceled',
     StatusBg: '#FF5C8E',
-    ProductImage:
-      'https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/pop-womens-garmin-watches-1641919013.jpg?crop=0.502xw:1.00xh;0.250xw,0&resize=640:*',
+    ProductImage: Product2_1,
   },
   {
     OrderID: 10248,
     CustomerName: 'Vinet',
-
     TotalAmount: 32.38,
-    OrderItems: 'Fresh Tomato',
+    OrderItems: 'Nike Air Force 1',
     Location: 'USA',
     Status: 'pending',
     StatusBg: '#FB9678',
-    ProductImage:
-      product6,
+    ProductImage: Product3_1,
   },
   {
     OrderID: 345653,
     CustomerName: 'Carson Darrin',
     TotalAmount: 56.34,
-    OrderItems: 'Butter Scotch',
+    OrderItems: 'Jordan 1 Retro High',
     Location: 'Delhi',
     Status: 'complete',
     StatusBg: '#8BE78B',
-    ProductImage:
-      product5,
+    ProductImage: Product4_1,
   },
   {
     OrderID: 390457,
     CustomerName: 'Fran Perez',
     TotalAmount: 93.31,
-    OrderItems: 'Candy Gucci',
+    OrderItems: 'Yeezy Boost 350',
     Location: 'New York',
     Status: 'active',
     StatusBg: '#03C9D7',
-    ProductImage:
-      product7,
+    ProductImage: Product5_1,
   },
   {
     OrderID: 893486,
     CustomerName: 'Anika Viseer',
     TotalAmount: 93.31,
-    OrderItems: 'Night Lamp',
+    OrderItems: 'Converse All Star',
     Location: 'Germany',
     Status: 'canceled',
     StatusBg: '#FF5C8E',
-    ProductImage:
-      product4,
+    ProductImage: Product6_1,
   },
   {
     OrderID: 748975,
     CustomerName: 'Miron Vitold',
     TotalAmount: 23.99,
-    OrderItems: 'Healthcare Erbology',
+    OrderItems: 'Vans Authentic',
     Location: 'Spain',
     Status: 'rejected',
     StatusBg: 'red',
-    ProductImage:
-      product1,
+    ProductImage: Product7_1,
   },
   {
     OrderID: 94757,
     CustomerName: 'Omar Darobe',
     TotalAmount: 95.99,
-    OrderItems: 'Makeup Lancome Rouge',
+    OrderItems: 'New Balance 574',
     Location: 'USA',
     Status: 'canceled',
     StatusBg: '#FF5C8E',
-    ProductImage:
-      product2,
+    ProductImage: Product8_1,
   },
   {
     OrderID: 944895,
     CustomerName: 'Lulia albu',
     TotalAmount: 17.99,
-    OrderItems: 'Skincare',
+    OrderItems: 'Puma Suede',
     Location: 'USA',
     Status: 'active',
     StatusBg: '#03C9D7',
-    ProductImage:
-      product3,
+    ProductImage: Product9_1,
   },
   {
     OrderID: 845954,
     CustomerName: 'Penjani',
     TotalAmount: 59.99,
-    OrderItems: 'Headphone',
+    OrderItems: 'Reebok Classic Leather',
     Location: 'USA',
     Status: 'complete',
     StatusBg: '#8BE78B',
-    ProductImage:
-      product4,
-  },
-  {
-    OrderID: 845954,
-    CustomerName: 'Jie Yan',
-    TotalAmount: 87.99,
-    OrderItems: 'Shoes',
-    Location: 'USA',
-    Status: 'pending',
-    StatusBg: '#FB9678',
-    ProductImage:
-      'https://cdn.shopclues.com/images1/thumbnails/104158/320/320/148648730-104158193-1592481791.jpg',
-  },
-  {
-    OrderID: 874534,
-    CustomerName: 'Danai',
-    TotalAmount: 122.99,
-    OrderItems: 'Watch',
-    Location: 'USA',
-    Status: 'canceled',
-    StatusBg: '#FF5C8E',
-    ProductImage:
-      'https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/pop-womens-garmin-watches-1641919013.jpg?crop=0.502xw:1.00xh;0.250xw,0&resize=640:*',
+    ProductImage: Product10_1,
   },
   {
     OrderID: 38489,
     CustomerName: 'Miron',
     TotalAmount: 87.99,
-    OrderItems: 'Ice Cream',
+    OrderItems: 'Nike Air Force 1',
     Location: 'USA',
     Status: 'active',
     StatusBg: '#03C9D7',
-    ProductImage:
-      'https://images.immediate.co.uk/production/volatile/sites/30/2020/08/dairy-free-ice-cream-eae372d.jpg',
+    ProductImage: Product7_1,
   },
   {
     OrderID: 24546,
     CustomerName: 'Frank',
     TotalAmount: 84.99,
-    OrderItems: 'Pan Cake',
+    OrderItems: 'Converse Chuck Taylor',
     Location: 'Delhi',
     Status: 'complete',
     StatusBg: '#8BE78B',
-    ProductImage:
-      'https://images.unsplash.com/photo-1576618148400-f54bed99fcfd?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1480&q=80',
+    ProductImage: Product8_1,
   },
   {
     OrderID: 874534,
     CustomerName: 'Danai',
     TotalAmount: 122.99,
-    OrderItems: 'Watch',
+    OrderItems: 'Vans Old Skool',
     Location: 'USA',
     Status: 'canceled',
     StatusBg: '#FF5C8E',
-    ProductImage:
-      'https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/pop-womens-garmin-watches-1641919013.jpg?crop=0.502xw:1.00xh;0.250xw,0&resize=640:*',
+    ProductImage: Product9_1,
   },
   {
     OrderID: 10248,
     CustomerName: 'Vinet',
-
     TotalAmount: 32.38,
-    OrderItems: 'Fresh Tomato',
+    OrderItems: 'New Balance 990',
     Location: 'USA',
     Status: 'pending',
     StatusBg: '#FB9678',
-    ProductImage:
-      product6,
+    ProductImage: Product10_1,
   },
   {
     OrderID: 345653,
     CustomerName: 'Carson Darrin',
     TotalAmount: 56.34,
-    OrderItems: 'Butter Scotch',
+    OrderItems: 'Adidas Ultra Boost',
     Location: 'Delhi',
     Status: 'complete',
     StatusBg: '#8BE78B',
-    ProductImage:
-      product5,
+    ProductImage: Product1_1,
   },
   {
     OrderID: 390457,
     CustomerName: 'Fran Perez',
     TotalAmount: 93.31,
-    OrderItems: 'Candy Gucci',
+    OrderItems: 'Reebok Classic Leather',
     Location: 'New York',
     Status: 'active',
     StatusBg: '#03C9D7',
-    ProductImage:
-      product7,
+    ProductImage: Product2_1,
   },
   {
     OrderID: 893486,
     CustomerName: 'Anika Viseer',
     TotalAmount: 93.31,
-    OrderItems: 'Night Lamp',
+    OrderItems: 'Puma Suede Classic',
     Location: 'Germany',
     Status: 'canceled',
     StatusBg: '#FF5C8E',
-    ProductImage:
-      product4,
+    ProductImage: Product3_1,
   },
   {
     OrderID: 748975,
     CustomerName: 'Miron Vitold',
     TotalAmount: 23.99,
-    OrderItems: 'Healthcare Erbology',
+    OrderItems: 'Fila Disruptor II',
     Location: 'Spain',
     Status: 'rejected',
     StatusBg: 'red',
-    ProductImage:
-      product1,
+    ProductImage: Product4_1,
   },
   {
     OrderID: 94757,
     CustomerName: 'Omar Darobe',
     TotalAmount: 95.99,
-    OrderItems: 'Makeup Lancome Rouge',
+    OrderItems: 'Skechers D\'Lites',
     Location: 'USA',
     Status: 'canceled',
     StatusBg: '#FF5C8E',
-    ProductImage:
-      product2,
+    ProductImage: Product5_1,
   },
   {
     OrderID: 944895,
     CustomerName: 'Lulia albu',
     TotalAmount: 17.99,
-    OrderItems: 'Skincare',
+    OrderItems: 'Merrell Jungle Moc',
     Location: 'USA',
     Status: 'active',
     StatusBg: '#03C9D7',
-    ProductImage:
-      product3,
-  },
-  {
-    OrderID: 845954,
-    CustomerName: 'Penjani',
-    TotalAmount: 59.99,
-    OrderItems: 'Headphone',
-    Location: 'USA',
-    Status: 'complete',
-    StatusBg: '#8BE78B',
-    ProductImage:
-      product4,
-  },
-  {
-    OrderID: 845954,
-    CustomerName: 'Jie Yan',
-    TotalAmount: 87.99,
-    OrderItems: 'Shoes',
-    Location: 'USA',
-    Status: 'pending',
-    StatusBg: '#FB9678',
-    ProductImage:
-      'https://cdn.shopclues.com/images1/thumbnails/104158/320/320/148648730-104158193-1592481791.jpg',
+    ProductImage: Product6_1,
   },
   {
     OrderID: 874534,
     CustomerName: 'Danai',
     TotalAmount: 122.99,
-    OrderItems: 'Watch',
+    OrderItems: 'Nike Air Max 90',
     Location: 'USA',
     Status: 'canceled',
     StatusBg: '#FF5C8E',
-    ProductImage:
-      'https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/pop-womens-garmin-watches-1641919013.jpg?crop=0.502xw:1.00xh;0.250xw,0&resize=640:*',
+    ProductImage: Product7_1,
   },
   {
     OrderID: 38489,
     CustomerName: 'Miron',
     TotalAmount: 87.99,
-    OrderItems: 'Ice Cream',
+    OrderItems: 'Adidas Stan Smith',
     Location: 'USA',
     Status: 'active',
     StatusBg: '#03C9D7',
-    ProductImage:
-      'https://images.immediate.co.uk/production/volatile/sites/30/2020/08/dairy-free-ice-cream-eae372d.jpg',
+    ProductImage: Product8_1,
   },
   {
     OrderID: 24546,
     CustomerName: 'Frank',
     TotalAmount: 84.99,
-    OrderItems: 'Pan Cake',
+    OrderItems: 'Converse Chuck 70',
     Location: 'Delhi',
     Status: 'complete',
     StatusBg: '#8BE78B',
-    ProductImage:
-      'https://images.unsplash.com/photo-1576618148400-f54bed99fcfd?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1480&q=80',
+    ProductImage: Product9_1,
   },
   {
     OrderID: 874534,
     CustomerName: 'Danai',
     TotalAmount: 122.99,
-    OrderItems: 'Watch',
+    OrderItems: 'New Balance 574',
     Location: 'USA',
     Status: 'canceled',
     StatusBg: '#FF5C8E',
-    ProductImage:
-      'https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/pop-womens-garmin-watches-1641919013.jpg?crop=0.502xw:1.00xh;0.250xw,0&resize=640:*',
+    ProductImage: Product10_1,
   },
   {
     OrderID: 10248,
     CustomerName: 'Vinet',
-
     TotalAmount: 32.38,
-    OrderItems: 'Fresh Tomato',
+    OrderItems: 'Vans Authentic',
     Location: 'USA',
     Status: 'pending',
     StatusBg: '#FB9678',
-    ProductImage:
-      product6,
+    ProductImage: Product1_1,
   },
   {
     OrderID: 345653,
     CustomerName: 'Carson Darrin',
     TotalAmount: 56.34,
-    OrderItems: 'Butter Scotch',
+    OrderItems: 'Nike React Element 55',
     Location: 'Delhi',
     Status: 'complete',
     StatusBg: '#8BE78B',
-    ProductImage:
-      product5,
+    ProductImage: Product2_1,
   },
   {
     OrderID: 390457,
     CustomerName: 'Fran Perez',
     TotalAmount: 93.31,
-    OrderItems: 'Candy Gucci',
+    OrderItems: 'Adidas Yeezy Boost 350',
     Location: 'New York',
     Status: 'active',
     StatusBg: '#03C9D7',
-    ProductImage:
-      product7,
+    ProductImage: Product3_1,
   },
   {
     OrderID: 893486,
     CustomerName: 'Anika Viseer',
     TotalAmount: 93.31,
-    OrderItems: 'Night Lamp',
+    OrderItems: 'Puma RS-X',
     Location: 'Germany',
     Status: 'canceled',
     StatusBg: '#FF5C8E',
-    ProductImage:
-      product4,
+    ProductImage: Product4_1,
   },
   {
     OrderID: 748975,
     CustomerName: 'Miron Vitold',
     TotalAmount: 23.99,
-    OrderItems: 'Healthcare Erbology',
+    OrderItems: 'Reebok Nano X',
     Location: 'Spain',
     Status: 'rejected',
     StatusBg: 'red',
-    ProductImage:
-      product1,
+    ProductImage: Product5_1,
   },
   {
     OrderID: 94757,
     CustomerName: 'Omar Darobe',
     TotalAmount: 95.99,
-    OrderItems: 'Makeup Lancome Rouge',
+    OrderItems: 'Under Armour HOVR',
     Location: 'USA',
     Status: 'canceled',
     StatusBg: '#FF5C8E',
-    ProductImage:
-      product2,
+    ProductImage: Product6_1,
   },
-  {
-    OrderID: 944895,
-    CustomerName: 'Lulia albu',
-    TotalAmount: 17.99,
-    OrderItems: 'Skincare',
-    Location: 'USA',
-    Status: 'active',
-    StatusBg: '#03C9D7',
-    ProductImage:
-      product3,
-  },
-  {
-    OrderID: 845954,
-    CustomerName: 'Penjani',
-    TotalAmount: 59.99,
-    OrderItems: 'Headphone',
-    Location: 'USA',
-    Status: 'complete',
-    StatusBg: '#8BE78B',
-    ProductImage:
-      product4,
-  },
-  {
-    OrderID: 845954,
-    CustomerName: 'Jie Yan',
-    TotalAmount: 87.99,
-    OrderItems: 'Shoes',
-    Location: 'USA',
-    Status: 'pending',
-    StatusBg: '#FB9678',
-    ProductImage:
-      'https://cdn.shopclues.com/images1/thumbnails/104158/320/320/148648730-104158193-1592481791.jpg',
-  },
-  {
-    OrderID: 874534,
-    CustomerName: 'Danai',
-    TotalAmount: 122.99,
-    OrderItems: 'Watch',
-    Location: 'USA',
-    Status: 'canceled',
-    StatusBg: '#FF5C8E',
-    ProductImage:
-      'https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/pop-womens-garmin-watches-1641919013.jpg?crop=0.502xw:1.00xh;0.250xw,0&resize=640:*',
-  },
-  {
-    OrderID: 38489,
-    CustomerName: 'Miron',
-    TotalAmount: 87.99,
-    OrderItems: 'Ice Cream',
-    Location: 'USA',
-    Status: 'active',
-    StatusBg: '#03C9D7',
-    ProductImage:
-      'https://images.immediate.co.uk/production/volatile/sites/30/2020/08/dairy-free-ice-cream-eae372d.jpg',
-  },
-  {
-    OrderID: 24546,
-    CustomerName: 'Frank',
-    TotalAmount: 84.99,
-    OrderItems: 'Pan Cake',
-    Location: 'Delhi',
-    Status: 'complete',
-    StatusBg: '#8BE78B',
-    ProductImage:
-      'https://images.unsplash.com/photo-1576618148400-f54bed99fcfd?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1480&q=80',
-  },
-  {
-    OrderID: 874534,
-    CustomerName: 'Danai',
-    TotalAmount: 122.99,
-    OrderItems: 'Watch',
-    Location: 'USA',
-    Status: 'canceled',
-    StatusBg: '#FF5C8E',
-    ProductImage:
-      'https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/pop-womens-garmin-watches-1641919013.jpg?crop=0.502xw:1.00xh;0.250xw,0&resize=640:*',
-  },
-  {
-    OrderID: 10248,
-    CustomerName: 'Vinet',
 
-    TotalAmount: 32.38,
-    OrderItems: 'Fresh Tomato',
-    Location: 'USA',
-    Status: 'pending',
-    StatusBg: '#FB9678',
-    ProductImage:
-      product6,
-  },
-  {
-    OrderID: 345653,
-    CustomerName: 'Carson Darrin',
-    TotalAmount: 56.34,
-    OrderItems: 'Butter Scotch',
-    Location: 'Delhi',
-    Status: 'complete',
-    StatusBg: '#8BE78B',
-    ProductImage:
-      product5,
-  },
-  {
-    OrderID: 390457,
-    CustomerName: 'Fran Perez',
-    TotalAmount: 93.31,
-    OrderItems: 'Candy Gucci',
-    Location: 'New York',
-    Status: 'active',
-    StatusBg: '#03C9D7',
-    ProductImage:
-      product7,
-  },
-  {
-    OrderID: 893486,
-    CustomerName: 'Anika Viseer',
-    TotalAmount: 93.31,
-    OrderItems: 'Night Lamp',
-    Location: 'Germany',
-    Status: 'canceled',
-    StatusBg: '#FF5C8E',
-    ProductImage:
-      product4,
-  },
-  {
-    OrderID: 748975,
-    CustomerName: 'Miron Vitold',
-    TotalAmount: 23.99,
-    OrderItems: 'Healthcare Erbology',
-    Location: 'Spain',
-    Status: 'rejected',
-    StatusBg: 'red',
-    ProductImage:
-      product1,
-  },
-  {
-    OrderID: 94757,
-    CustomerName: 'Omar Darobe',
-    TotalAmount: 95.99,
-    OrderItems: 'Makeup Lancome Rouge',
-    Location: 'USA',
-    Status: 'canceled',
-    StatusBg: '#FF5C8E',
-    ProductImage:
-      product2,
-  },
-  {
-    OrderID: 944895,
-    CustomerName: 'Lulia albu',
-    TotalAmount: 17.99,
-    OrderItems: 'Skincare',
-    Location: 'USA',
-    Status: 'active',
-    StatusBg: '#03C9D7',
-    ProductImage:
-      product3,
-  },
-  {
-    OrderID: 845954,
-    CustomerName: 'Penjani',
-    TotalAmount: 59.99,
-    OrderItems: 'Headphone',
-    Location: 'USA',
-    Status: 'complete',
-    StatusBg: '#8BE78B',
-    ProductImage:
-      product4,
-  },
-  {
-    OrderID: 845954,
-    CustomerName: 'Jie Yan',
-    TotalAmount: 87.99,
-    OrderItems: 'Shoes',
-    Location: 'USA',
-    Status: 'pending',
-    StatusBg: '#FB9678',
-    ProductImage:
-      'https://cdn.shopclues.com/images1/thumbnails/104158/320/320/148648730-104158193-1592481791.jpg',
-  },
-  {
-    OrderID: 874534,
-    CustomerName: 'Danai',
-    TotalAmount: 122.99,
-    OrderItems: 'Watch',
-    Location: 'USA',
-    Status: 'canceled',
-    StatusBg: '#FF5C8E',
-    ProductImage:
-      'https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/pop-womens-garmin-watches-1641919013.jpg?crop=0.502xw:1.00xh;0.250xw,0&resize=640:*',
-  },
-  {
-    OrderID: 38489,
-    CustomerName: 'Miron',
-    TotalAmount: 87.99,
-    OrderItems: 'Ice Cream',
-    Location: 'USA',
-    Status: 'active',
-    StatusBg: '#03C9D7',
-    ProductImage:
-      'https://images.immediate.co.uk/production/volatile/sites/30/2020/08/dairy-free-ice-cream-eae372d.jpg',
-  },
-  {
-    OrderID: 24546,
-    CustomerName: 'Frank',
-    TotalAmount: 84.99,
-    OrderItems: 'Pan Cake',
-    Location: 'Delhi',
-    Status: 'complete',
-    StatusBg: '#8BE78B',
-    ProductImage:
-      'https://images.unsplash.com/photo-1576618148400-f54bed99fcfd?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1480&q=80',
-  },
-  {
-    OrderID: 874534,
-    CustomerName: 'Danai',
-    TotalAmount: 122.99,
-    OrderItems: 'Watch',
-    Location: 'USA',
-    Status: 'canceled',
-    StatusBg: '#FF5C8E',
-    ProductImage:
-      'https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/pop-womens-garmin-watches-1641919013.jpg?crop=0.502xw:1.00xh;0.250xw,0&resize=640:*',
-  },
 ];
 
 export const scheduleData = [
