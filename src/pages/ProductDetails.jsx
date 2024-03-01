@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { useParams } from 'react-router-dom';
-import { productsData, productInfo } from '../data/dummy';
+import { productsData } from '../data/dummy';
 import { Header, ImageSlider, RatingStars, Button, ImagesViewer } from '../components';
 import { TooltipComponent } from '@syncfusion/ej2-react-popups';
 import { DropDownListComponent } from '@syncfusion/ej2-react-dropdowns';

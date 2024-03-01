@@ -17,3 +17,4 @@ export { default as Stacked } from './Charts/Stacked';
 export { default as ProductDetails } from './ProductDetails';
 export { default as Shop } from './Shop';
 export { default as Products } from './Products';
+export { default as EditProduct } from './EditProduct';

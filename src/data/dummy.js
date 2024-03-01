@@ -1018,6 +1018,13 @@ export const userProfileData = [
 ];
 export const productsGrid =[
   {
+    field: 'ProductID',
+    headerText: 'ID',
+    width: '80',
+    textAlign: 'left',
+    editType: 'numericedit',
+  },
+  {
     headerText: 'Image',
     template: gridProductImage,
     textAlign: 'Center',
@@ -1060,6 +1067,12 @@ export const productsGrid =[
 ]
 
 export const ordersGrid = [
+  {
+    field: 'OrderID',
+    headerText: 'ID',
+    width: '150',
+    textAlign: 'Center',
+  },
   {
     headerText: 'Image',
     template: gridOrderImage,
@@ -4589,6 +4602,7 @@ export const productsPerformanceData = [
 
 export const productsTableData = [
   {
+    ProductID:productsData[0].productId,
     ProductImage: productsData[0].productImages[0].productImages[0],
     ProductName:productsData[0].productName,
     ProductCategory:productsData[0].productCategory,
@@ -4597,6 +4611,7 @@ export const productsTableData = [
     ItemsSold:productsData[0].itemsSold,
   },
   {
+    ProductID:productsData[1].productId,
     ProductImage: productsData[1].productImages[0].productImages[0],
     ProductName: productsData[1].productName,
     ProductCategory: productsData[1].productCategory,
@@ -4606,6 +4621,7 @@ export const productsTableData = [
 
   },
   {
+    ProductID:productsData[2].productId,
     ProductImage: productsData[2].productImages[0].productImages[0],
     ProductName: productsData[2].productName,
     ProductCategory: productsData[2].productCategory,
@@ -4615,6 +4631,7 @@ export const productsTableData = [
 
   },
   {
+    ProductID:productsData[3].productId,
     ProductImage: productsData[3].productImages[0].productImages[0],
     ProductName: productsData[3].productName,
     ProductCategory: productsData[3].productCategory,
@@ -4624,6 +4641,7 @@ export const productsTableData = [
 
   },
   {
+    ProductID:productsData[4].productId,
     ProductImage: productsData[4].productImages[0].productImages[0],
     ProductName: productsData[4].productName,
     ProductCategory: productsData[4].productCategory,
@@ -4633,6 +4651,7 @@ export const productsTableData = [
 
   },
   {
+    ProductID:productsData[5].productId,
     ProductImage: productsData[5].productImages[0].productImages[0],
     ProductName: productsData[5].productName,
     ProductCategory: productsData[5].productCategory,
@@ -4642,6 +4661,7 @@ export const productsTableData = [
 
   },
   {
+    ProductID:productsData[6].productId,
     ProductImage: productsData[6].productImages[0].productImages[0],
     ProductName: productsData[6].productName,
     ProductCategory: productsData[6].productCategory,
@@ -4651,6 +4671,7 @@ export const productsTableData = [
 
   },
   {
+    ProductID:productsData[7].productId,
     ProductImage: productsData[7].productImages[0].productImages[0],
     ProductName: productsData[7].productName,
     ProductCategory: productsData[7].productCategory,
@@ -4660,6 +4681,7 @@ export const productsTableData = [
 
   },
   {
+    ProductID:productsData[8].productId,
     ProductImage: productsData[8].productImages[0].productImages[0],
     ProductName: productsData[8].productName,
     ProductCategory: productsData[8].productCategory,
@@ -4669,6 +4691,7 @@ export const productsTableData = [
 
   },
   {
+    ProductID:productsData[9].productId,
     ProductImage: productsData[9].productImages[0].productImages[0],
     ProductName: productsData[9].productName,
     ProductCategory: productsData[9].productCategory,
@@ -4678,6 +4701,7 @@ export const productsTableData = [
 
   },
   {
+    ProductID:productsData[10].productId,
     ProductImage: productsData[10].productImages[0].productImages[0],
     ProductName: productsData[10].productName,
     ProductCategory: productsData[10].productCategory,
@@ -4687,6 +4711,7 @@ export const productsTableData = [
 
   },
   {
+    ProductID:productsData[11].productId,
     ProductImage: productsData[11].productImages[0].productImages[0],
     ProductName: productsData[11].productName,
     ProductCategory: productsData[11].productCategory,
@@ -4696,6 +4721,7 @@ export const productsTableData = [
 
   },
   {
+    ProductID:productsData[12].productId,
     ProductImage: productsData[12].productImages[0].productImages[0],
     ProductName: productsData[12].productName,
     ProductCategory: productsData[12].productCategory,
@@ -4705,6 +4731,7 @@ export const productsTableData = [
 
   },
   {
+    ProductID:productsData[13].productId,
     ProductImage: productsData[13].productImages[0].productImages[0],
     ProductName: productsData[13].productName,
     ProductCategory: productsData[13].productCategory,
@@ -4714,6 +4741,7 @@ export const productsTableData = [
 
   },
   {
+    ProductID:productsData[14].productId,
     ProductImage: productsData[14].productImages[0].productImages[0],
     ProductName: productsData[14].productName,
     ProductCategory: productsData[14].productCategory,
