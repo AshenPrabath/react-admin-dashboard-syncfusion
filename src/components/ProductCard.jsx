@@ -11,7 +11,6 @@ const ProductCard = ({ index, image, title, category, price, rating, productStar
         sumStarsValue += star.stars * star.value;
         totalReviews += star.value;
     });
-    const totalValue = productStars.reduce((acc, curr) => acc + curr.value * curr.stars, 0);
 
     const finalRating = sumStarsValue / totalReviews;
     return (
