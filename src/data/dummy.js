@@ -7,7 +7,7 @@ import { FaCcAmex } from "react-icons/fa";
 import { BiColorFill, BiLogoVenmo } from 'react-icons/bi';
 import { IoMdContacts } from 'react-icons/io';
 import { RiContactsLine } from 'react-icons/ri';
-import { MdOutlineSupervisorAccount, MdOutlineEdit, MdOutlineDeleteOutline, MdOutlineDelete  } from 'react-icons/md';
+import { MdOutlineSupervisorAccount, MdOutlineEdit, MdOutlineDeleteOutline, MdOutlineDelete } from 'react-icons/md';
 import { HiOutlineRefresh } from 'react-icons/hi';
 import { GrLocation } from 'react-icons/gr';
 import avatar from './avatar.jpg';
@@ -647,7 +647,7 @@ export const links = [
         name: 'shop',
         icon: <BsShop />,
       },
-      
+
     ],
   },
   {
@@ -1016,7 +1016,7 @@ export const userProfileData = [
     iconBg: '#FEC90F',
   },
 ];
-export const productsGrid =[
+export const productsGrid = [
   {
     field: 'ProductID',
     headerText: 'ID',
@@ -1063,7 +1063,7 @@ export const productsGrid =[
     width: '150',
     textAlign: 'Center',
   },
-  
+
 ]
 
 export const ordersGrid = [
@@ -3107,7 +3107,7 @@ export const productImages = [
   ],
   [
     {
-      productImages: [Product8_1, Product8_2, Product8_3, Product8_4, Product8_5, Product8_6],
+      productImages: [Product8_1, Product8_2, Product8_3],
       productDetailImages: [Product8D_1, Product8D_2, Product8D_3, Product8D_4]
     }
   ],
@@ -4225,6 +4225,23 @@ export const productSizes = [
     { sizeName: '78 inches', sizeCode: '78in' },
   ]
 ];
+export const productGender = [
+  'Male',
+  'Female',
+]
+export const productCategory = [
+  {category: "Running Shoes", categoryCode:0},
+  {category: "Soccer Cleats", categoryCode:1},
+  {category: "Hiking Boots", categoryCode:2},
+  {category: "Yoga Shoes", categoryCode:3},
+  {category: "Tennis Shoes", categoryCode:4},
+  {category: "Volleyball Shoes", categoryCode:5},
+  {category: "Golf Shoes", categoryCode:6},
+  {category: "Dance Sneakers", categoryCode:7},
+  {category: "CrossFit Shoes", categoryCode:8},
+  {category: "Track Spikes", categoryCode:9},
+  {category: "Skate Shoes", categoryCode:10},
+]
 
 export const productsData = [
   {
@@ -4233,7 +4250,8 @@ export const productsData = [
     productName: 'Men\'s Running Shoes',
     productDesc: 'Lightweight and breathable shoes for running enthusiasts. Lightweight and breathable shoes for running enthusiasts',
     productInfo: productsInfo[0],
-    productCategory: 'Running Shoes',
+    productCategory: productCategory[0],
+    productGender: productGender[0],
     productPrice: 89.99,
     productRating: 4,
     productStars: productStarsData[0],
@@ -4241,7 +4259,7 @@ export const productsData = [
     productSizes: productSizes[0],
     productQuantity: 5,
     productStock: 50,
-    itemsSold:64,
+    itemsSold: 64,
     productReviews: productReviews[0],
   },
   {
@@ -4250,7 +4268,8 @@ export const productsData = [
     productName: 'Men\'s Running Shoes',
     productDesc: 'Lightweight and breathable shoes for running enthusiasts.',
     productInfo: productsInfo[1],
-    productCategory: 'Running Shoes',
+    productCategory: productCategory[0],
+    productGender: productGender[0],
     productPrice: 89.99,
     productRating: 5,
     productStars: productStarsData[1],
@@ -4258,7 +4277,7 @@ export const productsData = [
     productSizes: productSizes[1],
     productQuantity: 5,
     productStock: 100,
-    itemsSold:80,
+    itemsSold: 80,
     productReviews: productReviews[1],
   },
   {
@@ -4267,7 +4286,8 @@ export const productsData = [
     productName: 'Men\'s Running Shoes',
     productDesc: 'Lightweight and breathable shoes for running enthusiasts.',
     productInfo: productsInfo[2],
-    productCategory: 'Running Shoes',
+    productCategory: productCategory[0],
+    productGender: productGender[0],
     productPrice: 89.99,
     productRating: 3,
     productStars: productStarsData[2],
@@ -4275,7 +4295,7 @@ export const productsData = [
     productSizes: productSizes[2],
     productQuantity: 5,
     productStock: 100,
-    itemsSold:297,
+    itemsSold: 297,
     productReviews: productReviews[2],
   }, {
     productId: 3,
@@ -4283,7 +4303,8 @@ export const productsData = [
     productName: 'Men\'s Running Shoes',
     productDesc: 'Lightweight and breathable shoes for running enthusiasts.',
     productInfo: productsInfo[3],
-    productCategory: 'Running Shoes',
+    productCategory: productCategory[0],
+    productGender: productGender[0],
     productPrice: 89.99,
     productRating: 3,
     productStars: productStarsData[3],
@@ -4291,7 +4312,7 @@ export const productsData = [
     productSizes: productSizes[3],
     productQuantity: 5,
     productStock: 0,
-    itemsSold:650,
+    itemsSold: 650,
     productReviews: productReviews[3],
   },
   {
@@ -4300,7 +4321,8 @@ export const productsData = [
     productName: 'Men\'s Soccer Cleats',
     productDesc: 'Specially designed cleats for agility and control on the soccer field.',
     productInfo: productsInfo[4],
-    productCategory: 'Soccer Cleats',
+    productCategory: productCategory[1],
+    productGender: productGender[0],
     productPrice: 99.99,
     productRating: 3,
     productStars: productStarsData[4],
@@ -4308,7 +4330,7 @@ export const productsData = [
     productSizes: productSizes[4],
     productQuantity: 7,
     productStock: 110,
-    itemsSold:643,
+    itemsSold: 643,
     productReviews: productReviews[4],
   },
   {
@@ -4317,7 +4339,8 @@ export const productsData = [
     productName: 'Women\'s Running Shoes',
     productDesc: 'Comfortable and supportive shoes for long-distance running.',
     productInfo: productsInfo[5],
-    productCategory: 'Running Shoes',
+    productCategory: productCategory[0],
+    productGender: productGender[1],
     productPrice: 94.99,
     productRating: 3,
     productStars: productStarsData[5],
@@ -4325,7 +4348,7 @@ export const productsData = [
     productSizes: productSizes[5],
     productQuantity: 9,
     productStock: 105,
-    itemsSold:14,
+    itemsSold: 14,
     productReviews: productReviews[5],
   },
   {
@@ -4334,7 +4357,8 @@ export const productsData = [
     productName: 'Men\'s Hiking Boots',
     productDesc: 'Sturdy boots designed for rugged trails and outdoor adventures.',
     productInfo: productsInfo[6],
-    productCategory: 'Hiking Boots',
+    productCategory: productCategory[2],
+    productGender: productGender[0],
     productPrice: 149.99,
     productRating: 2,
     productStars: productStarsData[6],
@@ -4342,7 +4366,7 @@ export const productsData = [
     productSizes: productSizes[6],
     productQuantity: 12,
     productStock: 95,
-    itemsSold:69,
+    itemsSold: 69,
     productReviews: productReviews[6],
   },
   {
@@ -4351,7 +4375,8 @@ export const productsData = [
     productName: 'Women\'s Yoga Shoes',
     productDesc: 'Flexible and grippy shoes perfect for yoga and Pilates sessions.',
     productInfo: productsInfo[7],
-    productCategory: 'Yoga Shoes',
+    productCategory: productCategory[3],
+    productGender: productGender[1],
     productPrice: 69.99,
     productRating: 5,
     productStars: productStarsData[7],
@@ -4359,7 +4384,7 @@ export const productsData = [
     productSizes: productSizes[7],
     productQuantity: 6,
     productStock: 85,
-    itemsSold:65,
+    itemsSold: 65,
     productReviews: productReviews[7],
   },
   {
@@ -4368,7 +4393,8 @@ export const productsData = [
     productName: 'Men\'s Tennis Shoes',
     productDesc: 'Supportive and lightweight shoes designed for agility on the tennis court.',
     productInfo: productsInfo[8],
-    productCategory: 'Tennis Shoes',
+    productCategory: productCategory[4],
+    productGender: productGender[0],
     productPrice: 119.99,
     productRating: 4,
     productStars: productStarsData[8],
@@ -4376,7 +4402,7 @@ export const productsData = [
     productSizes: productSizes[8],
     productQuantity: 11,
     productStock: 100,
-    itemsSold:74,
+    itemsSold: 74,
     productReviews: productReviews[8],
   },
   {
@@ -4385,7 +4411,8 @@ export const productsData = [
     productName: 'Women\'s Volleyball Shoes',
     productDesc: 'Breathable shoes with excellent traction for indoor volleyball matches.',
     productInfo: productsInfo[9],
-    productCategory: 'Volleyball Shoes',
+    productCategory: productCategory[5],
+    productGender: productGender[1],
     productPrice: 89.99,
     productRating: 1,
     productStars: productStarsData[9],
@@ -4393,7 +4420,7 @@ export const productsData = [
     productSizes: productSizes[9],
     productQuantity: 7,
     productStock: 95,
-    itemsSold:50,
+    itemsSold: 50,
     productReviews: productReviews[9],
   },
   {
@@ -4402,7 +4429,8 @@ export const productsData = [
     productName: 'Men\'s Golf Shoes',
     productDesc: 'Waterproof and stable shoes designed for comfort and performance on the golf course.',
     productInfo: productsInfo[10],
-    productCategory: 'Golf Shoes',
+    productCategory: productCategory[6],
+    productGender: productGender[0],
     productPrice: 139.99,
     productRating: 5,
     productStars: productStarsData[10],
@@ -4410,7 +4438,7 @@ export const productsData = [
     productSizes: productSizes[10],
     productQuantity: 9,
     productStock: 105,
-    itemsSold:64,
+    itemsSold: 64,
     productReviews: productReviews[10],
   },
   {
@@ -4419,7 +4447,8 @@ export const productsData = [
     productName: 'Women\'s Dance Sneakers',
     productDesc: 'Sleek and supportive sneakers perfect for dance rehearsals and performances.',
     productInfo: productsInfo[11],
-    productCategory: 'Dance Sneakers',
+    productCategory: productCategory[7],
+    productGender: productGender[1],
     productPrice: 79.99,
     productRating: 3,
     productStars: productStarsData[11],
@@ -4427,7 +4456,7 @@ export const productsData = [
     productSizes: productSizes[11],
     productQuantity: 5,
     productStock: 90,
-    itemsSold:64,
+    itemsSold: 64,
     productReviews: productReviews[11],
   },
   {
@@ -4436,7 +4465,8 @@ export const productsData = [
     productName: 'Men\'s CrossFit Shoes',
     productDesc: 'Durable shoes with excellent grip for high-intensity CrossFit workouts.',
     productInfo: productsInfo[12],
-    productCategory: 'CrossFit Shoes',
+    productCategory: productCategory[8],
+    productGender: productGender[0],
     productPrice: 109.99,
     productRating: 4,
     productStars: productStarsData[12],
@@ -4444,7 +4474,7 @@ export const productsData = [
     productSizes: productSizes[12],
     productQuantity: 8,
     productStock: 100,
-    itemsSold:64,
+    itemsSold: 64,
     productReviews: productReviews[12],
   },
   {
@@ -4453,7 +4483,8 @@ export const productsData = [
     productName: 'Women\'s Track Spikes',
     productDesc: 'Lightweight and responsive spikes for sprinting and track competitions.',
     productInfo: productsInfo[13],
-    productCategory: 'Track Spikes',
+    productCategory: productCategory[9],
+    productGender: productGender[1],
     productPrice: 79.99,
     productRating: 4,
     productStars: productStarsData[13],
@@ -4461,7 +4492,7 @@ export const productsData = [
     productSizes: productSizes[13],
     productQuantity: 7,
     productStock: 95,
-    itemsSold:61,
+    itemsSold: 61,
     productReviews: productReviews[13],
   },
   {
@@ -4470,7 +4501,8 @@ export const productsData = [
     productName: 'Men\'s Skate Shoes',
     productDesc: 'Stylish and durable shoes designed for skateboarding and urban wear.',
     productInfo: productsInfo[14],
-    productCategory: 'Skate Shoes',
+    productCategory: productCategory[10],
+    productGender: productGender[0],
     productPrice: 89.99,
     productRating: 5,
     productStars: productStarsData[14],
@@ -4478,7 +4510,7 @@ export const productsData = [
     productSizes: productSizes[14],
     productQuantity: 6,
     productStock: 80,
-    itemsSold:61,
+    itemsSold: 61,
     productReviews: productReviews[14],
   },
 ];
@@ -4602,152 +4634,152 @@ export const productsPerformanceData = [
 
 export const productsTableData = [
   {
-    ProductID:productsData[0].productId,
+    ProductID: productsData[0].productId,
     ProductImage: productsData[0].productImages[0].productImages[0],
-    ProductName:productsData[0].productName,
-    ProductCategory:productsData[0].productCategory,
-    Price:productsData[0].productPrice,
-    ProductStock:productsData[0].productStock,
-    ItemsSold:productsData[0].itemsSold,
+    ProductName: productsData[0].productName,
+    ProductCategory: productsData[0].productCategory,
+    Price: productsData[0].productPrice,
+    ProductStock: productsData[0].productStock,
+    ItemsSold: productsData[0].itemsSold,
   },
   {
-    ProductID:productsData[1].productId,
+    ProductID: productsData[1].productId,
     ProductImage: productsData[1].productImages[0].productImages[0],
     ProductName: productsData[1].productName,
     ProductCategory: productsData[1].productCategory,
     Price: productsData[1].productPrice,
     ProductStock: productsData[1].productStock,
-    ItemsSold:productsData[1].itemsSold,
+    ItemsSold: productsData[1].itemsSold,
 
   },
   {
-    ProductID:productsData[2].productId,
+    ProductID: productsData[2].productId,
     ProductImage: productsData[2].productImages[0].productImages[0],
     ProductName: productsData[2].productName,
     ProductCategory: productsData[2].productCategory,
     Price: productsData[2].productPrice,
     ProductStock: productsData[2].productStock,
-    ItemsSold:productsData[2].itemsSold,
+    ItemsSold: productsData[2].itemsSold,
 
   },
   {
-    ProductID:productsData[3].productId,
+    ProductID: productsData[3].productId,
     ProductImage: productsData[3].productImages[0].productImages[0],
     ProductName: productsData[3].productName,
     ProductCategory: productsData[3].productCategory,
     Price: productsData[3].productPrice,
     ProductStock: productsData[3].productStock,
-    ItemsSold:productsData[3].itemsSold,
+    ItemsSold: productsData[3].itemsSold,
 
   },
   {
-    ProductID:productsData[4].productId,
+    ProductID: productsData[4].productId,
     ProductImage: productsData[4].productImages[0].productImages[0],
     ProductName: productsData[4].productName,
     ProductCategory: productsData[4].productCategory,
     Price: productsData[4].productPrice,
     ProductStock: productsData[4].productStock,
-    ItemsSold:productsData[4].itemsSold,
+    ItemsSold: productsData[4].itemsSold,
 
   },
   {
-    ProductID:productsData[5].productId,
+    ProductID: productsData[5].productId,
     ProductImage: productsData[5].productImages[0].productImages[0],
     ProductName: productsData[5].productName,
     ProductCategory: productsData[5].productCategory,
     Price: productsData[5].productPrice,
     ProductStock: productsData[5].productStock,
-    ItemsSold:productsData[5].itemsSold,
+    ItemsSold: productsData[5].itemsSold,
 
   },
   {
-    ProductID:productsData[6].productId,
+    ProductID: productsData[6].productId,
     ProductImage: productsData[6].productImages[0].productImages[0],
     ProductName: productsData[6].productName,
     ProductCategory: productsData[6].productCategory,
     Price: productsData[6].productPrice,
     ProductStock: productsData[6].productStock,
-    ItemsSold:productsData[6].itemsSold,
+    ItemsSold: productsData[6].itemsSold,
 
   },
   {
-    ProductID:productsData[7].productId,
+    ProductID: productsData[7].productId,
     ProductImage: productsData[7].productImages[0].productImages[0],
     ProductName: productsData[7].productName,
     ProductCategory: productsData[7].productCategory,
     Price: productsData[7].productPrice,
     ProductStock: productsData[7].productStock,
-    ItemsSold:productsData[8].itemsSold,
+    ItemsSold: productsData[8].itemsSold,
 
   },
   {
-    ProductID:productsData[8].productId,
+    ProductID: productsData[8].productId,
     ProductImage: productsData[8].productImages[0].productImages[0],
     ProductName: productsData[8].productName,
     ProductCategory: productsData[8].productCategory,
     Price: productsData[8].productPrice,
     ProductStock: productsData[8].productStock,
-    ItemsSold:productsData[8].itemsSold,
+    ItemsSold: productsData[8].itemsSold,
 
   },
   {
-    ProductID:productsData[9].productId,
+    ProductID: productsData[9].productId,
     ProductImage: productsData[9].productImages[0].productImages[0],
     ProductName: productsData[9].productName,
     ProductCategory: productsData[9].productCategory,
     Price: productsData[9].productPrice,
     ProductStock: productsData[9].productStock,
-    ItemsSold:productsData[9].itemsSold,
+    ItemsSold: productsData[9].itemsSold,
 
   },
   {
-    ProductID:productsData[10].productId,
+    ProductID: productsData[10].productId,
     ProductImage: productsData[10].productImages[0].productImages[0],
     ProductName: productsData[10].productName,
     ProductCategory: productsData[10].productCategory,
     Price: productsData[10].productPrice,
     ProductStock: productsData[10].productStock,
-    ItemsSold:productsData[10].itemsSold,
+    ItemsSold: productsData[10].itemsSold,
 
   },
   {
-    ProductID:productsData[11].productId,
+    ProductID: productsData[11].productId,
     ProductImage: productsData[11].productImages[0].productImages[0],
     ProductName: productsData[11].productName,
     ProductCategory: productsData[11].productCategory,
     Price: productsData[11].productPrice,
     ProductStock: productsData[11].productStock,
-    ItemsSold:productsData[11].itemsSold,
+    ItemsSold: productsData[11].itemsSold,
 
   },
   {
-    ProductID:productsData[12].productId,
+    ProductID: productsData[12].productId,
     ProductImage: productsData[12].productImages[0].productImages[0],
     ProductName: productsData[12].productName,
     ProductCategory: productsData[12].productCategory,
     Price: productsData[12].productPrice,
     ProductStock: productsData[12].productStock,
-    ItemsSold:productsData[12].itemsSold,
+    ItemsSold: productsData[12].itemsSold,
 
   },
   {
-    ProductID:productsData[13].productId,
+    ProductID: productsData[13].productId,
     ProductImage: productsData[13].productImages[0].productImages[0],
     ProductName: productsData[13].productName,
     ProductCategory: productsData[13].productCategory,
     Price: productsData[13].productPrice,
     ProductStock: productsData[13].productStock,
-    ItemsSold:productsData[13].itemsSold,
+    ItemsSold: productsData[13].itemsSold,
 
   },
   {
-    ProductID:productsData[14].productId,
+    ProductID: productsData[14].productId,
     ProductImage: productsData[14].productImages[0].productImages[0],
     ProductName: productsData[14].productName,
     ProductCategory: productsData[14].productCategory,
     Price: productsData[14].productPrice,
     ProductStock: productsData[14].productStock,
-    ItemsSold:productsData[14].itemsSold,
+    ItemsSold: productsData[14].itemsSold,
 
   }
 ]

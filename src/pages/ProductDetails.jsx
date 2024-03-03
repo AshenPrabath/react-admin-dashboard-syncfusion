@@ -54,7 +54,8 @@ const ProductDetails = () => {
                             ) : (
                                 <p className='bg-green-400 py-1 px-2 text-xs font-base text-white rounded-md'>In Stock</p>
                             )}
-                            <p className='text-sm  text-gray-400 dark:text-gray-400'>{product.productCategory}</p>
+                            <p className='text-sm  text-gray-400 dark:text-gray-400'>{product.productGender}</p>
+                            <p className='text-sm  text-gray-400 dark:text-gray-400'>{product.productCategory.category}</p>
                         </div>
                         <div className=''>
                             <p className='text-4xl font-bold pt-2'>{product.productName}</p>

@@ -14,6 +14,7 @@ const Shop = () => {
                     image={item.productImages[0].productImages[0]} 
                     title={item.productName} 
                     category={item.productCategory} 
+                    gender = {item.productGender}
                     price={item.productPrice} 
                     rating={item.productRating}
                     index={index}
