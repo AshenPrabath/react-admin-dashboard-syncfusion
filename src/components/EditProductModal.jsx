@@ -81,17 +81,20 @@ const EditProductModal = ({ currentProduct }) => {
                         <div className='flex h-full p-3 w-full overflow-auto '>
                             <div className=' w-7/12 pr-5'>
                                 <p className='font-semibold text-lg pb-10'>General Information</p>
-                                <div className='flex w-full items-center pb-5  '>
+                                <div className='flex w-full items-center pb-1  '>
                                     <p className='w-1/3 text-sm font-semibold'>Product Name</p>
                                     <div className='border-1 w-2/3 rounded-md pt-1'>
                                         <div className='px-3'>
                                             <TextBoxComponent
                                                 placeholder="Enter Product Name"
                                                 value={productsData[currentProduct].productName}
-                                                cssClass='position: relative;'
                                             />
                                         </div>
                                     </div>
+                                </div>
+                                <div className='flex w-full items-center pb-5  '>
+                                    <div className='w-1/3 text-sm font-semibold'></div>
+                                        <p className='pl-3 font-light text-xs text-gray-400'>* Do not Exceed over 25 characters for Product Name</p>
                                 </div>
                                 <div className='flex w-full items-center pb-5  '>
                                     <p className='w-1/3 text-sm font-semibold'>Category</p>
