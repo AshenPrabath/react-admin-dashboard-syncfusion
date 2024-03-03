@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { FaPlus } from "react-icons/fa";
-import { productsData } from '../data/dummy';
+import { productsData, productCategory } from '../data/dummy';
 import { useStateContext } from '../context/ContextProvider';
 import { MdOutlineCancel } from 'react-icons/md';
 import { TextBoxComponent } from '@syncfusion/ej2-react-inputs';
@@ -18,6 +18,8 @@ const EditProductModal = ({ currentProduct }) => {
     const oldDescImages = productsData[currentProduct].productImages[0].productDetailImages;
     const maxProductImages = 5;
     const maxDescImages = 6;
+    const productCategories = productCategory.map(item => item.category);
+
 
     const handleProductImageInput = (e) => {
         const files = Array.from(e.target.files);
@@ -86,16 +88,16 @@ const EditProductModal = ({ currentProduct }) => {
                                             <TextBoxComponent
                                                 placeholder="Enter Product Name"
                                                 value={productsData[currentProduct].productName}
-                                                cssClass={'border: 1px solid #ccc;'}
+                                                cssClass='position: relative;'
                                             />
                                         </div>
                                     </div>
                                 </div>
                                 <div className='flex w-full items-center pb-5  '>
-                                    <p className='w-1/3 text-sm font-semibold'>Product Name</p>
+                                    <p className='w-1/3 text-sm font-semibold'>Category</p>
                                     <div className='border-1 w-2/3 rounded-md pt-1'>
                                         <div className='px-3'>
-                                            <DropDownListComponent dataSource={dataSource} value={dataSource[0]} />
+                                            <DropDownListComponent dataSource={productCategories} value={productsData[currentProduct].productCategory.category} />
                                         </div>
                                     </div>
                                 </div>
