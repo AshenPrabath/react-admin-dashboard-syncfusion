@@ -17,6 +17,7 @@ export const ContextProvider = ({ children }) => {
     const [currentMode, setCurrentMode] = useState('Light');
     const [themeSettings, setThemeSettings] = useState(false);
     const [finalRating, setFinalRating] = useState(0);
+    const [dialogVisible, setDialogVisible] = useState(false);
     
 
     const setMode = (e) => {
@@ -49,6 +50,7 @@ export const ContextProvider = ({ children }) => {
                 currentMode,themeSettings, 
                 setThemeSettings,
                 setMode,setColor,
+                dialogVisible, setDialogVisible
                 
 
             }}>
