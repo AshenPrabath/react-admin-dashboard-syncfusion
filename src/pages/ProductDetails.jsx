@@ -103,7 +103,7 @@ const ProductDetails = () => {
                                                 style={{ backgroundColor: selectedSize === item.sizeName ? `rgba(0, 0, 0, 0.2)` : 'rgba(0, 0, 0, 0.1)' }}
                                                 onClick={() => setSelectedSize(selectedSize === item.sizeName ? null : item.sizeName)}
                                             >
-                                                {item.sizeName}
+                                                {item.sizeName} Inches
                                             </button>
                                         </div>
                                     ))}

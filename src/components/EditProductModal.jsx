@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import { FaPlus } from "react-icons/fa";
 import { productsData, productCategory, productGender, productBrand } from '../data/dummy';
 import { useStateContext } from '../context/ContextProvider';
-import { MdOutlineCancel } from 'react-icons/md';
+import { MdOutlineCancel, MdDeleteOutline } from 'react-icons/md';
 import { TextBoxComponent } from '@syncfusion/ej2-react-inputs';
 import { DropDownListComponent } from '@syncfusion/ej2-react-dropdowns';
 
@@ -13,22 +13,83 @@ const EditProductModal = ({ currentProduct }) => {
     const { setDialogVisible, currentColor } = useStateContext();
     const [selectedProductImages, setSelectedProductImages] = useState([]);
     const [selectedDescImages, setSelectedDescImages] = useState([]);
-    const [text, setText] = useState(productsData[currentProduct].productName);
+    const [productText, setProductSetText] = useState(productsData[currentProduct].productName);
+    const [descText, setDescText] = useState(productsData[currentProduct].productDesc);
+    const [category, setCategory] = useState(productsData[currentProduct].productCategory.category)
+    const [price, setPrice] = useState(productsData[currentProduct].productPrice)
+    const [Sizes, setSizes] = useState(productsData[currentProduct].productSizes.map(item => item.sizeName))
 
     const oldProductImages = productsData[currentProduct].productImages[0].productImages;
     const oldDescImages = productsData[currentProduct].productImages[0].productDetailImages;
     const productCategories = productCategory.map(item => item.category);
     const productBrands = productBrand.map(item => item.brand);
-    
 
     const maxProductImages = 5;
     const maxDescImages = 6;
     const productNameMaxLength = 30;
+    const productDescMaxLength = 100;
+    const maxProductSizes =10;
 
-    const handleChange = (e) => {
+    const handleProductChange = (e) => {
         if (e.target.value.length <= productNameMaxLength) {
-            setText(e.target.value);
+            setProductSetText(e.target.value);
         }
+    };
+    const handleDescChange = (e) => {
+        if (e.target.value.length <= productDescMaxLength) {
+            setDescText(e.target.value);
+        }
+    };
+    const handleCategoryChange = (e) => {
+        if (e.target.value.length <= productDescMaxLength) {
+            setCategory(e.target.value);
+        }
+    };
+    const handlePriceChange = (e) => {
+        if (e.target.value.length <= productDescMaxLength) {
+            setPrice(e.target.value);
+        }
+    };
+    const handleSizeChange = (event, index) => {
+        const newSize = event.target.value;
+        const updatedSizes = [...Sizes];
+        updatedSizes[index] = newSize;
+        setSizes(updatedSizes);
+    };
+    const handleAddSize = () => {
+        if (Sizes.length < maxProductSizes) { // Check if array size is less than 10
+            if (Sizes.length === 0 || Sizes[Sizes.length - 1] !== '') {
+                let nextSize;
+                if (Sizes.length === 0) {
+                    nextSize = 8; // If the array is empty, start with 1
+                } else {
+                    const lastSize = Sizes[Sizes.length - 1];
+                    if (lastSize >= 10) {
+                        // If the last size has more than one digit, increment only the last digit
+                        nextSize = Math.floor(lastSize / 10) * 10 + (lastSize % 10) + 1;
+                    } else {
+                        // If the last size has one digit, simply increment it by 1
+                        nextSize = lastSize + 1;
+                    }
+                }
+                if (!isNaN(nextSize)) {
+                    setSizes([...Sizes, nextSize]);
+                } else {
+                    alert('Please fill in a valid integer for the size field.');
+                }
+            } else {
+                alert('Please fill in the previous size field before adding a new size.');
+            }
+        } else {
+            alert('Maximum size limit (10) reached.');
+        }
+    };
+    
+    
+    const handleRemoveSize = (index) => {
+        const newSizes = [...Sizes];
+        newSizes.splice(index, 1);
+        setSizes(newSizes);
     };
 
     const handleProductImageInput = (e) => {
@@ -89,99 +150,246 @@ const EditProductModal = ({ currentProduct }) => {
                             <button onClick={() => dialogClose()} >Close</button>
                         </div>
                         <div className='flex h-full p-3 w-full overflow-auto '>
-                            <div className=' w-7/12 pr-5'>
-                                <p className='font-semibold text-lg pb-2'>General Information</p>
+
+                            {/*-------------First Column-------------*/}
+
+                            <div className=' w-7/12 pr-10'>
+                                <p className='font-semibold text-lg py-2'>General Information</p>
                                 <p className='font-light text-xs text-gray-400 '>
-                                    {`These are the general information of your product. please include real data. please not that all fields are required`}
+                                    {`These are the general information of your product. please include real data. please note that all fields are required`}
                                 </p>
-                                <div className='flex w-full items-center pb-1 pt-4  '>
-                                    <p className='w-1/3 text-sm font-semibold'>Product Name</p>
-                                    <div className='w-2/3 rounded-md pt-1'>
-                                        <input
-                                            className={`w-full py-1 rounded border border-gray-300 focus:border-[${currentColor}] outline-none transition duration-300`}
-                                            type="text"
-                                            value={text}
-                                            onChange={handleChange}
-                                            maxLength={productNameMaxLength}
-                                            style={{ 
-                                                paddingTop: '8px', 
-                                                paddingBottom: '8px', 
-                                                paddingLeft: '10px', 
+                                <div className='py-3'>
+                                    <div className='flex w-full items-center '>
+                                        <p className='w-1/3 text-sm font-semibold'>Product Name</p>
+                                        <div className='w-2/3 rounded-md'>
+                                            <input
+                                                className={`w-full rounded border border-gray-300 focus:border-${currentColor} outline-none transition duration-300`}
+                                                type="text"
+                                                value={productText}
+                                                onChange={handleProductChange}
+                                                maxLength={productNameMaxLength}
+                                                style={{
+                                                    paddingTop: '8px',
+                                                    paddingBottom: '8px',
+                                                    paddingLeft: '10px',
+                                                    paddingRight: '5px',
+                                                    fontSize: '13px',
+                                                }}
+                                            />
+                                        </div>
+                                    </div>
+                                    <div className='flex w-full items-center pt-1 '>
+                                        <div className='w-1/3 text-sm font-semibold'></div>
+                                        <div className='flex w-2/3 justify-between '>
+                                            <p className={`pl-3 font-light text-xs ${productText.length >= productNameMaxLength ? 'text-red-500' : 'text-gray-400'}`}>*  Do not Exceed over {productNameMaxLength} characters </p>
+                                            <p className='pl-3 font-light text-xs text-gray-400'>{productText.length}/{productNameMaxLength}</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div className='py-3'>
+                                    <div className='flex w-full items-center '>
+                                        <p className='w-1/3 text-sm font-semibold'>Short Description</p>
+                                        <div className='w-2/3 rounded-md'>
+                                            <textarea
+                                                className={`w-full rounded border border-gray-300 focus:border-[${currentColor}] outline-none transition duration-300`}
+                                                value={descText}
+                                                onChange={handleDescChange}
+                                                maxLength={productDescMaxLength}
+                                                style={{
+                                                    paddingTop: '8px',
+                                                    paddingBottom: '8px',
+                                                    paddingLeft: '10px',
+                                                    paddingRight: '5px',
+                                                    fontSize: '13px',
+                                                }}
+                                            />
+                                        </div>
+                                    </div>
+                                    <div className='flex w-full items-center '>
+                                        <div className='w-1/3 text-sm font-semibold '></div>
+                                        <div className='flex w-2/3 justify-between '>
+                                            <p className={`pl-3 font-light text-xs ${descText.length >= productDescMaxLength ? 'text-red-500' : 'text-gray-400'}`}>*  Do not Exceed over {productDescMaxLength} characters </p>
+                                            <p className='pl-3 font-light text-xs text-gray-400'>{descText.length}/{productDescMaxLength}</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div className='py-3  '>
+                                    <div className='flex w-full items-center '>
+                                        <p className='w-1/3 text-sm font-semibold'>Product Code</p>
+                                        <div className='w-2/3 rounded-md'>
+                                            <input
+                                                className={`w-1/2 rounded border border-gray-300 focus:border-[${currentColor}] cursor-not-allowed outline-none transition duration-300`}
+                                                type="text"
+                                                value={productsData[currentProduct].productId}
+                                                disabled={true}
+                                                style={{
+                                                    paddingTop: '8px',
+                                                    paddingBottom: '8px',
+                                                    paddingLeft: '10px',
+                                                    paddingRight: '5px',
+                                                    fontSize: '13px',
+                                                }}
+                                            />
+                                        </div>
+                                    </div>
+                                    <div className='flex w-full items-center pt-1 '>
+                                        <div className='w-1/3 text-sm font-semibold'></div>
+                                        <p className='pl-3 font-light text-xs text-gray-400'>* Product Code is automatically generated. Cannot change</p>
+                                    </div>
+                                </div>
+                                <div className='py-3  border-b-1 border-dashed '>
+                                    <div className='flex w-full items-center '>
+                                        <p className='w-1/3 text-sm font-semibold'>Price</p>
+                                        <div className='w-2/3 rounded-md'>
+                                            <div className='flex w-full items-center'>
+                                                <span class='rounded-l border px-4 text-sm bg-gray-100 border-gray-300 py-[8px]'>$</span>
+                                                <input
+                                                    className={`w-1/2 rounded-r border border-l-0 border-gray-300 focus:border-[${currentColor}] outline-none transition duration-300`}
+                                                    type="number"
+                                                    step='.01'
+                                                    inputmode="decimal"
+                                                    value={price}
+                                                    onChange={handlePriceChange}
+                                                    inputMode=''
+                                                    style={{
+                                                        paddingTop: '8px',
+                                                        paddingBottom: '8px',
+                                                        paddingLeft: '10px',
+                                                        paddingRight: '5px',
+                                                        fontSize: '13px',
+                                                    }}
+                                                />
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div className='flex w-full items-center py-3'>
+                                    <p className='w-1/3 text-sm font-semibold'>Category</p>
+                                    <div className=' w-2/3 rounded-md'>
+                                        <select
+                                            value={category}
+                                            onChange={handleCategoryChange}
+                                            className={`w-full rounded border border-gray-300 focus:border-[${currentColor}] outline-none transition duration-300`}
+                                            style={{
+                                                paddingTop: '8px',
+                                                paddingBottom: '8px',
+                                                paddingLeft: '10px',
                                                 paddingRight: '5px',
                                                 fontSize: '13px',
                                             }}
-                                        />
+                                        >
+                                            {productCategories.map((category, index) => (
+                                                <option
+                                                    key={index}
+                                                    value={category}
+                                                    className="text-gray-800 bg-white hover:bg-gray-200 focus:bg-gray-200"
+                                                >
+                                                    {category}
+                                                </option>
+                                            ))}
+                                        </select>
                                     </div>
                                 </div>
-                                <div className='flex w-full items-center pb-5  '>
-                                    <div className='w-1/3 text-sm font-semibold'></div>
-                                    <div className='flex w-2/3 justify-between'>
-                                        <p className={`pl-3 font-light text-xs text-gray-400`}>*Do not Exceed over 30 characters for Product Name </p>
-                                        <p className='pl-3 font-light text-xs text-gray-400'>{text.length}/{productNameMaxLength}</p>
-                                    </div>
-                                </div>
-                                <div className='flex w-full items-center pb-1  '>
-                                    <p className='w-1/3 text-sm font-semibold'>Short Description</p>
-                                    <div className='border-1 w-2/3 rounded-md pt-1'>
-                                        <div className='px-3'>
-                                            <TextBoxComponent
-                                                htmlAttributes={{
-                                                    maxLength: 50,
-                                                    // onchange: { changeHandle }
-                                                }}
-                                                multiline={true}
-                                                placeholder="Enter Product Name"
-                                                value={productsData[currentProduct].productDesc}
-                                            />
-                                        </div>
-                                    </div>
-                                </div>
-                                <div className='flex w-full items-center pb-5  '>
-                                    <div className='w-1/3 text-sm font-semibold'></div>
-                                    <p className='pl-3 font-light text-xs text-gray-400'>* Do not Exceed over 60 characters for Product Name</p>
-                                </div>
-                                <div className='flex w-full items-center pb-1 '>
-                                    <p className='w-1/3 text-sm font-semibold'>Product Code</p>
-                                    <div className='border-1 w-2/3 rounded-md pt-1'>
-                                        <div className='px-3'>
-                                            <TextBoxComponent
-                                                disabled
-                                                placeholder="Enter Product Name"
-                                                value={productsData[currentProduct].productId}
-                                            />
-                                        </div>
-                                    </div>
-                                </div>
-                                <div className='flex w-full items-center pb-5 border-b-1 border-dashed  '>
-                                    <div className='w-1/3 text-sm font-semibold'></div>
-                                    <p className='pl-3 font-light text-xs text-gray-400'>* Product Code is automatically generated. Cannot change</p>
-                                </div>
-                                <div className='flex w-full items-center py-5  '>
-                                    <p className='w-1/3 text-sm font-semibold'>Category</p>
-                                    <div className='border-1 w-2/3 rounded-md pt-1'>
-                                        <div className='px-3'>
-                                            <DropDownListComponent dataSource={productCategories} value={productsData[currentProduct].productCategory.category} />
-                                        </div>
-                                    </div>
-                                </div>
-                                <div className='flex w-full items-center pb-5  '>
+                                <div className='flex w-full items-center py-3'>
                                     <p className='w-1/3 text-sm font-semibold'>Brand</p>
-                                    <div className='border-1 w-2/3 rounded-md pt-1'>
-                                        <div className='px-3'>
-                                            <DropDownListComponent dataSource={productBrands} value={productsData[currentProduct].productBrand.brand} />
-                                        </div>
+                                    <div className='w-2/3 rounded-md '>
+                                        <select
+                                            value={category}
+                                            onChange={handleCategoryChange}
+                                            className={`w-full rounded border border-gray-300 focus:border-[${currentColor}] outline-none transition duration-300`}
+                                            style={{
+                                                paddingTop: '8px',
+                                                paddingBottom: '8px',
+                                                paddingLeft: '10px',
+                                                paddingRight: '5px',
+                                                fontSize: '13px',
+                                            }}
+                                        >
+                                            {productBrands.map((category, index) => (
+                                                <option
+                                                    key={index}
+                                                    value={category}
+                                                    className="text-gray-800 bg-white hover:bg-gray-200 focus:bg-gray-200"
+                                                >
+                                                    {category}
+                                                </option>
+                                            ))}
+                                        </select>
                                     </div>
                                 </div>
-                                <div className='flex w-full items-center pb-5 border-b-1 border-dashed  '>
+                                <div className='flex w-full items-center py-3 border-b-1 border-dashed  '>
                                     <p className='w-1/3 text-sm font-semibold'>Gender</p>
-                                    <div className='border-1 w-2/3 rounded-md pt-1'>
-                                        <div className='px-3'>
-                                            <DropDownListComponent dataSource={productGender} value={productsData[currentProduct].productGender} />
-                                        </div>
+                                    <div className=' w-2/3 rounded-md '>
+                                        <select
+                                            value={category}
+                                            onChange={handleCategoryChange}
+                                            className={`w-full rounded border border-gray-300 focus:border-[${currentColor}] outline-none transition duration-300`}
+                                            style={{
+                                                paddingTop: '8px',
+                                                paddingBottom: '8px',
+                                                paddingLeft: '10px',
+                                                paddingRight: '5px',
+                                                fontSize: '13px',
+                                            }}
+                                        >
+                                            {productGender.map((category, index) => (
+                                                <option
+                                                    key={index}
+                                                    value={category}
+                                                    className="text-gray-800 py-2 bg-white hover:bg-gray-200 focus:bg-gray-200"
+                                                >
+                                                    {category}
+                                                </option>
+                                            ))}
+                                        </select>
                                     </div>
+                                </div>
+                                <div className='flex w-full items-start py-3 '>
+                                    <p className='w-1/3 text-sm font-semibold'>Sizes</p>
+                                    <div className='w-2/3'>
+                                        <div className='w-2/3'>
+                                            {Sizes.map((size, index) => (
+                                                <div
+                                                    className='flex items-center pb-2 rounded-md '
+                                                    id={index}>
+                                                    <input
+                                                        className={`w-full rounded-l border border-r-0 border-gray-300 focus:border-${currentColor} outline-none transition duration-300`}
+                                                        type="number"
+                                                        value={size}
+                                                        onChange={(event) => handleSizeChange(event, index)}
+                                                        style={{
+                                                            paddingTop: '8px',
+                                                            paddingBottom: '8px',
+                                                            paddingLeft: '10px',
+                                                            paddingRight: '5px',
+                                                            fontSize: '13px',
+                                                        }}
+                                                    />
+                                                    <span class='rounded-r border px-4 text-sm bg-gray-100 border-gray-300 py-[8px]'>Inches</span>
+                                                    <button
+                                                        className='text-red-500 pl-3'
+                                                        onClick={() => handleRemoveSize(index)}
+                                                    ><MdDeleteOutline />
+                                                    </button>
+                                                </div>
+                                            ))}
+                                            <button
+                                                className='rounded-lg text-blue-600 underline py-1 text-sm w-full'
+                                                onClick={handleAddSize}
+                                            >
+                                                Add size
+                                            </button>
+                                        </div>
+
+                                    </div>
+
+
                                 </div>
                             </div>
-                            <div className='w-5/12'>
+
+                            {/*-------------Second Column-------------*/}
+
+                            <div className='w-5/12 py-2'>
                                 <p className='font-semibold text-lg pb-2'>Product Images</p>
                                 <p className='font-light text-xs text-gray-400 '>
                                     {`You need to add maximum of ${maxProductImages} images. Pay attention to the quality of the pictures you add. Pictures must be in certain dimensions.`}
@@ -239,7 +447,7 @@ const EditProductModal = ({ currentProduct }) => {
                                 </div>
                                 <p className='font-semibold text-lg py-2 border-t-1'>Description Images</p>
                                 <p className='font-light text-xs text-gray-400 '>
-                                    {`You need to add maximum of ${maxProductImages} images. these Images will apper bottom of the product card. add more detailed images for aware the customer of your product`}
+                                    {`You need to add maximum of ${maxDescImages} images. these Images will apper bottom of the product card. add more detailed images for aware the customer of your product`}
                                 </p>
                                 <div className='flex w-full justify-between'>
                                     <p className='font-light text-sm text-gray-500 py-4'>Upload Images</p>
