@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { FaPlus } from "react-icons/fa";
-import { productsData, productCategory } from '../data/dummy';
+import { productsData, productCategory, productGender, productBrand } from '../data/dummy';
 import { useStateContext } from '../context/ContextProvider';
 import { MdOutlineCancel } from 'react-icons/md';
 import { TextBoxComponent } from '@syncfusion/ej2-react-inputs';
@@ -10,16 +10,26 @@ import { DropDownListComponent } from '@syncfusion/ej2-react-dropdowns';
 
 
 const EditProductModal = ({ currentProduct }) => {
-    const { setDialogVisible } = useStateContext();
+    const { setDialogVisible, currentColor } = useStateContext();
     const [selectedProductImages, setSelectedProductImages] = useState([]);
     const [selectedDescImages, setSelectedDescImages] = useState([]);
+    const [text, setText] = useState(productsData[currentProduct].productName);
 
     const oldProductImages = productsData[currentProduct].productImages[0].productImages;
     const oldDescImages = productsData[currentProduct].productImages[0].productDetailImages;
+    const productCategories = productCategory.map(item => item.category);
+    const productBrands = productBrand.map(item => item.brand);
+    
+
     const maxProductImages = 5;
     const maxDescImages = 6;
-    const productCategories = productCategory.map(item => item.category);
+    const productNameMaxLength = 30;
 
+    const handleChange = (e) => {
+        if (e.target.value.length <= productNameMaxLength) {
+            setText(e.target.value);
+        }
+    };
 
     const handleProductImageInput = (e) => {
         const files = Array.from(e.target.files);
@@ -76,31 +86,97 @@ const EditProductModal = ({ currentProduct }) => {
                     <div className=' h-full pb-16 '>
                         <div className='flex justify-between border-b-2 '>
                             <p className='text-3xl font-bold pb-2 '>Edit Product</p>
-                            <button onClick={() => dialogClose()} >close</button>
+                            <button onClick={() => dialogClose()} >Close</button>
                         </div>
                         <div className='flex h-full p-3 w-full overflow-auto '>
                             <div className=' w-7/12 pr-5'>
-                                <p className='font-semibold text-lg pb-10'>General Information</p>
-                                <div className='flex w-full items-center pb-1  '>
+                                <p className='font-semibold text-lg pb-2'>General Information</p>
+                                <p className='font-light text-xs text-gray-400 '>
+                                    {`These are the general information of your product. please include real data. please not that all fields are required`}
+                                </p>
+                                <div className='flex w-full items-center pb-1 pt-4  '>
                                     <p className='w-1/3 text-sm font-semibold'>Product Name</p>
+                                    <div className='w-2/3 rounded-md pt-1'>
+                                        <input
+                                            className={`w-full py-1 rounded border border-gray-300 focus:border-[${currentColor}] outline-none transition duration-300`}
+                                            type="text"
+                                            value={text}
+                                            onChange={handleChange}
+                                            maxLength={productNameMaxLength}
+                                            style={{ 
+                                                paddingTop: '8px', 
+                                                paddingBottom: '8px', 
+                                                paddingLeft: '10px', 
+                                                paddingRight: '5px',
+                                                fontSize: '13px',
+                                            }}
+                                        />
+                                    </div>
+                                </div>
+                                <div className='flex w-full items-center pb-5  '>
+                                    <div className='w-1/3 text-sm font-semibold'></div>
+                                    <div className='flex w-2/3 justify-between'>
+                                        <p className={`pl-3 font-light text-xs text-gray-400`}>*Do not Exceed over 30 characters for Product Name </p>
+                                        <p className='pl-3 font-light text-xs text-gray-400'>{text.length}/{productNameMaxLength}</p>
+                                    </div>
+                                </div>
+                                <div className='flex w-full items-center pb-1  '>
+                                    <p className='w-1/3 text-sm font-semibold'>Short Description</p>
                                     <div className='border-1 w-2/3 rounded-md pt-1'>
                                         <div className='px-3'>
                                             <TextBoxComponent
+                                                htmlAttributes={{
+                                                    maxLength: 50,
+                                                    // onchange: { changeHandle }
+                                                }}
+                                                multiline={true}
                                                 placeholder="Enter Product Name"
-                                                value={productsData[currentProduct].productName}
+                                                value={productsData[currentProduct].productDesc}
                                             />
                                         </div>
                                     </div>
                                 </div>
                                 <div className='flex w-full items-center pb-5  '>
                                     <div className='w-1/3 text-sm font-semibold'></div>
-                                        <p className='pl-3 font-light text-xs text-gray-400'>* Do not Exceed over 25 characters for Product Name</p>
+                                    <p className='pl-3 font-light text-xs text-gray-400'>* Do not Exceed over 60 characters for Product Name</p>
                                 </div>
-                                <div className='flex w-full items-center pb-5  '>
+                                <div className='flex w-full items-center pb-1 '>
+                                    <p className='w-1/3 text-sm font-semibold'>Product Code</p>
+                                    <div className='border-1 w-2/3 rounded-md pt-1'>
+                                        <div className='px-3'>
+                                            <TextBoxComponent
+                                                disabled
+                                                placeholder="Enter Product Name"
+                                                value={productsData[currentProduct].productId}
+                                            />
+                                        </div>
+                                    </div>
+                                </div>
+                                <div className='flex w-full items-center pb-5 border-b-1 border-dashed  '>
+                                    <div className='w-1/3 text-sm font-semibold'></div>
+                                    <p className='pl-3 font-light text-xs text-gray-400'>* Product Code is automatically generated. Cannot change</p>
+                                </div>
+                                <div className='flex w-full items-center py-5  '>
                                     <p className='w-1/3 text-sm font-semibold'>Category</p>
                                     <div className='border-1 w-2/3 rounded-md pt-1'>
                                         <div className='px-3'>
                                             <DropDownListComponent dataSource={productCategories} value={productsData[currentProduct].productCategory.category} />
+                                        </div>
+                                    </div>
+                                </div>
+                                <div className='flex w-full items-center pb-5  '>
+                                    <p className='w-1/3 text-sm font-semibold'>Brand</p>
+                                    <div className='border-1 w-2/3 rounded-md pt-1'>
+                                        <div className='px-3'>
+                                            <DropDownListComponent dataSource={productBrands} value={productsData[currentProduct].productBrand.brand} />
+                                        </div>
+                                    </div>
+                                </div>
+                                <div className='flex w-full items-center pb-5 border-b-1 border-dashed  '>
+                                    <p className='w-1/3 text-sm font-semibold'>Gender</p>
+                                    <div className='border-1 w-2/3 rounded-md pt-1'>
+                                        <div className='px-3'>
+                                            <DropDownListComponent dataSource={productGender} value={productsData[currentProduct].productGender} />
                                         </div>
                                     </div>
                                 </div>
@@ -143,7 +219,6 @@ const EditProductModal = ({ currentProduct }) => {
                                                 className="absolute top-1 right-3 bg-gray-50 text-red-500 rounded-full "
                                             ><MdOutlineCancel /></button>
                                         </div>
-
                                     ))}
                                     <div className='relative justify-center flex w-full'>
                                         <input
@@ -161,7 +236,6 @@ const EditProductModal = ({ currentProduct }) => {
                                             <FaPlus />
                                         </label>
                                     </div>
-
                                 </div>
                                 <p className='font-semibold text-lg py-2 border-t-1'>Description Images</p>
                                 <p className='font-light text-xs text-gray-400 '>

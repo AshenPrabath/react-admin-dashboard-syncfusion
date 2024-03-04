@@ -88,6 +88,9 @@ const ProductDetails = () => {
                                         </TooltipComponent>
                                     ))}
                                 </div>
+                                <p className='font-bold text-sm pt-3'>Brand: </p>
+                                <p className='pl-3 text-sm'>{product.productBrand.brand}</p>
+
                             </div>
                             <div className='pt-3 pb-3'>
                                 <p className='font-bold text-sm'>Size:</p>
