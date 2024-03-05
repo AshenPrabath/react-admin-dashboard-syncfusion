@@ -78,8 +78,8 @@ const ProductDetails = () => {
                                             <div className=' pl-3 cursor-pointer flex gap-5 items-center'>
                                                 <button
                                                     type='button'
-                                                    className={`h-6 w-6 rounded-full cursor-pointer ${selectedColor === item.colorCode ? `border-2 border-solid  border-[${item.colorCode}]` : ''}`}
-                                                    style={{ backgroundColor: selectedColor === item.colorCode ? `${item.colorCode}90` : item.colorCode }}
+                                                    className={`h-6 w-6 rounded-full cursor-pointer ${selectedColor === item.colorCode ? `border-2 border-solid ` : ''}`}
+                                                    style={{ borderColor:item.colorCode, backgroundColor: selectedColor === item.colorCode ? `${item.colorCode}90` : item.colorCode }}
                                                     onClick={() => setSelectedColor(selectedColor === item.colorCode ? null : item.colorCode)}
                                                 >
                                                 </button>

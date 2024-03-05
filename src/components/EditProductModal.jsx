@@ -1,15 +1,10 @@
 import React, { useState, useEffect } from 'react';
-import { Link } from 'react-router-dom';
 import { FaPlus } from "react-icons/fa";
-import { productsData, productCategory, productGender, productBrand } from '../data/dummy';
-import { useStateContext } from '../context/ContextProvider';
 import { MdOutlineCancel, MdDelete } from 'react-icons/md';
 import { IoIosArrowUp, IoIosArrowDown } from "react-icons/io";
-import { TextBoxComponent } from '@syncfusion/ej2-react-inputs';
-import { DropDownListComponent } from '@syncfusion/ej2-react-dropdowns';
+import { productsData, productCategory, productGender, productBrand } from '../data/dummy';
+import { useStateContext } from '../context/ContextProvider';
 import { TooltipComponent } from '@syncfusion/ej2-react-popups';
-
-
 
 const EditProductModal = ({ currentProduct }) => {
     const { setDialogVisible, currentColor } = useStateContext();
@@ -20,6 +15,7 @@ const EditProductModal = ({ currentProduct }) => {
     const [category, setCategory] = useState(productsData[currentProduct].productCategory.category);
     const [price, setPrice] = useState(productsData[currentProduct].productPrice);
     const [Sizes, setSizes] = useState(productsData[currentProduct].productSizes.map(item => item.sizeName));
+    const [colors, setColors] = useState(productsData[currentProduct].productColors);
 
     const oldProductImages = productsData[currentProduct].productImages[0].productImages;
     const oldDescImages = productsData[currentProduct].productImages[0].productDetailImages;
@@ -31,6 +27,7 @@ const EditProductModal = ({ currentProduct }) => {
     const productNameMaxLength = 30;
     const productDescMaxLength = 100;
     const maxProductSizes = 10;
+    const MaxColors = 10;
 
     const handleProductChange = (e) => {
         if (e.target.value.length <= productNameMaxLength) {
@@ -86,6 +83,56 @@ const EditProductModal = ({ currentProduct }) => {
             alert(`Maximum size limit ${maxProductSizes} reached.`);
         }
     };
+
+    const handleAddColor = () => {
+        if (colors.length >= MaxColors) {
+            alert(`Maximum color limit (${MaxColors}) exceeded.`);
+            return;
+        }
+
+        const lastColor = colors[colors.length - 1];
+        if (lastColor.colorName.trim() === '') {
+            alert('Color name cannot be blank.');
+            return;
+        }
+
+        setColors(prevColors => [...prevColors, { colorName: '', colorCode: '#000000' }]);
+    };
+
+    const handleColorChange = (event, index) => {
+        const { value } = event.target;
+        const newColors = [...colors];
+        newColors[index] = { ...newColors[index], colorName: value };
+        setColors(newColors);
+    };
+    const handleColorCodeChange = (event, index) => {
+        const { value } = event.target;
+        const newColors = [...colors];
+        newColors[index] = { ...newColors[index], colorCode: value };
+        setColors(newColors);
+    };
+
+    const handleMoveUpColor = (index) => {
+        if (index === 0) return; // Already at the top, can't move up further
+        const newColors = [...colors];
+        // Swap current color object with the one above it
+        [newColors[index - 1], newColors[index]] = [newColors[index], newColors[index - 1]];
+        setColors(newColors);
+    };
+
+    const handleMoveDownColor = (index) => {
+        if (index === colors.length - 1) return; // Already at the bottom, can't move down further
+        const newColors = [...colors];
+        // Swap current color object with the one below it
+        [newColors[index + 1], newColors[index]] = [newColors[index], newColors[index + 1]];
+        setColors(newColors);
+    };
+
+    const handleRemoveColor = (index) => {
+        const newColors = colors.filter((_, idx) => idx !== index);
+        setColors(newColors);
+    };
+
     const handleMoveUpSize = (index) => {
         if (index > 0) {
             const newSizes = [...Sizes];
@@ -372,7 +419,7 @@ const EditProductModal = ({ currentProduct }) => {
                                             {Sizes.map((size, index) => (
                                                 <div
                                                     className='flex items-center pb-2 rounded-md '
-                                                    id={index}>
+                                                    key={index}>
                                                     <input
                                                         className={`w-full rounded-l border border-r-0 border-gray-300 focus:border-${currentColor} outline-none transition duration-300`}
                                                         type="number"
@@ -421,18 +468,99 @@ const EditProductModal = ({ currentProduct }) => {
                                                     </TooltipComponent>
                                                 </div>
                                             ))}
-                                            <button
-                                                className='rounded-lg text-blue-600 underline py-1 text-sm w-full'
-                                                onClick={handleAddSize}
-                                            >
-                                                Add size
-                                            </button>
+                                            <div className='flex justify-center w-full'>
+                                                <button
+                                                    className='rounded-lg text-blue-600 underline pt-1 text-sm'
+                                                    onClick={handleAddSize}
+                                                >
+                                                    Add size
+                                                </button>
+                                            </div>
                                         </div>
-
                                     </div>
-
-
                                 </div>
+                                <div className='flex w-full items-start py-3 '>
+                                    <p className='w-1/3 text-sm font-semibold'>Colors</p>
+                                    <div className='w-2/3'>
+                                        <div className='w-2/3'>
+                                            {colors.map((color, index) => (
+                                                <div>
+                                                    <div
+                                                        className='flex items-center pb-2 rounded-md '
+                                                        key={index}>
+
+                                                        <div className='pr-2'>
+                                                            <input
+                                                                className=''
+                                                                type="color"
+                                                                value={color.colorCode}
+                                                                onChange={(event) => handleColorCodeChange(event, index)}
+                                                                style={{ 
+                                                                    width: '25px', 
+                                                                    height: '25px' 
+                                                                }}
+                                                            />
+                                                        </div>
+                                                        <input
+                                                            className={`w-full rounded border border-gray-300 focus:border-${currentColor} outline-none transition duration-300`}
+                                                            type="text"
+                                                            value={color.colorName}
+                                                            onChange={(event) => handleColorChange(event, index)}
+                                                            style={{
+                                                                paddingTop: '8px',
+                                                                paddingBottom: '8px',
+                                                                paddingLeft: '10px',
+                                                                paddingRight: '5px',
+                                                                fontSize: '13px',
+                                                            }}
+                                                        />
+                                                        <div className='justify-center items-center'>
+                                                            <TooltipComponent
+                                                                content='Move up'
+                                                                position='TopCenter'
+                                                            >
+                                                                <button
+                                                                    className='text-gray-600 pl-3'
+                                                                    onClick={() => handleMoveUpColor(index)}
+                                                                ><IoIosArrowUp />
+                                                                </button>
+                                                            </TooltipComponent>
+                                                            <TooltipComponent
+                                                                content='Move Down'
+                                                                position='TopCenter'
+                                                            >
+                                                                <button
+                                                                    className='text-gray-600 pl-3'
+                                                                    onClick={() => handleMoveDownColor(index)}
+                                                                ><IoIosArrowDown />
+                                                                </button>
+                                                            </TooltipComponent>
+                                                        </div>
+                                                        <TooltipComponent
+                                                            content='Delete'
+                                                            position='TopCenter'
+                                                        >
+                                                            <button
+                                                                className='text-gray-600 pl-3 text-lg'
+                                                                onClick={() => handleRemoveColor(index)}
+                                                            ><MdDelete />
+                                                            </button>
+                                                        </TooltipComponent>
+                                                    </div>
+                                                </div>
+                                            ))}
+                                            <div className='flex justify-center w-full'>
+                                                <button
+                                                    className='rounded-lg text-blue-600 underline py-1 text-sm'
+                                                    onClick={handleAddColor}
+                                                >
+                                                    Add Color
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
                             </div>
 
                             {/*-------------Second Column-------------*/}
