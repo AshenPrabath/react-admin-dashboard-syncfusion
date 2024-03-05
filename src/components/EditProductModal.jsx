@@ -3,9 +3,11 @@ import { Link } from 'react-router-dom';
 import { FaPlus } from "react-icons/fa";
 import { productsData, productCategory, productGender, productBrand } from '../data/dummy';
 import { useStateContext } from '../context/ContextProvider';
-import { MdOutlineCancel, MdDeleteOutline } from 'react-icons/md';
+import { MdOutlineCancel, MdDelete } from 'react-icons/md';
+import { IoIosArrowUp, IoIosArrowDown } from "react-icons/io";
 import { TextBoxComponent } from '@syncfusion/ej2-react-inputs';
 import { DropDownListComponent } from '@syncfusion/ej2-react-dropdowns';
+import { TooltipComponent } from '@syncfusion/ej2-react-popups';
 
 
 
@@ -15,9 +17,9 @@ const EditProductModal = ({ currentProduct }) => {
     const [selectedDescImages, setSelectedDescImages] = useState([]);
     const [productText, setProductSetText] = useState(productsData[currentProduct].productName);
     const [descText, setDescText] = useState(productsData[currentProduct].productDesc);
-    const [category, setCategory] = useState(productsData[currentProduct].productCategory.category)
-    const [price, setPrice] = useState(productsData[currentProduct].productPrice)
-    const [Sizes, setSizes] = useState(productsData[currentProduct].productSizes.map(item => item.sizeName))
+    const [category, setCategory] = useState(productsData[currentProduct].productCategory.category);
+    const [price, setPrice] = useState(productsData[currentProduct].productPrice);
+    const [Sizes, setSizes] = useState(productsData[currentProduct].productSizes.map(item => item.sizeName));
 
     const oldProductImages = productsData[currentProduct].productImages[0].productImages;
     const oldDescImages = productsData[currentProduct].productImages[0].productDetailImages;
@@ -28,7 +30,7 @@ const EditProductModal = ({ currentProduct }) => {
     const maxDescImages = 6;
     const productNameMaxLength = 30;
     const productDescMaxLength = 100;
-    const maxProductSizes =10;
+    const maxProductSizes = 10;
 
     const handleProductChange = (e) => {
         if (e.target.value.length <= productNameMaxLength) {
@@ -81,11 +83,30 @@ const EditProductModal = ({ currentProduct }) => {
                 alert('Please fill in the previous size field before adding a new size.');
             }
         } else {
-            alert('Maximum size limit (10) reached.');
+            alert(`Maximum size limit ${maxProductSizes} reached.`);
         }
     };
-    
-    
+    const handleMoveUpSize = (index) => {
+        if (index > 0) {
+            const newSizes = [...Sizes];
+            const temp = newSizes[index];
+            newSizes[index] = newSizes[index - 1];
+            newSizes[index - 1] = temp;
+            setSizes(newSizes);
+        }
+    };
+
+    const handleMoveDownSize = (index) => {
+        if (index < Sizes.length - 1) {
+            const newSizes = [...Sizes];
+            const temp = newSizes[index];
+            newSizes[index] = newSizes[index + 1];
+            newSizes[index + 1] = temp;
+            setSizes(newSizes);
+        }
+    };
+
+
     const handleRemoveSize = (index) => {
         const newSizes = [...Sizes];
         newSizes.splice(index, 1);
@@ -366,11 +387,38 @@ const EditProductModal = ({ currentProduct }) => {
                                                         }}
                                                     />
                                                     <span class='rounded-r border px-4 text-sm bg-gray-100 border-gray-300 py-[8px]'>Inches</span>
-                                                    <button
-                                                        className='text-red-500 pl-3'
-                                                        onClick={() => handleRemoveSize(index)}
-                                                    ><MdDeleteOutline />
-                                                    </button>
+                                                    <div className='justify-center items-center'>
+                                                        <TooltipComponent
+                                                            content='Move up'
+                                                            position='TopCenter'
+                                                        >
+                                                            <button
+                                                                className='text-gray-600 pl-3'
+                                                                onClick={() => handleMoveUpSize(index)}
+                                                            ><IoIosArrowUp />
+                                                            </button>
+                                                        </TooltipComponent>
+                                                        <TooltipComponent
+                                                            content='Move Down'
+                                                            position='TopCenter'
+                                                        >
+                                                            <button
+                                                                className='text-gray-600 pl-3'
+                                                                onClick={() => handleMoveDownSize(index)}
+                                                            ><IoIosArrowDown />
+                                                            </button>
+                                                        </TooltipComponent>
+                                                    </div>
+                                                    <TooltipComponent
+                                                        content='Delete'
+                                                        position='TopCenter'
+                                                    >
+                                                        <button
+                                                            className='text-gray-600 pl-3 text-lg'
+                                                            onClick={() => handleRemoveSize(index)}
+                                                        ><MdDelete />
+                                                        </button>
+                                                    </TooltipComponent>
                                                 </div>
                                             ))}
                                             <button
