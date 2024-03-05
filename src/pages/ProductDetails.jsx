@@ -6,6 +6,8 @@ import { TooltipComponent } from '@syncfusion/ej2-react-popups';
 import { DropDownListComponent } from '@syncfusion/ej2-react-dropdowns';
 import { useStateContext } from '../context/ContextProvider';
 import { TabComponent, TabItemDirective, TabItemsDirective } from '@syncfusion/ej2-react-navigations';
+import { HtmlEditor, Image, Inject, Link, QuickToolbar, RichTextEditorComponent, Toolbar } from '@syncfusion/ej2-react-richtexteditor'
+
 
 const ProductDetails = () => {
     const { currentColor } = useStateContext();
@@ -33,7 +35,7 @@ const ProductDetails = () => {
     const [selectedImageIndex, setSelectedImageIndex] = useState(0);
 
     const handleImageClick = (images) => {
-      setSelectedImages(images);
+        setSelectedImages(images);
     };
 
 
@@ -79,7 +81,7 @@ const ProductDetails = () => {
                                                 <button
                                                     type='button'
                                                     className={`h-6 w-6 rounded-full cursor-pointer ${selectedColor === item.colorCode ? `border-2 border-solid ` : ''}`}
-                                                    style={{ borderColor:item.colorCode, backgroundColor: selectedColor === item.colorCode ? `${item.colorCode}90` : item.colorCode }}
+                                                    style={{ borderColor: item.colorCode, backgroundColor: selectedColor === item.colorCode ? `${item.colorCode}90` : item.colorCode }}
                                                     onClick={() => setSelectedColor(selectedColor === item.colorCode ? null : item.colorCode)}
                                                 >
                                                 </button>
@@ -149,7 +151,16 @@ const ProductDetails = () => {
                                 header={headerText[0]}
                                 content={() => {
                                     return <div className='text-xl  pt-10 '>
-                                        <div className="max-h-[1900px] overflow-y-auto border rounded-lg dark:text-white border-gray-300 p-5" dangerouslySetInnerHTML={{ __html: product.productInfo }} />
+                                        <div className=" rounded-lg dark:text-white border-gray-300 p-5">
+                                            <RichTextEditorComponent
+                                            toolbarSettings={{enable:false}}
+                                            readonly={true}
+                                                className='max-h-[1900px] overflow-y-auto'
+                                            >
+                                                {product.productInfo}
+                                                <Inject services={[HtmlEditor, Image, Link, QuickToolbar, RichTextEditorComponent, Toolbar]} />
+                                            </RichTextEditorComponent>
+                                        </div>
                                     </div>;
                                 }} />
                             <TabItemDirective header={headerText[1]}
@@ -204,7 +215,7 @@ const ProductDetails = () => {
                                                                         setSelectedImageIndex(index);
                                                                     }}
                                                                 />
-                                                            ))}     
+                                                            ))}
                                                         </div>
                                                     </div>
                                                 </div>
@@ -221,7 +232,7 @@ const ProductDetails = () => {
             </div>
             <div className='m-2 md:m-8 mt-24 p-10 bg-white dark:bg-secondary-dark-bg rounded-3xl dark:text-white'>
                 <div className=''>
-                    {product.productImages[0].productDetailImages.map((image,index)=>(
+                    {product.productImages[0].productDetailImages.map((image, index) => (
                         <div key={index}>
                             <img
                                 src={image}
@@ -235,7 +246,7 @@ const ProductDetails = () => {
                     ))}
 
                 </div>
-                
+
             </div>
         </div>
     );

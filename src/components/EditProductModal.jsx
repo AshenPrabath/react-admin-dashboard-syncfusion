@@ -5,6 +5,9 @@ import { IoIosArrowUp, IoIosArrowDown } from "react-icons/io";
 import { productsData, productCategory, productGender, productBrand } from '../data/dummy';
 import { useStateContext } from '../context/ContextProvider';
 import { TooltipComponent } from '@syncfusion/ej2-react-popups';
+import { HtmlEditor, Image, Inject, Link, QuickToolbar, RichTextEditorComponent, Toolbar } from '@syncfusion/ej2-react-richtexteditor';
+// import { EditorData } from '../data/dummy'
+
 
 const EditProductModal = ({ currentProduct }) => {
     const { setDialogVisible, currentColor } = useStateContext();
@@ -201,7 +204,13 @@ const EditProductModal = ({ currentProduct }) => {
     const dialogClose = () => {
         setDialogVisible(false);
         document.body.style.overflow = 'visible';
-    }
+    };
+
+    const EditorData = () => (
+        <div>
+            {productsData[currentProduct].productInfo}
+        </div>
+    );
 
     useEffect(() => {
         setSelectedProductImages(oldProductImages);
@@ -217,108 +226,360 @@ const EditProductModal = ({ currentProduct }) => {
                             <p className='text-3xl font-bold pb-2 '>Edit Product</p>
                             <button onClick={() => dialogClose()} >Close</button>
                         </div>
-                        <div className='flex h-full p-3 w-full overflow-auto '>
+                        <div className='h-full p-3 w-full overflow-auto '>
+                            <div className='flex py-3'>
 
-                            {/*-------------First Column-------------*/}
 
-                            <div className=' w-7/12 pr-10'>
-                                <p className='font-semibold text-lg py-2'>General Information</p>
-                                <p className='font-light text-xs text-gray-400 '>
-                                    {`These are the general information of your product. please include real data. please note that all fields are required`}
-                                </p>
-                                <div className='py-3'>
-                                    <div className='flex w-full items-center '>
-                                        <p className='w-1/3 text-sm font-semibold'>Product Name</p>
-                                        <div className='w-2/3 rounded-md'>
-                                            <input
-                                                className={`w-full rounded border border-gray-300 focus:border-${currentColor} outline-none transition duration-300`}
-                                                type="text"
-                                                value={productText}
-                                                onChange={handleProductChange}
-                                                maxLength={productNameMaxLength}
-                                                style={{
-                                                    paddingTop: '8px',
-                                                    paddingBottom: '8px',
-                                                    paddingLeft: '10px',
-                                                    paddingRight: '5px',
-                                                    fontSize: '13px',
-                                                }}
-                                            />
-                                        </div>
-                                    </div>
-                                    <div className='flex w-full items-center pt-1 '>
-                                        <div className='w-1/3 text-sm font-semibold'></div>
-                                        <div className='flex w-2/3 justify-between '>
-                                            <p className={`pl-3 font-light text-xs ${productText.length >= productNameMaxLength ? 'text-red-500' : 'text-gray-400'}`}>*  Do not Exceed over {productNameMaxLength} characters </p>
-                                            <p className='pl-3 font-light text-xs text-gray-400'>{productText.length}/{productNameMaxLength}</p>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div className='py-3'>
-                                    <div className='flex w-full items-center '>
-                                        <p className='w-1/3 text-sm font-semibold'>Short Description</p>
-                                        <div className='w-2/3 rounded-md'>
-                                            <textarea
-                                                className={`w-full rounded border border-gray-300 focus:border-[${currentColor}] outline-none transition duration-300`}
-                                                value={descText}
-                                                onChange={handleDescChange}
-                                                maxLength={productDescMaxLength}
-                                                style={{
-                                                    paddingTop: '8px',
-                                                    paddingBottom: '8px',
-                                                    paddingLeft: '10px',
-                                                    paddingRight: '5px',
-                                                    fontSize: '13px',
-                                                }}
-                                            />
-                                        </div>
-                                    </div>
-                                    <div className='flex w-full items-center '>
-                                        <div className='w-1/3 text-sm font-semibold '></div>
-                                        <div className='flex w-2/3 justify-between '>
-                                            <p className={`pl-3 font-light text-xs ${descText.length >= productDescMaxLength ? 'text-red-500' : 'text-gray-400'}`}>*  Do not Exceed over {productDescMaxLength} characters </p>
-                                            <p className='pl-3 font-light text-xs text-gray-400'>{descText.length}/{productDescMaxLength}</p>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div className='py-3  '>
-                                    <div className='flex w-full items-center '>
-                                        <p className='w-1/3 text-sm font-semibold'>Product Code</p>
-                                        <div className='w-2/3 rounded-md'>
-                                            <input
-                                                className={`w-1/2 rounded border border-gray-300 focus:border-[${currentColor}] cursor-not-allowed outline-none transition duration-300`}
-                                                type="text"
-                                                value={productsData[currentProduct].productId}
-                                                disabled={true}
-                                                style={{
-                                                    paddingTop: '8px',
-                                                    paddingBottom: '8px',
-                                                    paddingLeft: '10px',
-                                                    paddingRight: '5px',
-                                                    fontSize: '13px',
-                                                }}
-                                            />
-                                        </div>
-                                    </div>
-                                    <div className='flex w-full items-center pt-1 '>
-                                        <div className='w-1/3 text-sm font-semibold'></div>
-                                        <p className='pl-3 font-light text-xs text-gray-400'>* Product Code is automatically generated. Cannot change</p>
-                                    </div>
-                                </div>
-                                <div className='py-3  border-b-1 border-dashed '>
-                                    <div className='flex w-full items-center '>
-                                        <p className='w-1/3 text-sm font-semibold'>Price</p>
-                                        <div className='w-2/3 rounded-md'>
-                                            <div className='flex w-full items-center'>
-                                                <span class='rounded-l border px-4 text-sm bg-gray-100 border-gray-300 py-[8px]'>$</span>
+
+                                {/*-------------First Column-------------*/}
+
+                                <div className=' w-7/12 pr-10'>
+                                    <p className='font-semibold text-lg py-2'>General Information</p>
+                                    <p className='font-light text-xs text-gray-400 '>
+                                        {`These are the general information of your product. please include real data. please note that all fields are required`}
+                                    </p>
+                                    <div className='py-3'>
+                                        <div className='flex w-full items-center '>
+                                            <p className='w-1/3 text-sm font-semibold'>Product Name</p>
+                                            <div className='w-2/3 rounded-md'>
                                                 <input
-                                                    className={`w-1/2 rounded-r border border-l-0 border-gray-300 focus:border-[${currentColor}] outline-none transition duration-300`}
+                                                    className={`w-full rounded border border-gray-300 focus:border-${currentColor} outline-none transition duration-300`}
+                                                    type="text"
+                                                    value={productText}
+                                                    onChange={handleProductChange}
+                                                    maxLength={productNameMaxLength}
+                                                    style={{
+                                                        paddingTop: '8px',
+                                                        paddingBottom: '8px',
+                                                        paddingLeft: '10px',
+                                                        paddingRight: '5px',
+                                                        fontSize: '13px',
+                                                    }}
+                                                />
+                                            </div>
+                                        </div>
+                                        <div className='flex w-full items-center pt-1 '>
+                                            <div className='w-1/3 text-sm font-semibold'></div>
+                                            <div className='flex w-2/3 justify-between '>
+                                                <p className={`pl-3 font-light text-xs ${productText.length >= productNameMaxLength ? 'text-red-500' : 'text-gray-400'}`}>*  Do not Exceed over {productNameMaxLength} characters </p>
+                                                <p className='pl-3 font-light text-xs text-gray-400'>{productText.length}/{productNameMaxLength}</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div className='py-3'>
+                                        <div className='flex w-full items-center '>
+                                            <p className='w-1/3 text-sm font-semibold'>Short Description</p>
+                                            <div className='w-2/3 rounded-md'>
+                                                <textarea
+                                                    className={`w-full rounded border border-gray-300 focus:border-[${currentColor}] outline-none transition duration-300`}
+                                                    value={descText}
+                                                    onChange={handleDescChange}
+                                                    maxLength={productDescMaxLength}
+                                                    style={{
+                                                        paddingTop: '8px',
+                                                        paddingBottom: '8px',
+                                                        paddingLeft: '10px',
+                                                        paddingRight: '5px',
+                                                        fontSize: '13px',
+                                                    }}
+                                                />
+                                            </div>
+                                        </div>
+                                        <div className='flex w-full items-center '>
+                                            <div className='w-1/3 text-sm font-semibold '></div>
+                                            <div className='flex w-2/3 justify-between '>
+                                                <p className={`pl-3 font-light text-xs ${descText.length >= productDescMaxLength ? 'text-red-500' : 'text-gray-400'}`}>*  Do not Exceed over {productDescMaxLength} characters </p>
+                                                <p className='pl-3 font-light text-xs text-gray-400'>{descText.length}/{productDescMaxLength}</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div className='py-3  '>
+                                        <div className='flex w-full items-center '>
+                                            <p className='w-1/3 text-sm font-semibold'>Product Code</p>
+                                            <div className='w-2/3 rounded-md'>
+                                                <input
+                                                    className={`w-1/2 rounded border border-gray-300 focus:border-[${currentColor}] cursor-not-allowed outline-none transition duration-300`}
+                                                    type="text"
+                                                    value={productsData[currentProduct].productId}
+                                                    disabled={true}
+                                                    style={{
+                                                        paddingTop: '8px',
+                                                        paddingBottom: '8px',
+                                                        paddingLeft: '10px',
+                                                        paddingRight: '5px',
+                                                        fontSize: '13px',
+                                                    }}
+                                                />
+                                            </div>
+                                        </div>
+                                        <div className='flex w-full items-center pt-1 '>
+                                            <div className='w-1/3 text-sm font-semibold'></div>
+                                            <p className='pl-3 font-light text-xs text-gray-400'>* Product Code is automatically generated. Cannot change</p>
+                                        </div>
+                                    </div>
+                                    <div className='py-3  border-b-1 border-dashed '>
+                                        <div className='flex w-full items-center '>
+                                            <p className='w-1/3 text-sm font-semibold'>Price</p>
+                                            <div className='w-2/3 rounded-md'>
+                                                <div className='flex w-1/2 items-center'>
+                                                    <span class='rounded-l border px-4 text-sm bg-gray-100 border-gray-300 py-[8px]'>$</span>
+                                                    <input
+                                                        className={`w-full rounded-r border border-l-0 border-gray-300 focus:border-[${currentColor}] outline-none transition duration-300`}
+                                                        type="number"
+                                                        step='.01'
+                                                        inputmode="decimal"
+                                                        value={price}
+                                                        onChange={handlePriceChange}
+                                                        inputMode=''
+                                                        style={{
+                                                            paddingTop: '8px',
+                                                            paddingBottom: '8px',
+                                                            paddingLeft: '10px',
+                                                            paddingRight: '5px',
+                                                            fontSize: '13px',
+                                                        }}
+                                                    />
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div className='flex w-full items-center py-3'>
+                                        <p className='w-1/3 text-sm font-semibold'>Category</p>
+                                        <div className=' w-2/3 rounded-md'>
+                                            <select
+                                                value={category}
+                                                onChange={handleCategoryChange}
+                                                className={`w-full rounded border border-gray-300 focus:border-[${currentColor}] outline-none transition duration-300`}
+                                                style={{
+                                                    paddingTop: '8px',
+                                                    paddingBottom: '8px',
+                                                    paddingLeft: '10px',
+                                                    paddingRight: '5px',
+                                                    fontSize: '13px',
+                                                }}
+                                            >
+                                                {productCategories.map((category, index) => (
+                                                    <option
+                                                        key={index}
+                                                        value={category}
+                                                        className="text-gray-800 bg-white hover:bg-gray-200 focus:bg-gray-200"
+                                                    >
+                                                        {category}
+                                                    </option>
+                                                ))}
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div className='flex w-full items-center py-3'>
+                                        <p className='w-1/3 text-sm font-semibold'>Brand</p>
+                                        <div className='w-2/3 rounded-md '>
+                                            <select
+                                                value={category}
+                                                onChange={handleCategoryChange}
+                                                className={`w-full rounded border border-gray-300 focus:border-[${currentColor}] outline-none transition duration-300`}
+                                                style={{
+                                                    paddingTop: '8px',
+                                                    paddingBottom: '8px',
+                                                    paddingLeft: '10px',
+                                                    paddingRight: '5px',
+                                                    fontSize: '13px',
+                                                }}
+                                            >
+                                                {productBrands.map((category, index) => (
+                                                    <option
+                                                        key={index}
+                                                        value={category}
+                                                        className="text-gray-800 bg-white hover:bg-gray-200 focus:bg-gray-200"
+                                                    >
+                                                        {category}
+                                                    </option>
+                                                ))}
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div className='flex w-full items-center py-3 border-b-1 border-dashed  '>
+                                        <p className='w-1/3 text-sm font-semibold'>Gender</p>
+                                        <div className=' w-2/3 rounded-md '>
+                                            <select
+                                                value={category}
+                                                onChange={handleCategoryChange}
+                                                className={`w-full rounded border border-gray-300 focus:border-[${currentColor}] outline-none transition duration-300`}
+                                                style={{
+                                                    paddingTop: '8px',
+                                                    paddingBottom: '8px',
+                                                    paddingLeft: '10px',
+                                                    paddingRight: '5px',
+                                                    fontSize: '13px',
+                                                }}
+                                            >
+                                                {productGender.map((category, index) => (
+                                                    <option
+                                                        key={index}
+                                                        value={category}
+                                                        className="text-gray-800 py-2 bg-white hover:bg-gray-200 focus:bg-gray-200"
+                                                    >
+                                                        {category}
+                                                    </option>
+                                                ))}
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div className='flex w-full items-start py-3 '>
+                                        <p className='w-1/3 text-sm font-semibold'>Sizes</p>
+                                        <div className='w-2/3'>
+                                            <div className='w-2/3'>
+                                                {Sizes.map((size, index) => (
+                                                    <div
+                                                        className='flex items-center pb-2 rounded-md '
+                                                        key={index}>
+                                                        <input
+                                                            className={`w-full rounded-l border border-r-0 border-gray-300 focus:border-${currentColor} outline-none transition duration-300`}
+                                                            type="number"
+                                                            value={size}
+                                                            onChange={(event) => handleSizeChange(event, index)}
+                                                            style={{
+                                                                paddingTop: '8px',
+                                                                paddingBottom: '8px',
+                                                                paddingLeft: '10px',
+                                                                paddingRight: '5px',
+                                                                fontSize: '13px',
+                                                            }}
+                                                        />
+                                                        <span class='rounded-r border px-4 text-sm bg-gray-100 border-gray-300 py-[8px]'>Inches</span>
+                                                        <div className='justify-center items-center'>
+                                                            <TooltipComponent
+                                                                content='Move up'
+                                                                position='TopCenter'
+                                                            >
+                                                                <button
+                                                                    className='text-gray-600 pl-3'
+                                                                    onClick={() => handleMoveUpSize(index)}
+                                                                ><IoIosArrowUp />
+                                                                </button>
+                                                            </TooltipComponent>
+                                                            <TooltipComponent
+                                                                content='Move Down'
+                                                                position='TopCenter'
+                                                            >
+                                                                <button
+                                                                    className='text-gray-600 pl-3'
+                                                                    onClick={() => handleMoveDownSize(index)}
+                                                                ><IoIosArrowDown />
+                                                                </button>
+                                                            </TooltipComponent>
+                                                        </div>
+                                                        <TooltipComponent
+                                                            content='Delete'
+                                                            position='TopCenter'
+                                                        >
+                                                            <button
+                                                                className='text-gray-600 pl-3 text-lg'
+                                                                onClick={() => handleRemoveSize(index)}
+                                                            ><MdDelete />
+                                                            </button>
+                                                        </TooltipComponent>
+                                                    </div>
+                                                ))}
+                                                <div className='flex justify-center w-full'>
+                                                    <button
+                                                        className='rounded-lg text-blue-600 underline pt-1 text-sm'
+                                                        onClick={handleAddSize}
+                                                    >
+                                                        Add size
+                                                    </button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div className='flex w-full items-start py-3 border-b-1 border-dashed  '>
+                                        <p className='w-1/3 text-sm font-semibold'>Colors</p>
+                                        <div className='w-2/3'>
+                                            <div className='w-2/3'>
+                                                {colors.map((color, index) => (
+                                                    <div>
+                                                        <div
+                                                            className='flex items-center pb-2 rounded-md '
+                                                            key={index}>
+
+                                                            <div className='pr-2'>
+                                                                <input
+                                                                    className=''
+                                                                    type="color"
+                                                                    value={color.colorCode}
+                                                                    onChange={(event) => handleColorCodeChange(event, index)}
+                                                                    style={{
+                                                                        width: '25px',
+                                                                        height: '25px'
+                                                                    }}
+                                                                />
+                                                            </div>
+                                                            <input
+                                                                className={`w-full rounded border border-gray-300 focus:border-${currentColor} outline-none transition duration-300`}
+                                                                type="text"
+                                                                value={color.colorName}
+                                                                onChange={(event) => handleColorChange(event, index)}
+                                                                style={{
+                                                                    paddingTop: '8px',
+                                                                    paddingBottom: '8px',
+                                                                    paddingLeft: '10px',
+                                                                    paddingRight: '5px',
+                                                                    fontSize: '13px',
+                                                                }}
+                                                            />
+                                                            <div className='justify-center items-center'>
+                                                                <TooltipComponent
+                                                                    content='Move up'
+                                                                    position='TopCenter'
+                                                                >
+                                                                    <button
+                                                                        className='text-gray-600 pl-3'
+                                                                        onClick={() => handleMoveUpColor(index)}
+                                                                    ><IoIosArrowUp />
+                                                                    </button>
+                                                                </TooltipComponent>
+                                                                <TooltipComponent
+                                                                    content='Move Down'
+                                                                    position='TopCenter'
+                                                                >
+                                                                    <button
+                                                                        className='text-gray-600 pl-3'
+                                                                        onClick={() => handleMoveDownColor(index)}
+                                                                    ><IoIosArrowDown />
+                                                                    </button>
+                                                                </TooltipComponent>
+                                                            </div>
+                                                            <TooltipComponent
+                                                                content='Delete'
+                                                                position='TopCenter'
+                                                            >
+                                                                <button
+                                                                    className='text-gray-600 pl-3 text-lg'
+                                                                    onClick={() => handleRemoveColor(index)}
+                                                                ><MdDelete />
+                                                                </button>
+                                                            </TooltipComponent>
+                                                        </div>
+                                                    </div>
+                                                ))}
+                                                <div className='flex justify-center w-full'>
+                                                    <button
+                                                        className='rounded-lg text-blue-600 underline py-1 text-sm'
+                                                        onClick={handleAddColor}
+                                                    >
+                                                        Add Color
+                                                    </button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div className='py-3  '>
+                                        <div className='flex w-full items-center '>
+                                            <p className='w-1/3 text-sm font-semibold'>Product Stock</p>
+                                            <div className='w-2/3 rounded-md'>
+                                                <input
+                                                    className={`w-1/2 rounded border border-gray-300 focus:border-[${currentColor}] outline-none transition duration-300`}
                                                     type="number"
-                                                    step='.01'
-                                                    inputmode="decimal"
-                                                    value={price}
-                                                    onChange={handlePriceChange}
-                                                    inputMode=''
+                                                    value={productsData[currentProduct].productStock}
                                                     style={{
                                                         paddingTop: '8px',
                                                         paddingBottom: '8px',
@@ -330,343 +591,146 @@ const EditProductModal = ({ currentProduct }) => {
                                             </div>
                                         </div>
                                     </div>
-                                </div>
-                                <div className='flex w-full items-center py-3'>
-                                    <p className='w-1/3 text-sm font-semibold'>Category</p>
-                                    <div className=' w-2/3 rounded-md'>
-                                        <select
-                                            value={category}
-                                            onChange={handleCategoryChange}
-                                            className={`w-full rounded border border-gray-300 focus:border-[${currentColor}] outline-none transition duration-300`}
-                                            style={{
-                                                paddingTop: '8px',
-                                                paddingBottom: '8px',
-                                                paddingLeft: '10px',
-                                                paddingRight: '5px',
-                                                fontSize: '13px',
-                                            }}
-                                        >
-                                            {productCategories.map((category, index) => (
-                                                <option
-                                                    key={index}
-                                                    value={category}
-                                                    className="text-gray-800 bg-white hover:bg-gray-200 focus:bg-gray-200"
-                                                >
-                                                    {category}
-                                                </option>
-                                            ))}
-                                        </select>
-                                    </div>
-                                </div>
-                                <div className='flex w-full items-center py-3'>
-                                    <p className='w-1/3 text-sm font-semibold'>Brand</p>
-                                    <div className='w-2/3 rounded-md '>
-                                        <select
-                                            value={category}
-                                            onChange={handleCategoryChange}
-                                            className={`w-full rounded border border-gray-300 focus:border-[${currentColor}] outline-none transition duration-300`}
-                                            style={{
-                                                paddingTop: '8px',
-                                                paddingBottom: '8px',
-                                                paddingLeft: '10px',
-                                                paddingRight: '5px',
-                                                fontSize: '13px',
-                                            }}
-                                        >
-                                            {productBrands.map((category, index) => (
-                                                <option
-                                                    key={index}
-                                                    value={category}
-                                                    className="text-gray-800 bg-white hover:bg-gray-200 focus:bg-gray-200"
-                                                >
-                                                    {category}
-                                                </option>
-                                            ))}
-                                        </select>
-                                    </div>
-                                </div>
-                                <div className='flex w-full items-center py-3 border-b-1 border-dashed  '>
-                                    <p className='w-1/3 text-sm font-semibold'>Gender</p>
-                                    <div className=' w-2/3 rounded-md '>
-                                        <select
-                                            value={category}
-                                            onChange={handleCategoryChange}
-                                            className={`w-full rounded border border-gray-300 focus:border-[${currentColor}] outline-none transition duration-300`}
-                                            style={{
-                                                paddingTop: '8px',
-                                                paddingBottom: '8px',
-                                                paddingLeft: '10px',
-                                                paddingRight: '5px',
-                                                fontSize: '13px',
-                                            }}
-                                        >
-                                            {productGender.map((category, index) => (
-                                                <option
-                                                    key={index}
-                                                    value={category}
-                                                    className="text-gray-800 py-2 bg-white hover:bg-gray-200 focus:bg-gray-200"
-                                                >
-                                                    {category}
-                                                </option>
-                                            ))}
-                                        </select>
-                                    </div>
-                                </div>
-                                <div className='flex w-full items-start py-3 '>
-                                    <p className='w-1/3 text-sm font-semibold'>Sizes</p>
-                                    <div className='w-2/3'>
-                                        <div className='w-2/3'>
-                                            {Sizes.map((size, index) => (
-                                                <div
-                                                    className='flex items-center pb-2 rounded-md '
-                                                    key={index}>
-                                                    <input
-                                                        className={`w-full rounded-l border border-r-0 border-gray-300 focus:border-${currentColor} outline-none transition duration-300`}
-                                                        type="number"
-                                                        value={size}
-                                                        onChange={(event) => handleSizeChange(event, index)}
-                                                        style={{
-                                                            paddingTop: '8px',
-                                                            paddingBottom: '8px',
-                                                            paddingLeft: '10px',
-                                                            paddingRight: '5px',
-                                                            fontSize: '13px',
-                                                        }}
-                                                    />
-                                                    <span class='rounded-r border px-4 text-sm bg-gray-100 border-gray-300 py-[8px]'>Inches</span>
-                                                    <div className='justify-center items-center'>
-                                                        <TooltipComponent
-                                                            content='Move up'
-                                                            position='TopCenter'
-                                                        >
-                                                            <button
-                                                                className='text-gray-600 pl-3'
-                                                                onClick={() => handleMoveUpSize(index)}
-                                                            ><IoIosArrowUp />
-                                                            </button>
-                                                        </TooltipComponent>
-                                                        <TooltipComponent
-                                                            content='Move Down'
-                                                            position='TopCenter'
-                                                        >
-                                                            <button
-                                                                className='text-gray-600 pl-3'
-                                                                onClick={() => handleMoveDownSize(index)}
-                                                            ><IoIosArrowDown />
-                                                            </button>
-                                                        </TooltipComponent>
-                                                    </div>
-                                                    <TooltipComponent
-                                                        content='Delete'
-                                                        position='TopCenter'
-                                                    >
-                                                        <button
-                                                            className='text-gray-600 pl-3 text-lg'
-                                                            onClick={() => handleRemoveSize(index)}
-                                                        ><MdDelete />
-                                                        </button>
-                                                    </TooltipComponent>
-                                                </div>
-                                            ))}
-                                            <div className='flex justify-center w-full'>
-                                                <button
-                                                    className='rounded-lg text-blue-600 underline pt-1 text-sm'
-                                                    onClick={handleAddSize}
-                                                >
-                                                    Add size
-                                                </button>
+                                    <div className='py-3  '>
+                                        <div className='flex w-full items-center '>
+                                            <p className='w-1/3 text-sm font-semibold'>Items per order</p>
+                                            <div className='w-2/3 rounded-md'>
+                                                <input
+                                                    className={`w-1/2 rounded border border-gray-300 focus:border-[${currentColor}] outline-none transition duration-300`}
+                                                    type="number"
+                                                    value={productsData[currentProduct].productQuantity}
+                                                    style={{
+                                                        paddingTop: '8px',
+                                                        paddingBottom: '8px',
+                                                        paddingLeft: '10px',
+                                                        paddingRight: '5px',
+                                                        fontSize: '13px',
+                                                    }}
+                                                />
                                             </div>
                                         </div>
                                     </div>
-                                </div>
-                                <div className='flex w-full items-start py-3 '>
-                                    <p className='w-1/3 text-sm font-semibold'>Colors</p>
-                                    <div className='w-2/3'>
-                                        <div className='w-2/3'>
-                                            {colors.map((color, index) => (
-                                                <div>
-                                                    <div
-                                                        className='flex items-center pb-2 rounded-md '
-                                                        key={index}>
 
-                                                        <div className='pr-2'>
-                                                            <input
-                                                                className=''
-                                                                type="color"
-                                                                value={color.colorCode}
-                                                                onChange={(event) => handleColorCodeChange(event, index)}
-                                                                style={{ 
-                                                                    width: '25px', 
-                                                                    height: '25px' 
-                                                                }}
-                                                            />
-                                                        </div>
-                                                        <input
-                                                            className={`w-full rounded border border-gray-300 focus:border-${currentColor} outline-none transition duration-300`}
-                                                            type="text"
-                                                            value={color.colorName}
-                                                            onChange={(event) => handleColorChange(event, index)}
-                                                            style={{
-                                                                paddingTop: '8px',
-                                                                paddingBottom: '8px',
-                                                                paddingLeft: '10px',
-                                                                paddingRight: '5px',
-                                                                fontSize: '13px',
-                                                            }}
-                                                        />
-                                                        <div className='justify-center items-center'>
-                                                            <TooltipComponent
-                                                                content='Move up'
-                                                                position='TopCenter'
-                                                            >
-                                                                <button
-                                                                    className='text-gray-600 pl-3'
-                                                                    onClick={() => handleMoveUpColor(index)}
-                                                                ><IoIosArrowUp />
-                                                                </button>
-                                                            </TooltipComponent>
-                                                            <TooltipComponent
-                                                                content='Move Down'
-                                                                position='TopCenter'
-                                                            >
-                                                                <button
-                                                                    className='text-gray-600 pl-3'
-                                                                    onClick={() => handleMoveDownColor(index)}
-                                                                ><IoIosArrowDown />
-                                                                </button>
-                                                            </TooltipComponent>
-                                                        </div>
-                                                        <TooltipComponent
-                                                            content='Delete'
-                                                            position='TopCenter'
-                                                        >
-                                                            <button
-                                                                className='text-gray-600 pl-3 text-lg'
-                                                                onClick={() => handleRemoveColor(index)}
-                                                            ><MdDelete />
-                                                            </button>
-                                                        </TooltipComponent>
-                                                    </div>
-                                                </div>
-                                            ))}
-                                            <div className='flex justify-center w-full'>
-                                                <button
-                                                    className='rounded-lg text-blue-600 underline py-1 text-sm'
-                                                    onClick={handleAddColor}
-                                                >
-                                                    Add Color
-                                                </button>
+                                </div>
+
+                                {/*-------------Second Column-------------*/}
+
+                                <div className='w-5/12 py-2'>
+                                    <p className='font-semibold text-lg pb-2'>Product Images</p>
+                                    <p className='font-light text-xs text-gray-400 '>
+                                        {`You need to add maximum of ${maxProductImages} images. Pay attention to the quality of the pictures you add. Pictures must be in certain dimensions.`}
+                                    </p>
+                                    <p className='font-light text-sm text-gray-500 py-4'>Cover Image</p>
+                                    <div className='flex w-full justify-center'>
+                                        {selectedProductImages.length > 0 ? (
+                                            <img
+                                                className="rounded-xl h-48 w-48 md:ml-3 object-contain bg-gray-50"
+                                                src={selectedProductImages[0]}
+                                                alt="Your first uploaded Image will be set as the cover image"
+                                            />) :
+                                            <div
+                                                className="flex justify-center items-center rounded-xl h-48 w-48 md:ml-3 object-contain bg-gray-50">
+                                                <p className='p-5 text-sm text-gray-600'>Your first uploaded Image will be set as the cover image</p>
                                             </div>
-                                        </div>
+                                        }
                                     </div>
-                                </div>
+                                    <div className='flex w-full justify-between'>
+                                        <p className='font-light text-sm text-gray-500 py-4'>Upload Images</p>
+                                        <p className='font-light text-sm text-gray-500 py-4'> {selectedProductImages.length} of {maxProductImages} images uploaded </p>
+                                    </div>
 
-                            </div>
-
-                            {/*-------------Second Column-------------*/}
-
-                            <div className='w-5/12 py-2'>
-                                <p className='font-semibold text-lg pb-2'>Product Images</p>
-                                <p className='font-light text-xs text-gray-400 '>
-                                    {`You need to add maximum of ${maxProductImages} images. Pay attention to the quality of the pictures you add. Pictures must be in certain dimensions.`}
-                                </p>
-                                <p className='font-light text-sm text-gray-500 py-4'>Cover Image</p>
-                                <div className='flex w-full justify-center'>
-                                    {selectedProductImages.length > 0 ? (
-                                        <img
-                                            className="rounded-xl h-48 w-48 md:ml-3 object-contain bg-gray-50"
-                                            src={selectedProductImages[0]}
-                                            alt="Your first uploaded Image will be set as the cover image"
-                                        />) :
-                                        <div
-                                            className="flex justify-center items-center rounded-xl h-48 w-48 md:ml-3 object-contain bg-gray-50">
-                                            <p className='p-5 text-sm text-gray-600'>Your first uploaded Image will be set as the cover image</p>
-                                        </div>
-                                    }
-                                </div>
-                                <div className='flex w-full justify-between'>
-                                    <p className='font-light text-sm text-gray-500 py-4'>Upload Images</p>
-                                    <p className='font-light text-sm text-gray-500 py-4'> {selectedProductImages.length} of {maxProductImages} images uploaded </p>
-                                </div>
-
-                                <div className='grid grid-cols-4 gap-3 justify-center pb-4'>
-                                    {selectedProductImages.map((image, index) => (
+                                    <div className='grid grid-cols-4 gap-3 justify-center pb-4'>
+                                        {selectedProductImages.map((image, index) => (
+                                            <div className='relative justify-center flex w-full'>
+                                                <img
+                                                    key={index}
+                                                    src={image}
+                                                    alt={`${index + 1}`}
+                                                    className="rounded-xl h-20 w-20 object-contain bg-gray-50"
+                                                />
+                                                <button
+                                                    onClick={() => handleRemoveProductImage(index)}
+                                                    className="absolute top-1 right-3 bg-gray-50 text-red-500 rounded-full "
+                                                ><MdOutlineCancel /></button>
+                                            </div>
+                                        ))}
                                         <div className='relative justify-center flex w-full'>
-                                            <img
-                                                key={index}
-                                                src={image}
-                                                alt={`${index + 1}`}
-                                                className="rounded-xl h-20 w-20 object-contain bg-gray-50"
+                                            <input
+                                                type="file"
+                                                accept="image/*"
+                                                onChange={handleProductImageInput}
+                                                multiple
+                                                className="hidden"
+                                                id="product-file-input"
                                             />
-                                            <button
-                                                onClick={() => handleRemoveProductImage(index)}
-                                                className="absolute top-1 right-3 bg-gray-50 text-red-500 rounded-full "
-                                            ><MdOutlineCancel /></button>
+                                            <label
+                                                htmlFor="product-file-input"
+                                                className="bg-gray-50 h-20 w-20 border-dashed border-2 flex justify-center items-center object-contain text-gray-400 px-4 py-2 rounded-md cursor-pointer"
+                                            >
+                                                <FaPlus />
+                                            </label>
                                         </div>
-                                    ))}
-                                    <div className='relative justify-center flex w-full'>
-                                        <input
-                                            type="file"
-                                            accept="image/*"
-                                            onChange={handleProductImageInput}
-                                            multiple
-                                            className="hidden"
-                                            id="product-file-input"
-                                        />
-                                        <label
-                                            htmlFor="product-file-input"
-                                            className="bg-gray-50 h-20 w-20 border-dashed border-2 flex justify-center items-center object-contain text-gray-400 px-4 py-2 rounded-md cursor-pointer"
-                                        >
-                                            <FaPlus />
-                                        </label>
+                                    </div>
+                                    <p className='font-semibold text-lg py-2 border-t-1'>Description Images</p>
+                                    <p className='font-light text-xs text-gray-400 '>
+                                        {`You need to add maximum of ${maxDescImages} images. these Images will apper bottom of the product card. add more detailed images for aware the customer of your product`}
+                                    </p>
+                                    <div className='flex w-full justify-between'>
+                                        <p className='font-light text-sm text-gray-500 py-4'>Upload Images</p>
+                                        <p className='font-light text-sm text-gray-500 py-4'> {selectedDescImages.length} of {maxDescImages} images uploaded </p>
+                                    </div>
+                                    <div className='grid-flow-col grid-rows-1 gap-x-1'>
+                                        {selectedDescImages.map((image, index) => (
+                                            <div className='relative justify-center flex w-full pb-2'>
+                                                <img
+                                                    key={index}
+                                                    src={image}
+                                                    alt={`${index + 1}`}
+                                                    className="rounded-xl h-auto w-auto object-contain bg-gray-50"
+                                                />
+                                                <button
+                                                    onClick={() => handleRemoveDescImage(index)}
+                                                    className="absolute top-1 right-3 bg-gray-50 text-red-500 rounded-full "
+                                                ><MdOutlineCancel /></button>
+                                            </div>
+                                        ))}
+                                        <div className='relative justify-center flex w-full'>
+                                            <input
+                                                type="file"
+                                                accept="image/*"
+                                                onChange={handleDescImageInput}
+                                                multiple
+                                                className="hidden"
+                                                id="desc-file-input"
+                                            />
+                                            <label
+                                                htmlFor="desc-file-input"
+                                                className="bg-gray-50 h-20 w-full border-dashed border-2 flex justify-center items-center object-contain text-gray-400 px-4 py-2 rounded-md cursor-pointer"
+                                            >
+                                                <FaPlus />
+                                            </label>
+                                        </div>
                                     </div>
                                 </div>
-                                <p className='font-semibold text-lg py-2 border-t-1'>Description Images</p>
-                                <p className='font-light text-xs text-gray-400 '>
-                                    {`You need to add maximum of ${maxDescImages} images. these Images will apper bottom of the product card. add more detailed images for aware the customer of your product`}
-                                </p>
-                                <div className='flex w-full justify-between'>
-                                    <p className='font-light text-sm text-gray-500 py-4'>Upload Images</p>
-                                    <p className='font-light text-sm text-gray-500 py-4'> {selectedDescImages.length} of {maxDescImages} images uploaded </p>
-                                </div>
-                                <div className='grid-flow-col grid-rows-1 gap-x-1'>
-                                    {selectedDescImages.map((image, index) => (
-                                        <div className='relative justify-center flex w-full pb-2'>
-                                            <img
-                                                key={index}
-                                                src={image}
-                                                alt={`${index + 1}`}
-                                                className="rounded-xl h-auto w-auto object-contain bg-gray-50"
-                                            />
-                                            <button
-                                                onClick={() => handleRemoveDescImage(index)}
-                                                className="absolute top-1 right-3 bg-gray-50 text-red-500 rounded-full "
-                                            ><MdOutlineCancel /></button>
-                                        </div>
-                                    ))}
-                                    <div className='relative justify-center flex w-full'>
-                                        <input
-                                            type="file"
-                                            accept="image/*"
-                                            onChange={handleDescImageInput}
-                                            multiple
-                                            className="hidden"
-                                            id="desc-file-input"
-                                        />
-                                        <label
-                                            htmlFor="desc-file-input"
-                                            className="bg-gray-50 h-20 w-full border-dashed border-2 flex justify-center items-center object-contain text-gray-400 px-4 py-2 rounded-md cursor-pointer"
-                                        >
-                                            <FaPlus />
-                                        </label>
-                                    </div>
-
-                                </div>
-
                             </div>
+                            <div className='pb-3'>
+                                <p className='font-semibold text-lg py-2 border-t-1 border-dashed'>Product Information</p>
+                                <p className='font-light text-xs text-gray-400 '>
+                                    {`This section contains detailed information about the product. Please fill in the field with your product details. `}
+                                </p>
+                            </div>
+                            <RichTextEditorComponent
+                            
+                            >
+                                <div>
+                                    {productsData[currentProduct].productInfo}
+                                </div>
+                                <Inject services={[HtmlEditor, Image, Link, QuickToolbar, RichTextEditorComponent, Toolbar]} />
+                            </RichTextEditorComponent>
+                            <p>
+
+                            </p>
                         </div>
-
-
                         <div className='flex justify-end font-semibold text-lg py-2 border-t-1'>
                             ss
                         </div>
