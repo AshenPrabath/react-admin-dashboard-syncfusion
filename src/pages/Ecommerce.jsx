@@ -154,7 +154,7 @@ const Ecommerce = () => {
           {productsPerformanceData.map((item, index) => (
             <div key={index} className='flex flex-wrap justify-start items-center pb-4 '>
               <div className='flex items-center lg:w-9/12'>
-                <img className='w-24 h-20 rounded-md mr-5 object-cover ' src={item.ProductImage} alt={item.name} />
+                <img className='w-24 h-20 rounded-md mr-5 object-contain ' src={item.ProductImage} alt={item.name} />
                 <div>
                   <p className='text-xl text-gray-600 dark:text-gray-100 font-base '>
                     {item.productTitle}

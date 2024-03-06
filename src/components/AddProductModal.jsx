@@ -8,25 +8,23 @@ import { TooltipComponent } from '@syncfusion/ej2-react-popups';
 import { HtmlEditor, Image, Inject, Link, QuickToolbar, RichTextEditorComponent, Toolbar } from '@syncfusion/ej2-react-richtexteditor';
 import { Button } from '../components'
 
-
-const EditProductModal = ({ currentProduct }) => {
-    const { setDialogVisible, currentColor } = useStateContext();
+const AddProductModal = () => {
+    const { setAddDialogVisible, currentColor } = useStateContext();
     const [selectedProductImages, setSelectedProductImages] = useState([]);
     const [selectedDescImages, setSelectedDescImages] = useState([]);
-    const [productText, setProductSetText] = useState(productsData[currentProduct].productName);
-    const [descText, setDescText] = useState(productsData[currentProduct].productDesc);
-    const [category, setCategory] = useState(productsData[currentProduct].productCategory.category);
-    const [price, setPrice] = useState(productsData[currentProduct].productPrice);
-    const [Sizes, setSizes] = useState(productsData[currentProduct].productSizes.map(item => item.sizeName));
-    const [colors, setColors] = useState(productsData[currentProduct].productColors);
-    const [stock, setStock] = useState(productsData[currentProduct].productStock);
-    const [quantity, setQuantity] = useState(productsData[currentProduct].productQuantity);
+    const [productText, setProductSetText] = useState('');
+    const [descText, setDescText] = useState('');
+    const [category, setCategory] = useState('');
+    const [price, setPrice] = useState(null);
+    const [Sizes, setSizes] = useState([]);
+    const [colors, setColors] = useState([]);
+    const [stock, setStock] = useState();
+    const [quantity, setQuantity] = useState();
+    const [productInfo, setProductInfo] = useState('')
 
-
-    const oldProductImages = productsData[currentProduct].productImages[0].productImages;
-    const oldDescImages = productsData[currentProduct].productImages[0].productDetailImages;
     const productCategories = productCategory.map(item => item.category);
     const productBrands = productBrand.map(item => item.brand);
+    const productCode = (productsData.length) + 1;
 
     const maxProductImages = 5;
     const maxDescImages = 6;
@@ -56,12 +54,16 @@ const EditProductModal = ({ currentProduct }) => {
         }
     };
     const handleStockChange = (e) => {
-            setStock(e.target.value);  
+        setStock(e.target.value);
     };
     const handleQuantityChange = (e) => {
-            setQuantity(e.target.value);
+        setQuantity(e.target.value);
     };
-    
+    const handleInfoChange = (e) => {
+        const htmlContent = e.value;
+        setProductInfo(htmlContent);
+        console.log(htmlContent);
+    };
     const handleSizeChange = (event, index) => {
         const newSize = event.target.value;
         const updatedSizes = [...Sizes];
@@ -212,20 +214,9 @@ const EditProductModal = ({ currentProduct }) => {
     };
 
     const dialogClose = () => {
-        setDialogVisible(false);
+        setAddDialogVisible(false);
         document.body.style.overflow = 'visible';
     };
-
-    const EditorData = () => (
-        <div>
-            {productsData[currentProduct].productInfo}
-        </div>
-    );
-
-    useEffect(() => {
-        setSelectedProductImages(oldProductImages);
-        setSelectedDescImages(oldDescImages);
-    }, [currentProduct]);
 
     return (
         <div>
@@ -233,7 +224,7 @@ const EditProductModal = ({ currentProduct }) => {
                 <div className=' p-10 w-8/12 h-[90vh] bg-white rounded-lg '>
                     <div className=' h-full pb-20 '>
                         <div className='flex justify-between border-b-2 '>
-                            <p className='text-3xl font-bold pb-2 '>Edit Product</p>
+                            <p className='text-3xl font-bold pb-2 '>Add New Product</p>
                             <button onClick={() => dialogClose()} >Close</button>
                         </div>
                         <div className='h-full p-3 w-full overflow-auto '>
@@ -310,7 +301,7 @@ const EditProductModal = ({ currentProduct }) => {
                                                 <input
                                                     className={`w-1/2 rounded border border-gray-300 focus:border-[${currentColor}] cursor-not-allowed outline-none transition duration-300`}
                                                     type="text"
-                                                    value={productsData[currentProduct].productId}
+                                                    value={productCode}
                                                     disabled={true}
                                                     style={{
                                                         paddingTop: '8px',
@@ -731,11 +722,11 @@ const EditProductModal = ({ currentProduct }) => {
                                     {`This section contains detailed information about the product. Please fill in the field with your product details. `}
                                 </p>
                             </div>
+                            {productInfo}
                             <RichTextEditorComponent
+                                value={productInfo}
+                                change={handleInfoChange}
                             >
-                                <div>
-                                    {productsData[currentProduct].productInfo}
-                                </div>
                                 <Inject services={[HtmlEditor, Image, Link, QuickToolbar, RichTextEditorComponent, Toolbar]} />
                             </RichTextEditorComponent>
                             <p>
@@ -744,17 +735,9 @@ const EditProductModal = ({ currentProduct }) => {
                         </div>
                         <div className='flex gap-5 justify-end items-center font-semibold text-lg py-3 border-t-1'>
                             <Button
-                                color="red"
-                                border={1}
-                                text="Delete Product"
-                                borderRadius="10px"
-                                size="sm"
-                                width="full"
-                            />
-                            <Button
                                 color="white"
                                 bgColor={currentColor}
-                                text="Save Changes"
+                                text="Add Product"
                                 borderRadius="10px"
                                 size="sm"
                                 width="full"
@@ -767,4 +750,4 @@ const EditProductModal = ({ currentProduct }) => {
     );
 };
 
-export default EditProductModal;
+export default AddProductModal

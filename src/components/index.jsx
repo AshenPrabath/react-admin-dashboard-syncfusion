@@ -21,3 +21,4 @@ export { default as RatingStars } from '../components/RatingStars';
 export { default as ImageSlider } from '../components/ImageSlider';
 export { default as ImagesViewer } from '../components/ImagesViewer';
 export { default as EditProductModal } from '../components/EditProductModal';
+export { default as AddProductModal } from '../components/AddProductModal';
