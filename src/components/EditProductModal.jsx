@@ -6,7 +6,7 @@ import { productsData, productCategory, productGender, productBrand } from '../d
 import { useStateContext } from '../context/ContextProvider';
 import { TooltipComponent } from '@syncfusion/ej2-react-popups';
 import { HtmlEditor, Image, Inject, Link, QuickToolbar, RichTextEditorComponent, Toolbar } from '@syncfusion/ej2-react-richtexteditor';
-// import { EditorData } from '../data/dummy'
+import { Button } from '../components'
 
 
 const EditProductModal = ({ currentProduct }) => {
@@ -221,7 +221,7 @@ const EditProductModal = ({ currentProduct }) => {
         <div>
             <div className='fixed top-0 left-0 w-full h-full flex justify-center items-center bg-gray-900 bg-opacity-50 z-50'>
                 <div className=' p-10 w-8/12 h-[90vh] bg-white rounded-lg '>
-                    <div className=' h-full pb-16 '>
+                    <div className=' h-full pb-20 '>
                         <div className='flex justify-between border-b-2 '>
                             <p className='text-3xl font-bold pb-2 '>Edit Product</p>
                             <button onClick={() => dialogClose()} >Close</button>
@@ -720,7 +720,6 @@ const EditProductModal = ({ currentProduct }) => {
                                 </p>
                             </div>
                             <RichTextEditorComponent
-                            
                             >
                                 <div>
                                     {productsData[currentProduct].productInfo}
@@ -731,8 +730,23 @@ const EditProductModal = ({ currentProduct }) => {
 
                             </p>
                         </div>
-                        <div className='flex justify-end font-semibold text-lg py-2 border-t-1'>
-                            ss
+                        <div className='flex gap-5 justify-end items-center font-semibold text-lg py-3 border-t-1'>
+                            <Button
+                                color="red"
+                                border={1}
+                                text="Delete Product"
+                                borderRadius="10px"
+                                size="sm"
+                                width="full"
+                            />
+                            <Button
+                                color="white"
+                                bgColor={currentColor}
+                                text="Save Changes"
+                                borderRadius="10px"
+                                size="sm"
+                                width="full"
+                            />
                         </div>
                     </div>
                 </div>
