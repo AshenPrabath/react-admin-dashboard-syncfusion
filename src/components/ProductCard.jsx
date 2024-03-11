@@ -15,7 +15,7 @@ const ProductCard = ({ index, image, title, category, price, gender, productStar
     const finalRating = sumStarsValue / totalReviews;
     return (
         <div className='w-full bg-white dark:text-gray-200 dark:bg-secondary-dark-bg rounded-lg shadow-lg h-full'>
-            <Link to={`/product/${index}`} className=' h-full justify-between '>
+            <Link to={`/shop/${index}`} className=' h-full justify-between '>
                 <div className='justify-center' >
                     <img src={image} className='rounded-t-lg aspect-square w-full object-contain p-5' />
                 </div>

@@ -41,6 +41,7 @@ const ProductDetails = () => {
 
     useState(() => {
         setProgressWidth((averageValue / 5) * 100);
+        window.scrollTo(0, 0);
     }, [averageValue]);
 
     return (

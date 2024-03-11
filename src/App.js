@@ -4,7 +4,7 @@ import { FiSettings } from 'react-icons/fi';
 import { TooltipComponent } from '@syncfusion/ej2-react-popups';
 
 import { Navbar, Sidebar, ThemeSettings } from './components';
-import { Ecommerce, Orders, Calendar, Employees, Line, Customers, Kanban, Area, Bar, Pie, ColorPicker, Editor, ProductDetails, Shop, Products, EditProduct} from './pages';
+import { Ecommerce, Orders, Calendar, Employees, Line, Customers, Kanban, Area, Bar, Pie, ColorPicker, ProductDetails, Shop, Products, Tracking} from './pages';
 import './App.css';
 
 import { useStateContext } from './context/ContextProvider';
@@ -66,21 +66,19 @@ const App = () => {
                                 <Route path='/customers' element={<Customers />} />
                                 <Route path='/shop' element={<Shop />} />
                                 <Route path='/products' element={<Products />} />
+                                <Route path='/tracking' element={<Tracking />} />
 
                                 {/* App*/}
                                 <Route path='/kanban' element={<Kanban />} />
-                                <Route path='/editor' element={<Editor />} />
                                 <Route path='/calendar' element={<Calendar />} />
                                 <Route path='/color-picker' element={<ColorPicker />} />
 
                                 {/* Charts*/}
-                                <Route path='/line' element={<Line />} />
+                                <Route path='/revenue' element={<Line />} />
                                 <Route path='/area' element={<Area />} />
                                 <Route path='/bar' element={<Bar />} />
                                 <Route path='/pie' element={<Pie />} />
-
-                                <Route path='/product/:id' element={<ProductDetails/>} />
-                                <Route path='/edit-product/:ProductID' element={<EditProduct/>} />
+                                <Route path='/shop/:id' element={<ProductDetails/>} />
 
                             </Routes>
                         </div>

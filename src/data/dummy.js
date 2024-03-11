@@ -1,13 +1,12 @@
 import React from 'react';
-import { AiOutlineCalendar, AiOutlineShoppingCart, AiOutlineAreaChart, AiOutlineBarChart, AiOutlineStock } from 'react-icons/ai';
-import { FiShoppingBag, FiEdit, FiPieChart, FiBarChart, FiCreditCard, FiStar, FiShoppingCart } from 'react-icons/fi';
-import { BsKanban, BsBoxSeam, BsCurrencyDollar, BsShield, BsChatLeft, BsPaypal, BsBank, BsCash, BsShop } from 'react-icons/bs';
+import {AiOutlineShoppingCart, AiOutlineAreaChart, AiOutlineBarChart, AiOutlineStock } from 'react-icons/ai';
+import { FiShoppingBag, FiPieChart, FiBarChart, FiCreditCard, FiStar, FiShoppingCart } from 'react-icons/fi';
+import {BsBoxSeam, BsCurrencyDollar, BsShield, BsChatLeft, BsPaypal, BsBank, BsCash, BsShop } from 'react-icons/bs';
 import { GiRunningShoe } from "react-icons/gi";
 import { FaCcAmex } from "react-icons/fa";
-import { BiColorFill, BiLogoVenmo } from 'react-icons/bi';
-import { IoMdContacts } from 'react-icons/io';
+import { BiLogoVenmo, BiTargetLock  } from 'react-icons/bi';
 import { RiContactsLine } from 'react-icons/ri';
-import { MdOutlineSupervisorAccount, MdOutlineEdit, MdOutlineDeleteOutline, MdOutlineDelete } from 'react-icons/md';
+import { MdOutlineSupervisorAccount } from 'react-icons/md';
 import { HiOutlineRefresh } from 'react-icons/hi';
 import { GrLocation } from 'react-icons/gr';
 import avatar from './avatar.jpg';
@@ -147,6 +146,15 @@ export const gridOrderStatus = (props) => (
     {props.Status}
   </button>
 );
+export const gridTrackingStatus = (props) => (
+  <button
+    type="button"
+    style={{ background: props.statusBg }}
+    className="text-white py-0.5 px-3 capitalize rounded-2xl text-md"
+  >
+    {props.status}
+  </button>
+);
 
 export const kanbanGrid = [
   {
@@ -191,60 +199,7 @@ const gridEmployeeCountry = (props) => (
     <span>{props.Country}</span>
   </div>
 );
-export const EditorData = () => (
-  <div>
-    <p>&nbsp;</p>
-    <p style={{ marginLeft: '40px' }}>
-      <span style={{ fontSize: '26px' }}><strong>Product Title: Nike Air Zoom Pegasus 38 Running Shoes</strong></span>
-    </p>
-    <p style={{ marginLeft: '40px' }}><br />
-      <span style={{ fontSize: '16px' }}><strong>Price:</strong> $129.99<br />
-        <strong>Brand:</strong> Nike<br />
-        <strong>Model:</strong> Air Zoom Pegasus 38<br />
-        <strong>Category:</strong> Running Shoes<br />
-        <strong>Color Options:</strong> Black/White, Blue/Orange, Gray/Pink<br />
-        <strong>Sizes Available:</strong> 6, 7, 8, 9, 10, 11, 12<br />
-        <strong>Gender:</strong> Unisex</span>
-    </p>
-    <p style={{ marginLeft: '40px' }}><br />
-      <span style={{ fontSize: '20px' }}><strong>Material:</strong></span>
-    </p>
-    <p style={{ marginLeft: '80px' }}><span style={{ fontSize: '16px' }}>Upper: Engineered Mesh</span></p>
-    <p style={{ marginLeft: '80px' }}><span style={{ fontSize: '16px' }}>Midsole: Nike React Foam</span></p>
-    <p style={{ marginLeft: '80px' }}><span style={{ fontSize: '16px' }}>Outsole: Rubber</span></p>
-    <p style={{ marginLeft: '40px' }}><span style={{ fontSize: '20px' }}><strong>Features:</strong></span></p>
-    <p style={{ marginLeft: '80px' }}><span style={{ fontSize: '16px' }}>Responsive Air Zoom cushioning in the forefoot</span></p>
-    <p style={{ marginLeft: '80px' }}><span style={{ fontSize: '16px' }}>Wider forefoot area provides a roomy fit</span></p>
-    <p style={{ marginLeft: '80px' }}><span style={{ fontSize: '16px' }}>Midfoot webbing delivers support</span></p>
-    <p style={{ marginLeft: '80px' }}><span style={{ fontSize: '16px' }}>Nike React foam offers lightweight cushioning and durability</span></p>
-    <p style={{ marginLeft: '80px' }}><span style={{ fontSize: '16px' }}>Durable rubber outsole provides traction on various surfaces</span></p>
-    <p style={{ marginLeft: '80px' }}><span style={{ fontSize: '16px' }}>Breathable mesh upper keeps feet cool and comfortable</span></p>
-    <p style={{ marginLeft: '80px' }}><span style={{ fontSize: '16px' }}>Cushioned collar for ankle support</span></p>
-    <p style={{ marginLeft: '80px' }}><span style={{ fontSize: '16px' }}>Lace-up closure for a secure fit</span></p>
-    <p style={{ marginLeft: '80px' }}>&nbsp;</p>
-    <p style={{ marginLeft: '40px' }}><span style={{ fontSize: '20px' }}><strong>Product Description:</strong></span><br />
-      <span style={{ fontSize: '16px' }}>The Nike Air Zoom Pegasus 38 Running Shoes are designed to provide comfort and performance for runners of all levels. Featuring responsive Air Zoom cushioning in the forefoot, these shoes offer a springy feel with every stride. The wider forefoot area ensures a roomy fit, while the midfoot webbing provides support during runs. Constructed with Nike React foam, these shoes offer lightweight cushioning and durability for long-lasting wear. The breathable mesh upper keeps feet cool, while the durable rubber outsole provides traction on various surfaces. Whether you&#39;re hitting the pavement or the trails, the Nike Air Zoom Pegasus 38 Running Shoes are ready to take on your next run with style and comfort.</span></p>
-    <p style={{ marginLeft: '40px' }}><br />
-      <span style={{ fontSize: '20px' }}><strong>Shipping Information:</strong></span></p>
-    <p style={{ marginLeft: '80px' }}><span style={{ fontSize: '16px' }}>Free standard shipping on orders over $50</span></p>
-    <p style={{ marginLeft: '80px' }}><span style={{ fontSize: '16px' }}>Expedited shipping options available</span></p>
-    <p style={{ marginLeft: '80px' }}><span style={{ fontSize: '16px' }}>International shipping available to select countries</span></p>
-    <p style={{ marginLeft: '40px' }}><span style={{ fontSize: '20px' }}><strong>Return Policy:</strong></span></p>
-    <p style={{ marginLeft: '80px' }}><span style={{ fontSize: '16px' }}>30-day return policy for unused products</span></p>
-    <p style={{ marginLeft: '80px' }}><span style={{ fontSize: '16px' }}>Free returns within the U.S.</span></p>
-    <p style={{ marginLeft: '80px' }}><span style={{ fontSize: '16px' }}>International returns accepted, buyer pays return shipping</span></p>
-    <p style={{ marginLeft: '40px' }}><br />
-      <span style={{ fontSize: '20px' }}><strong>Additional Information:</strong></span></p>
-    <p style={{ marginLeft: '80px' }}><span style={{ fontSize: '16px' }}>Product Code: NZP38-001</span></p>
-    <p style={{ marginLeft: '80px' }}><span style={{ fontSize: '16px' }}>UPC: 887231896532</span></p>
-    <p style={{ marginLeft: '80px' }}><span style={{ fontSize: '16px' }}>Manufactured in Vietnam</span></p>
-    <p style={{ marginLeft: '40px' }}><span style={{ fontSize: '16px' }}><strong>Disclaimer:</strong> Actual product colors may vary slightly from images due to monitor settings and lighting conditions.<br />
-      <strong>Related Products:</strong></span></p>
-    <p style={{ marginLeft: '40px' }}><span style={{ fontSize: '16px' }}>Nike Elite Lightweight No-Show Running Socks</span></p>
-    <p style={{ marginLeft: '40px' }}><span style={{ fontSize: '16px' }}>Nike Running Hat</span></p>
-    <p style={{ marginLeft: '40px' }}><span style={{ fontSize: '16px' }}>Nike Lightweight Running Jacket</span></p>
-  </div>
-);
+
 const customerGridImage = (props) => (
   <div className="image flex gap-4">
     <img
@@ -644,13 +599,9 @@ export const links = [
         icon: <AiOutlineShoppingCart />,
       },
       {
-        name: 'Products',
+        name: 'products',
         icon: <GiRunningShoe />,
       },
-      // {
-      //   name: 'employees',
-      //   icon: <IoMdContacts />,
-      // },
       {
         name: 'customers',
         icon: <RiContactsLine />,
@@ -659,35 +610,19 @@ export const links = [
         name: 'shop',
         icon: <BsShop />,
       },
+      {
+        name: 'tracking',
+        icon: <BiTargetLock />,
+      },
+      
 
-    ],
-  },
-  {
-    title: 'Apps',
-    links: [
-      {
-        name: 'calendar',
-        icon: <AiOutlineCalendar />,
-      },
-      {
-        name: 'kanban',
-        icon: <BsKanban />,
-      },
-      {
-        name: 'editor',
-        icon: <FiEdit />,
-      },
-      {
-        name: 'color-picker',
-        icon: <BiColorFill />,
-      },
     ],
   },
   {
     title: 'Charts',
     links: [
       {
-        name: 'line',
+        name: 'revenue',
         icon: <AiOutlineStock />,
       },
       {
@@ -703,22 +638,6 @@ export const links = [
         name: 'pie',
         icon: <FiPieChart />,
       },
-      // {
-      //   name: 'financial',
-      //   icon: <RiStockLine />,
-      // },
-      // {
-      //   name: 'color-mapping',
-      //   icon: <BsBarChart />,
-      // },
-      // {
-      //   name: 'pyramid',
-      //   icon: <GiLouvrePyramid />,
-      // },
-      // {
-      //   name: 'stacked',
-      //   icon: <AiOutlineBarChart />,
-      // },
     ],
   },
 ];
@@ -1028,6 +947,48 @@ export const userProfileData = [
     iconBg: '#FEC90F',
   },
 ];
+
+export const trackingGrid =[
+  {
+    field: 'trackingID',
+    headerText: 'Tracking Number',
+    width: '150',
+    textAlign: 'left',
+    editType: 'numericedit',
+  },
+  {
+    field: 'orderID',
+    headerText: 'Order ID',
+    textAlign: 'Center',
+    width: '120',
+  },
+  {
+    field: 'customerName',
+    headerText: 'Customer Name',
+    width: '150',
+    textAlign: 'Center',
+  },
+  {
+    field: 'customerLocation',
+    headerText: 'Location',
+    width: '150',
+    textAlign: 'Center',
+  },
+  {
+    field: 'status',
+    headerText: 'Status',
+    template: gridTrackingStatus,
+    width: '150',
+    textAlign: 'Center',
+    editType: 'numericedit',
+  },
+  {
+    field: 'shippingVia',
+    headerText: 'Shipping Via',
+    width: '150',
+    textAlign: 'Center',
+  },
+]
 export const productsGrid = [
   {
     field: 'ProductID',
@@ -4874,8 +4835,23 @@ export const productsTableData = [
     Price: productsData[14].productPrice,
     ProductStock: productsData[14].productStock,
     ItemsSold: productsData[14].itemsSold,
-
   }
+]
+
+export const trackingTableData =[
+  {
+    trackingID: "SKV32765388F",
+    orderID: 10248,
+    customerName: 'Vinet',
+    customerLocation: 'Canda',
+    shippiingTo:"John Doe",
+    status: "Delivered",
+    statusBg: '#8BE78B',
+    placedOn: '2023-08-05',
+    eta: '2023-08-29',
+    shippingVia: "FedEx",
+  }
+
 ]
 
 export const ordersData = [
