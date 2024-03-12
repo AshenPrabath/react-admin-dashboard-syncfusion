@@ -39,7 +39,7 @@ const ProductsTable = ({ dataSource, pageSize = 10, }) => {
     }
 
     return (
-        <div style={{ backgroundColor: '#f3f4f6', color: '#333' }}>
+        <div>
             <GridComponent
                 id='gridcomp'
                 dataSource={dataSource}
@@ -49,6 +49,8 @@ const ProductsTable = ({ dataSource, pageSize = 10, }) => {
                 pageSettings={{ pageSize: pageSize }}
                 commandClick={commandClick}
                 ref={g => grid = g}
+                width="auto"
+                // style={{ backgroundColor: '#f3f4f6', color: '#333' }}
             >
                 <ColumnsDirective>
                     {productsGrid.map((item, index) => (

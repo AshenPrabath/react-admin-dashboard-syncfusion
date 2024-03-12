@@ -4,7 +4,7 @@ import { ordersGrid } from '../../data/dummy';
 
 const OrdersTable = ({dataSource, pageSize=10}) => {
   return (
-    <div style={{ backgroundColor: '#f3f4f6', color: '#333' }}>
+    <div>
         <GridComponent
         id='gridcomp'
         dataSource={dataSource}
@@ -12,6 +12,7 @@ const OrdersTable = ({dataSource, pageSize=10}) => {
         allowSorting={true}
         toolbar={['Search' ]}
         pageSettings={{pageSize:pageSize}}
+        width="auto"
       >
         <ColumnsDirective>
           {ordersGrid.map((item, index) => (

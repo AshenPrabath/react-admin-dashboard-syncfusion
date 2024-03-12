@@ -952,7 +952,7 @@ export const trackingGrid =[
   {
     field: 'trackingID',
     headerText: 'Tracking Number',
-    width: '150',
+    width: '130',
     textAlign: 'left',
     editType: 'numericedit',
   },
@@ -960,32 +960,32 @@ export const trackingGrid =[
     field: 'orderID',
     headerText: 'Order ID',
     textAlign: 'Center',
-    width: '120',
+    width: '100',
   },
   {
     field: 'customerName',
     headerText: 'Customer Name',
-    width: '150',
+    width: '120',
     textAlign: 'Center',
   },
   {
     field: 'customerLocation',
     headerText: 'Location',
-    width: '150',
+    width: '100',
     textAlign: 'Center',
   },
   {
     field: 'status',
     headerText: 'Status',
     template: gridTrackingStatus,
-    width: '150',
+    width: '100',
     textAlign: 'Center',
     editType: 'numericedit',
   },
   {
     field: 'shippingVia',
     headerText: 'Shipping Via',
-    width: '150',
+    width: '120',
     textAlign: 'Center',
   },
 ]
@@ -993,7 +993,7 @@ export const productsGrid = [
   {
     field: 'ProductID',
     headerText: 'ID',
-    width: '80',
+    width: '70',
     textAlign: 'left',
     editType: 'numericedit',
   },
@@ -1001,7 +1001,7 @@ export const productsGrid = [
     headerText: 'Image',
     template: gridProductImage,
     textAlign: 'Center',
-    width: '120',
+    width: '100',
   },
   {
     field: 'ProductName',
@@ -1012,28 +1012,28 @@ export const productsGrid = [
   {
     field: 'ProductCategory',
     headerText: 'Category',
-    width: '150',
+    width: '130',
     textAlign: 'Center',
   },
   {
     field: 'Price',
     headerText: 'Price',
     format: 'C2',
-    width: '150',
+    width: '100',
     textAlign: 'Center',
     editType: 'numericedit',
   },
   {
     field: 'ProductStock',
     headerText: 'Stock',
-    width: '150',
+    width: '80',
     textAlign: 'Center',
     editType: 'numericedit',
   },
   {
     field: 'ItemsSold',
-    headerText: 'Items Sold',
-    width: '150',
+    headerText: 'Sold',
+    width: '80',
     textAlign: 'Center',
   },
 
@@ -1043,7 +1043,7 @@ export const ordersGrid = [
   {
     field: 'OrderID',
     headerText: 'ID',
-    width: '150',
+    width: '120',
     textAlign: 'Center',
   },
   {
@@ -1080,13 +1080,6 @@ export const ordersGrid = [
     textAlign: 'Center',
     width: '120',
   },
-  {
-    field: 'OrderID',
-    headerText: 'Order ID',
-    width: '120',
-    textAlign: 'Center',
-  },
-
   {
     field: 'Location',
     headerText: 'Location',
