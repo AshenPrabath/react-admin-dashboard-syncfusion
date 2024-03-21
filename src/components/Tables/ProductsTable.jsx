@@ -1,14 +1,8 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import { GridComponent, ColumnsDirective, ColumnDirective, Resize, Sort, ContextMenu, Filter, Page, ExcelExport, PdfExport, Edit, Inject, Search, Toolbar, CommandColumn } from '@syncfusion/ej2-react-grids';
-import { productsGrid, productsData } from '../../data/dummy';
-import { Link } from 'react-router-dom';
-import { FaPlus } from "react-icons/fa";
-import product1 from '../../data/product1.jpg';
-import product2 from '../../data/product2.jpg';
+import { productsGrid } from '../../data/dummy';
 import EditProductModal from '../EditProductModal';
 import { useStateContext } from '../../context/ContextProvider';
-
-
 
 const ProductsTable = ({ dataSource, pageSize = 10, }) => {
 

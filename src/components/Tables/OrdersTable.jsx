@@ -1,36 +1,37 @@
-import React,{useState} from 'react';
-import { GridComponent, ColumnsDirective, ColumnDirective, Resize, Sort, ContextMenu, Filter, Page, ExcelExport, PdfExport, Edit, Inject, Search, Toolbar } from '@syncfusion/ej2-react-grids';
+import React, { useState } from 'react';
+import { GridComponent, ColumnsDirective, ColumnDirective, Resize, Sort, ContextMenu, Filter, Page, ExcelExport, PdfExport, Edit, Inject, Search, Toolbar, CommandColumn } from '@syncfusion/ej2-react-grids';
 import { ordersGrid } from '../../data/dummy';
+import OrderInfoModal from '../OrderInfoModal';
 import { useStateContext } from '../../context/ContextProvider';
 
 
 const OrdersTable = ({ dataSource, pageSize = 10 }) => {
 
-  const { dialogVisible, setDialogVisible } = useStateContext();
-    const [currentProduct, setCurrentProduct] = useState(null);
+  const {  orderInfodialogVisible, setOrderInfoDialogVisible } = useStateContext();
+  const [currentOrder, setCurrentOrder] = useState(null);
 
   let grid;
-    let rowData;
+  let rowData;
 
-    const commands = [
-        {
-            buttonOption: {
-                content: 'Edit Product', cssClass: 'e-flat'
-            }
-        }
-    ];
-
-    const commandClick = (args) => {
-        if (grid) {
-            rowData = args.rowData;
-            if (rowData) {
-                setCurrentProduct(rowData.ProductID);
-                console.log(rowData.ProductID);
-                setDialogVisible(true);
-                document.body.style.overflow = 'hidden';
-            }
-        }
+  const commands = [
+    {
+      buttonOption: {
+        content: 'Details', cssClass: 'e-flat'
+      }
     }
+  ];
+
+  const commandClick = (args) => {
+    if (grid) {
+      rowData = args.rowData;
+      if (rowData) {
+        setCurrentOrder(rowData.OrderID);
+        console.log(rowData.OrderID);
+        setOrderInfoDialogVisible(true);
+        document.body.style.overflow = 'hidden';
+      }
+    }
+  }
   return (
     <div>
       <GridComponent
@@ -41,16 +42,24 @@ const OrdersTable = ({ dataSource, pageSize = 10 }) => {
         toolbar={['Search']}
         pageSettings={{ pageSize: pageSize }}
         commandClick={commandClick}
-        ref={g => grid = g}
+        ref={(g) => (grid = g)}
         width="auto"
       >
         <ColumnsDirective>
           {ordersGrid.map((item, index) => (
             <ColumnDirective key={index} {...item} />
           ))}
+          <ColumnDirective field='Actions' headerText='Actions' width='150' textAlign='Center' commands={commands} />
         </ColumnsDirective>
-        <Inject services={[Resize, Sort, ContextMenu, Filter, Page, ExcelExport, PdfExport, Edit, Search, Toolbar]} />
+        <Inject services={[Resize, Sort, ContextMenu, Filter, Page, ExcelExport, PdfExport, Edit, Search, Toolbar, CommandColumn]} />
       </GridComponent>
+      {orderInfodialogVisible ? (
+        <OrderInfoModal
+        currentOrder={currentOrder}
+        />
+      ) :
+        null
+      }
     </div>
   )
 }

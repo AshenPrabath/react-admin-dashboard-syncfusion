@@ -1,21 +1,5 @@
 import React, { useState } from "react";
-import {
-  GridComponent,
-  ColumnsDirective,
-  ColumnDirective,
-  Resize,
-  Sort,
-  ContextMenu,
-  Filter,
-  Page,
-  ExcelExport,
-  PdfExport,
-  Edit,
-  Inject,
-  Search,
-  Toolbar,
-  CommandColumn,
-} from "@syncfusion/ej2-react-grids";
+import { GridComponent, ColumnsDirective, ColumnDirective, Resize, Sort, ContextMenu, Filter, Page, ExcelExport, PdfExport, Edit, Inject, Search, Toolbar, CommandColumn } from "@syncfusion/ej2-react-grids";
 import { trackingGrid } from "../../data/dummy";
 import { useStateContext } from "../../context/ContextProvider";
 import EditProductModal from "../EditProductModal";
@@ -64,29 +48,9 @@ const TrackingTable = ({ dataSource, pageSize = 10 }) => {
           {trackingGrid.map((item, index) => (
             <ColumnDirective key={index} {...item} />
           ))}
-          <ColumnDirective
-            field="Actions"
-            headerText="Actions"
-            width="150"
-            textAlign="Center"
-            commands={commands}
-          />
+          <ColumnDirective field="Actions" headerText="Actions" width="150" textAlign="Center" commands={commands} />
         </ColumnsDirective>
-        <Inject
-          services={[
-            Resize,
-            Sort,
-            ContextMenu,
-            Filter,
-            Page,
-            ExcelExport,
-            PdfExport,
-            Edit,
-            Search,
-            Toolbar,
-            CommandColumn,
-          ]}
-        />
+        <Inject services={[Resize, Sort, ContextMenu, Filter, Page, ExcelExport, PdfExport, Edit, Search, Toolbar, CommandColumn]} />
       </GridComponent>
       {dialogVisible ? (
         <EditProductModal currentProduct={currentProduct} />

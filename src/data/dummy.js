@@ -1,10 +1,10 @@
 import React from 'react';
-import {AiOutlineShoppingCart, AiOutlineAreaChart, AiOutlineBarChart, AiOutlineStock } from 'react-icons/ai';
+import { AiOutlineShoppingCart, AiOutlineAreaChart, AiOutlineBarChart, AiOutlineStock } from 'react-icons/ai';
 import { FiShoppingBag, FiPieChart, FiBarChart, FiCreditCard, FiStar, FiShoppingCart } from 'react-icons/fi';
-import {BsBoxSeam, BsCurrencyDollar, BsShield, BsChatLeft, BsPaypal, BsBank, BsCash, BsShop } from 'react-icons/bs';
+import { BsBoxSeam, BsCurrencyDollar, BsShield, BsChatLeft, BsPaypal, BsBank, BsCash, BsShop } from 'react-icons/bs';
 import { GiRunningShoe } from "react-icons/gi";
 import { FaCcAmex } from "react-icons/fa";
-import { BiLogoVenmo, BiTargetLock  } from 'react-icons/bi';
+import { BiLogoVenmo, BiTargetLock } from 'react-icons/bi';
 import { RiContactsLine } from 'react-icons/ri';
 import { MdOutlineSupervisorAccount } from 'react-icons/md';
 import { HiOutlineRefresh } from 'react-icons/hi';
@@ -620,7 +620,7 @@ export const links = [
         name: 'tracking',
         icon: <BiTargetLock />,
       },
-      
+
 
     ],
   },
@@ -954,7 +954,7 @@ export const userProfileData = [
   },
 ];
 
-export const trackingGrid =[
+export const trackingGrid = [
   {
     field: 'trackingID',
     headerText: 'Tracking Number',
@@ -1087,7 +1087,7 @@ export const ordersGrid = [
   {
     field: 'Location',
     headerText: 'Location',
-    width: '150',
+    width: '100',
     textAlign: 'Center',
   },
 ];
@@ -2509,578 +2509,578 @@ export const productsInfo = [
   ],
   [
     <div>
-    <p>&nbsp;</p>
-    <p style={{ marginLeft: '40px' }}>
+      <p>&nbsp;</p>
+      <p style={{ marginLeft: '40px' }}>
         <span style={{ fontSize: '26px' }}><strong>Product Title: Brooks Ghost 14 Running Shoes</strong></span>
-    </p>
-    <p style={{ marginLeft: '40px' }}><br />
+      </p>
+      <p style={{ marginLeft: '40px' }}><br />
         <span style={{ fontSize: '16px' }}><strong>Price:</strong> $129.99<br />
-        <strong>Brand:</strong> Brooks<br />
-        <strong>Model:</strong> Ghost 14<br />
-        <strong>Category:</strong> Running Shoes<br />
-        <strong>Color Options:</strong> Black/White, Blue/Green, Grey/Orange<br />
-        <strong>Sizes Available:</strong> 6, 7, 8, 9, 10, 11, 12<br />
-        <strong>Gender:</strong> Unisex</span>
-    </p>
-    <p style={{ marginLeft: '40px' }}><br />
+          <strong>Brand:</strong> Brooks<br />
+          <strong>Model:</strong> Ghost 14<br />
+          <strong>Category:</strong> Running Shoes<br />
+          <strong>Color Options:</strong> Black/White, Blue/Green, Grey/Orange<br />
+          <strong>Sizes Available:</strong> 6, 7, 8, 9, 10, 11, 12<br />
+          <strong>Gender:</strong> Unisex</span>
+      </p>
+      <p style={{ marginLeft: '40px' }}><br />
         <span style={{ fontSize: '20px' }}><strong>Material:</strong></span>
-    </p>
-    <p style={{ marginLeft: '80px' }}><span style={{ fontSize: '16px' }}>Upper: Engineered Air Mesh</span></p>
-    <p style={{ marginLeft: '80px' }}><span style={{ fontSize: '16px' }}>Midsole: DNA LOFT cushioning</span></p>
-    <p style={{ marginLeft: '80px' }}><span style={{ fontSize: '16px' }}>Outsole: Blown rubber</span></p>
-    <p style={{ marginLeft: '40px' }}><span style={{ fontSize: '20px' }}><strong>Features:</strong></span></p>
-    <p style={{ marginLeft: '80px' }}><span style={{ fontSize: '16px' }}>DNA LOFT cushioning provides a soft and luxurious feeling underfoot</span></p>
-    <p style={{ marginLeft: '80px' }}><span style={{ fontSize: '16px' }}>Engineered Air Mesh upper offers a breathable and comfortable fit</span></p>
-    <p style={{ marginLeft: '80px' }}><span style={{ fontSize: '16px' }}>Segmented Crash Pad allows for smooth heel-to-toe transitions</span></p>
-    <p style={{ marginLeft: '80px' }}><span style={{ fontSize: '16px' }}>3D Fit Print technology delivers a secure fit</span></p>
-    <p style={{ marginLeft: '80px' }}><span style={{ fontSize: '16px' }}>Omega Flex Grooves enhance flexibility for a natural stride</span></p>
-    <p style={{ marginLeft: '80px' }}><span style={{ fontSize: '16px' }}>Lace-up closure for a personalized fit</span></p>
-    <p style={{ marginLeft: '80px' }}>&nbsp;</p>
-    <p style={{ marginLeft: '40px' }}><span style={{ fontSize: '20px' }}><strong>Product Description:</strong></span><br />
-    <span style={{ fontSize: '16px' }}>The Brooks Ghost 14 Running Shoes are designed to provide runners with a plush and smooth ride. With DNA LOFT cushioning, these shoes offer a soft and luxurious feel underfoot, making them ideal for long-distance runs or everyday training. The engineered Air Mesh upper ensures breathability and comfort, while the Segmented Crash Pad allows for smooth heel-to-toe transitions. 3D Fit Print technology delivers a secure fit, and Omega Flex Grooves enhance flexibility for a natural stride. Whether you're hitting the roads or the trails, the Brooks Ghost 14 will provide the comfort and support you need to reach your goals.</span></p>
-    <p style={{ marginLeft: '40px' }}><br />
-    <span style={{ fontSize: '20px' }}><strong>Shipping Information:</strong></span></p>
-    <p style={{ marginLeft: '80px' }}><span style={{ fontSize: '16px' }}>Free standard shipping on all orders</span></p> 
-    <p style={{ marginLeft: '80px' }}><span style={{ fontSize: '16px' }}>Expedited shipping options available</span></p>
-    <p style={{ marginLeft: '80px' }}><span style={{ fontSize: '16px' }}>International shipping available to select countries</span></p>
-    <p style={{ marginLeft: '40px' }}><span style={{ fontSize: '20px' }}><strong>Return Policy:</strong></span></p>
-    <p style={{ marginLeft: '80px' }}><span style={{ fontSize: '16px' }}>60-day satisfaction guarantee</span></p>
-    <p style={{ marginLeft: '80px' }}><span style={{ fontSize: '16px' }}>Free returns within the U.S.</span></p>
-    <p style={{ marginLeft: '80px' }}><span style={{ fontSize: '16px' }}>International returns accepted within 90 days, buyer pays return shipping</span></p>
-    <p style={{ marginLeft: '40px' }}><br />
-    <span style={{ fontSize: '20px' }}><strong>Additional Information:</strong></span></p>
-    <p style={{ marginLeft: '80px' }}><span style={{ fontSize: '16px' }}>Product Code: BKG14-001</span></p>
-    <p style={{ marginLeft: '80px' }}><span style={{ fontSize: '16px' }}>UPC: 192662930483</span></p>
-    <p style={{ marginLeft: '80px' }}><span style={{ fontSize: '16px' }}>Manufactured in Vietnam</span></p>
-    <p style={{ marginLeft: '40px' }}><span style={{ fontSize: '16px' }}><strong>Disclaimer:</strong> Actual product colors may vary slightly from images due to monitor settings and lighting conditions.<br />
-    <strong>Related Products:</strong></span></p>
-    <p style={{ marginLeft: '40px' }}><span style={{ fontSize: '16px' }}>Brooks Ghost Running Socks</span></p>
-    <p style={{ marginLeft: '40px' }}><span style={{ fontSize: '16px' }}>Brooks Running Cap</span></p>
-    <p style={{ marginLeft: '40px' }}><span style={{ fontSize: '16px' }}>Brooks Lightweight Running Jacket</span></p>
-</div>
+      </p>
+      <p style={{ marginLeft: '80px' }}><span style={{ fontSize: '16px' }}>Upper: Engineered Air Mesh</span></p>
+      <p style={{ marginLeft: '80px' }}><span style={{ fontSize: '16px' }}>Midsole: DNA LOFT cushioning</span></p>
+      <p style={{ marginLeft: '80px' }}><span style={{ fontSize: '16px' }}>Outsole: Blown rubber</span></p>
+      <p style={{ marginLeft: '40px' }}><span style={{ fontSize: '20px' }}><strong>Features:</strong></span></p>
+      <p style={{ marginLeft: '80px' }}><span style={{ fontSize: '16px' }}>DNA LOFT cushioning provides a soft and luxurious feeling underfoot</span></p>
+      <p style={{ marginLeft: '80px' }}><span style={{ fontSize: '16px' }}>Engineered Air Mesh upper offers a breathable and comfortable fit</span></p>
+      <p style={{ marginLeft: '80px' }}><span style={{ fontSize: '16px' }}>Segmented Crash Pad allows for smooth heel-to-toe transitions</span></p>
+      <p style={{ marginLeft: '80px' }}><span style={{ fontSize: '16px' }}>3D Fit Print technology delivers a secure fit</span></p>
+      <p style={{ marginLeft: '80px' }}><span style={{ fontSize: '16px' }}>Omega Flex Grooves enhance flexibility for a natural stride</span></p>
+      <p style={{ marginLeft: '80px' }}><span style={{ fontSize: '16px' }}>Lace-up closure for a personalized fit</span></p>
+      <p style={{ marginLeft: '80px' }}>&nbsp;</p>
+      <p style={{ marginLeft: '40px' }}><span style={{ fontSize: '20px' }}><strong>Product Description:</strong></span><br />
+        <span style={{ fontSize: '16px' }}>The Brooks Ghost 14 Running Shoes are designed to provide runners with a plush and smooth ride. With DNA LOFT cushioning, these shoes offer a soft and luxurious feel underfoot, making them ideal for long-distance runs or everyday training. The engineered Air Mesh upper ensures breathability and comfort, while the Segmented Crash Pad allows for smooth heel-to-toe transitions. 3D Fit Print technology delivers a secure fit, and Omega Flex Grooves enhance flexibility for a natural stride. Whether you're hitting the roads or the trails, the Brooks Ghost 14 will provide the comfort and support you need to reach your goals.</span></p>
+      <p style={{ marginLeft: '40px' }}><br />
+        <span style={{ fontSize: '20px' }}><strong>Shipping Information:</strong></span></p>
+      <p style={{ marginLeft: '80px' }}><span style={{ fontSize: '16px' }}>Free standard shipping on all orders</span></p>
+      <p style={{ marginLeft: '80px' }}><span style={{ fontSize: '16px' }}>Expedited shipping options available</span></p>
+      <p style={{ marginLeft: '80px' }}><span style={{ fontSize: '16px' }}>International shipping available to select countries</span></p>
+      <p style={{ marginLeft: '40px' }}><span style={{ fontSize: '20px' }}><strong>Return Policy:</strong></span></p>
+      <p style={{ marginLeft: '80px' }}><span style={{ fontSize: '16px' }}>60-day satisfaction guarantee</span></p>
+      <p style={{ marginLeft: '80px' }}><span style={{ fontSize: '16px' }}>Free returns within the U.S.</span></p>
+      <p style={{ marginLeft: '80px' }}><span style={{ fontSize: '16px' }}>International returns accepted within 90 days, buyer pays return shipping</span></p>
+      <p style={{ marginLeft: '40px' }}><br />
+        <span style={{ fontSize: '20px' }}><strong>Additional Information:</strong></span></p>
+      <p style={{ marginLeft: '80px' }}><span style={{ fontSize: '16px' }}>Product Code: BKG14-001</span></p>
+      <p style={{ marginLeft: '80px' }}><span style={{ fontSize: '16px' }}>UPC: 192662930483</span></p>
+      <p style={{ marginLeft: '80px' }}><span style={{ fontSize: '16px' }}>Manufactured in Vietnam</span></p>
+      <p style={{ marginLeft: '40px' }}><span style={{ fontSize: '16px' }}><strong>Disclaimer:</strong> Actual product colors may vary slightly from images due to monitor settings and lighting conditions.<br />
+        <strong>Related Products:</strong></span></p>
+      <p style={{ marginLeft: '40px' }}><span style={{ fontSize: '16px' }}>Brooks Ghost Running Socks</span></p>
+      <p style={{ marginLeft: '40px' }}><span style={{ fontSize: '16px' }}>Brooks Running Cap</span></p>
+      <p style={{ marginLeft: '40px' }}><span style={{ fontSize: '16px' }}>Brooks Lightweight Running Jacket</span></p>
+    </div>
 
   ],
   [
     <div>
-    <p>&nbsp;</p>
-    <p style={{ marginLeft: '40px' }}>
+      <p>&nbsp;</p>
+      <p style={{ marginLeft: '40px' }}>
         <span style={{ fontSize: '26px' }}><strong>Product Title: Saucony Kinvara 12 Running Shoes</strong></span>
-    </p>
-    <p style={{ marginLeft: '40px' }}><br />
+      </p>
+      <p style={{ marginLeft: '40px' }}><br />
         <span style={{ fontSize: '16px' }}><strong>Price:</strong> $119.99<br />
-        <strong>Brand:</strong> Saucony<br />
-        <strong>Model:</strong> Kinvara 12<br />
-        <strong>Category:</strong> Running Shoes<br />
-        <strong>Color Options:</strong> Black/Grey, Blue/White, Green/Yellow<br />
-        <strong>Sizes Available:</strong> 6, 7, 8, 9, 10, 11, 12<br />
-        <strong>Gender:</strong> Unisex</span>
-    </p>
-    <p style={{ marginLeft: '40px' }}><br />
+          <strong>Brand:</strong> Saucony<br />
+          <strong>Model:</strong> Kinvara 12<br />
+          <strong>Category:</strong> Running Shoes<br />
+          <strong>Color Options:</strong> Black/Grey, Blue/White, Green/Yellow<br />
+          <strong>Sizes Available:</strong> 6, 7, 8, 9, 10, 11, 12<br />
+          <strong>Gender:</strong> Unisex</span>
+      </p>
+      <p style={{ marginLeft: '40px' }}><br />
         <span style={{ fontSize: '20px' }}><strong>Material:</strong></span>
-    </p>
-    <p style={{ marginLeft: '80px' }}><span style={{ fontSize: '16px' }}>Upper: FORMFIT engineered mesh</span></p>
-    <p style={{ marginLeft: '80px' }}><span style={{ fontSize: '16px' }}>Midsole: PWRRUN cushioning</span></p>
-    <p style={{ marginLeft: '80px' }}><span style={{ fontSize: '16px' }}>Outsole: XT-900 rubber</span></p>
-    <p style={{ marginLeft: '40px' }}><span style={{ fontSize: '20px' }}><strong>Features:</strong></span></p>
-    <p style={{ marginLeft: '80px' }}><span style={{ fontSize: '16px' }}>FORMFIT technology adapts to your foot for a personalized fit</span></p>
-    <p style={{ marginLeft: '80px' }}><span style={{ fontSize: '16px' }}>PWRRUN cushioning provides a responsive and cushioned ride</span></p>
-    <p style={{ marginLeft: '80px' }}><span style={{ fontSize: '16px' }}>Flexfilm overlays offer lightweight support</span></p>
-    <p style={{ marginLeft: '80px' }}><span style={{ fontSize: '16px' }}>XT-900 rubber outsole for durability and traction</span></p>
-    <p style={{ marginLeft: '80px' }}><span style={{ fontSize: '16px' }}>Breathable and lightweight FORMFIT engineered mesh upper</span></p>
-    <p style={{ marginLeft: '80px' }}><span style={{ fontSize: '16px' }}>Lace-up closure for a secure fit</span></p>
-    <p style={{ marginLeft: '80px' }}>&nbsp;</p>
-    <p style={{ marginLeft: '40px' }}><span style={{ fontSize: '20px' }}><strong>Product Description:</strong></span><br />
-    <span style={{ fontSize: '16px' }}>The Saucony Kinvara 12 Running Shoes are designed to provide a lightweight and responsive ride. Featuring FORMFIT technology, these shoes adapt to your foot shape for a personalized fit. The PWRRUN cushioning offers a responsive and cushioned feel underfoot, while the Flexfilm overlays provide lightweight support. With an XT-900 rubber outsole, these shoes offer durability and traction on various surfaces. The breathable and lightweight FORMFIT engineered mesh upper ensures comfort and ventilation during your runs. Lace-up closure allows for a secure fit, making the Kinvara 12 ideal for runners seeking a versatile and comfortable shoe for their training sessions.</span></p>
-    <p style={{ marginLeft: '40px' }}><br />
-    <span style={{ fontSize: '20px' }}><strong>Shipping Information:</strong></span></p>
-    <p style={{ marginLeft: '80px' }}><span style={{ fontSize: '16px' }}>Free standard shipping on all orders</span></p> 
-    <p style={{ marginLeft: '80px' }}><span style={{ fontSize: '16px' }}>Expedited shipping options available</span></p>
-    <p style={{ marginLeft: '80px' }}><span style={{ fontSize: '16px' }}>International shipping available to most countries</span></p>
-    <p style={{ marginLeft: '40px' }}><span style={{ fontSize: '20px' }}><strong>Return Policy:</strong></span></p>
-    <p style={{ marginLeft: '80px' }}><span style={{ fontSize: '16px' }}>90-day satisfaction guarantee</span></p>
-    <p style={{ marginLeft: '80px' }}><span style={{ fontSize: '16px' }}>Free returns within the U.S.</span></p>
-    <p style={{ marginLeft: '80px' }}><span style={{ fontSize: '16px' }}>International returns accepted within 120 days, buyer pays return shipping</span></p>
-    <p style={{ marginLeft: '40px' }}><br />
-    <span style={{ fontSize: '20px' }}><strong>Additional Information:</strong></span></p>
-    <p style={{ marginLeft: '80px' }}><span style={{ fontSize: '16px' }}>Product Code: SK12-001</span></p>
-    <p style={{ marginLeft: '80px' }}><span style={{ fontSize: '16px' }}>UPC: 192662930483</span></p>
-    <p style={{ marginLeft: '80px' }}><span style={{ fontSize: '16px' }}>Manufactured in Vietnam</span></p>
-    <p style={{ marginLeft: '40px' }}><span style={{ fontSize: '16px' }}><strong>Disclaimer:</strong> Actual product colors may vary slightly from images due to monitor settings and lighting conditions.<br />
-    <strong>Related Products:</strong></span></p>
-    <p style={{ marginLeft: '40px' }}><span style={{ fontSize: '16px' }}>Saucony Kinvara Running Socks</span></p>
-    <p style={{ marginLeft: '40px' }}><span style={{ fontSize: '16px' }}>Saucony Running Cap</span></p>
-    <p style={{ marginLeft: '40px' }}><span style={{ fontSize: '16px' }}>Saucony Lightweight Running Jacket</span></p>
-</div>
+      </p>
+      <p style={{ marginLeft: '80px' }}><span style={{ fontSize: '16px' }}>Upper: FORMFIT engineered mesh</span></p>
+      <p style={{ marginLeft: '80px' }}><span style={{ fontSize: '16px' }}>Midsole: PWRRUN cushioning</span></p>
+      <p style={{ marginLeft: '80px' }}><span style={{ fontSize: '16px' }}>Outsole: XT-900 rubber</span></p>
+      <p style={{ marginLeft: '40px' }}><span style={{ fontSize: '20px' }}><strong>Features:</strong></span></p>
+      <p style={{ marginLeft: '80px' }}><span style={{ fontSize: '16px' }}>FORMFIT technology adapts to your foot for a personalized fit</span></p>
+      <p style={{ marginLeft: '80px' }}><span style={{ fontSize: '16px' }}>PWRRUN cushioning provides a responsive and cushioned ride</span></p>
+      <p style={{ marginLeft: '80px' }}><span style={{ fontSize: '16px' }}>Flexfilm overlays offer lightweight support</span></p>
+      <p style={{ marginLeft: '80px' }}><span style={{ fontSize: '16px' }}>XT-900 rubber outsole for durability and traction</span></p>
+      <p style={{ marginLeft: '80px' }}><span style={{ fontSize: '16px' }}>Breathable and lightweight FORMFIT engineered mesh upper</span></p>
+      <p style={{ marginLeft: '80px' }}><span style={{ fontSize: '16px' }}>Lace-up closure for a secure fit</span></p>
+      <p style={{ marginLeft: '80px' }}>&nbsp;</p>
+      <p style={{ marginLeft: '40px' }}><span style={{ fontSize: '20px' }}><strong>Product Description:</strong></span><br />
+        <span style={{ fontSize: '16px' }}>The Saucony Kinvara 12 Running Shoes are designed to provide a lightweight and responsive ride. Featuring FORMFIT technology, these shoes adapt to your foot shape for a personalized fit. The PWRRUN cushioning offers a responsive and cushioned feel underfoot, while the Flexfilm overlays provide lightweight support. With an XT-900 rubber outsole, these shoes offer durability and traction on various surfaces. The breathable and lightweight FORMFIT engineered mesh upper ensures comfort and ventilation during your runs. Lace-up closure allows for a secure fit, making the Kinvara 12 ideal for runners seeking a versatile and comfortable shoe for their training sessions.</span></p>
+      <p style={{ marginLeft: '40px' }}><br />
+        <span style={{ fontSize: '20px' }}><strong>Shipping Information:</strong></span></p>
+      <p style={{ marginLeft: '80px' }}><span style={{ fontSize: '16px' }}>Free standard shipping on all orders</span></p>
+      <p style={{ marginLeft: '80px' }}><span style={{ fontSize: '16px' }}>Expedited shipping options available</span></p>
+      <p style={{ marginLeft: '80px' }}><span style={{ fontSize: '16px' }}>International shipping available to most countries</span></p>
+      <p style={{ marginLeft: '40px' }}><span style={{ fontSize: '20px' }}><strong>Return Policy:</strong></span></p>
+      <p style={{ marginLeft: '80px' }}><span style={{ fontSize: '16px' }}>90-day satisfaction guarantee</span></p>
+      <p style={{ marginLeft: '80px' }}><span style={{ fontSize: '16px' }}>Free returns within the U.S.</span></p>
+      <p style={{ marginLeft: '80px' }}><span style={{ fontSize: '16px' }}>International returns accepted within 120 days, buyer pays return shipping</span></p>
+      <p style={{ marginLeft: '40px' }}><br />
+        <span style={{ fontSize: '20px' }}><strong>Additional Information:</strong></span></p>
+      <p style={{ marginLeft: '80px' }}><span style={{ fontSize: '16px' }}>Product Code: SK12-001</span></p>
+      <p style={{ marginLeft: '80px' }}><span style={{ fontSize: '16px' }}>UPC: 192662930483</span></p>
+      <p style={{ marginLeft: '80px' }}><span style={{ fontSize: '16px' }}>Manufactured in Vietnam</span></p>
+      <p style={{ marginLeft: '40px' }}><span style={{ fontSize: '16px' }}><strong>Disclaimer:</strong> Actual product colors may vary slightly from images due to monitor settings and lighting conditions.<br />
+        <strong>Related Products:</strong></span></p>
+      <p style={{ marginLeft: '40px' }}><span style={{ fontSize: '16px' }}>Saucony Kinvara Running Socks</span></p>
+      <p style={{ marginLeft: '40px' }}><span style={{ fontSize: '16px' }}>Saucony Running Cap</span></p>
+      <p style={{ marginLeft: '40px' }}><span style={{ fontSize: '16px' }}>Saucony Lightweight Running Jacket</span></p>
+    </div>
   ],
   [
     <div>
-    <p>&nbsp;</p>
-    <p style={{ marginLeft: '40px' }}>
+      <p>&nbsp;</p>
+      <p style={{ marginLeft: '40px' }}>
         <span style={{ fontSize: '26px' }}><strong>Product Title: Asics Gel-Nimbus 24 Running Shoes</strong></span>
-    </p>
-    <p style={{ marginLeft: '40px' }}><br />
+      </p>
+      <p style={{ marginLeft: '40px' }}><br />
         <span style={{ fontSize: '16px' }}><strong>Price:</strong> $159.99<br />
-        <strong>Brand:</strong> Asics<br />
-        <strong>Model:</strong> Gel-Nimbus 24<br />
-        <strong>Category:</strong> Running Shoes<br />
-        <strong>Color Options:</strong> Black/Silver, White/Blue, Red/Black<br />
-        <strong>Sizes Available:</strong> 6, 7, 8, 9, 10, 11, 12<br />
-        <strong>Gender:</strong> Unisex</span>
-    </p>
-    <p style={{ marginLeft: '40px' }}><br />
+          <strong>Brand:</strong> Asics<br />
+          <strong>Model:</strong> Gel-Nimbus 24<br />
+          <strong>Category:</strong> Running Shoes<br />
+          <strong>Color Options:</strong> Black/Silver, White/Blue, Red/Black<br />
+          <strong>Sizes Available:</strong> 6, 7, 8, 9, 10, 11, 12<br />
+          <strong>Gender:</strong> Unisex</span>
+      </p>
+      <p style={{ marginLeft: '40px' }}><br />
         <span style={{ fontSize: '20px' }}><strong>Material:</strong></span>
-    </p>
-    <p style={{ marginLeft: '80px' }}><span style={{ fontSize: '16px' }}>Upper: Mesh and synthetic leather</span></p>
-    <p style={{ marginLeft: '80px' }}><span style={{ fontSize: '16px' }}>Midsole: FlyteFoam Propel and FlyteFoam Lyte cushioning</span></p>
-    <p style={{ marginLeft: '80px' }}><span style={{ fontSize: '16px' }}>Outsole: AHAR (Asics High Abrasion Rubber)</span></p>
-    <p style={{ marginLeft: '40px' }}><span style={{ fontSize: '20px' }}><strong>Features:</strong></span></p>
-    <p style={{ marginLeft: '80px' }}><span style={{ fontSize: '16px' }}>Gel cushioning technology for shock absorption</span></p>
-    <p style={{ marginLeft: '80px' }}><span style={{ fontSize: '16px' }}>Adaptive Mesh upper for a supportive and breathable fit</span></p>
-    <p style={{ marginLeft: '80px' }}><span style={{ fontSize: '16px' }}>Impact Guidance System enhances the foot's natural gait</span></p>
-    <p style={{ marginLeft: '80px' }}><span style={{ fontSize: '16px' }}>FlyteFoam Propel and FlyteFoam Lyte cushioning offer lightweight and responsive cushioning</span></p>
-    <p style={{ marginLeft: '80px' }}><span style={{ fontSize: '16px' }}>AHAR outsole provides durability and traction</span></p>
-    <p style={{ marginLeft: '80px' }}><span style={{ fontSize: '16px' }}>Ortholite X-40 sockliner for moisture management and breathability</span></p>
-    <p style={{ marginLeft: '80px' }}>&nbsp;</p>
-    <p style={{ marginLeft: '40px' }}><span style={{ fontSize: '20px' }}><strong>Product Description:</strong></span><br />
-    <span style={{ fontSize: '16px' }}>The Asics Gel-Nimbus 24 Running Shoes are designed to provide maximum comfort and support for neutral runners. Featuring Gel cushioning technology in the heel and forefoot, these shoes offer exceptional shock absorption to reduce impact during each stride. The Adaptive Mesh upper provides a supportive and breathable fit, while the Impact Guidance System enhances the foot's natural gait for a smoother transition from heel strike to toe-off. With FlyteFoam Propel and FlyteFoam Lyte cushioning, these shoes offer lightweight and responsive cushioning for a comfortable ride mile after mile. The AHAR outsole ensures durability and traction on various surfaces, while the Ortholite X-40 sockliner provides moisture management and breathability. Whether you're training for a marathon or going for a leisurely jog, the Gel-Nimbus 24 will keep you comfortable and supported every step of the way.</span></p>
-    <p style={{ marginLeft: '40px' }}><br />
-    <span style={{ fontSize: '20px' }}><strong>Shipping Information:</strong></span></p>
-    <p style={{ marginLeft: '80px' }}><span style={{ fontSize: '16px' }}>Free standard shipping on orders over $100</span></p> 
-    <p style={{ marginLeft: '80px' }}><span style={{ fontSize: '16px' }}>Expedited shipping options available</span></p>
-    <p style={{ marginLeft: '80px' }}><span style={{ fontSize: '16px' }}>International shipping available to select countries</span></p>
-    <p style={{ marginLeft: '40px' }}><span style={{ fontSize: '20px' }}><strong>Return Policy:</strong></span></p>
-    <p style={{ marginLeft: '80px' }}><span style={{ fontSize: '16px' }}>60-day satisfaction guarantee</span></p>
-    <p style={{ marginLeft: '80px' }}><span style={{ fontSize: '16px' }}>Free returns within the U.S.</span></p>
-    <p style={{ marginLeft: '80px' }}><span style={{ fontSize: '16px' }}>International returns accepted within 90 days, buyer pays return shipping</span></p>
-    <p style={{ marginLeft: '40px' }}><br />
-    <span style={{ fontSize: '20px' }}><strong>Additional Information:</strong></span></p>
-    <p style={{ marginLeft: '80px' }}><span style={{ fontSize: '16px' }}>Product Code: ASGN24-001</span></p>
-    <p style={{ marginLeft: '80px' }}><span style={{ fontSize: '16px' }}>UPC: 192662930483</span></p>
-    <p style={{ marginLeft: '80px' }}><span style={{ fontSize: '16px' }}>Manufactured in Vietnam</span></p>
-    <p style={{ marginLeft: '40px' }}><span style={{ fontSize: '16px' }}><strong>Disclaimer:</strong> Actual product colors may vary slightly from images due to monitor settings and lighting conditions.<br />
-    <strong>Related Products:</strong></span></p>
-    <p style={{ marginLeft: '40px' }}><span style={{ fontSize: '16px' }}>Asics Gel-Nimbus Running Socks</span></p>
-    <p style={{ marginLeft: '40px' }}><span style={{ fontSize: '16px' }}>Asics Running Cap</span></p>
-    <p style={{ marginLeft: '40px' }}><span style={{ fontSize: '16px' }}>Asics Lightweight Running Jacket</span></p>
-</div>
+      </p>
+      <p style={{ marginLeft: '80px' }}><span style={{ fontSize: '16px' }}>Upper: Mesh and synthetic leather</span></p>
+      <p style={{ marginLeft: '80px' }}><span style={{ fontSize: '16px' }}>Midsole: FlyteFoam Propel and FlyteFoam Lyte cushioning</span></p>
+      <p style={{ marginLeft: '80px' }}><span style={{ fontSize: '16px' }}>Outsole: AHAR (Asics High Abrasion Rubber)</span></p>
+      <p style={{ marginLeft: '40px' }}><span style={{ fontSize: '20px' }}><strong>Features:</strong></span></p>
+      <p style={{ marginLeft: '80px' }}><span style={{ fontSize: '16px' }}>Gel cushioning technology for shock absorption</span></p>
+      <p style={{ marginLeft: '80px' }}><span style={{ fontSize: '16px' }}>Adaptive Mesh upper for a supportive and breathable fit</span></p>
+      <p style={{ marginLeft: '80px' }}><span style={{ fontSize: '16px' }}>Impact Guidance System enhances the foot's natural gait</span></p>
+      <p style={{ marginLeft: '80px' }}><span style={{ fontSize: '16px' }}>FlyteFoam Propel and FlyteFoam Lyte cushioning offer lightweight and responsive cushioning</span></p>
+      <p style={{ marginLeft: '80px' }}><span style={{ fontSize: '16px' }}>AHAR outsole provides durability and traction</span></p>
+      <p style={{ marginLeft: '80px' }}><span style={{ fontSize: '16px' }}>Ortholite X-40 sockliner for moisture management and breathability</span></p>
+      <p style={{ marginLeft: '80px' }}>&nbsp;</p>
+      <p style={{ marginLeft: '40px' }}><span style={{ fontSize: '20px' }}><strong>Product Description:</strong></span><br />
+        <span style={{ fontSize: '16px' }}>The Asics Gel-Nimbus 24 Running Shoes are designed to provide maximum comfort and support for neutral runners. Featuring Gel cushioning technology in the heel and forefoot, these shoes offer exceptional shock absorption to reduce impact during each stride. The Adaptive Mesh upper provides a supportive and breathable fit, while the Impact Guidance System enhances the foot's natural gait for a smoother transition from heel strike to toe-off. With FlyteFoam Propel and FlyteFoam Lyte cushioning, these shoes offer lightweight and responsive cushioning for a comfortable ride mile after mile. The AHAR outsole ensures durability and traction on various surfaces, while the Ortholite X-40 sockliner provides moisture management and breathability. Whether you're training for a marathon or going for a leisurely jog, the Gel-Nimbus 24 will keep you comfortable and supported every step of the way.</span></p>
+      <p style={{ marginLeft: '40px' }}><br />
+        <span style={{ fontSize: '20px' }}><strong>Shipping Information:</strong></span></p>
+      <p style={{ marginLeft: '80px' }}><span style={{ fontSize: '16px' }}>Free standard shipping on orders over $100</span></p>
+      <p style={{ marginLeft: '80px' }}><span style={{ fontSize: '16px' }}>Expedited shipping options available</span></p>
+      <p style={{ marginLeft: '80px' }}><span style={{ fontSize: '16px' }}>International shipping available to select countries</span></p>
+      <p style={{ marginLeft: '40px' }}><span style={{ fontSize: '20px' }}><strong>Return Policy:</strong></span></p>
+      <p style={{ marginLeft: '80px' }}><span style={{ fontSize: '16px' }}>60-day satisfaction guarantee</span></p>
+      <p style={{ marginLeft: '80px' }}><span style={{ fontSize: '16px' }}>Free returns within the U.S.</span></p>
+      <p style={{ marginLeft: '80px' }}><span style={{ fontSize: '16px' }}>International returns accepted within 90 days, buyer pays return shipping</span></p>
+      <p style={{ marginLeft: '40px' }}><br />
+        <span style={{ fontSize: '20px' }}><strong>Additional Information:</strong></span></p>
+      <p style={{ marginLeft: '80px' }}><span style={{ fontSize: '16px' }}>Product Code: ASGN24-001</span></p>
+      <p style={{ marginLeft: '80px' }}><span style={{ fontSize: '16px' }}>UPC: 192662930483</span></p>
+      <p style={{ marginLeft: '80px' }}><span style={{ fontSize: '16px' }}>Manufactured in Vietnam</span></p>
+      <p style={{ marginLeft: '40px' }}><span style={{ fontSize: '16px' }}><strong>Disclaimer:</strong> Actual product colors may vary slightly from images due to monitor settings and lighting conditions.<br />
+        <strong>Related Products:</strong></span></p>
+      <p style={{ marginLeft: '40px' }}><span style={{ fontSize: '16px' }}>Asics Gel-Nimbus Running Socks</span></p>
+      <p style={{ marginLeft: '40px' }}><span style={{ fontSize: '16px' }}>Asics Running Cap</span></p>
+      <p style={{ marginLeft: '40px' }}><span style={{ fontSize: '16px' }}>Asics Lightweight Running Jacket</span></p>
+    </div>
   ],
   [
     <div>
-    <p>&nbsp;</p>
-    <p style={{ marginLeft: '40px' }}>
+      <p>&nbsp;</p>
+      <p style={{ marginLeft: '40px' }}>
         <span style={{ fontSize: '26px' }}><strong>Product Title: New Balance Fresh Foam 1080v11 Running Shoes</strong></span>
-    </p>
-    <p style={{ marginLeft: '40px' }}><br />
+      </p>
+      <p style={{ marginLeft: '40px' }}><br />
         <span style={{ fontSize: '16px' }}><strong>Price:</strong> $149.99<br />
-        <strong>Brand:</strong> New Balance<br />
-        <strong>Model:</strong> Fresh Foam 1080v11<br />
-        <strong>Category:</strong> Running Shoes<br />
-        <strong>Color Options:</strong> Black/White, Blue/Green, Grey/Yellow<br />
-        <strong>Sizes Available:</strong> 6, 7, 8, 9, 10, 11, 12<br />
-        <strong>Gender:</strong> Unisex</span>
-    </p>
-    <p style={{ marginLeft: '40px' }}><br />
+          <strong>Brand:</strong> New Balance<br />
+          <strong>Model:</strong> Fresh Foam 1080v11<br />
+          <strong>Category:</strong> Running Shoes<br />
+          <strong>Color Options:</strong> Black/White, Blue/Green, Grey/Yellow<br />
+          <strong>Sizes Available:</strong> 6, 7, 8, 9, 10, 11, 12<br />
+          <strong>Gender:</strong> Unisex</span>
+      </p>
+      <p style={{ marginLeft: '40px' }}><br />
         <span style={{ fontSize: '20px' }}><strong>Material:</strong></span>
-    </p>
-    <p style={{ marginLeft: '80px' }}><span style={{ fontSize: '16px' }}>Upper: Hypoknit</span></p>
-    <p style={{ marginLeft: '80px' }}><span style={{ fontSize: '16px' }}>Midsole: Fresh Foam X</span></p>
-    <p style={{ marginLeft: '80px' }}><span style={{ fontSize: '16px' }}>Outsole: Blown rubber</span></p>
-    <p style={{ marginLeft: '40px' }}><span style={{ fontSize: '20px' }}><strong>Features:</strong></span></p>
-    <p style={{ marginLeft: '80px' }}><span style={{ fontSize: '16px' }}>Hypoknit upper provides strategic support and stretch</span></p>
-    <p style={{ marginLeft: '80px' }}><span style={{ fontSize: '16px' }}>Fresh Foam X midsole cushioning delivers a plush and responsive ride</span></p>
-    <p style={{ marginLeft: '80px' }}><span style={{ fontSize: '16px' }}>Ultra Heel design hugs the back of the foot for a snug, supportive fit</span></p>
-    <p style={{ marginLeft: '80px' }}><span style={{ fontSize: '16px' }}>Blown rubber outsole provides durable traction</span></p>
-    <p style={{ marginLeft: '80px' }}><span style={{ fontSize: '16px' }}>Bootie construction for a comfortable and secure fit</span></p>
-    <p style={{ marginLeft: '80px' }}><span style={{ fontSize: '16px' }}>Lace-up closure for a customizable fit</span></p>
-    <p style={{ marginLeft: '80px' }}>&nbsp;</p>
-    <p style={{ marginLeft: '40px' }}><span style={{ fontSize: '20px' }}><strong>Product Description:</strong></span><br />
-    <span style={{ fontSize: '16px' }}>The New Balance Fresh Foam 1080v11 Running Shoes offer premium cushioning and support for runners seeking a smooth and comfortable ride. The Hypoknit upper provides strategic support and stretch where you need it most, while the Fresh Foam X midsole cushioning delivers a plush and responsive feel underfoot. The Ultra Heel design hugs the back of the foot for a snug and supportive fit, and the blown rubber outsole ensures durable traction on various surfaces. With bootie construction for a comfortable and secure fit, as well as a lace-up closure for customizable adjustability, these shoes are ready to take on any run with you.</span></p>
-    <p style={{ marginLeft: '40px' }}><br />
-    <span style={{ fontSize: '20px' }}><strong>Shipping Information:</strong></span></p>
-    <p style={{ marginLeft: '80px' }}><span style={{ fontSize: '16px' }}>Free standard shipping on orders over $75</span></p>
-    <p style={{ marginLeft: '80px' }}><span style={{ fontSize: '16px' }}>Expedited shipping options available</span></p>
-    <p style={{ marginLeft: '80px' }}><span style={{ fontSize: '16px' }}>International shipping available to select countries</span></p>
-    <p style={{ marginLeft: '40px' }}><span style={{ fontSize: '20px' }}><strong>Return Policy:</strong></span></p>
-    <p style={{ marginLeft: '80px' }}><span style={{ fontSize: '16px' }}>90-day satisfaction guarantee</span></p>
-    <p style={{ marginLeft: '80px' }}><span style={{ fontSize: '16px' }}>Free returns within the U.S.</span></p>
-    <p style={{ marginLeft: '80px' }}><span style={{ fontSize: '16px' }}>International returns accepted within 120 days, buyer pays return shipping</span></p>
-    <p style={{ marginLeft: '40px' }}><br />
-    <span style={{ fontSize: '20px' }}><strong>Additional Information:</strong></span></p>
-    <p style={{ marginLeft: '80px' }}><span style={{ fontSize: '16px' }}>Product Code: NBFF1080v11-001</span></p>
-    <p style={{ marginLeft: '80px' }}><span style={{ fontSize: '16px' }}>UPC: 192662930483</span></p>
-    <p style={{ marginLeft: '80px' }}><span style={{ fontSize: '16px' }}>Manufactured in Vietnam</span></p>
-    <p style={{ marginLeft: '40px' }}><span style={{ fontSize: '16px' }}><strong>Disclaimer:</strong> Actual product colors may vary slightly from images due to monitor settings and lighting conditions.<br />
-    <strong>Related Products:</strong></span></p>
-    <p style={{ marginLeft: '40px' }}><span style={{ fontSize: '16px' }}>New Balance Fresh Foam Running Socks</span></p>
-    <p style={{ marginLeft: '40px' }}><span style={{ fontSize: '16px' }}>New Balance Running Cap</span></p>
-    <p style={{ marginLeft: '40px' }}><span style={{ fontSize: '16px' }}>New Balance Lightweight Running Jacket</span></p>
-</div>
+      </p>
+      <p style={{ marginLeft: '80px' }}><span style={{ fontSize: '16px' }}>Upper: Hypoknit</span></p>
+      <p style={{ marginLeft: '80px' }}><span style={{ fontSize: '16px' }}>Midsole: Fresh Foam X</span></p>
+      <p style={{ marginLeft: '80px' }}><span style={{ fontSize: '16px' }}>Outsole: Blown rubber</span></p>
+      <p style={{ marginLeft: '40px' }}><span style={{ fontSize: '20px' }}><strong>Features:</strong></span></p>
+      <p style={{ marginLeft: '80px' }}><span style={{ fontSize: '16px' }}>Hypoknit upper provides strategic support and stretch</span></p>
+      <p style={{ marginLeft: '80px' }}><span style={{ fontSize: '16px' }}>Fresh Foam X midsole cushioning delivers a plush and responsive ride</span></p>
+      <p style={{ marginLeft: '80px' }}><span style={{ fontSize: '16px' }}>Ultra Heel design hugs the back of the foot for a snug, supportive fit</span></p>
+      <p style={{ marginLeft: '80px' }}><span style={{ fontSize: '16px' }}>Blown rubber outsole provides durable traction</span></p>
+      <p style={{ marginLeft: '80px' }}><span style={{ fontSize: '16px' }}>Bootie construction for a comfortable and secure fit</span></p>
+      <p style={{ marginLeft: '80px' }}><span style={{ fontSize: '16px' }}>Lace-up closure for a customizable fit</span></p>
+      <p style={{ marginLeft: '80px' }}>&nbsp;</p>
+      <p style={{ marginLeft: '40px' }}><span style={{ fontSize: '20px' }}><strong>Product Description:</strong></span><br />
+        <span style={{ fontSize: '16px' }}>The New Balance Fresh Foam 1080v11 Running Shoes offer premium cushioning and support for runners seeking a smooth and comfortable ride. The Hypoknit upper provides strategic support and stretch where you need it most, while the Fresh Foam X midsole cushioning delivers a plush and responsive feel underfoot. The Ultra Heel design hugs the back of the foot for a snug and supportive fit, and the blown rubber outsole ensures durable traction on various surfaces. With bootie construction for a comfortable and secure fit, as well as a lace-up closure for customizable adjustability, these shoes are ready to take on any run with you.</span></p>
+      <p style={{ marginLeft: '40px' }}><br />
+        <span style={{ fontSize: '20px' }}><strong>Shipping Information:</strong></span></p>
+      <p style={{ marginLeft: '80px' }}><span style={{ fontSize: '16px' }}>Free standard shipping on orders over $75</span></p>
+      <p style={{ marginLeft: '80px' }}><span style={{ fontSize: '16px' }}>Expedited shipping options available</span></p>
+      <p style={{ marginLeft: '80px' }}><span style={{ fontSize: '16px' }}>International shipping available to select countries</span></p>
+      <p style={{ marginLeft: '40px' }}><span style={{ fontSize: '20px' }}><strong>Return Policy:</strong></span></p>
+      <p style={{ marginLeft: '80px' }}><span style={{ fontSize: '16px' }}>90-day satisfaction guarantee</span></p>
+      <p style={{ marginLeft: '80px' }}><span style={{ fontSize: '16px' }}>Free returns within the U.S.</span></p>
+      <p style={{ marginLeft: '80px' }}><span style={{ fontSize: '16px' }}>International returns accepted within 120 days, buyer pays return shipping</span></p>
+      <p style={{ marginLeft: '40px' }}><br />
+        <span style={{ fontSize: '20px' }}><strong>Additional Information:</strong></span></p>
+      <p style={{ marginLeft: '80px' }}><span style={{ fontSize: '16px' }}>Product Code: NBFF1080v11-001</span></p>
+      <p style={{ marginLeft: '80px' }}><span style={{ fontSize: '16px' }}>UPC: 192662930483</span></p>
+      <p style={{ marginLeft: '80px' }}><span style={{ fontSize: '16px' }}>Manufactured in Vietnam</span></p>
+      <p style={{ marginLeft: '40px' }}><span style={{ fontSize: '16px' }}><strong>Disclaimer:</strong> Actual product colors may vary slightly from images due to monitor settings and lighting conditions.<br />
+        <strong>Related Products:</strong></span></p>
+      <p style={{ marginLeft: '40px' }}><span style={{ fontSize: '16px' }}>New Balance Fresh Foam Running Socks</span></p>
+      <p style={{ marginLeft: '40px' }}><span style={{ fontSize: '16px' }}>New Balance Running Cap</span></p>
+      <p style={{ marginLeft: '40px' }}><span style={{ fontSize: '16px' }}>New Balance Lightweight Running Jacket</span></p>
+    </div>
   ],
   [
     <div>
-    <p>&nbsp;</p>
-    <p style={{ marginLeft: '40px' }}>
+      <p>&nbsp;</p>
+      <p style={{ marginLeft: '40px' }}>
         <span style={{ fontSize: '26px' }}><strong>Product Title: Brooks Ghost 14 Running Shoes</strong></span>
-    </p>
-    <p style={{ marginLeft: '40px' }}><br />
+      </p>
+      <p style={{ marginLeft: '40px' }}><br />
         <span style={{ fontSize: '16px' }}><strong>Price:</strong> $129.99<br />
-        <strong>Brand:</strong> Brooks<br />
-        <strong>Model:</strong> Ghost 14<br />
-        <strong>Category:</strong> Running Shoes<br />
-        <strong>Color Options:</strong> Black/Red, Blue/Silver, Grey/White<br />
-        <strong>Sizes Available:</strong> 6, 7, 8, 9, 10, 11, 12<br />
-        <strong>Gender:</strong> Unisex</span>
-    </p>
-    <p style={{ marginLeft: '40px' }}><br />
+          <strong>Brand:</strong> Brooks<br />
+          <strong>Model:</strong> Ghost 14<br />
+          <strong>Category:</strong> Running Shoes<br />
+          <strong>Color Options:</strong> Black/Red, Blue/Silver, Grey/White<br />
+          <strong>Sizes Available:</strong> 6, 7, 8, 9, 10, 11, 12<br />
+          <strong>Gender:</strong> Unisex</span>
+      </p>
+      <p style={{ marginLeft: '40px' }}><br />
         <span style={{ fontSize: '20px' }}><strong>Material:</strong></span>
-    </p>
-    <p style={{ marginLeft: '80px' }}><span style={{ fontSize: '16px' }}>Upper: Engineered Air Mesh</span></p>
-    <p style={{ marginLeft: '80px' }}><span style={{ fontSize: '16px' }}>Midsole: DNA Loft cushioning</span></p>
-    <p style={{ marginLeft: '80px' }}><span style={{ fontSize: '16px' }}>Outsole: Blown rubber</span></p>
-    <p style={{ marginLeft: '40px' }}><span style={{ fontSize: '20px' }}><strong>Features:</strong></span></p>
-    <p style={{ marginLeft: '80px' }}><span style={{ fontSize: '16px' }}>Engineered Air Mesh upper offers lightweight breathability</span></p>
-    <p style={{ marginLeft: '80px' }}><span style={{ fontSize: '16px' }}>DNA Loft cushioning provides softness and durability</span></p>
-    <p style={{ marginLeft: '80px' }}><span style={{ fontSize: '16px' }}>Segmented Crash Pad accommodates any foot landing for smooth transitions</span></p>
-    <p style={{ marginLeft: '80px' }}><span style={{ fontSize: '16px' }}>Blown rubber outsole for reliable traction</span></p>
-    <p style={{ marginLeft: '80px' }}><span style={{ fontSize: '16px' }}>3D Fit Print applies strategic stretch and structure for an impeccable fit</span></p>
-    <p style={{ marginLeft: '80px' }}><span style={{ fontSize: '16px' }}>Lace-up closure ensures a secure fit</span></p>
-    <p style={{ marginLeft: '80px' }}>&nbsp;</p>
-    <p style={{ marginLeft: '40px' }}><span style={{ fontSize: '20px' }}><strong>Product Description:</strong></span><br />
-    <span style={{ fontSize: '16px' }}>The Brooks Ghost 14 Running Shoes are engineered to provide a smooth and comfortable ride mile after mile. Featuring an Engineered Air Mesh upper, these shoes offer lightweight breathability to keep your feet cool and comfortable during your runs. The DNA Loft cushioning in the midsole provides softness and durability, while the segmented Crash Pad ensures smooth transitions from heel to toe. The blown rubber outsole delivers reliable traction on various surfaces, and the 3D Fit Print technology applies strategic stretch and structure for an impeccable fit. With a lace-up closure for a secure fit, the Brooks Ghost 14 is ready to take on any distance with you.</span></p>
-    <p style={{ marginLeft: '40px' }}><br />
-    <span style={{ fontSize: '20px' }}><strong>Shipping Information:</strong></span></p>
-    <p style={{ marginLeft: '80px' }}><span style={{ fontSize: '16px' }}>Free standard shipping on orders over $100</span></p>
-    <p style={{ marginLeft: '80px' }}><span style={{ fontSize: '16px' }}>Expedited shipping options available</span></p>
-    <p style={{ marginLeft: '80px' }}><span style={{ fontSize: '16px' }}>International shipping available to select countries</span></p>
-    <p style={{ marginLeft: '40px' }}><span style={{ fontSize: '20px' }}><strong>Return Policy:</strong></span></p>
-    <p style={{ marginLeft: '80px' }}><span style={{ fontSize: '16px' }}>60-day satisfaction guarantee</span></p>
-    <p style={{ marginLeft: '80px' }}><span style={{ fontSize: '16px' }}>Free returns within the U.S.</span></p>
-    <p style={{ marginLeft: '80px' }}><span style={{ fontSize: '16px' }}>International returns accepted within 90 days, buyer pays return shipping</span></p>
-    <p style={{ marginLeft: '40px' }}><br />
-    <span style={{ fontSize: '20px' }}><strong>Additional Information:</strong></span></p>
-    <p style={{ marginLeft: '80px' }}><span style={{ fontSize: '16px' }}>Product Code: BRKG14-001</span></p>
-    <p style={{ marginLeft: '80px' }}><span style={{ fontSize: '16px' }}>UPC: 192662930483</span></p>
-    <p style={{ marginLeft: '80px' }}><span style={{ fontSize: '16px' }}>Manufactured in Vietnam</span></p>
-    <p style={{ marginLeft: '40px' }}><span style={{ fontSize: '16px' }}><strong>Disclaimer:</strong> Actual product colors may vary slightly from images due to monitor settings and lighting conditions.<br />
-    <strong>Related Products:</strong></span></p>
-    <p style={{ marginLeft: '40px' }}><span style={{ fontSize: '16px' }}>Brooks Ghost Running Socks</span></p>
-    <p style={{ marginLeft: '40px' }}><span style={{ fontSize: '16px' }}>Brooks Running Cap</span></p>
-    <p style={{ marginLeft: '40px' }}><span style={{ fontSize: '16px' }}>Brooks Lightweight Running Jacket</span></p>
-</div>
+      </p>
+      <p style={{ marginLeft: '80px' }}><span style={{ fontSize: '16px' }}>Upper: Engineered Air Mesh</span></p>
+      <p style={{ marginLeft: '80px' }}><span style={{ fontSize: '16px' }}>Midsole: DNA Loft cushioning</span></p>
+      <p style={{ marginLeft: '80px' }}><span style={{ fontSize: '16px' }}>Outsole: Blown rubber</span></p>
+      <p style={{ marginLeft: '40px' }}><span style={{ fontSize: '20px' }}><strong>Features:</strong></span></p>
+      <p style={{ marginLeft: '80px' }}><span style={{ fontSize: '16px' }}>Engineered Air Mesh upper offers lightweight breathability</span></p>
+      <p style={{ marginLeft: '80px' }}><span style={{ fontSize: '16px' }}>DNA Loft cushioning provides softness and durability</span></p>
+      <p style={{ marginLeft: '80px' }}><span style={{ fontSize: '16px' }}>Segmented Crash Pad accommodates any foot landing for smooth transitions</span></p>
+      <p style={{ marginLeft: '80px' }}><span style={{ fontSize: '16px' }}>Blown rubber outsole for reliable traction</span></p>
+      <p style={{ marginLeft: '80px' }}><span style={{ fontSize: '16px' }}>3D Fit Print applies strategic stretch and structure for an impeccable fit</span></p>
+      <p style={{ marginLeft: '80px' }}><span style={{ fontSize: '16px' }}>Lace-up closure ensures a secure fit</span></p>
+      <p style={{ marginLeft: '80px' }}>&nbsp;</p>
+      <p style={{ marginLeft: '40px' }}><span style={{ fontSize: '20px' }}><strong>Product Description:</strong></span><br />
+        <span style={{ fontSize: '16px' }}>The Brooks Ghost 14 Running Shoes are engineered to provide a smooth and comfortable ride mile after mile. Featuring an Engineered Air Mesh upper, these shoes offer lightweight breathability to keep your feet cool and comfortable during your runs. The DNA Loft cushioning in the midsole provides softness and durability, while the segmented Crash Pad ensures smooth transitions from heel to toe. The blown rubber outsole delivers reliable traction on various surfaces, and the 3D Fit Print technology applies strategic stretch and structure for an impeccable fit. With a lace-up closure for a secure fit, the Brooks Ghost 14 is ready to take on any distance with you.</span></p>
+      <p style={{ marginLeft: '40px' }}><br />
+        <span style={{ fontSize: '20px' }}><strong>Shipping Information:</strong></span></p>
+      <p style={{ marginLeft: '80px' }}><span style={{ fontSize: '16px' }}>Free standard shipping on orders over $100</span></p>
+      <p style={{ marginLeft: '80px' }}><span style={{ fontSize: '16px' }}>Expedited shipping options available</span></p>
+      <p style={{ marginLeft: '80px' }}><span style={{ fontSize: '16px' }}>International shipping available to select countries</span></p>
+      <p style={{ marginLeft: '40px' }}><span style={{ fontSize: '20px' }}><strong>Return Policy:</strong></span></p>
+      <p style={{ marginLeft: '80px' }}><span style={{ fontSize: '16px' }}>60-day satisfaction guarantee</span></p>
+      <p style={{ marginLeft: '80px' }}><span style={{ fontSize: '16px' }}>Free returns within the U.S.</span></p>
+      <p style={{ marginLeft: '80px' }}><span style={{ fontSize: '16px' }}>International returns accepted within 90 days, buyer pays return shipping</span></p>
+      <p style={{ marginLeft: '40px' }}><br />
+        <span style={{ fontSize: '20px' }}><strong>Additional Information:</strong></span></p>
+      <p style={{ marginLeft: '80px' }}><span style={{ fontSize: '16px' }}>Product Code: BRKG14-001</span></p>
+      <p style={{ marginLeft: '80px' }}><span style={{ fontSize: '16px' }}>UPC: 192662930483</span></p>
+      <p style={{ marginLeft: '80px' }}><span style={{ fontSize: '16px' }}>Manufactured in Vietnam</span></p>
+      <p style={{ marginLeft: '40px' }}><span style={{ fontSize: '16px' }}><strong>Disclaimer:</strong> Actual product colors may vary slightly from images due to monitor settings and lighting conditions.<br />
+        <strong>Related Products:</strong></span></p>
+      <p style={{ marginLeft: '40px' }}><span style={{ fontSize: '16px' }}>Brooks Ghost Running Socks</span></p>
+      <p style={{ marginLeft: '40px' }}><span style={{ fontSize: '16px' }}>Brooks Running Cap</span></p>
+      <p style={{ marginLeft: '40px' }}><span style={{ fontSize: '16px' }}>Brooks Lightweight Running Jacket</span></p>
+    </div>
 
   ],
   [
     <div>
-    <p>&nbsp;</p>
-    <p style={{ marginLeft: '40px' }}>
+      <p>&nbsp;</p>
+      <p style={{ marginLeft: '40px' }}>
         <span style={{ fontSize: '26px' }}><strong>Product Title: Brooks Ghost 14 Running Shoes</strong></span>
-    </p>
-    <p style={{ marginLeft: '40px' }}><br />
+      </p>
+      <p style={{ marginLeft: '40px' }}><br />
         <span style={{ fontSize: '16px' }}><strong>Price:</strong> $129.99<br />
-        <strong>Brand:</strong> Brooks<br />
-        <strong>Model:</strong> Ghost 14<br />
-        <strong>Category:</strong> Running Shoes<br />
-        <strong>Color Options:</strong> Black/Red, Blue/Silver, Grey/White<br />
-        <strong>Sizes Available:</strong> 6, 7, 8, 9, 10, 11, 12<br />
-        <strong>Gender:</strong> Unisex</span>
-    </p>
-    <p style={{ marginLeft: '40px' }}><br />
+          <strong>Brand:</strong> Brooks<br />
+          <strong>Model:</strong> Ghost 14<br />
+          <strong>Category:</strong> Running Shoes<br />
+          <strong>Color Options:</strong> Black/Red, Blue/Silver, Grey/White<br />
+          <strong>Sizes Available:</strong> 6, 7, 8, 9, 10, 11, 12<br />
+          <strong>Gender:</strong> Unisex</span>
+      </p>
+      <p style={{ marginLeft: '40px' }}><br />
         <span style={{ fontSize: '20px' }}><strong>Material:</strong></span>
-    </p>
-    <p style={{ marginLeft: '80px' }}><span style={{ fontSize: '16px' }}>Upper: Engineered Air Mesh</span></p>
-    <p style={{ marginLeft: '80px' }}><span style={{ fontSize: '16px' }}>Midsole: DNA Loft cushioning</span></p>
-    <p style={{ marginLeft: '80px' }}><span style={{ fontSize: '16px' }}>Outsole: Blown rubber</span></p>
-    <p style={{ marginLeft: '40px' }}><span style={{ fontSize: '20px' }}><strong>Features:</strong></span></p>
-    <p style={{ marginLeft: '80px' }}><span style={{ fontSize: '16px' }}>Engineered Air Mesh upper offers lightweight breathability</span></p>
-    <p style={{ marginLeft: '80px' }}><span style={{ fontSize: '16px' }}>DNA Loft cushioning provides softness and durability</span></p>
-    <p style={{ marginLeft: '80px' }}><span style={{ fontSize: '16px' }}>Segmented Crash Pad accommodates any foot landing for smooth transitions</span></p>
-    <p style={{ marginLeft: '80px' }}><span style={{ fontSize: '16px' }}>Blown rubber outsole for reliable traction</span></p>
-    <p style={{ marginLeft: '80px' }}><span style={{ fontSize: '16px' }}>3D Fit Print applies strategic stretch and structure for an impeccable fit</span></p>
-    <p style={{ marginLeft: '80px' }}><span style={{ fontSize: '16px' }}>Lace-up closure ensures a secure fit</span></p>
-    <p style={{ marginLeft: '80px' }}>&nbsp;</p>
-    <p style={{ marginLeft: '40px' }}><span style={{ fontSize: '20px' }}><strong>Product Description:</strong></span><br />
-    <span style={{ fontSize: '16px' }}>The Brooks Ghost 14 Running Shoes are engineered to provide a smooth and comfortable ride mile after mile. Featuring an Engineered Air Mesh upper, these shoes offer lightweight breathability to keep your feet cool and comfortable during your runs. The DNA Loft cushioning in the midsole provides softness and durability, while the segmented Crash Pad ensures smooth transitions from heel to toe. The blown rubber outsole delivers reliable traction on various surfaces, and the 3D Fit Print technology applies strategic stretch and structure for an impeccable fit. With a lace-up closure for a secure fit, the Brooks Ghost 14 is ready to take on any distance with you.</span></p>
-    <p style={{ marginLeft: '40px' }}><br />
-    <span style={{ fontSize: '20px' }}><strong>Shipping Information:</strong></span></p>
-    <p style={{ marginLeft: '80px' }}><span style={{ fontSize: '16px' }}>Free standard shipping on orders over $100</span></p>
-    <p style={{ marginLeft: '80px' }}><span style={{ fontSize: '16px' }}>Expedited shipping options available</span></p>
-    <p style={{ marginLeft: '80px' }}><span style={{ fontSize: '16px' }}>International shipping available to select countries</span></p>
-    <p style={{ marginLeft: '40px' }}><span style={{ fontSize: '20px' }}><strong>Return Policy:</strong></span></p>
-    <p style={{ marginLeft: '80px' }}><span style={{ fontSize: '16px' }}>60-day satisfaction guarantee</span></p>
-    <p style={{ marginLeft: '80px' }}><span style={{ fontSize: '16px' }}>Free returns within the U.S.</span></p>
-    <p style={{ marginLeft: '80px' }}><span style={{ fontSize: '16px' }}>International returns accepted within 90 days, buyer pays return shipping</span></p>
-    <p style={{ marginLeft: '40px' }}><br />
-    <span style={{ fontSize: '20px' }}><strong>Additional Information:</strong></span></p>
-    <p style={{ marginLeft: '80px' }}><span style={{ fontSize: '16px' }}>Product Code: BRKG14-001</span></p>
-    <p style={{ marginLeft: '80px' }}><span style={{ fontSize: '16px' }}>UPC: 192662930483</span></p>
-    <p style={{ marginLeft: '80px' }}><span style={{ fontSize: '16px' }}>Manufactured in Vietnam</span></p>
-    <p style={{ marginLeft: '40px' }}><span style={{ fontSize: '16px' }}><strong>Disclaimer:</strong> Actual product colors may vary slightly from images due to monitor settings and lighting conditions.<br />
-    <strong>Related Products:</strong></span></p>
-    <p style={{ marginLeft: '40px' }}><span style={{ fontSize: '16px' }}>Brooks Ghost Running Socks</span></p>
-    <p style={{ marginLeft: '40px' }}><span style={{ fontSize: '16px' }}>Brooks Running Cap</span></p>
-    <p style={{ marginLeft: '40px' }}><span style={{ fontSize: '16px' }}>Brooks Lightweight Running Jacket</span></p>
-</div>
+      </p>
+      <p style={{ marginLeft: '80px' }}><span style={{ fontSize: '16px' }}>Upper: Engineered Air Mesh</span></p>
+      <p style={{ marginLeft: '80px' }}><span style={{ fontSize: '16px' }}>Midsole: DNA Loft cushioning</span></p>
+      <p style={{ marginLeft: '80px' }}><span style={{ fontSize: '16px' }}>Outsole: Blown rubber</span></p>
+      <p style={{ marginLeft: '40px' }}><span style={{ fontSize: '20px' }}><strong>Features:</strong></span></p>
+      <p style={{ marginLeft: '80px' }}><span style={{ fontSize: '16px' }}>Engineered Air Mesh upper offers lightweight breathability</span></p>
+      <p style={{ marginLeft: '80px' }}><span style={{ fontSize: '16px' }}>DNA Loft cushioning provides softness and durability</span></p>
+      <p style={{ marginLeft: '80px' }}><span style={{ fontSize: '16px' }}>Segmented Crash Pad accommodates any foot landing for smooth transitions</span></p>
+      <p style={{ marginLeft: '80px' }}><span style={{ fontSize: '16px' }}>Blown rubber outsole for reliable traction</span></p>
+      <p style={{ marginLeft: '80px' }}><span style={{ fontSize: '16px' }}>3D Fit Print applies strategic stretch and structure for an impeccable fit</span></p>
+      <p style={{ marginLeft: '80px' }}><span style={{ fontSize: '16px' }}>Lace-up closure ensures a secure fit</span></p>
+      <p style={{ marginLeft: '80px' }}>&nbsp;</p>
+      <p style={{ marginLeft: '40px' }}><span style={{ fontSize: '20px' }}><strong>Product Description:</strong></span><br />
+        <span style={{ fontSize: '16px' }}>The Brooks Ghost 14 Running Shoes are engineered to provide a smooth and comfortable ride mile after mile. Featuring an Engineered Air Mesh upper, these shoes offer lightweight breathability to keep your feet cool and comfortable during your runs. The DNA Loft cushioning in the midsole provides softness and durability, while the segmented Crash Pad ensures smooth transitions from heel to toe. The blown rubber outsole delivers reliable traction on various surfaces, and the 3D Fit Print technology applies strategic stretch and structure for an impeccable fit. With a lace-up closure for a secure fit, the Brooks Ghost 14 is ready to take on any distance with you.</span></p>
+      <p style={{ marginLeft: '40px' }}><br />
+        <span style={{ fontSize: '20px' }}><strong>Shipping Information:</strong></span></p>
+      <p style={{ marginLeft: '80px' }}><span style={{ fontSize: '16px' }}>Free standard shipping on orders over $100</span></p>
+      <p style={{ marginLeft: '80px' }}><span style={{ fontSize: '16px' }}>Expedited shipping options available</span></p>
+      <p style={{ marginLeft: '80px' }}><span style={{ fontSize: '16px' }}>International shipping available to select countries</span></p>
+      <p style={{ marginLeft: '40px' }}><span style={{ fontSize: '20px' }}><strong>Return Policy:</strong></span></p>
+      <p style={{ marginLeft: '80px' }}><span style={{ fontSize: '16px' }}>60-day satisfaction guarantee</span></p>
+      <p style={{ marginLeft: '80px' }}><span style={{ fontSize: '16px' }}>Free returns within the U.S.</span></p>
+      <p style={{ marginLeft: '80px' }}><span style={{ fontSize: '16px' }}>International returns accepted within 90 days, buyer pays return shipping</span></p>
+      <p style={{ marginLeft: '40px' }}><br />
+        <span style={{ fontSize: '20px' }}><strong>Additional Information:</strong></span></p>
+      <p style={{ marginLeft: '80px' }}><span style={{ fontSize: '16px' }}>Product Code: BRKG14-001</span></p>
+      <p style={{ marginLeft: '80px' }}><span style={{ fontSize: '16px' }}>UPC: 192662930483</span></p>
+      <p style={{ marginLeft: '80px' }}><span style={{ fontSize: '16px' }}>Manufactured in Vietnam</span></p>
+      <p style={{ marginLeft: '40px' }}><span style={{ fontSize: '16px' }}><strong>Disclaimer:</strong> Actual product colors may vary slightly from images due to monitor settings and lighting conditions.<br />
+        <strong>Related Products:</strong></span></p>
+      <p style={{ marginLeft: '40px' }}><span style={{ fontSize: '16px' }}>Brooks Ghost Running Socks</span></p>
+      <p style={{ marginLeft: '40px' }}><span style={{ fontSize: '16px' }}>Brooks Running Cap</span></p>
+      <p style={{ marginLeft: '40px' }}><span style={{ fontSize: '16px' }}>Brooks Lightweight Running Jacket</span></p>
+    </div>
   ],
   [
     <div>
-    <p>&nbsp;</p>
-    <p style={{ marginLeft: '40px' }}>
+      <p>&nbsp;</p>
+      <p style={{ marginLeft: '40px' }}>
         <span style={{ fontSize: '26px' }}><strong>Product Title: ASICS GEL-Nimbus 24 Running Shoes</strong></span>
-    </p>
-    <p style={{ marginLeft: '40px' }}><br />
+      </p>
+      <p style={{ marginLeft: '40px' }}><br />
         <span style={{ fontSize: '16px' }}><strong>Price:</strong> $159.99<br />
-        <strong>Brand:</strong> ASICS<br />
-        <strong>Model:</strong> GEL-Nimbus 24<br />
-        <strong>Category:</strong> Running Shoes<br />
-        <strong>Color Options:</strong> Black/Yellow, Blue/Purple, White/Red<br />
-        <strong>Sizes Available:</strong> 6, 7, 8, 9, 10, 11, 12<br />
-        <strong>Gender:</strong> Unisex</span>
-    </p>
-    <p style={{ marginLeft: '40px' }}><br />
+          <strong>Brand:</strong> ASICS<br />
+          <strong>Model:</strong> GEL-Nimbus 24<br />
+          <strong>Category:</strong> Running Shoes<br />
+          <strong>Color Options:</strong> Black/Yellow, Blue/Purple, White/Red<br />
+          <strong>Sizes Available:</strong> 6, 7, 8, 9, 10, 11, 12<br />
+          <strong>Gender:</strong> Unisex</span>
+      </p>
+      <p style={{ marginLeft: '40px' }}><br />
         <span style={{ fontSize: '20px' }}><strong>Material:</strong></span>
-    </p>
-    <p style={{ marginLeft: '80px' }}><span style={{ fontSize: '16px' }}>Upper: Engineered Mesh</span></p>
-    <p style={{ marginLeft: '80px' }}><span style={{ fontSize: '16px' }}>Midsole: FlyteFoam cushioning</span></p>
-    <p style={{ marginLeft: '80px' }}><span style={{ fontSize: '16px' }}>Outsole: AHARPLUS rubber</span></p>
-    <p style={{ marginLeft: '40px' }}><span style={{ fontSize: '20px' }}><strong>Features:</strong></span></p>
-    <p style={{ marginLeft: '80px' }}><span style={{ fontSize: '16px' }}>Engineered Mesh upper offers breathability and support</span></p>
-    <p style={{ marginLeft: '80px' }}><span style={{ fontSize: '16px' }}>FlyteFoam cushioning provides lightweight and responsive cushioning</span></p>
-    <p style={{ marginLeft: '80px' }}><span style={{ fontSize: '16px' }}>Rearfoot and forefoot GEL technology cushioning attenuates shock during impact and toe-off phases</span></p>
-    <p style={{ marginLeft: '80px' }}><span style={{ fontSize: '16px' }}>AHARPLUS rubber outsole enhances durability and traction</span></p>
-    <p style={{ marginLeft: '80px' }}><span style={{ fontSize: '16px' }}>Trusstic System technology reduces the weight of the sole unit while retaining the structural integrity of the shoe</span></p>
-    <p style={{ marginLeft: '80px' }}><span style={{ fontSize: '16px' }}>OrthoLite X-55 sockliner provides additional cushioning and moisture management</span></p>
-    <p style={{ marginLeft: '80px' }}>&nbsp;</p>
-    <p style={{ marginLeft: '40px' }}><span style={{ fontSize: '20px' }}><strong>Product Description:</strong></span><br />
-    <span style={{ fontSize: '16px' }}>The ASICS GEL-Nimbus 24 Running Shoes are designed to offer maximum comfort and support for long-distance runners. The Engineered Mesh upper provides breathability and support, while the FlyteFoam cushioning delivers lightweight and responsive cushioning mile after mile. The rearfoot and forefoot GEL technology cushioning attenuates shock during the impact and toe-off phases, enhancing comfort and reducing the risk of injury. The AHARPLUS rubber outsole enhances durability and traction, while the Trusstic System technology reduces the weight of the sole unit without compromising structural integrity. With an OrthoLite X-55 sockliner for additional cushioning and moisture management, these shoes are ideal for runners looking for reliable performance on every run.</span></p>
-    <p style={{ marginLeft: '40px' }}><br />
-    <span style={{ fontSize: '20px' }}><strong>Shipping Information:</strong></span></p>
-    <p style={{ marginLeft: '80px' }}><span style={{ fontSize: '16px' }}>Free standard shipping on orders over $100</span></p>
-    <p style={{ marginLeft: '80px' }}><span style={{ fontSize: '16px' }}>Expedited shipping options available</span></p>
-    <p style={{ marginLeft: '80px' }}><span style={{ fontSize: '16px' }}>International shipping available to select countries</span></p>
-    <p style={{ marginLeft: '40px' }}><span style={{ fontSize: '20px' }}><strong>Return Policy:</strong></span></p>
-    <p style={{ marginLeft: '80px' }}><span style={{ fontSize: '16px' }}>60-day satisfaction guarantee</span></p>
-    <p style={{ marginLeft: '80px' }}><span style={{ fontSize: '16px' }}>Free returns within the U.S.</span></p>
-    <p style={{ marginLeft: '80px' }}><span style={{ fontSize: '16px' }}>International returns accepted within 90 days, buyer pays return shipping</span></p>
-    <p style={{ marginLeft: '40px' }}><br />
-    <span style={{ fontSize: '20px' }}><strong>Additional Information:</strong></span></p>
-    <p style={{ marginLeft: '80px' }}><span style={{ fontSize: '16px' }}>Product Code: ASIG24-001</span></p>
-    <p style={{ marginLeft: '80px' }}><span style={{ fontSize: '16px' }}>UPC: 192662930483</span></p>
-    <p style={{ marginLeft: '80px' }}><span style={{ fontSize: '16px' }}>Manufactured in Vietnam</span></p>
-    <p style={{ marginLeft: '40px' }}><span style={{ fontSize: '16px' }}><strong>Disclaimer:</strong> Actual product colors may vary slightly from images due to monitor settings and lighting conditions.<br />
-    <strong>Related Products:</strong></span></p>
-    <p style={{ marginLeft: '40px' }}><span style={{ fontSize: '16px' }}>ASICS Running Socks</span></p>
-    <p style={{ marginLeft: '40px' }}><span style={{ fontSize: '16px' }}>ASICS Running Cap</span></p>
-    <p style={{ marginLeft: '40px' }}><span style={{ fontSize: '16px' }}>ASICS Lightweight Running Jacket</span></p>
-</div>
+      </p>
+      <p style={{ marginLeft: '80px' }}><span style={{ fontSize: '16px' }}>Upper: Engineered Mesh</span></p>
+      <p style={{ marginLeft: '80px' }}><span style={{ fontSize: '16px' }}>Midsole: FlyteFoam cushioning</span></p>
+      <p style={{ marginLeft: '80px' }}><span style={{ fontSize: '16px' }}>Outsole: AHARPLUS rubber</span></p>
+      <p style={{ marginLeft: '40px' }}><span style={{ fontSize: '20px' }}><strong>Features:</strong></span></p>
+      <p style={{ marginLeft: '80px' }}><span style={{ fontSize: '16px' }}>Engineered Mesh upper offers breathability and support</span></p>
+      <p style={{ marginLeft: '80px' }}><span style={{ fontSize: '16px' }}>FlyteFoam cushioning provides lightweight and responsive cushioning</span></p>
+      <p style={{ marginLeft: '80px' }}><span style={{ fontSize: '16px' }}>Rearfoot and forefoot GEL technology cushioning attenuates shock during impact and toe-off phases</span></p>
+      <p style={{ marginLeft: '80px' }}><span style={{ fontSize: '16px' }}>AHARPLUS rubber outsole enhances durability and traction</span></p>
+      <p style={{ marginLeft: '80px' }}><span style={{ fontSize: '16px' }}>Trusstic System technology reduces the weight of the sole unit while retaining the structural integrity of the shoe</span></p>
+      <p style={{ marginLeft: '80px' }}><span style={{ fontSize: '16px' }}>OrthoLite X-55 sockliner provides additional cushioning and moisture management</span></p>
+      <p style={{ marginLeft: '80px' }}>&nbsp;</p>
+      <p style={{ marginLeft: '40px' }}><span style={{ fontSize: '20px' }}><strong>Product Description:</strong></span><br />
+        <span style={{ fontSize: '16px' }}>The ASICS GEL-Nimbus 24 Running Shoes are designed to offer maximum comfort and support for long-distance runners. The Engineered Mesh upper provides breathability and support, while the FlyteFoam cushioning delivers lightweight and responsive cushioning mile after mile. The rearfoot and forefoot GEL technology cushioning attenuates shock during the impact and toe-off phases, enhancing comfort and reducing the risk of injury. The AHARPLUS rubber outsole enhances durability and traction, while the Trusstic System technology reduces the weight of the sole unit without compromising structural integrity. With an OrthoLite X-55 sockliner for additional cushioning and moisture management, these shoes are ideal for runners looking for reliable performance on every run.</span></p>
+      <p style={{ marginLeft: '40px' }}><br />
+        <span style={{ fontSize: '20px' }}><strong>Shipping Information:</strong></span></p>
+      <p style={{ marginLeft: '80px' }}><span style={{ fontSize: '16px' }}>Free standard shipping on orders over $100</span></p>
+      <p style={{ marginLeft: '80px' }}><span style={{ fontSize: '16px' }}>Expedited shipping options available</span></p>
+      <p style={{ marginLeft: '80px' }}><span style={{ fontSize: '16px' }}>International shipping available to select countries</span></p>
+      <p style={{ marginLeft: '40px' }}><span style={{ fontSize: '20px' }}><strong>Return Policy:</strong></span></p>
+      <p style={{ marginLeft: '80px' }}><span style={{ fontSize: '16px' }}>60-day satisfaction guarantee</span></p>
+      <p style={{ marginLeft: '80px' }}><span style={{ fontSize: '16px' }}>Free returns within the U.S.</span></p>
+      <p style={{ marginLeft: '80px' }}><span style={{ fontSize: '16px' }}>International returns accepted within 90 days, buyer pays return shipping</span></p>
+      <p style={{ marginLeft: '40px' }}><br />
+        <span style={{ fontSize: '20px' }}><strong>Additional Information:</strong></span></p>
+      <p style={{ marginLeft: '80px' }}><span style={{ fontSize: '16px' }}>Product Code: ASIG24-001</span></p>
+      <p style={{ marginLeft: '80px' }}><span style={{ fontSize: '16px' }}>UPC: 192662930483</span></p>
+      <p style={{ marginLeft: '80px' }}><span style={{ fontSize: '16px' }}>Manufactured in Vietnam</span></p>
+      <p style={{ marginLeft: '40px' }}><span style={{ fontSize: '16px' }}><strong>Disclaimer:</strong> Actual product colors may vary slightly from images due to monitor settings and lighting conditions.<br />
+        <strong>Related Products:</strong></span></p>
+      <p style={{ marginLeft: '40px' }}><span style={{ fontSize: '16px' }}>ASICS Running Socks</span></p>
+      <p style={{ marginLeft: '40px' }}><span style={{ fontSize: '16px' }}>ASICS Running Cap</span></p>
+      <p style={{ marginLeft: '40px' }}><span style={{ fontSize: '16px' }}>ASICS Lightweight Running Jacket</span></p>
+    </div>
 
 
 
   ],
   [
     <div>
-    <p>&nbsp;</p>
-    <p style={{ marginLeft: '40px' }}>
+      <p>&nbsp;</p>
+      <p style={{ marginLeft: '40px' }}>
         <span style={{ fontSize: '26px' }}><strong>Product Title: New Balance Fresh Foam 1080v11 Running Shoes</strong></span>
-    </p>
-    <p style={{ marginLeft: '40px' }}><br />
+      </p>
+      <p style={{ marginLeft: '40px' }}><br />
         <span style={{ fontSize: '16px' }}><strong>Price:</strong> $149.99<br />
-        <strong>Brand:</strong> New Balance<br />
-        <strong>Model:</strong> Fresh Foam 1080v11<br />
-        <strong>Category:</strong> Running Shoes<br />
-        <strong>Color Options:</strong> Black/Yellow, Grey/Blue, White/Black<br />
-        <strong>Sizes Available:</strong> 6, 7, 8, 9, 10, 11, 12<br />
-        <strong>Gender:</strong> Unisex</span>
-    </p>
-    <p style={{ marginLeft: '40px' }}><br />
+          <strong>Brand:</strong> New Balance<br />
+          <strong>Model:</strong> Fresh Foam 1080v11<br />
+          <strong>Category:</strong> Running Shoes<br />
+          <strong>Color Options:</strong> Black/Yellow, Grey/Blue, White/Black<br />
+          <strong>Sizes Available:</strong> 6, 7, 8, 9, 10, 11, 12<br />
+          <strong>Gender:</strong> Unisex</span>
+      </p>
+      <p style={{ marginLeft: '40px' }}><br />
         <span style={{ fontSize: '20px' }}><strong>Material:</strong></span>
-    </p>
-    <p style={{ marginLeft: '80px' }}><span style={{ fontSize: '16px' }}>Upper: Hypoknit</span></p>
-    <p style={{ marginLeft: '80px' }}><span style={{ fontSize: '16px' }}>Midsole: Fresh Foam X cushioning</span></p>
-    <p style={{ marginLeft: '80px' }}><span style={{ fontSize: '16px' }}>Outsole: Blown rubber</span></p>
-    <p style={{ marginLeft: '40px' }}><span style={{ fontSize: '20px' }}><strong>Features:</strong></span></p>
-    <p style={{ marginLeft: '80px' }}><span style={{ fontSize: '16px' }}>Hypoknit upper offers strategic zones of stretch and support</span></p>
-    <p style={{ marginLeft: '80px' }}><span style={{ fontSize: '16px' }}>Fresh Foam X cushioning provides ultra-plush and smooth ride</span></p>
-    <p style={{ marginLeft: '80px' }}><span style={{ fontSize: '16px' }}>Blown rubber outsole for reliable traction</span></p>
-    <p style={{ marginLeft: '80px' }}><span style={{ fontSize: '16px' }}>Ultra Heel design hugs the back of the foot for a snug, supportive fit</span></p>
-    <p style={{ marginLeft: '80px' }}><span style={{ fontSize: '16px' }}>Lace-up closure for a secure fit</span></p>
-    <p style={{ marginLeft: '80px' }}>&nbsp;</p>
-    <p style={{ marginLeft: '40px' }}><span style={{ fontSize: '20px' }}><strong>Product Description:</strong></span><br />
-    <span style={{ fontSize: '16px' }}>The New Balance Fresh Foam 1080v11 Running Shoes deliver luxurious comfort and exceptional support for runners seeking a premium running experience. The Hypoknit upper combines strategic zones of stretch and support to provide a dynamic fit, while the Fresh Foam X cushioning offers an ultra-plush and smooth ride mile after mile. The blown rubber outsole ensures reliable traction, while the Ultra Heel design hugs the back of the foot for a snug, supportive fit. With a lace-up closure for a secure fit, these shoes are perfect for long-distance runs or everyday training sessions.</span></p>
-    <p style={{ marginLeft: '40px' }}><br />
-    <span style={{ fontSize: '20px' }}><strong>Shipping Information:</strong></span></p>
-    <p style={{ marginLeft: '80px' }}><span style={{ fontSize: '16px' }}>Free standard shipping on orders over $75</span></p>
-    <p style={{ marginLeft: '80px' }}><span style={{ fontSize: '16px' }}>Expedited shipping options available</span></p>
-    <p style={{ marginLeft: '80px' }}><span style={{ fontSize: '16px' }}>International shipping available to select countries</span></p>
-    <p style={{ marginLeft: '40px' }}><span style={{ fontSize: '20px' }}><strong>Return Policy:</strong></span></p>
-    <p style={{ marginLeft: '80px' }}><span style={{ fontSize: '16px' }}>45-day satisfaction guarantee</span></p>
-    <p style={{ marginLeft: '80px' }}><span style={{ fontSize: '16px' }}>Free returns within the U.S.</span></p>
-    <p style={{ marginLeft: '80px' }}><span style={{ fontSize: '16px' }}>International returns accepted within 60 days, buyer pays return shipping</span></p>
-    <p style={{ marginLeft: '40px' }}><br />
-    <span style={{ fontSize: '20px' }}><strong>Additional Information:</strong></span></p>
-    <p style={{ marginLeft: '80px' }}><span style={{ fontSize: '16px' }}>Product Code: NBFRESH1080-001</span></p>
-    <p style={{ marginLeft: '80px' }}><span style={{ fontSize: '16px' }}>UPC: 192662930483</span></p>
-    <p style={{ marginLeft: '80px' }}><span style={{ fontSize: '16px' }}>Manufactured in Vietnam</span></p>
-    <p style={{ marginLeft: '40px' }}><span style={{ fontSize: '16px' }}><strong>Disclaimer:</strong> Actual product colors may vary slightly from images due to monitor settings and lighting conditions.<br />
-    <strong>Related Products:</strong></span></p>
-    <p style={{ marginLeft: '40px' }}><span style={{ fontSize: '16px' }}>New Balance Performance Running Socks</span></p>
-    <p style={{ marginLeft: '40px' }}><span style={{ fontSize: '16px' }}>New Balance Running Cap</span></p>
-    <p style={{ marginLeft: '40px' }}><span style={{ fontSize: '16px' }}>New Balance Lightweight Running Jacket</span></p>
-</div>
+      </p>
+      <p style={{ marginLeft: '80px' }}><span style={{ fontSize: '16px' }}>Upper: Hypoknit</span></p>
+      <p style={{ marginLeft: '80px' }}><span style={{ fontSize: '16px' }}>Midsole: Fresh Foam X cushioning</span></p>
+      <p style={{ marginLeft: '80px' }}><span style={{ fontSize: '16px' }}>Outsole: Blown rubber</span></p>
+      <p style={{ marginLeft: '40px' }}><span style={{ fontSize: '20px' }}><strong>Features:</strong></span></p>
+      <p style={{ marginLeft: '80px' }}><span style={{ fontSize: '16px' }}>Hypoknit upper offers strategic zones of stretch and support</span></p>
+      <p style={{ marginLeft: '80px' }}><span style={{ fontSize: '16px' }}>Fresh Foam X cushioning provides ultra-plush and smooth ride</span></p>
+      <p style={{ marginLeft: '80px' }}><span style={{ fontSize: '16px' }}>Blown rubber outsole for reliable traction</span></p>
+      <p style={{ marginLeft: '80px' }}><span style={{ fontSize: '16px' }}>Ultra Heel design hugs the back of the foot for a snug, supportive fit</span></p>
+      <p style={{ marginLeft: '80px' }}><span style={{ fontSize: '16px' }}>Lace-up closure for a secure fit</span></p>
+      <p style={{ marginLeft: '80px' }}>&nbsp;</p>
+      <p style={{ marginLeft: '40px' }}><span style={{ fontSize: '20px' }}><strong>Product Description:</strong></span><br />
+        <span style={{ fontSize: '16px' }}>The New Balance Fresh Foam 1080v11 Running Shoes deliver luxurious comfort and exceptional support for runners seeking a premium running experience. The Hypoknit upper combines strategic zones of stretch and support to provide a dynamic fit, while the Fresh Foam X cushioning offers an ultra-plush and smooth ride mile after mile. The blown rubber outsole ensures reliable traction, while the Ultra Heel design hugs the back of the foot for a snug, supportive fit. With a lace-up closure for a secure fit, these shoes are perfect for long-distance runs or everyday training sessions.</span></p>
+      <p style={{ marginLeft: '40px' }}><br />
+        <span style={{ fontSize: '20px' }}><strong>Shipping Information:</strong></span></p>
+      <p style={{ marginLeft: '80px' }}><span style={{ fontSize: '16px' }}>Free standard shipping on orders over $75</span></p>
+      <p style={{ marginLeft: '80px' }}><span style={{ fontSize: '16px' }}>Expedited shipping options available</span></p>
+      <p style={{ marginLeft: '80px' }}><span style={{ fontSize: '16px' }}>International shipping available to select countries</span></p>
+      <p style={{ marginLeft: '40px' }}><span style={{ fontSize: '20px' }}><strong>Return Policy:</strong></span></p>
+      <p style={{ marginLeft: '80px' }}><span style={{ fontSize: '16px' }}>45-day satisfaction guarantee</span></p>
+      <p style={{ marginLeft: '80px' }}><span style={{ fontSize: '16px' }}>Free returns within the U.S.</span></p>
+      <p style={{ marginLeft: '80px' }}><span style={{ fontSize: '16px' }}>International returns accepted within 60 days, buyer pays return shipping</span></p>
+      <p style={{ marginLeft: '40px' }}><br />
+        <span style={{ fontSize: '20px' }}><strong>Additional Information:</strong></span></p>
+      <p style={{ marginLeft: '80px' }}><span style={{ fontSize: '16px' }}>Product Code: NBFRESH1080-001</span></p>
+      <p style={{ marginLeft: '80px' }}><span style={{ fontSize: '16px' }}>UPC: 192662930483</span></p>
+      <p style={{ marginLeft: '80px' }}><span style={{ fontSize: '16px' }}>Manufactured in Vietnam</span></p>
+      <p style={{ marginLeft: '40px' }}><span style={{ fontSize: '16px' }}><strong>Disclaimer:</strong> Actual product colors may vary slightly from images due to monitor settings and lighting conditions.<br />
+        <strong>Related Products:</strong></span></p>
+      <p style={{ marginLeft: '40px' }}><span style={{ fontSize: '16px' }}>New Balance Performance Running Socks</span></p>
+      <p style={{ marginLeft: '40px' }}><span style={{ fontSize: '16px' }}>New Balance Running Cap</span></p>
+      <p style={{ marginLeft: '40px' }}><span style={{ fontSize: '16px' }}>New Balance Lightweight Running Jacket</span></p>
+    </div>
 
   ],
   [
     <div>
-    <p>&nbsp;</p>
-    <p style={{ marginLeft: '40px' }}>
+      <p>&nbsp;</p>
+      <p style={{ marginLeft: '40px' }}>
         <span style={{ fontSize: '26px' }}><strong>Product Title: Brooks Ghost 14 Running Shoes</strong></span>
-    </p>
-    <p style={{ marginLeft: '40px' }}><br />
+      </p>
+      <p style={{ marginLeft: '40px' }}><br />
         <span style={{ fontSize: '16px' }}><strong>Price:</strong> $129.99<br />
-        <strong>Brand:</strong> Brooks<br />
-        <strong>Model:</strong> Ghost 14<br />
-        <strong>Category:</strong> Running Shoes<br />
-        <strong>Color Options:</strong> Black/Red, Blue/Silver, Grey/White<br />
-        <strong>Sizes Available:</strong> 6, 7, 8, 9, 10, 11, 12<br />
-        <strong>Gender:</strong> Unisex</span>
-    </p>
-    <p style={{ marginLeft: '40px' }}><br />
+          <strong>Brand:</strong> Brooks<br />
+          <strong>Model:</strong> Ghost 14<br />
+          <strong>Category:</strong> Running Shoes<br />
+          <strong>Color Options:</strong> Black/Red, Blue/Silver, Grey/White<br />
+          <strong>Sizes Available:</strong> 6, 7, 8, 9, 10, 11, 12<br />
+          <strong>Gender:</strong> Unisex</span>
+      </p>
+      <p style={{ marginLeft: '40px' }}><br />
         <span style={{ fontSize: '20px' }}><strong>Material:</strong></span>
-    </p>
-    <p style={{ marginLeft: '80px' }}><span style={{ fontSize: '16px' }}>Upper: Engineered Air Mesh</span></p>
-    <p style={{ marginLeft: '80px' }}><span style={{ fontSize: '16px' }}>Midsole: DNA Loft cushioning</span></p>
-    <p style={{ marginLeft: '80px' }}><span style={{ fontSize: '16px' }}>Outsole: Blown rubber</span></p>
-    <p style={{ marginLeft: '40px' }}><span style={{ fontSize: '20px' }}><strong>Features:</strong></span></p>
-    <p style={{ marginLeft: '80px' }}><span style={{ fontSize: '16px' }}>Engineered Air Mesh upper offers lightweight breathability</span></p>
-    <p style={{ marginLeft: '80px' }}><span style={{ fontSize: '16px' }}>DNA Loft cushioning provides softness and durability</span></p>
-    <p style={{ marginLeft: '80px' }}><span style={{ fontSize: '16px' }}>Segmented Crash Pad accommodates any foot landing for smooth transitions</span></p>
-    <p style={{ marginLeft: '80px' }}><span style={{ fontSize: '16px' }}>Blown rubber outsole for reliable traction</span></p>
-    <p style={{ marginLeft: '80px' }}><span style={{ fontSize: '16px' }}>3D Fit Print applies strategic stretch and structure for an impeccable fit</span></p>
-    <p style={{ marginLeft: '80px' }}><span style={{ fontSize: '16px' }}>Lace-up closure ensures a secure fit</span></p>
-    <p style={{ marginLeft: '80px' }}>&nbsp;</p>
-    <p style={{ marginLeft: '40px' }}><span style={{ fontSize: '20px' }}><strong>Product Description:</strong></span><br />
-    <span style={{ fontSize: '16px' }}>The Brooks Ghost 14 Running Shoes are engineered to provide a smooth and comfortable ride mile after mile. Featuring an Engineered Air Mesh upper, these shoes offer lightweight breathability to keep your feet cool and comfortable during your runs. The DNA Loft cushioning in the midsole provides softness and durability, while the segmented Crash Pad ensures smooth transitions from heel to toe. The blown rubber outsole delivers reliable traction on various surfaces, and the 3D Fit Print technology applies strategic stretch and structure for an impeccable fit. With a lace-up closure for a secure fit, the Brooks Ghost 14 is ready to take on any distance with you.</span></p>
-    <p style={{ marginLeft: '40px' }}><br />
-    <span style={{ fontSize: '20px' }}><strong>Shipping Information:</strong></span></p>
-    <p style={{ marginLeft: '80px' }}><span style={{ fontSize: '16px' }}>Free standard shipping on orders over $100</span></p>
-    <p style={{ marginLeft: '80px' }}><span style={{ fontSize: '16px' }}>Expedited shipping options available</span></p>
-    <p style={{ marginLeft: '80px' }}><span style={{ fontSize: '16px' }}>International shipping available to select countries</span></p>
-    <p style={{ marginLeft: '40px' }}><span style={{ fontSize: '20px' }}><strong>Return Policy:</strong></span></p>
-    <p style={{ marginLeft: '80px' }}><span style={{ fontSize: '16px' }}>60-day satisfaction guarantee</span></p>
-    <p style={{ marginLeft: '80px' }}><span style={{ fontSize: '16px' }}>Free returns within the U.S.</span></p>
-    <p style={{ marginLeft: '80px' }}><span style={{ fontSize: '16px' }}>International returns accepted within 90 days, buyer pays return shipping</span></p>
-    <p style={{ marginLeft: '40px' }}><br />
-    <span style={{ fontSize: '20px' }}><strong>Additional Information:</strong></span></p>
-    <p style={{ marginLeft: '80px' }}><span style={{ fontSize: '16px' }}>Product Code: BRKG14-001</span></p>
-    <p style={{ marginLeft: '80px' }}><span style={{ fontSize: '16px' }}>UPC: 192662930483</span></p>
-    <p style={{ marginLeft: '80px' }}><span style={{ fontSize: '16px' }}>Manufactured in Vietnam</span></p>
-    <p style={{ marginLeft: '40px' }}><span style={{ fontSize: '16px' }}><strong>Disclaimer:</strong> Actual product colors may vary slightly from images due to monitor settings and lighting conditions.<br />
-    <strong>Related Products:</strong></span></p>
-    <p style={{ marginLeft: '40px' }}><span style={{ fontSize: '16px' }}>Brooks Ghost Running Socks</span></p>
-    <p style={{ marginLeft: '40px' }}><span style={{ fontSize: '16px' }}>Brooks Running Cap</span></p>
-    <p style={{ marginLeft: '40px' }}><span style={{ fontSize: '16px' }}>Brooks Lightweight Running Jacket</span></p>
-</div>
+      </p>
+      <p style={{ marginLeft: '80px' }}><span style={{ fontSize: '16px' }}>Upper: Engineered Air Mesh</span></p>
+      <p style={{ marginLeft: '80px' }}><span style={{ fontSize: '16px' }}>Midsole: DNA Loft cushioning</span></p>
+      <p style={{ marginLeft: '80px' }}><span style={{ fontSize: '16px' }}>Outsole: Blown rubber</span></p>
+      <p style={{ marginLeft: '40px' }}><span style={{ fontSize: '20px' }}><strong>Features:</strong></span></p>
+      <p style={{ marginLeft: '80px' }}><span style={{ fontSize: '16px' }}>Engineered Air Mesh upper offers lightweight breathability</span></p>
+      <p style={{ marginLeft: '80px' }}><span style={{ fontSize: '16px' }}>DNA Loft cushioning provides softness and durability</span></p>
+      <p style={{ marginLeft: '80px' }}><span style={{ fontSize: '16px' }}>Segmented Crash Pad accommodates any foot landing for smooth transitions</span></p>
+      <p style={{ marginLeft: '80px' }}><span style={{ fontSize: '16px' }}>Blown rubber outsole for reliable traction</span></p>
+      <p style={{ marginLeft: '80px' }}><span style={{ fontSize: '16px' }}>3D Fit Print applies strategic stretch and structure for an impeccable fit</span></p>
+      <p style={{ marginLeft: '80px' }}><span style={{ fontSize: '16px' }}>Lace-up closure ensures a secure fit</span></p>
+      <p style={{ marginLeft: '80px' }}>&nbsp;</p>
+      <p style={{ marginLeft: '40px' }}><span style={{ fontSize: '20px' }}><strong>Product Description:</strong></span><br />
+        <span style={{ fontSize: '16px' }}>The Brooks Ghost 14 Running Shoes are engineered to provide a smooth and comfortable ride mile after mile. Featuring an Engineered Air Mesh upper, these shoes offer lightweight breathability to keep your feet cool and comfortable during your runs. The DNA Loft cushioning in the midsole provides softness and durability, while the segmented Crash Pad ensures smooth transitions from heel to toe. The blown rubber outsole delivers reliable traction on various surfaces, and the 3D Fit Print technology applies strategic stretch and structure for an impeccable fit. With a lace-up closure for a secure fit, the Brooks Ghost 14 is ready to take on any distance with you.</span></p>
+      <p style={{ marginLeft: '40px' }}><br />
+        <span style={{ fontSize: '20px' }}><strong>Shipping Information:</strong></span></p>
+      <p style={{ marginLeft: '80px' }}><span style={{ fontSize: '16px' }}>Free standard shipping on orders over $100</span></p>
+      <p style={{ marginLeft: '80px' }}><span style={{ fontSize: '16px' }}>Expedited shipping options available</span></p>
+      <p style={{ marginLeft: '80px' }}><span style={{ fontSize: '16px' }}>International shipping available to select countries</span></p>
+      <p style={{ marginLeft: '40px' }}><span style={{ fontSize: '20px' }}><strong>Return Policy:</strong></span></p>
+      <p style={{ marginLeft: '80px' }}><span style={{ fontSize: '16px' }}>60-day satisfaction guarantee</span></p>
+      <p style={{ marginLeft: '80px' }}><span style={{ fontSize: '16px' }}>Free returns within the U.S.</span></p>
+      <p style={{ marginLeft: '80px' }}><span style={{ fontSize: '16px' }}>International returns accepted within 90 days, buyer pays return shipping</span></p>
+      <p style={{ marginLeft: '40px' }}><br />
+        <span style={{ fontSize: '20px' }}><strong>Additional Information:</strong></span></p>
+      <p style={{ marginLeft: '80px' }}><span style={{ fontSize: '16px' }}>Product Code: BRKG14-001</span></p>
+      <p style={{ marginLeft: '80px' }}><span style={{ fontSize: '16px' }}>UPC: 192662930483</span></p>
+      <p style={{ marginLeft: '80px' }}><span style={{ fontSize: '16px' }}>Manufactured in Vietnam</span></p>
+      <p style={{ marginLeft: '40px' }}><span style={{ fontSize: '16px' }}><strong>Disclaimer:</strong> Actual product colors may vary slightly from images due to monitor settings and lighting conditions.<br />
+        <strong>Related Products:</strong></span></p>
+      <p style={{ marginLeft: '40px' }}><span style={{ fontSize: '16px' }}>Brooks Ghost Running Socks</span></p>
+      <p style={{ marginLeft: '40px' }}><span style={{ fontSize: '16px' }}>Brooks Running Cap</span></p>
+      <p style={{ marginLeft: '40px' }}><span style={{ fontSize: '16px' }}>Brooks Lightweight Running Jacket</span></p>
+    </div>
 
   ],
   [
     <div>
-    <p>&nbsp;</p>
-    <p style={{ marginLeft: '40px' }}><span style={{ fontSize: '26px' }}><strong>Product Title: Saucony Kinvara 12 Running Shoes</strong></span></p>
-    <p style={{ marginLeft: '40px' }}><br />
+      <p>&nbsp;</p>
+      <p style={{ marginLeft: '40px' }}><span style={{ fontSize: '26px' }}><strong>Product Title: Saucony Kinvara 12 Running Shoes</strong></span></p>
+      <p style={{ marginLeft: '40px' }}><br />
         <span style={{ fontSize: '16px' }}><strong>Price:</strong> $119.99<br />
-        <strong>Brand:</strong> Saucony<br />
-        <strong>Model:</strong> Kinvara 12<br />
-        <strong>Category:</strong> Running Shoes<br />
-        <strong>Color Options:</strong> Black/Grey, Blue/White, Green/Yellow<br />
-        <strong>Sizes Available:</strong> 6, 7, 8, 9, 10, 11, 12<br />
-        <strong>Gender:</strong> Unisex</span>
-    </p>
-    <p style={{ marginLeft: '40px' }}><br />
+          <strong>Brand:</strong> Saucony<br />
+          <strong>Model:</strong> Kinvara 12<br />
+          <strong>Category:</strong> Running Shoes<br />
+          <strong>Color Options:</strong> Black/Grey, Blue/White, Green/Yellow<br />
+          <strong>Sizes Available:</strong> 6, 7, 8, 9, 10, 11, 12<br />
+          <strong>Gender:</strong> Unisex</span>
+      </p>
+      <p style={{ marginLeft: '40px' }}><br />
         <span style={{ fontSize: '20px' }}><strong>Material:</strong></span>
-    </p>
-    <p style={{ marginLeft: '80px' }}><span style={{ fontSize: '16px' }}>Upper: FORMFIT engineered mesh</span></p>
-    <p style={{ marginLeft: '80px' }}><span style={{ fontSize: '16px' }}>Midsole: PWRRUN cushioning</span></p>
-    <p style={{ marginLeft: '80px' }}><span style={{ fontSize: '16px' }}>Outsole: XT-900 rubber</span></p>
-    <p style={{ marginLeft: '40px' }}><span style={{ fontSize: '20px' }}><strong>Features:</strong></span></p>
-    <p style={{ marginLeft: '80px' }}><span style={{ fontSize: '16px' }}>FORMFIT technology adapts to your foot for a personalized fit</span></p>
-    <p style={{ marginLeft: '80px' }}><span style={{ fontSize: '16px' }}>PWRRUN cushioning provides a responsive and cushioned ride</span></p>
-    <p style={{ marginLeft: '80px' }}><span style={{ fontSize: '16px' }}>Flexfilm overlays offer lightweight support</span></p>
-    <p style={{ marginLeft: '80px' }}><span style={{ fontSize: '16px' }}>XT-900 rubber outsole for durability and traction</span></p>
-    <p style={{ marginLeft: '80px' }}><span style={{ fontSize: '16px' }}>Breathable and lightweight FORMFIT engineered mesh upper</span></p>
-    <p style={{ marginLeft: '80px' }}><span style={{ fontSize: '16px' }}>Lace-up closure for a secure fit</span></p>
-    <p style={{ marginLeft: '80px' }}>&nbsp;</p>
-    <p style={{ marginLeft: '40px' }}><span style={{ fontSize: '20px' }}><strong>Product Description:</strong></span><br />
-    <span style={{ fontSize: '16px' }}>The Saucony Kinvara 12 Running Shoes are designed to provide a lightweight and responsive ride. Featuring FORMFIT technology, these shoes adapt to your foot shape for a personalized fit. The PWRRUN cushioning offers a responsive and cushioned feel underfoot, while the Flexfilm overlays provide lightweight support. With an XT-900 rubber outsole, these shoes offer durability and traction on various surfaces. The breathable and lightweight FORMFIT engineered mesh upper ensures comfort and ventilation during your runs. Lace-up closure allows for a secure fit, making the Kinvara 12 ideal for runners seeking a versatile and comfortable shoe for their training sessions.</span></p>
-    <p style={{ marginLeft: '40px' }}><br />
-    <span style={{ fontSize: '20px' }}><strong>Shipping Information:</strong></span></p>
-    <p style={{ marginLeft: '80px' }}><span style={{ fontSize: '16px' }}>Free standard shipping on all orders</span></p> 
-    <p style={{ marginLeft: '80px' }}><span style={{ fontSize: '16px' }}>Expedited shipping options available</span></p>
-    <p style={{ marginLeft: '80px' }}><span style={{ fontSize: '16px' }}>International shipping available to most countries</span></p>
-    <p style={{ marginLeft: '40px' }}><span style={{ fontSize: '20px' }}><strong>Return Policy:</strong></span></p>
-    <p style={{ marginLeft: '80px' }}><span style={{ fontSize: '16px' }}>90-day satisfaction guarantee</span></p>
-    <p style={{ marginLeft: '80px' }}><span style={{ fontSize: '16px' }}>Free returns within the U.S.</span></p>
-    <p style={{ marginLeft: '80px' }}><span style={{ fontSize: '16px' }}>International returns accepted within 120 days, buyer pays return shipping</span></p>
-    <p style={{ marginLeft: '40px' }}><br />
-    <span style={{ fontSize: '20px' }}><strong>Additional Information:</strong></span></p>
-    <p style={{ marginLeft: '80px' }}><span style={{ fontSize: '16px' }}>Product Code: SK12-001</span></p>
-    <p style={{ marginLeft: '80px' }}><span style={{ fontSize: '16px' }}>UPC: 192662930483</span></p>
-    <p style={{ marginLeft: '80px' }}><span style={{ fontSize: '16px' }}>Manufactured in Vietnam</span></p>
-    <p style={{ marginLeft: '40px' }}><span style={{ fontSize: '16px' }}><strong>Disclaimer:</strong> Actual product colors may vary slightly from images due to monitor settings and lighting conditions.<br />
-    <strong>Related Products:</strong></span></p>
-    <p style={{ marginLeft: '40px' }}><span style={{ fontSize: '16px' }}>Saucony Kinvara Running Socks</span></p>
-    <p style={{ marginLeft: '40px' }}><span style={{ fontSize: '16px' }}>Saucony Running Cap</span></p>
-    <p style={{ marginLeft: '40px' }}><span style={{ fontSize: '16px' }}>Saucony Lightweight Running Jacket</span></p>
-</div>
+      </p>
+      <p style={{ marginLeft: '80px' }}><span style={{ fontSize: '16px' }}>Upper: FORMFIT engineered mesh</span></p>
+      <p style={{ marginLeft: '80px' }}><span style={{ fontSize: '16px' }}>Midsole: PWRRUN cushioning</span></p>
+      <p style={{ marginLeft: '80px' }}><span style={{ fontSize: '16px' }}>Outsole: XT-900 rubber</span></p>
+      <p style={{ marginLeft: '40px' }}><span style={{ fontSize: '20px' }}><strong>Features:</strong></span></p>
+      <p style={{ marginLeft: '80px' }}><span style={{ fontSize: '16px' }}>FORMFIT technology adapts to your foot for a personalized fit</span></p>
+      <p style={{ marginLeft: '80px' }}><span style={{ fontSize: '16px' }}>PWRRUN cushioning provides a responsive and cushioned ride</span></p>
+      <p style={{ marginLeft: '80px' }}><span style={{ fontSize: '16px' }}>Flexfilm overlays offer lightweight support</span></p>
+      <p style={{ marginLeft: '80px' }}><span style={{ fontSize: '16px' }}>XT-900 rubber outsole for durability and traction</span></p>
+      <p style={{ marginLeft: '80px' }}><span style={{ fontSize: '16px' }}>Breathable and lightweight FORMFIT engineered mesh upper</span></p>
+      <p style={{ marginLeft: '80px' }}><span style={{ fontSize: '16px' }}>Lace-up closure for a secure fit</span></p>
+      <p style={{ marginLeft: '80px' }}>&nbsp;</p>
+      <p style={{ marginLeft: '40px' }}><span style={{ fontSize: '20px' }}><strong>Product Description:</strong></span><br />
+        <span style={{ fontSize: '16px' }}>The Saucony Kinvara 12 Running Shoes are designed to provide a lightweight and responsive ride. Featuring FORMFIT technology, these shoes adapt to your foot shape for a personalized fit. The PWRRUN cushioning offers a responsive and cushioned feel underfoot, while the Flexfilm overlays provide lightweight support. With an XT-900 rubber outsole, these shoes offer durability and traction on various surfaces. The breathable and lightweight FORMFIT engineered mesh upper ensures comfort and ventilation during your runs. Lace-up closure allows for a secure fit, making the Kinvara 12 ideal for runners seeking a versatile and comfortable shoe for their training sessions.</span></p>
+      <p style={{ marginLeft: '40px' }}><br />
+        <span style={{ fontSize: '20px' }}><strong>Shipping Information:</strong></span></p>
+      <p style={{ marginLeft: '80px' }}><span style={{ fontSize: '16px' }}>Free standard shipping on all orders</span></p>
+      <p style={{ marginLeft: '80px' }}><span style={{ fontSize: '16px' }}>Expedited shipping options available</span></p>
+      <p style={{ marginLeft: '80px' }}><span style={{ fontSize: '16px' }}>International shipping available to most countries</span></p>
+      <p style={{ marginLeft: '40px' }}><span style={{ fontSize: '20px' }}><strong>Return Policy:</strong></span></p>
+      <p style={{ marginLeft: '80px' }}><span style={{ fontSize: '16px' }}>90-day satisfaction guarantee</span></p>
+      <p style={{ marginLeft: '80px' }}><span style={{ fontSize: '16px' }}>Free returns within the U.S.</span></p>
+      <p style={{ marginLeft: '80px' }}><span style={{ fontSize: '16px' }}>International returns accepted within 120 days, buyer pays return shipping</span></p>
+      <p style={{ marginLeft: '40px' }}><br />
+        <span style={{ fontSize: '20px' }}><strong>Additional Information:</strong></span></p>
+      <p style={{ marginLeft: '80px' }}><span style={{ fontSize: '16px' }}>Product Code: SK12-001</span></p>
+      <p style={{ marginLeft: '80px' }}><span style={{ fontSize: '16px' }}>UPC: 192662930483</span></p>
+      <p style={{ marginLeft: '80px' }}><span style={{ fontSize: '16px' }}>Manufactured in Vietnam</span></p>
+      <p style={{ marginLeft: '40px' }}><span style={{ fontSize: '16px' }}><strong>Disclaimer:</strong> Actual product colors may vary slightly from images due to monitor settings and lighting conditions.<br />
+        <strong>Related Products:</strong></span></p>
+      <p style={{ marginLeft: '40px' }}><span style={{ fontSize: '16px' }}>Saucony Kinvara Running Socks</span></p>
+      <p style={{ marginLeft: '40px' }}><span style={{ fontSize: '16px' }}>Saucony Running Cap</span></p>
+      <p style={{ marginLeft: '40px' }}><span style={{ fontSize: '16px' }}>Saucony Lightweight Running Jacket</span></p>
+    </div>
 
   ],
   [
     <div>
-    <p>&nbsp;</p>
-    <p style={{ marginLeft: '40px' }}><span style={{ fontSize: '26px' }}><strong>Product Title: Brooks Ghost 14 Running Shoes</strong></span></p>
-    <p style={{ marginLeft: '40px' }}><br />
+      <p>&nbsp;</p>
+      <p style={{ marginLeft: '40px' }}><span style={{ fontSize: '26px' }}><strong>Product Title: Brooks Ghost 14 Running Shoes</strong></span></p>
+      <p style={{ marginLeft: '40px' }}><br />
         <span style={{ fontSize: '16px' }}><strong>Price:</strong> $129.99<br />
-        <strong>Brand:</strong> Brooks<br />
-        <strong>Model:</strong> Ghost 14<br />
-        <strong>Category:</strong> Running Shoes<br />
-        <strong>Color Options:</strong> Black/White, Blue/Green, Grey/Orange<br />
-        <strong>Sizes Available:</strong> 6, 7, 8, 9, 10, 11, 12<br />
-        <strong>Gender:</strong> Unisex</span>
-    </p>
-    <p style={{ marginLeft: '40px' }}><br />
+          <strong>Brand:</strong> Brooks<br />
+          <strong>Model:</strong> Ghost 14<br />
+          <strong>Category:</strong> Running Shoes<br />
+          <strong>Color Options:</strong> Black/White, Blue/Green, Grey/Orange<br />
+          <strong>Sizes Available:</strong> 6, 7, 8, 9, 10, 11, 12<br />
+          <strong>Gender:</strong> Unisex</span>
+      </p>
+      <p style={{ marginLeft: '40px' }}><br />
         <span style={{ fontSize: '20px' }}><strong>Material:</strong></span>
-    </p>
-    <p style={{ marginLeft: '80px' }}><span style={{ fontSize: '16px' }}>Upper: Engineered Air Mesh</span></p>
-    <p style={{ marginLeft: '80px' }}><span style={{ fontSize: '16px' }}>Midsole: DNA LOFT cushioning</span></p>
-    <p style={{ marginLeft: '80px' }}><span style={{ fontSize: '16px' }}>Outsole: Blown rubber</span></p>
-    <p style={{ marginLeft: '40px' }}><span style={{ fontSize: '20px' }}><strong>Features:</strong></span></p>
-    <p style={{ marginLeft: '80px' }}><span style={{ fontSize: '16px' }}>DNA LOFT cushioning provides a soft and luxurious feeling underfoot</span></p>
-    <p style={{ marginLeft: '80px' }}><span style={{ fontSize: '16px' }}>Engineered Air Mesh upper offers a breathable and comfortable fit</span></p>
-    <p style={{ marginLeft: '80px' }}><span style={{ fontSize: '16px' }}>Segmented Crash Pad allows for smooth heel-to-toe transitions</span></p>
-    <p style={{ marginLeft: '80px' }}><span style={{ fontSize: '16px' }}>3D Fit Print technology delivers a secure fit</span></p>
-    <p style={{ marginLeft: '80px' }}><span style={{ fontSize: '16px' }}>Omega Flex Grooves enhance flexibility for a natural stride</span></p>
-    <p style={{ marginLeft: '80px' }}><span style={{ fontSize: '16px' }}>Lace-up closure for a personalized fit</span></p>
-    <p style={{ marginLeft: '80px' }}>&nbsp;</p>
-    <p style={{ marginLeft: '40px' }}><span style={{ fontSize: '20px' }}><strong>Product Description:</strong></span><br />
-    <span style={{ fontSize: '16px' }}>The Brooks Ghost 14 Running Shoes are designed to provide runners with a plush and smooth ride. With DNA LOFT cushioning, these shoes offer a soft and luxurious feel underfoot, making them ideal for long-distance runs or everyday training. The engineered Air Mesh upper ensures breathability and comfort, while the Segmented Crash Pad allows for smooth heel-to-toe transitions. 3D Fit Print technology delivers a secure fit, and Omega Flex Grooves enhance flexibility for a natural stride. Whether you're hitting the roads or the trails, the Brooks Ghost 14 will provide the comfort and support you need to reach your goals.</span></p>
-    <p style={{ marginLeft: '40px' }}><br />
-    <span style={{ fontSize: '20px' }}><strong>Shipping Information:</strong></span></p>
-    <p style={{ marginLeft: '80px' }}><span style={{ fontSize: '16px' }}>Free standard shipping on all orders</span></p> 
-    <p style={{ marginLeft: '80px' }}><span style={{ fontSize: '16px' }}>Expedited shipping options available</span></p>
-    <p style={{ marginLeft: '80px' }}><span style={{ fontSize: '16px' }}>International shipping available to select countries</span></p>
-    <p style={{ marginLeft: '40px' }}><span style={{ fontSize: '20px' }}><strong>Return Policy:</strong></span></p>
-    <p style={{ marginLeft: '80px' }}><span style={{ fontSize: '16px' }}>60-day satisfaction guarantee</span></p>
-    <p style={{ marginLeft: '80px' }}><span style={{ fontSize: '16px' }}>Free returns within the U.S.</span></p>
-    <p style={{ marginLeft: '80px' }}><span style={{ fontSize: '16px' }}>International returns accepted within 90 days, buyer pays return shipping</span></p>
-    <p style={{ marginLeft: '40px' }}><br />
-    <span style={{ fontSize: '20px' }}><strong>Additional Information:</strong></span></p>
-    <p style={{ marginLeft: '80px' }}><span style={{ fontSize: '16px' }}>Product Code: BKG14-001</span></p>
-    <p style={{ marginLeft: '80px' }}><span style={{ fontSize: '16px' }}>UPC: 192662930483</span></p>
-    <p style={{ marginLeft: '80px' }}><span style={{ fontSize: '16px' }}>Manufactured in Vietnam</span></p>
-    <p style={{ marginLeft: '40px' }}><span style={{ fontSize: '16px' }}><strong>Disclaimer:</strong> Actual product colors may vary slightly from images due to monitor settings and lighting conditions.<br />
-    <strong>Related Products:</strong></span></p>
-    <p style={{ marginLeft: '40px' }}><span style={{ fontSize: '16px' }}>Brooks Ghost Running Socks</span></p>
-    <p style={{ marginLeft: '40px' }}><span style={{ fontSize: '16px' }}>Brooks Running Cap</span></p>
-    <p style={{ marginLeft: '40px' }}><span style={{ fontSize: '16px' }}>Brooks Lightweight Running Jacket</span></p>
-</div>
+      </p>
+      <p style={{ marginLeft: '80px' }}><span style={{ fontSize: '16px' }}>Upper: Engineered Air Mesh</span></p>
+      <p style={{ marginLeft: '80px' }}><span style={{ fontSize: '16px' }}>Midsole: DNA LOFT cushioning</span></p>
+      <p style={{ marginLeft: '80px' }}><span style={{ fontSize: '16px' }}>Outsole: Blown rubber</span></p>
+      <p style={{ marginLeft: '40px' }}><span style={{ fontSize: '20px' }}><strong>Features:</strong></span></p>
+      <p style={{ marginLeft: '80px' }}><span style={{ fontSize: '16px' }}>DNA LOFT cushioning provides a soft and luxurious feeling underfoot</span></p>
+      <p style={{ marginLeft: '80px' }}><span style={{ fontSize: '16px' }}>Engineered Air Mesh upper offers a breathable and comfortable fit</span></p>
+      <p style={{ marginLeft: '80px' }}><span style={{ fontSize: '16px' }}>Segmented Crash Pad allows for smooth heel-to-toe transitions</span></p>
+      <p style={{ marginLeft: '80px' }}><span style={{ fontSize: '16px' }}>3D Fit Print technology delivers a secure fit</span></p>
+      <p style={{ marginLeft: '80px' }}><span style={{ fontSize: '16px' }}>Omega Flex Grooves enhance flexibility for a natural stride</span></p>
+      <p style={{ marginLeft: '80px' }}><span style={{ fontSize: '16px' }}>Lace-up closure for a personalized fit</span></p>
+      <p style={{ marginLeft: '80px' }}>&nbsp;</p>
+      <p style={{ marginLeft: '40px' }}><span style={{ fontSize: '20px' }}><strong>Product Description:</strong></span><br />
+        <span style={{ fontSize: '16px' }}>The Brooks Ghost 14 Running Shoes are designed to provide runners with a plush and smooth ride. With DNA LOFT cushioning, these shoes offer a soft and luxurious feel underfoot, making them ideal for long-distance runs or everyday training. The engineered Air Mesh upper ensures breathability and comfort, while the Segmented Crash Pad allows for smooth heel-to-toe transitions. 3D Fit Print technology delivers a secure fit, and Omega Flex Grooves enhance flexibility for a natural stride. Whether you're hitting the roads or the trails, the Brooks Ghost 14 will provide the comfort and support you need to reach your goals.</span></p>
+      <p style={{ marginLeft: '40px' }}><br />
+        <span style={{ fontSize: '20px' }}><strong>Shipping Information:</strong></span></p>
+      <p style={{ marginLeft: '80px' }}><span style={{ fontSize: '16px' }}>Free standard shipping on all orders</span></p>
+      <p style={{ marginLeft: '80px' }}><span style={{ fontSize: '16px' }}>Expedited shipping options available</span></p>
+      <p style={{ marginLeft: '80px' }}><span style={{ fontSize: '16px' }}>International shipping available to select countries</span></p>
+      <p style={{ marginLeft: '40px' }}><span style={{ fontSize: '20px' }}><strong>Return Policy:</strong></span></p>
+      <p style={{ marginLeft: '80px' }}><span style={{ fontSize: '16px' }}>60-day satisfaction guarantee</span></p>
+      <p style={{ marginLeft: '80px' }}><span style={{ fontSize: '16px' }}>Free returns within the U.S.</span></p>
+      <p style={{ marginLeft: '80px' }}><span style={{ fontSize: '16px' }}>International returns accepted within 90 days, buyer pays return shipping</span></p>
+      <p style={{ marginLeft: '40px' }}><br />
+        <span style={{ fontSize: '20px' }}><strong>Additional Information:</strong></span></p>
+      <p style={{ marginLeft: '80px' }}><span style={{ fontSize: '16px' }}>Product Code: BKG14-001</span></p>
+      <p style={{ marginLeft: '80px' }}><span style={{ fontSize: '16px' }}>UPC: 192662930483</span></p>
+      <p style={{ marginLeft: '80px' }}><span style={{ fontSize: '16px' }}>Manufactured in Vietnam</span></p>
+      <p style={{ marginLeft: '40px' }}><span style={{ fontSize: '16px' }}><strong>Disclaimer:</strong> Actual product colors may vary slightly from images due to monitor settings and lighting conditions.<br />
+        <strong>Related Products:</strong></span></p>
+      <p style={{ marginLeft: '40px' }}><span style={{ fontSize: '16px' }}>Brooks Ghost Running Socks</span></p>
+      <p style={{ marginLeft: '40px' }}><span style={{ fontSize: '16px' }}>Brooks Running Cap</span></p>
+      <p style={{ marginLeft: '40px' }}><span style={{ fontSize: '16px' }}>Brooks Lightweight Running Jacket</span></p>
+    </div>
   ]
 ];
 
@@ -4761,31 +4761,239 @@ export const productsTableData = [
   }
 ]
 
-export const trackingTableData =[
+export const trackingTableData = [
   {
     trackingID: "SKV32765388F",
     orderID: 10248,
     customerName: 'Vinet',
     customerLocation: 'Canda',
-    shippiingTo:"John Doe",
+    shippiingTo: "John Doe",
     status: "Delivered",
     statusBg: '#8BE78B',
     placedOn: '2023-08-05',
     eta: '2023-08-29',
     shippingVia: "FedEx",
   }
-
 ]
+
+export const orderItems = [
+  [
+    {
+      productID: productsData[0].productId,
+      productImage: productsData[0].productImages[0].productImages[0],
+      productName: productsData[0].productName,
+      unitPrice: productsData[0].productPrice,
+      productQty: 2,
+      totalPrice: productsData[0].productPrice * 2
+    },
+    {
+      productID: productsData[3].productId,
+      productImage: productsData[3].productImages[0].productImages[0],
+      productName: productsData[3].productName,
+      unitPrice: productsData[3].productPrice,
+      productQty: 3,
+      totalPrice: productsData[3].productPrice * 3
+    },
+    {
+      productID: productsData[9].productId,
+      productImage: productsData[9].productImages[0].productImages[0],
+      productName: productsData[9].productName,
+      unitPrice: productsData[9].productPrice,
+      productQty: 1,
+      totalPrice: productsData[9].productPrice * 1
+    }
+  ],
+  [
+    {
+      productID: productsData[7].productId,
+      productImage: productsData[7].productImages[0].productImages[0],
+      productName: productsData[7].productName,
+      unitPrice: productsData[7].productPrice,
+      productQty: 2,
+      totalPrice: productsData[7].productPrice * 2
+    }
+  ],
+  [
+    {
+      productID: productsData[11].productId,
+      productImage: productsData[11].productImages[0].productImages[0],
+      productName: productsData[11].productName,
+      unitPrice: productsData[11].productPrice,
+      productQty: 1,
+      totalPrice: productsData[11].productPrice * 1
+    },
+    {
+      productID: productsData[2].productId,
+      productImage: productsData[2].productImages[0].productImages[0],
+      productName: productsData[2].productName,
+      unitPrice: productsData[2].productPrice,
+      productQty: 1,
+      totalPrice: productsData[2].productPrice * 1
+    }
+  ],
+  [
+    {
+      productID: productsData[6].productId,
+      productImage: productsData[6].productImages[0].productImages[0],
+      productName: productsData[6].productName,
+      unitPrice: productsData[6].productPrice,
+      productQty: 2,
+      totalPrice: productsData[6].productPrice * 2
+    },
+    {
+      productID: productsData[14].productId,
+      productImage: productsData[14].productImages[0].productImages[0],
+      productName: productsData[14].productName,
+      unitPrice: productsData[14].productPrice,
+      productQty: 2,
+      totalPrice: productsData[14].productPrice * 2
+    },
+    {
+      productID: productsData[1].productId,
+      productImage: productsData[1].productImages[0].productImages[0],
+      productName: productsData[1].productName,
+      unitPrice: productsData[1].productPrice,
+      productQty: 2,
+      totalPrice: productsData[1].productPrice * 2
+    }
+  ],
+  [
+    {
+      productID: productsData[8].productId,
+      productImage: productsData[8].productImages[0].productImages[0],
+      productName: productsData[8].productName,
+      unitPrice: productsData[8].productPrice,
+      productQty: 1,
+      totalPrice: productsData[8].productPrice * 1
+    },
+    {
+      productID: productsData[5].productId,
+      productImage: productsData[5].productImages[0].productImages[0],
+      productName: productsData[5].productName,
+      unitPrice: productsData[5].productPrice,
+      productQty: 2,
+      totalPrice: productsData[5].productPrice * 2
+    }
+  ],
+  [
+    {
+      productID: productsData[10].productId,
+      productImage: productsData[10].productImages[0].productImages[0],
+      productName: productsData[10].productName,
+      unitPrice: productsData[10].productPrice,
+      productQty: 1,
+      totalPrice: productsData[10].productPrice * 1
+    },
+    {
+      productID: productsData[12].productId,
+      productImage: productsData[12].productImages[0].productImages[0],
+      productName: productsData[12].productName,
+      unitPrice: productsData[12].productPrice,
+      productQty: 1,
+      totalPrice: productsData[12].productPrice * 1
+    },
+    {
+      productID: productsData[13].productId,
+      productImage: productsData[13].productImages[0].productImages[0],
+      productName: productsData[13].productName,
+      unitPrice: productsData[13].productPrice,
+      productQty: 4,
+      totalPrice: productsData[13].productPrice * 4
+    }
+  ],
+  [
+    {
+      productID: productsData[4].productId,
+      productImage: productsData[4].productImages[0].productImages[0],
+      productName: productsData[4].productName,
+      unitPrice: productsData[4].productPrice,
+      productQty: 1,
+      totalPrice: productsData[4].productPrice * 1
+    },
+    {
+      productID: productsData[7].productId,
+      productImage: productsData[7].productImages[0].productImages[0],
+      productName: productsData[7].productName,
+      unitPrice: productsData[7].productPrice,
+      productQty: 3,
+      totalPrice: productsData[7].productPrice * 3
+    },
+    {
+      productID: productsData[11].productId,
+      productImage: productsData[11].productImages[0].productImages[0],
+      productName: productsData[11].productName,
+      unitPrice: productsData[11].productPrice,
+      productQty: 2,
+      totalPrice: productsData[11].productPrice * 2
+    }
+  ],
+  [
+    {
+      productID: productsData[14].productId,
+      productImage: productsData[14].productImages[0].productImages[0],
+      productName: productsData[14].productName,
+      unitPrice: productsData[14].productPrice,
+      productQty: 1,
+      totalPrice: productsData[14].productPrice * 1
+    }
+  ],
+  [
+    {
+      productID: productsData[14].productId,
+      productImage: productsData[14].productImages[0].productImages[0],
+      productName: productsData[14].productName,
+      unitPrice: productsData[14].productPrice,
+      productQty: 2,
+      totalPrice: productsData[14].productPrice * 2
+    }
+  ],
+  [
+    {
+      productID: productsData[1].productId,
+      productImage: productsData[1].productImages[0].productImages[0],
+      productName: productsData[1].productName,
+      unitPrice: productsData[1].productPrice,
+      productQty: 2,
+      totalPrice: productsData[1].productPrice * 2
+    },
+    {
+      productID: productsData[6].productId,
+      productImage: productsData[6].productImages[0].productImages[0],
+      productName: productsData[6].productName,
+      unitPrice: productsData[6].productPrice,
+      productQty: 2,
+      totalPrice: productsData[6].productPrice * 2
+    }
+  ],
+  [
+    {
+      productID: productsData[10].productId,
+      productImage: productsData[10].productImages[0].productImages[0],
+      productName: productsData[10].productName,
+      unitPrice: productsData[10].productPrice,
+      productQty: 1,
+      totalPrice: productsData[10].productPrice * 1
+    },
+    {
+      productID: productsData[13].productId,
+      productImage: productsData[13].productImages[0].productImages[0],
+      productName: productsData[13].productName,
+      unitPrice: productsData[13].productPrice,
+      productQty: 1,
+      totalPrice: productsData[13].productPrice * 1
+    }
+  ]
+];
+
 
 export const ordersData = [
   {
     OrderID: 10248,
     CustomerName: "Vinet",
     CustomerEmail: "vinet69@gmail.com",
-    ItemsQuantity:3,
-    TotalAmount: 32.38,
+    ItemsQuantity: orderItems[0].length,
+    TotalAmount: orderItems[0].reduce((total, item)=>total + item.totalPrice,0),
     PayMethod: 'COD',
-    OrderItems: "Adidas Ultra Boost",
     Location: "USA",
     Status: "pending",
     StatusBg: "#FB9678"
@@ -4794,8 +5002,8 @@ export const ordersData = [
     OrderID: 345653,
     CustomerName: "Carson Darrin",
     CustomerEmail: "carson@example.com",
-    ItemsQuantity:2,
-    TotalAmount: 56.34,
+    ItemsQuantity: orderItems[1].length,
+    TotalAmount: orderItems[1].reduce((total, item)=>total + item.totalPrice,0),
     PayMethod: 'Paypal',
     OrderItems: "Nike Air Jordan",
     Location: "Delhi",
@@ -4806,8 +5014,8 @@ export const ordersData = [
     OrderID: 390457,
     CustomerName: "Fran Perez",
     CustomerEmail: "fran@example.com",
-    ItemsQuantity:1,
-    TotalAmount: 93.31,
+    ItemsQuantity: orderItems[2].length,
+    TotalAmount: orderItems[2].reduce((total, item)=>total + item.totalPrice,0),
     PayMethod: 'Venmo',
     OrderItems: "Puma RS-X",
     Location: "New York",
@@ -4818,8 +5026,8 @@ export const ordersData = [
     OrderID: 893486,
     CustomerName: "Anika Viseer",
     CustomerEmail: "anika@example.com",
-    ItemsQuantity:5,
-    TotalAmount: 93.31,
+    ItemsQuantity: orderItems[3].length,
+    TotalAmount: orderItems[3].reduce((total, item)=>total + item.totalPrice,0),
     PayMethod: 'Credit Card',
     OrderItems: "Adidas Superstar",
     Location: "Germany",
@@ -4830,8 +5038,8 @@ export const ordersData = [
     OrderID: 748975,
     CustomerName: "Miron Vitold",
     CustomerEmail: "miron@example.com",
-    ItemsQuantity:1,
-    TotalAmount: 23.99,
+    ItemsQuantity: orderItems[4].length,
+    TotalAmount: orderItems[4].reduce((total, item)=>total + item.totalPrice,0),
     PayMethod: 'COD',
     OrderItems: "Converse Chuck Taylor",
     Location: "Spain",
@@ -4842,8 +5050,8 @@ export const ordersData = [
     OrderID: 94757,
     CustomerName: "Omar Darobe",
     CustomerEmail: "omar@example.com",
-    ItemsQuantity:3,
-    TotalAmount: 95.99,
+    ItemsQuantity: orderItems[5].length,
+    TotalAmount: orderItems[5].reduce((total, item)=>total + item.totalPrice,0),
     PayMethod: 'Paypal',
     OrderItems: "Vans Old Skool",
     Location: "USA",
@@ -4854,8 +5062,8 @@ export const ordersData = [
     OrderID: 944895,
     CustomerName: "Lulia albu",
     CustomerEmail: "lulia@example.com",
-    ItemsQuantity:3,
-    TotalAmount: 17.99,
+    ItemsQuantity: orderItems[6].length,
+    TotalAmount: orderItems[6].reduce((total, item)=>total + item.totalPrice,0),
     PayMethod: 'Venmo',
     OrderItems: "New Balance 990",
     Location: "USA",
@@ -4866,8 +5074,8 @@ export const ordersData = [
     OrderID: 845954,
     CustomerName: "Penjani",
     CustomerEmail: "penjani@example.com",
-    ItemsQuantity:3,
-    TotalAmount: 59.99,
+    ItemsQuantity: orderItems[7].length,
+    TotalAmount: orderItems[7].reduce((total, item)=>total + item.totalPrice,0),
     PayMethod: 'Credit Card',
     OrderItems: "Under Armour HOVR",
     Location: "USA",
@@ -4878,8 +5086,8 @@ export const ordersData = [
     OrderID: 874534,
     CustomerName: "Danai",
     CustomerEmail: "danai@example.com",
-    ItemsQuantity:4,
-    TotalAmount: 122.99,
+    ItemsQuantity: orderItems[8].length,
+    TotalAmount: orderItems[8].reduce((total, item)=>total + item.totalPrice,0),
     PayMethod: 'Paypal',
     OrderItems: "Reebok Nano",
     Location: "USA",
@@ -4890,8 +5098,8 @@ export const ordersData = [
     OrderID: 38489,
     CustomerName: "Miron",
     CustomerEmail: "miron@example.com",
-    ItemsQuantity:2,
-    TotalAmount: 87.99,
+    ItemsQuantity: orderItems[9].length,
+    TotalAmount: orderItems[9].reduce((total, item)=>total + item.totalPrice,0),
     PayMethod: 'Venmo',
     OrderItems: "Skechers Go Walk",
     Location: "USA",
@@ -4902,98 +5110,14 @@ export const ordersData = [
     OrderID: 24546,
     CustomerName: "Frank",
     CustomerEmail: "frank@example.com",
-    ItemsQuantity:6,
-    TotalAmount: 84.99,
+    ItemsQuantity: orderItems[10].length,
+    TotalAmount: orderItems[10].reduce((total, item)=>total + item.totalPrice,0),
     PayMethod: 'COD',
     OrderItems: "Adidas NMD",
     Location: "Delhi",
     Status: "complete",
     StatusBg: "#8BE78B"
-  },
-  {
-    OrderID: 874534,
-    CustomerName: "Danai",
-    CustomerEmail: "danai@example.com",
-    TotalAmount: 122.99,
-    PayMethod: 'Credit Card',
-    OrderItems: "Adidas Stan Smith",
-    Location: "USA",
-    Status: "canceled",
-    StatusBg: "#FF5C8E"
-  },
-  {
-    OrderID: 10248,
-    CustomerName: "Vinet",
-    CustomerEmail: "vinet69@gmail.com",
-    ItemsQuantity:5,
-    TotalAmount: 32.38,
-    PayMethod: 'COD',
-    OrderItems: "Nike Air Force 1",
-    Location: "USA",
-    Status: "pending",
-    StatusBg: "#FB9678"
-  },
-  {
-    OrderID: 345653,
-    CustomerName: "Carson Darrin",
-    CustomerEmail: "carson@example.com",
-    ItemsQuantity:2,
-    TotalAmount: 56.34,
-    PayMethod: 'Paypal',
-    OrderItems: "Jordan 1 Retro High",
-    Location: "Delhi",
-    Status: "complete",
-    StatusBg: "#8BE78B"
-  },
-  {
-    OrderID: 390457,
-    CustomerName: "Fran Perez",
-    CustomerEmail: "fran@example.com",
-    ItemsQuantity:1,
-    TotalAmount: 93.31,
-    PayMethod: 'Venmo',
-    OrderItems: "Yeezy Boost 350",
-    Location: "New York",
-    Status: "active",
-    StatusBg: "#03C9D7"
-  },
-  {
-    OrderID: 893486,
-    CustomerName: "Anika Viseer",
-    CustomerEmail: "anika@example.com",
-    ItemsQuantity:5,
-    TotalAmount: 93.31,
-    PayMethod: 'Credit Card',
-    OrderItems: "Puma RS-X",
-    Location: "Germany",
-    Status: "canceled",
-    StatusBg: "#FF5C8E"
-  },
-  {
-    OrderID: 748975,
-    CustomerName: "Miron Vitold",
-    CustomerEmail: "miron@example.com",
-    ItemsQuantity:1,
-    TotalAmount: 23.99,
-    PayMethod: 'COD',
-    OrderItems: "Reebok Nano X",
-    Location: "Spain",
-    Status: "rejected",
-    StatusBg: "red"
-  },
-  {
-    OrderID: 94757,
-    CustomerName: "Omar Darobe",
-    CustomerEmail: "omar@example.com",
-    ItemsQuantity:5,
-    TotalAmount: 95.99,
-    PayMethod: 'Paypal',
-    OrderItems: "Under Armour HOVR",
-    Location: "USA",
-    Status: "canceled",
-    StatusBg: "#FF5C8E"
   }
-
 ];
 
 export const scheduleData = [
