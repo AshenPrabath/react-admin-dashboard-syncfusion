@@ -1,7 +1,7 @@
 import React from 'react'
 import { GoDotFill } from 'react-icons/go';
 import { Stacked, Button, SparkLine, LineChart, OrdersTable } from '../components';
-import { earningData, SparklineAreaData, recentOrdersData, productsPerformanceData, recentTransactionsData } from '../data/dummy';
+import { earningData, SparklineAreaData, ordersData, productsPerformanceData, recentTransactionsData } from '../data/dummy';
 import ProgressBar from '../components/ProgressBar';
 import { useStateContext } from '../context/ContextProvider';
 
@@ -140,7 +140,7 @@ const Ecommerce = () => {
       <div className='m-3'>
         <div className={`bg-white dark:text-gray-200 dark:bg-secondary-dark-bg p-8 rounded-2xl w-full  shadow-2xl ${shadowSettings} `}>
           <p className='text-xl font-semibold pb-4'>Recent Orders</p>
-          <OrdersTable dataSource={recentOrdersData} />
+          <OrdersTable dataSource={ordersData.slice(0,5)} />
         </div>
       </div>
       {/*----- End Of Recent Orders Section ----*/}
