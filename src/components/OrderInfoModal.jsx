@@ -2,11 +2,11 @@ import React from 'react';
 import { useStateContext } from '../context/ContextProvider';
 import { ordersData } from '../data/dummy';
 
-const OrderInfoModal = (currentOrder) => {
+const OrderInfoModal = ({currentOrder}) => {
     const { setOrderInfoDialogVisible, currentColor } = useStateContext();
 
-    const order =ordersData.find(order => order.OrderID ===  currentOrder);
-    console.log(order);
+    const order =ordersData.find(obj => obj.OrderID ===  currentOrder);
+
     const dialogClose = () => {
         setOrderInfoDialogVisible(false);
         document.body.style.overflow = 'visible';
@@ -20,7 +20,7 @@ const OrderInfoModal = (currentOrder) => {
                             <p className='text-3xl font-bold pb-2 '>Order Info</p>
                             <button onClick={() => dialogClose()} >Close</button>
                         </div>
-                        <p>s</p>
+                        <p>{order.CustomerName}</p>
                     </div>
                 </div>
             </div>

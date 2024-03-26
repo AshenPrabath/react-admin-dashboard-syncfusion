@@ -1,8 +1,8 @@
+import { ColumnDirective, ColumnsDirective, CommandColumn, ContextMenu, Edit, ExcelExport, Filter, GridComponent, Inject, Page, PdfExport, Resize, Search, Sort, Toolbar } from '@syncfusion/ej2-react-grids';
 import React, { useState } from 'react';
-import { GridComponent, ColumnsDirective, ColumnDirective, Resize, Sort, ContextMenu, Filter, Page, ExcelExport, PdfExport, Edit, Inject, Search, Toolbar, CommandColumn } from '@syncfusion/ej2-react-grids';
+import { useStateContext } from '../../context/ContextProvider';
 import { ordersGrid } from '../../data/dummy';
 import OrderInfoModal from '../OrderInfoModal';
-import { useStateContext } from '../../context/ContextProvider';
 
 
 const OrdersTable = ({ dataSource, pageSize = 10 }) => {
@@ -26,7 +26,7 @@ const OrdersTable = ({ dataSource, pageSize = 10 }) => {
       rowData = args.rowData;
       if (rowData) {
         setCurrentOrder(rowData.OrderID);
-        console.log(rowData.OrderID);
+        // console.log(rowData.OrderID);
         setOrderInfoDialogVisible(true);
         document.body.style.overflow = 'hidden';
       }
