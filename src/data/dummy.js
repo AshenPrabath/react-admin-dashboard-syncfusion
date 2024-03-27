@@ -1,14 +1,14 @@
 import React from 'react';
-import { AiOutlineShoppingCart, AiOutlineAreaChart, AiOutlineBarChart, AiOutlineStock } from 'react-icons/ai';
-import { FiShoppingBag, FiPieChart, FiBarChart, FiCreditCard, FiStar, FiShoppingCart } from 'react-icons/fi';
-import { BsBoxSeam, BsCurrencyDollar, BsShield, BsChatLeft, BsPaypal, BsBank, BsCash, BsShop } from 'react-icons/bs';
-import { GiRunningShoe } from "react-icons/gi";
-import { FaCcAmex } from "react-icons/fa";
+import { AiOutlineAreaChart, AiOutlineBarChart, AiOutlineShoppingCart, AiOutlineStock } from 'react-icons/ai';
 import { BiLogoVenmo, BiTargetLock } from 'react-icons/bi';
-import { RiContactsLine } from 'react-icons/ri';
-import { MdOutlineSupervisorAccount } from 'react-icons/md';
-import { HiOutlineRefresh } from 'react-icons/hi';
+import { BsBank, BsBoxSeam, BsCash, BsChatLeft, BsCurrencyDollar, BsPaypal, BsShield, BsShop } from 'react-icons/bs';
+import { FaCcAmex } from "react-icons/fa";
+import { FiBarChart, FiCreditCard, FiPieChart, FiShoppingBag, FiShoppingCart, FiStar } from 'react-icons/fi';
+import { GiRunningShoe } from "react-icons/gi";
 import { GrLocation } from 'react-icons/gr';
+import { HiOutlineRefresh } from 'react-icons/hi';
+import { MdOutlineSupervisorAccount } from 'react-icons/md';
+import { RiContactsLine } from 'react-icons/ri';
 import avatar from './avatar.jpg';
 import avatar2 from './avatar2.jpg';
 import avatar3 from './avatar3.png';
@@ -22,7 +22,6 @@ import product6 from './product6.jpg';
 import product7 from './product7.jpg';
 import product8 from './product8.jpg';
 import product9 from './product9.jpg';
-import product10 from './product10.jpg';
 
 import Product1_1 from '../data/Products/Product1/Product1 (1).jpg';
 import Product1_2 from '../data/Products/Product1/Product1 (2).jpg';
@@ -4991,6 +4990,7 @@ export const ordersData = [
     OrderID: 10248,
     CustomerName: "Vinet",
     CustomerEmail: "vinet69@gmail.com",
+    Items: orderItems[0],
     ItemsQuantity: orderItems[0].length,
     TotalAmount: orderItems[0].reduce((total, item)=>total + item.totalPrice,0),
     PayMethod: 'COD',
@@ -5002,6 +5002,7 @@ export const ordersData = [
     OrderID: 345653,
     CustomerName: "Carson Darrin",
     CustomerEmail: "carson@example.com",
+    Items: orderItems[1],
     ItemsQuantity: orderItems[1].length,
     TotalAmount: orderItems[1].reduce((total, item)=>total + item.totalPrice,0),
     PayMethod: 'Paypal',
@@ -5014,6 +5015,7 @@ export const ordersData = [
     OrderID: 390457,
     CustomerName: "Fran Perez",
     CustomerEmail: "fran@example.com",
+    Items: orderItems[2],
     ItemsQuantity: orderItems[2].length,
     TotalAmount: orderItems[2].reduce((total, item)=>total + item.totalPrice,0),
     PayMethod: 'Venmo',
@@ -5026,6 +5028,7 @@ export const ordersData = [
     OrderID: 893486,
     CustomerName: "Anika Viseer",
     CustomerEmail: "anika@example.com",
+    Items: orderItems[3],
     ItemsQuantity: orderItems[3].length,
     TotalAmount: orderItems[3].reduce((total, item)=>total + item.totalPrice,0),
     PayMethod: 'Credit Card',
@@ -5038,6 +5041,7 @@ export const ordersData = [
     OrderID: 748975,
     CustomerName: "Miron Vitold",
     CustomerEmail: "miron@example.com",
+    Items: orderItems[4],
     ItemsQuantity: orderItems[4].length,
     TotalAmount: orderItems[4].reduce((total, item)=>total + item.totalPrice,0),
     PayMethod: 'COD',
@@ -5050,6 +5054,7 @@ export const ordersData = [
     OrderID: 94757,
     CustomerName: "Omar Darobe",
     CustomerEmail: "omar@example.com",
+    Items: orderItems[5],
     ItemsQuantity: orderItems[5].length,
     TotalAmount: orderItems[5].reduce((total, item)=>total + item.totalPrice,0),
     PayMethod: 'Paypal',
@@ -5062,6 +5067,7 @@ export const ordersData = [
     OrderID: 944895,
     CustomerName: "Lulia albu",
     CustomerEmail: "lulia@example.com",
+    Items: orderItems[6],
     ItemsQuantity: orderItems[6].length,
     TotalAmount: orderItems[6].reduce((total, item)=>total + item.totalPrice,0),
     PayMethod: 'Venmo',
@@ -5074,6 +5080,7 @@ export const ordersData = [
     OrderID: 845954,
     CustomerName: "Penjani",
     CustomerEmail: "penjani@example.com",
+    Items: orderItems[7],
     ItemsQuantity: orderItems[7].length,
     TotalAmount: orderItems[7].reduce((total, item)=>total + item.totalPrice,0),
     PayMethod: 'Credit Card',
@@ -5086,6 +5093,7 @@ export const ordersData = [
     OrderID: 874534,
     CustomerName: "Danai",
     CustomerEmail: "danai@example.com",
+    Items: orderItems[8],
     ItemsQuantity: orderItems[8].length,
     TotalAmount: orderItems[8].reduce((total, item)=>total + item.totalPrice,0),
     PayMethod: 'Paypal',
@@ -5098,6 +5106,7 @@ export const ordersData = [
     OrderID: 38489,
     CustomerName: "Miron",
     CustomerEmail: "miron@example.com",
+    Items: orderItems[9],
     ItemsQuantity: orderItems[9].length,
     TotalAmount: orderItems[9].reduce((total, item)=>total + item.totalPrice,0),
     PayMethod: 'Venmo',
@@ -5110,6 +5119,7 @@ export const ordersData = [
     OrderID: 24546,
     CustomerName: "Frank",
     CustomerEmail: "frank@example.com",
+    Items: orderItems[10],
     ItemsQuantity: orderItems[10].length,
     TotalAmount: orderItems[10].reduce((total, item)=>total + item.totalPrice,0),
     PayMethod: 'COD',
