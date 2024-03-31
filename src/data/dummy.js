@@ -1090,569 +1090,6 @@ export const ordersGrid = [
     textAlign: 'Center',
   },
 ];
-
-export const customersData = [
-  {
-    CustomerID: 1001,
-    CustomerName: 'Nirav Joshi',
-    CustomerEmail: 'nirav@gmail.com',
-    CustomerImage:
-      avatar2,
-    ProjectName: 'Hosting Press HTML',
-    Status: 'Active',
-    StatusBg: '#8BE78B',
-    Weeks: '40',
-    Budget: '$2.4k',
-    Location: 'India',
-  },
-  {
-    CustomerID: 1002,
-
-    CustomerName: 'Sunil Joshi',
-    CustomerEmail: 'sunil@gmail.com',
-    ProjectName: 'Elite Admin',
-    Status: 'Active',
-    CustomerImage:
-      avatar3,
-
-    StatusBg: '#8BE78B',
-    Weeks: '11',
-    Budget: '$3.9k',
-    Location: 'India',
-  },
-  {
-    CustomerID: 1003,
-
-    CustomerName: 'Andrew McDownland',
-    CustomerEmail: 'andrew@gmail.com',
-    ProjectName: 'Real Homes WP Theme',
-    Status: 'Pending',
-    CustomerImage:
-      avatar4,
-    StatusBg: '#FEC90F',
-    Weeks: '19',
-    Budget: '$24.5k',
-    Location: 'USA',
-  },
-  {
-    CustomerID: 1004,
-
-    CustomerName: 'Christopher Jamil',
-    CustomerEmail: 'jamil@gmail.com',
-    ProjectName: 'MedicalPro WP Theme',
-    Status: 'Completed',
-    CustomerImage:
-      avatar,
-    StatusBg: '#8BE78B',
-    Weeks: '34',
-    Budget: '$16.5k',
-    Location: 'USA',
-  },
-  {
-    CustomerID: 1005,
-
-    CustomerName: 'Michael',
-    CustomerEmail: 'michael@gmail.com',
-    ProjectName: 'Weekly WP Theme',
-    Status: 'Cancel',
-    CustomerImage:
-      avatar2,
-    StatusBg: 'red',
-    Weeks: '34',
-    Budget: '$16.5k',
-    Location: 'USA',
-  },
-  {
-    CustomerID: 1006,
-    CustomerName: 'Nirav Joshi',
-    CustomerEmail: 'nirav@gmail.com',
-    CustomerImage:
-      avatar2,
-    ProjectName: 'Hosting Press HTML',
-    Status: 'Active',
-    StatusBg: '#8BE78B',
-    Weeks: '40',
-    Budget: '$2.4k',
-    Location: 'India',
-  },
-  {
-    CustomerID: 1007,
-
-    CustomerName: 'Sunil Joshi',
-    CustomerEmail: 'sunil@gmail.com',
-    ProjectName: 'Elite Admin',
-    Status: 'Active',
-    CustomerImage:
-      avatar3,
-
-    StatusBg: '#8BE78B',
-    Weeks: '11',
-    Budget: '$3.9k',
-    Location: 'India',
-  },
-  {
-    CustomerID: 1008,
-
-    CustomerName: 'Andrew McDownland',
-    CustomerEmail: 'andrew@gmail.com',
-    ProjectName: 'Real Homes WP Theme',
-    Status: 'Pending',
-    CustomerImage:
-      avatar4,
-    StatusBg: '#FEC90F',
-    Weeks: '19',
-    Budget: '$24.5k',
-    Location: 'USA',
-  },
-  {
-    CustomerID: 1009,
-
-    CustomerName: 'Christopher Jamil',
-    CustomerEmail: 'jamil@gmail.com',
-    ProjectName: 'MedicalPro WP Theme',
-    Status: 'Completed',
-    CustomerImage:
-      avatar,
-    StatusBg: '#8BE78B',
-    Weeks: '34',
-    Budget: '$16.5k',
-    Location: 'USA',
-  },
-  {
-    CustomerID: 1010,
-
-    CustomerName: 'Michael',
-    CustomerEmail: 'michael@gmail.com',
-    ProjectName: 'Weekly WP Theme',
-    Status: 'Cancel',
-    CustomerImage:
-      avatar2,
-    StatusBg: 'red',
-    Weeks: '34',
-    Budget: '$16.5k',
-    Location: 'USA',
-  },
-  {
-    CustomerID: 1011,
-    CustomerName: 'Nirav Joshi',
-    CustomerEmail: 'nirav@gmail.com',
-    CustomerImage:
-      avatar2,
-    ProjectName: 'Hosting Press HTML',
-    Status: 'Active',
-    StatusBg: '#8BE78B',
-    Weeks: '40',
-    Budget: '$2.4k',
-    Location: 'India',
-  },
-  {
-    CustomerID: 1012,
-
-    CustomerName: 'Sunil Joshi',
-    CustomerEmail: 'sunil@gmail.com',
-    ProjectName: 'Elite Admin',
-    Status: 'Active',
-    CustomerImage:
-      avatar3,
-
-    StatusBg: '#8BE78B',
-    Weeks: '11',
-    Budget: '$3.9k',
-    Location: 'India',
-  },
-  {
-    CustomerID: 1013,
-
-    CustomerName: 'Andrew McDownland',
-    CustomerEmail: 'andrew@gmail.com',
-    ProjectName: 'Real Homes WP Theme',
-    Status: 'Pending',
-    CustomerImage:
-      avatar4,
-    StatusBg: '#FEC90F',
-    Weeks: '19',
-    Budget: '$24.5k',
-    Location: 'USA',
-  },
-  {
-    CustomerID: 1014,
-
-    CustomerName: 'Christopher Jamil',
-    CustomerEmail: 'jamil@gmail.com',
-    ProjectName: 'MedicalPro WP Theme',
-    Status: 'Completed',
-    CustomerImage:
-      avatar,
-    StatusBg: '#8BE78B',
-    Weeks: '34',
-    Budget: '$16.5k',
-    Location: 'USA',
-  },
-  {
-    CustomerID: 1015,
-
-    CustomerName: 'Michael',
-    CustomerEmail: 'michael@gmail.com',
-    ProjectName: 'Weekly WP Theme',
-    Status: 'Cancel',
-    CustomerImage:
-      avatar2,
-    StatusBg: 'red',
-    Weeks: '34',
-    Budget: '$16.5k',
-    Location: 'USA',
-  },
-  {
-    CustomerID: 1016,
-    CustomerName: 'Nirav Joshi',
-    CustomerEmail: 'nirav@gmail.com',
-    CustomerImage:
-      avatar2,
-    ProjectName: 'Hosting Press HTML',
-    Status: 'Active',
-    StatusBg: '#8BE78B',
-    Weeks: '40',
-    Budget: '$2.4k',
-    Location: 'India',
-  },
-  {
-    CustomerID: 1017,
-
-    CustomerName: 'Sunil Joshi',
-    CustomerEmail: 'sunil@gmail.com',
-    ProjectName: 'Elite Admin',
-    Status: 'Active',
-    CustomerImage:
-      avatar3,
-
-    StatusBg: '#8BE78B',
-    Weeks: '11',
-    Budget: '$3.9k',
-    Location: 'India',
-  },
-  {
-    CustomerID: 1018,
-
-    CustomerName: 'Andrew McDownland',
-    CustomerEmail: 'andrew@gmail.com',
-    ProjectName: 'Real Homes WP Theme',
-    Status: 'Pending',
-    CustomerImage:
-      avatar4,
-    StatusBg: '#FEC90F',
-    Weeks: '19',
-    Budget: '$24.5k',
-    Location: 'USA',
-  },
-  {
-    CustomerID: 1019,
-
-    CustomerName: 'Christopher Jamil',
-    CustomerEmail: 'jamil@gmail.com',
-    ProjectName: 'MedicalPro WP Theme',
-    Status: 'Completed',
-    CustomerImage:
-      avatar,
-    StatusBg: '#8BE78B',
-    Weeks: '34',
-    Budget: '$16.5k',
-    Location: 'USA',
-  },
-  {
-    CustomerID: 1020,
-
-    CustomerName: 'Michael',
-    CustomerEmail: 'michael@gmail.com',
-    ProjectName: 'Weekly WP Theme',
-    Status: 'Cancel',
-    CustomerImage:
-      avatar2,
-    StatusBg: 'red',
-    Weeks: '34',
-    Budget: '$16.5k',
-    Location: 'USA',
-  },
-  {
-    CustomerID: 1021,
-    CustomerName: 'Nirav Joshi',
-    CustomerEmail: 'nirav@gmail.com',
-    CustomerImage:
-      avatar2,
-    ProjectName: 'Hosting Press HTML',
-    Status: 'Active',
-    StatusBg: '#8BE78B',
-    Weeks: '40',
-    Budget: '$2.4k',
-    Location: 'India',
-  },
-  {
-    CustomerID: 1022,
-
-    CustomerName: 'Sunil Joshi',
-    CustomerEmail: 'sunil@gmail.com',
-    ProjectName: 'Elite Admin',
-    Status: 'Active',
-    CustomerImage:
-      avatar3,
-
-    StatusBg: '#8BE78B',
-    Weeks: '11',
-    Budget: '$3.9k',
-    Location: 'India',
-  },
-  {
-    CustomerID: 1023,
-
-    CustomerName: 'Andrew McDownland',
-    CustomerEmail: 'andrew@gmail.com',
-    ProjectName: 'Real Homes WP Theme',
-    Status: 'Pending',
-    CustomerImage:
-      avatar4,
-    StatusBg: '#FEC90F',
-    Weeks: '19',
-    Budget: '$24.5k',
-    Location: 'USA',
-  },
-  {
-    CustomerID: 1024,
-
-    CustomerName: 'Christopher Jamil',
-    CustomerEmail: 'jamil@gmail.com',
-    ProjectName: 'MedicalPro WP Theme',
-    Status: 'Completed',
-    CustomerImage:
-      avatar,
-    StatusBg: '#8BE78B',
-    Weeks: '34',
-    Budget: '$16.5k',
-    Location: 'USA',
-  },
-  {
-    CustomerID: 1025,
-
-    CustomerName: 'Michael',
-    CustomerEmail: 'michael@gmail.com',
-    ProjectName: 'Weekly WP Theme',
-    Status: 'Cancel',
-    CustomerImage:
-      avatar2,
-    StatusBg: 'red',
-    Weeks: '34',
-    Budget: '$16.5k',
-    Location: 'USA',
-  },
-  {
-    CustomerID: 1026,
-    CustomerName: 'Nirav Joshi',
-    CustomerEmail: 'nirav@gmail.com',
-    CustomerImage:
-      avatar2,
-    ProjectName: 'Hosting Press HTML',
-    Status: 'Active',
-    StatusBg: '#8BE78B',
-    Weeks: '40',
-    Budget: '$2.4k',
-    Location: 'India',
-  },
-  {
-    CustomerID: 1027,
-
-    CustomerName: 'Sunil Joshi',
-    CustomerEmail: 'sunil@gmail.com',
-    ProjectName: 'Elite Admin',
-    Status: 'Active',
-    CustomerImage:
-      avatar3,
-
-    StatusBg: '#8BE78B',
-    Weeks: '11',
-    Budget: '$3.9k',
-    Location: 'India',
-  },
-  {
-    CustomerID: 1028,
-
-    CustomerName: 'Andrew McDownland',
-    CustomerEmail: 'andrew@gmail.com',
-    ProjectName: 'Real Homes WP Theme',
-    Status: 'Pending',
-    CustomerImage:
-      avatar4,
-    StatusBg: '#FEC90F',
-    Weeks: '19',
-    Budget: '$24.5k',
-    Location: 'USA',
-  },
-  {
-    CustomerID: 1029,
-
-    CustomerName: 'Christopher Jamil',
-    CustomerEmail: 'jamil@gmail.com',
-    ProjectName: 'MedicalPro WP Theme',
-    Status: 'Completed',
-    CustomerImage:
-      avatar,
-    StatusBg: '#8BE78B',
-    Weeks: '34',
-    Budget: '$16.5k',
-    Location: 'USA',
-  },
-  {
-    CustomerID: 1030,
-
-    CustomerName: 'Michael',
-    CustomerEmail: 'michael@gmail.com',
-    ProjectName: 'Weekly WP Theme',
-    Status: 'Cancel',
-    CustomerImage:
-      avatar2,
-    StatusBg: 'red',
-    Weeks: '34',
-    Budget: '$16.5k',
-    Location: 'USA',
-  },
-  {
-    CustomerID: 1031,
-    CustomerName: 'Nirav Joshi',
-    CustomerEmail: 'nirav@gmail.com',
-    CustomerImage:
-      avatar2,
-    ProjectName: 'Hosting Press HTML',
-    Status: 'Active',
-    StatusBg: '#8BE78B',
-    Weeks: '40',
-    Budget: '$2.4k',
-    Location: 'India',
-  },
-  {
-    CustomerID: 1032,
-
-    CustomerName: 'Sunil Joshi',
-    CustomerEmail: 'sunil@gmail.com',
-    ProjectName: 'Elite Admin',
-    Status: 'Active',
-    CustomerImage:
-      avatar3,
-
-    StatusBg: '#8BE78B',
-    Weeks: '11',
-    Budget: '$3.9k',
-    Location: 'India',
-  },
-  {
-    CustomerID: 1033,
-
-    CustomerName: 'Andrew McDownland',
-    CustomerEmail: 'andrew@gmail.com',
-    ProjectName: 'Real Homes WP Theme',
-    Status: 'Pending',
-    CustomerImage:
-      avatar4,
-    StatusBg: '#FEC90F',
-    Weeks: '19',
-    Budget: '$24.5k',
-    Location: 'USA',
-  },
-  {
-    CustomerID: 1034,
-
-    CustomerName: 'Christopher Jamil',
-    CustomerEmail: 'jamil@gmail.com',
-    ProjectName: 'MedicalPro WP Theme',
-    Status: 'Completed',
-    CustomerImage:
-      avatar,
-    StatusBg: '#8BE78B',
-    Weeks: '34',
-    Budget: '$16.5k',
-    Location: 'USA',
-  },
-  {
-    CustomerID: 1035,
-
-    CustomerName: 'Michael',
-    CustomerEmail: 'michael@gmail.com',
-    ProjectName: 'Weekly WP Theme',
-    Status: 'Cancel',
-    CustomerImage:
-      avatar2,
-    StatusBg: 'red',
-    Weeks: '34',
-    Budget: '$16.5k',
-    Location: 'USA',
-  },
-  {
-    CustomerID: 1036,
-    CustomerName: 'Nirav Joshi',
-    CustomerEmail: 'nirav@gmail.com',
-    CustomerImage:
-      avatar2,
-    ProjectName: 'Hosting Press HTML',
-    Status: 'Active',
-    StatusBg: '#8BE78B',
-    Weeks: '40',
-    Budget: '$2.4k',
-    Location: 'India',
-  },
-  {
-    CustomerID: 1037,
-
-    CustomerName: 'Sunil Joshi',
-    CustomerEmail: 'sunil@gmail.com',
-    ProjectName: 'Elite Admin',
-    Status: 'Active',
-    CustomerImage:
-      avatar3,
-
-    StatusBg: '#8BE78B',
-    Weeks: '11',
-    Budget: '$3.9k',
-    Location: 'India',
-  },
-  {
-    CustomerID: 1038,
-
-    CustomerName: 'Andrew McDownland',
-    CustomerEmail: 'andrew@gmail.com',
-    ProjectName: 'Real Homes WP Theme',
-    Status: 'Pending',
-    CustomerImage:
-      avatar4,
-    StatusBg: '#FEC90F',
-    Weeks: '19',
-    Budget: '$24.5k',
-    Location: 'USA',
-  },
-  {
-    CustomerID: 1039,
-    CustomerName: 'Christopher Jamil',
-    CustomerEmail: 'jamil@gmail.com',
-    ProjectName: 'MedicalPro WP Theme',
-    Status: 'Completed',
-    CustomerImage:
-      avatar,
-    StatusBg: '#8BE78B',
-    Weeks: '34',
-    Budget: '$16.5k',
-    Location: 'USA',
-  },
-  {
-    CustomerID: 1040,
-    CustomerName: 'Michael',
-    CustomerEmail: 'michael@gmail.com',
-    ProjectName: 'Weekly WP Theme',
-    Status: 'Cancel',
-    CustomerImage:
-      avatar2,
-    StatusBg: 'red',
-    Weeks: '34',
-    Budget: '$16.5k',
-    Location: 'USA',
-  },
-
-];
-
 export const employeesData = [
   {
     EmployeeID: 1,
@@ -4985,6 +4422,129 @@ export const orderItems = [
 ];
 
 
+export const customersData = [
+  {
+    CustomerID: 1001,
+    CustomerName: 'Vinet',
+    CustomerEmail: 'vinet69@gmail.com',
+    PhoneNumber: '+99 58 485 9541',
+    AddressLine: '14/A ',
+    StreetName: 'Calf Street',
+    City: 'New York',
+    State: 'NY',
+    Country: 'USA',
+    PostalCode: '10001',
+  },
+  {
+    CustomerID: 1002,
+    CustomerName: "Tom",
+    CustomerEmail: "tom@example.com",
+    PhoneNumber: "+1 123 456 7890",
+    AddressLine: "27/B",
+    StreetName: "Oak Avenue",
+    City: "Los Angeles",
+    State: "CA",
+    Country: "USA",
+    PostalCode: "90001"
+  },
+  {
+    CustomerID: 1003,
+    CustomerName: "Alice",
+    CustomerEmail: "alice@example.com",
+    PhoneNumber: "+1 234 567 8901",
+    AddressLine: "19/C",
+    StreetName: "Maple Street",
+    City: "Toronto",
+    State: "Ontario",
+    Country: "Canada",
+    PostalCode: "M5V 2V6"
+  },
+  {
+    CustomerID: 1004,
+    CustomerName: "John",
+    CustomerEmail: "john@example.com",
+    PhoneNumber: "+1 345 678 9012",
+    AddressLine: "35/D",
+    StreetName: "Pine Road",
+    City: "London",
+    State: "England",
+    Country: "UK",
+    PostalCode: "W1D 5DY"
+  },
+  {
+    CustomerID: 1005,
+    CustomerName: "Emma",
+    CustomerEmail: "emma@example.com",
+    PhoneNumber: "+1 456 789 0123",
+    AddressLine: "42/E",
+    StreetName: "Cedar Lane",
+    City: "Sydney",
+    State: "New South Wales",
+    Country: "Australia",
+    PostalCode: "2000"
+  },
+  {
+    CustomerID: 1006,
+    CustomerName: "Jack",
+    CustomerEmail: "jack@example.com",
+    PhoneNumber: "+1 567 890 1234",
+    AddressLine: "8/F",
+    StreetName: "Elm Street",
+    City: "Paris",
+    State: "Île-de-France",
+    Country: "France",
+    PostalCode: "75001"
+  },
+  {
+    CustomerID: 1007,
+    CustomerName: "Sophia",
+    CustomerEmail: "sophia@example.com",
+    PhoneNumber: "+1 678 901 2345",
+    AddressLine: "21/G",
+    StreetName: "Willow Avenue",
+    City: "Berlin",
+    State: "Berlin",
+    Country: "Germany",
+    PostalCode: "10117"
+  },
+  {
+    CustomerID: 1008,
+    CustomerName: "William",
+    CustomerEmail: "william@example.com",
+    PhoneNumber: "+1 789 012 3456",
+    AddressLine: "10/H",
+    StreetName: "Birch Street",
+    City: "Tokyo",
+    State: "Tokyo",
+    Country: "Japan",
+    PostalCode: "100-0005"
+  },
+  {
+    CustomerID: 1009,
+    CustomerName: "Olivia",
+    CustomerEmail: "olivia@example.com",
+    PhoneNumber: "+1 890 123 4567",
+    AddressLine: "3/I",
+    StreetName: "Sycamore Lane",
+    City: "Rio de Janeiro",
+    State: "Rio de Janeiro",
+    Country: "Brazil",
+    PostalCode: "20010-010"
+  },
+  {
+    CustomerID: 1010,
+    CustomerName: "James",
+    CustomerEmail: "james@example.com",
+    PhoneNumber: "+1 901 234 5678",
+    AddressLine: "17/J",
+    StreetName: "Poplar Street",
+    City: "Madrid",
+    State: "Community of Madrid",
+    Country: "Spain",
+    PostalCode: "28001"
+  }
+
+];
 export const ordersData = [
   {
     OrderID: 10248,
@@ -4993,6 +4553,7 @@ export const ordersData = [
     Items: orderItems[0],
     ItemsQuantity: orderItems[0].length,
     TotalAmount: orderItems[0].reduce((total, item)=>total + item.totalPrice,0),
+    Date: "May 7, 2023",
     PayMethod: 'COD',
     Location: "USA",
     Status: "pending",
@@ -5005,6 +4566,7 @@ export const ordersData = [
     Items: orderItems[1],
     ItemsQuantity: orderItems[1].length,
     TotalAmount: orderItems[1].reduce((total, item)=>total + item.totalPrice,0),
+    Date: "November 3, 2024",
     PayMethod: 'Paypal',
     OrderItems: "Nike Air Jordan",
     Location: "Delhi",
@@ -5018,6 +4580,7 @@ export const ordersData = [
     Items: orderItems[2],
     ItemsQuantity: orderItems[2].length,
     TotalAmount: orderItems[2].reduce((total, item)=>total + item.totalPrice,0),
+    Date: "April 28, 2025",
     PayMethod: 'Venmo',
     OrderItems: "Puma RS-X",
     Location: "New York",
@@ -5028,6 +4591,7 @@ export const ordersData = [
     OrderID: 893486,
     CustomerName: "Anika Viseer",
     CustomerEmail: "anika@example.com",
+    Date: "September 9, 2022",
     Items: orderItems[3],
     ItemsQuantity: orderItems[3].length,
     TotalAmount: orderItems[3].reduce((total, item)=>total + item.totalPrice,0),
@@ -5044,6 +4608,7 @@ export const ordersData = [
     Items: orderItems[4],
     ItemsQuantity: orderItems[4].length,
     TotalAmount: orderItems[4].reduce((total, item)=>total + item.totalPrice,0),
+    Date: "September 9, 2022",
     PayMethod: 'COD',
     OrderItems: "Converse Chuck Taylor",
     Location: "Spain",
@@ -5057,6 +4622,7 @@ export const ordersData = [
     Items: orderItems[5],
     ItemsQuantity: orderItems[5].length,
     TotalAmount: orderItems[5].reduce((total, item)=>total + item.totalPrice,0),
+    Date: "September 9, 2022",
     PayMethod: 'Paypal',
     OrderItems: "Vans Old Skool",
     Location: "USA",
@@ -5070,6 +4636,7 @@ export const ordersData = [
     Items: orderItems[6],
     ItemsQuantity: orderItems[6].length,
     TotalAmount: orderItems[6].reduce((total, item)=>total + item.totalPrice,0),
+    Date: "September 9, 2022",
     PayMethod: 'Venmo',
     OrderItems: "New Balance 990",
     Location: "USA",
@@ -5083,6 +4650,7 @@ export const ordersData = [
     Items: orderItems[7],
     ItemsQuantity: orderItems[7].length,
     TotalAmount: orderItems[7].reduce((total, item)=>total + item.totalPrice,0),
+    Date: "September 9, 2022",
     PayMethod: 'Credit Card',
     OrderItems: "Under Armour HOVR",
     Location: "USA",
@@ -5096,6 +4664,7 @@ export const ordersData = [
     Items: orderItems[8],
     ItemsQuantity: orderItems[8].length,
     TotalAmount: orderItems[8].reduce((total, item)=>total + item.totalPrice,0),
+    Date: "September 9, 2022",
     PayMethod: 'Paypal',
     OrderItems: "Reebok Nano",
     Location: "USA",
@@ -5109,6 +4678,7 @@ export const ordersData = [
     Items: orderItems[9],
     ItemsQuantity: orderItems[9].length,
     TotalAmount: orderItems[9].reduce((total, item)=>total + item.totalPrice,0),
+    Date: "September 9, 2022",
     PayMethod: 'Venmo',
     OrderItems: "Skechers Go Walk",
     Location: "USA",
@@ -5122,6 +4692,7 @@ export const ordersData = [
     Items: orderItems[10],
     ItemsQuantity: orderItems[10].length,
     TotalAmount: orderItems[10].reduce((total, item)=>total + item.totalPrice,0),
+    Date: "September 9, 2022",
     PayMethod: 'COD',
     OrderItems: "Adidas NMD",
     Location: "Delhi",
