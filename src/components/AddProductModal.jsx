@@ -222,7 +222,7 @@ const AddProductModal = () => {
         <div>
             <div className='fixed top-0 left-0 w-full h-full flex justify-center items-center bg-gray-900 bg-opacity-50 z-50'>
                 <div className=' p-10 w-8/12 h-[90vh] bg-white rounded-lg dark:text-gray-200 dark:bg-secondary-dark-bg'>
-                    <div className=' h-full pb-20 '>
+                    <div className=' h-full pb-20  '>
                         <div className='flex justify-between border-b-2 '>
                             <p className='text-3xl font-bold pb-2 '>Add New Product</p>
                             <button onClick={() => dialogClose()} >Close</button>
