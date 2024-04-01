@@ -113,10 +113,6 @@ const OrderInfoModal = ({ currentOrder }) => {
                                                 <p className="w-7/12">: {order.CustomerName}</p>
                                             </div>
                                             <div className="flex text-xs">
-                                                <p className="w-5/12 font-semibold">Customer Email</p>
-                                                <p className="w-7/12">: {order.CustomerEmail}</p>
-                                            </div>
-                                            <div className="flex text-xs">
                                                 <p className="w-5/12 font-semibold">Payment method</p>
                                                 <p className="w-7/12">: {order.PayMethod}</p>
                                             </div>
@@ -128,12 +124,16 @@ const OrderInfoModal = ({ currentOrder }) => {
                                                 <p className="w-5/12 font-semibold">Placed on</p>
                                                 <p className="w-7/12">: {order.Date}</p>
                                             </div>
+                                            <div className="flex text-xs">
+                                                <p className="w-5/12 font-semibold">Accepted on</p>
+                                                <p className="w-7/12">: {order.AcceptedDate}</p>
+                                            </div>
                                         </div>
                                     </div>
                                     <div className=" p-3 mb-3 border-1 rounded-md">
                                         <div className="flex text-xs">
-                                            <p className="w-5/12 font-semibold">Total</p>
-                                            <p className="w-7/12">: {order.TotalAmount.toLocaleString('en-US', { style: 'currency', currency: 'USD'})}</p>
+                                            <p className="w-5/12 font-bold">Total</p>
+                                            <p className="w-7/12 font-semibold">: {order.TotalAmount.toLocaleString('en-US', { style: 'currency', currency: 'USD'})}</p>
                                         </div>
                                     </div>
                                     <div className=" p-3 mb-3 border-1 rounded-md">
@@ -142,11 +142,11 @@ const OrderInfoModal = ({ currentOrder }) => {
                                         </div>
                                         <div className="flex flex-col py-2 gap-y-1">
                                             <div className="flex text-xs">
-                                                <p className="w-5/12 font-semibold">Customer Name</p>
+                                                <p className="w-5/12 font-semibold">Name</p>
                                                 <p className="w-7/12">: {order.CustomerName}</p>
                                             </div>
                                             <div className="flex text-xs">
-                                                <p className="w-5/12 font-semibold">Customer Email</p>
+                                                <p className="w-5/12 font-semibold">Email</p>
                                                 <p className="w-7/12">: {order.CustomerEmail}</p>
                                             </div>
                                             <div className="flex text-xs">
