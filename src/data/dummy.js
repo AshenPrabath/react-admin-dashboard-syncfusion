@@ -4197,18 +4197,127 @@ export const productsTableData = [
   }
 ]
 
-export const trackingTableData = [
+export const trackingData = [
   {
-    trackingID: "SKV32765388F",
+    trackingID: "N/A",
     orderID: 10248,
-    customerName: 'Vinet',
-    customerLocation: 'Canda',
-    shippiingTo: "John Doe",
+    customerName: 'N/A',
+    customerLocation: 'N/A',
+    placedOn: 'N/A',
+    eta: 'N/A',
+    shippingVia: "N/A",
+    status: "N/A",
+    statusBg: '#FFFFFF',
+  },
+  {
+    trackingID: "JKL4529102G",
+    orderID: 345653,
+    customerName: 'Tom',
+    customerLocation: 'USA',
+    placedOn: 'November 5, 2024',
+    eta: 'December 3, 2024',
+    shippingVia: "UPS",
     status: "Delivered",
     statusBg: '#8BE78B',
-    placedOn: '2023-08-05',
-    eta: '2023-08-29',
+  },
+  {
+    trackingID: "MNO7896321H",
+    orderID: 390457,
+    customerName: 'Alice',
+    customerLocation: 'Canada',
+    placedOn: 'April 28, 2023',
+    eta: 'April 30, 2023',
+    shippingVia: "DHL",
+    status: "In Transit",
+    statusBg: '#F4C542',
+  },
+  {
+    trackingID: "PQR1234567I",
+    orderID: 390457,
+    customerName: 'John',
+    customerLocation: 'UK',
+    placedOn: 'November 7, 2022',
+    eta: 'November 11, 2022',
+    shippingVia: "USPS",
+    status: "Out for Delivery",
+    statusBg: '#42A5F5',
+  },
+  {
+    trackingID: "N/A",
+    orderID: 748975,
+    customerName: 'N/A',
+    customerLocation: 'N/A',
+    placedOn: 'N/A',
+    eta: 'N/A',
+    shippingVia: "N/A",
+    status: "N/A",
+    statusBg: '#FFFFFF',
+  },
+  {
+    trackingID: "VWX2468013K",
+    orderID: 94757,
+    customerName: 'Jack',
+    customerLocation: 'France',
+    placedOn: 'September 20, 2022',
+    eta: 'November 9, 2022',
     shippingVia: "FedEx",
+    status: "In Transit",
+    statusBg: '#F4C542',
+  },
+  {
+    trackingID: "YZA1357924L",
+    orderID: 944895,
+    customerName: 'Sophia',
+    customerLocation: 'Germany',
+    placedOn: 'September 10, 2022',
+    eta: 'September 11, 2022',
+    shippingVia: "UPS",
+    status: "In Transit",
+    statusBg: '#F4C542',
+  },
+  {
+    trackingID: "BCD8642095M",
+    orderID: 845954,
+    customerName: 'William',
+    customerLocation: 'Japan',
+    placedOn: 'September 9, 2022',
+    eta: 'September 11, 2022',
+    shippingVia: "DHL",
+    status: "Delivered",
+    statusBg: '#8BE78B',
+  },
+  {
+    trackingID: "EFG7531902N",
+    orderID: 874534,
+    customerName: 'Tom',
+    customerLocation: 'USA',
+    placedOn: '2024-03-22',
+    eta: '2024-04-15',
+    shippingVia: "USPS",
+    status: "In Transit",
+    statusBg: '#F4C542',
+  },
+  {
+    trackingID: "HIJ6810493O",
+    orderID: 38489,
+    customerName: 'Olivia',
+    customerLocation: 'Brazil',
+    placedOn: 'September 9, 2022',
+    eta: 'September 30, 2022',
+    shippingVia: "FedEx",
+    status: "Processing",
+    statusBg: '#FF7043',
+  },
+  {
+    trackingID: "LMN9357026P",
+    orderID: 24546,
+    customerName: 'James',
+    customerLocation: 'Spain',
+    placedOn: 'September 10, 2022',
+    eta: 'September 15, 2022',
+    shippingVia: "UPS",
+    status: "Delivered",
+    statusBg: '#8BE78B',
   }
 ]
 
@@ -4561,6 +4670,7 @@ export const ordersData = [
   {
     OrderID: 10248,
     Customer: customersData[0],
+    tracking: trackingData[0],
     Items: orderItems[0],
     ItemsQuantity: orderItems[0].length,
     TotalAmount: orderItems[0].reduce((total, item) => total + item.totalPrice, 0),
@@ -4573,6 +4683,7 @@ export const ordersData = [
   {
     OrderID: 345653,
     Customer: customersData[1],
+    tracking: trackingData[1],
     Items: orderItems[1],
     ItemsQuantity: orderItems[1].length,
     TotalAmount: orderItems[1].reduce((total, item) => total + item.totalPrice, 0),
@@ -4586,20 +4697,21 @@ export const ordersData = [
   {
     OrderID: 390457,
     Customer: customersData[2],
+    tracking: trackingData[2],
     Items: orderItems[2],
     ItemsQuantity: orderItems[2].length,
     TotalAmount: orderItems[2].reduce((total, item) => total + item.totalPrice, 0),
-    Date: "April 28, 2025",
-    AcceptedDate: "April 28, 2025",
+    Date: "April 28, 2023",
+    AcceptedDate: "April 28, 2023",
     PayMethod: 'Venmo',
     OrderItems: "Puma RS-X",
-
     Status: "active",
     StatusBg: "#03C9D7"
   },
   {
-    OrderID: 893486,
+    OrderID: 390457,
     Customer: customersData[3],
+    tracking: trackingData[3],
     Date: "September 9, 2022",
     AcceptedDate: "November 4, 2022",
     Items: orderItems[3],
@@ -4613,6 +4725,7 @@ export const ordersData = [
   {
     OrderID: 748975,
     Customer: customersData[4],
+    tracking: trackingData[4],
     Items: orderItems[4],
     ItemsQuantity: orderItems[4].length,
     TotalAmount: orderItems[4].reduce((total, item) => total + item.totalPrice, 0),
@@ -4626,6 +4739,7 @@ export const ordersData = [
   {
     OrderID: 94757,
     Customer: customersData[5],
+    tracking: trackingData[5],
     Items: orderItems[5],
     ItemsQuantity: orderItems[5].length,
     TotalAmount: orderItems[5].reduce((total, item) => total + item.totalPrice, 0),
@@ -4633,12 +4747,13 @@ export const ordersData = [
     AcceptedDate: "September 9, 2022",
     PayMethod: 'Paypal',
     OrderItems: "Vans Old Skool",
-    Status: "canceled",
-    StatusBg: "#FF5C8E"
+    Status: "active",
+    StatusBg: "#03C9D7"
   },
   {
     OrderID: 944895,
     Customer: customersData[6],
+    tracking: trackingData[6],
     Items: orderItems[6],
     ItemsQuantity: orderItems[6].length,
     TotalAmount: orderItems[6].reduce((total, item) => total + item.totalPrice, 0),
@@ -4652,6 +4767,7 @@ export const ordersData = [
   {
     OrderID: 845954,
     Customer: customersData[7],
+    tracking: trackingData[7],
     Items: orderItems[7],
     ItemsQuantity: orderItems[7].length,
     TotalAmount: orderItems[7].reduce((total, item) => total + item.totalPrice, 0),
@@ -4665,6 +4781,7 @@ export const ordersData = [
   {
     OrderID: 874534,
     Customer: customersData[8],
+    tracking: trackingData[8],
     Items: orderItems[8],
     ItemsQuantity: orderItems[8].length,
     TotalAmount: orderItems[8].reduce((total, item) => total + item.totalPrice, 0),
@@ -4678,6 +4795,7 @@ export const ordersData = [
   {
     OrderID: 38489,
     Customer: customersData[9],
+    tracking: trackingData[9],
     Items: orderItems[9],
     ItemsQuantity: orderItems[9].length,
     TotalAmount: orderItems[9].reduce((total, item) => total + item.totalPrice, 0),
@@ -4691,6 +4809,7 @@ export const ordersData = [
   {
     OrderID: 24546,
     Customer: customersData[10],
+    tracking: trackingData[10],
     Items: orderItems[10],
     ItemsQuantity: orderItems[10].length,
     TotalAmount: orderItems[10].reduce((total, item) => total + item.totalPrice, 0),
@@ -4701,7 +4820,7 @@ export const ordersData = [
     Status: "complete",
     StatusBg: "#8BE78B"
   }
-  
+
 ];
 
 export const scheduleData = [
