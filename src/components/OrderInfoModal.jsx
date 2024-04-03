@@ -98,6 +98,12 @@ const OrderInfoModal = ({ currentOrder }) => {
                                         <div className="flex border-b-1 justify-between items-center">
                                             <p className="text-xl font-semibold">Tracking Info</p>
                                         </div>
+                                        <div className="flex flex-col py-2 gap-y-1">
+                                            <div className="flex text-xs">
+                                                <p className="w-5/12 font-semibold">Tracking ID</p>
+                                                <p className="w-7/12">: {order.Customer.CustomerName}</p>
+                                            </div>
+                                        </div>
                                     </div>
                                 </div>
                                 <div className="w-1/3">
