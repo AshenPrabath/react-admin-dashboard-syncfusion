@@ -1084,7 +1084,7 @@ export const ordersGrid = [
     width: '120',
   },
   {
-    field: 'Location',
+    field: 'Country',
     headerText: 'Location',
     width: '100',
     textAlign: 'Center',
@@ -4520,6 +4520,18 @@ export const customersData = [
     PostalCode: "100-0005"
   },
   {
+    CustomerID: 1002,
+    CustomerName: "Tom",
+    CustomerEmail: "tom@example.com",
+    PhoneNumber: "+1 123 456 7890",
+    AddressLine: "27/B",
+    StreetName: "Oak Avenue",
+    City: "Los Angeles",
+    State: "CA",
+    Country: "USA",
+    PostalCode: "90001"
+  },
+  {
     CustomerID: 1009,
     CustomerName: "Olivia",
     CustomerEmail: "olivia@example.com",
@@ -4555,7 +4567,6 @@ export const ordersData = [
     Date: "May 7, 2023",
     AcceptedDate: "N/A",
     PayMethod: 'COD',
-    Location: "USA",
     Status: "pending",
     StatusBg: "#FB9678"
   },
@@ -4569,7 +4580,6 @@ export const ordersData = [
     AcceptedDate: "November 3, 2024",
     PayMethod: 'Paypal',
     OrderItems: "Nike Air Jordan",
-    Location: "Delhi",
     Status: "complete",
     StatusBg: "#8BE78B"
   },
@@ -4583,7 +4593,7 @@ export const ordersData = [
     AcceptedDate: "April 28, 2025",
     PayMethod: 'Venmo',
     OrderItems: "Puma RS-X",
-    Location: "New York",
+
     Status: "active",
     StatusBg: "#03C9D7"
   },
@@ -4597,7 +4607,6 @@ export const ordersData = [
     TotalAmount: orderItems[3].reduce((total, item) => total + item.totalPrice, 0),
     PayMethod: 'Credit Card',
     OrderItems: "Adidas Superstar",
-    Location: "Germany",
     Status: "canceled",
     StatusBg: "#FF5C8E"
   },
@@ -4611,7 +4620,6 @@ export const ordersData = [
     AcceptedDate: "rejected order",
     PayMethod: 'COD',
     OrderItems: "Converse Chuck Taylor",
-    Location: "Spain",
     Status: "rejected",
     StatusBg: "red"
   },
@@ -4625,7 +4633,6 @@ export const ordersData = [
     AcceptedDate: "September 9, 2022",
     PayMethod: 'Paypal',
     OrderItems: "Vans Old Skool",
-    Location: "USA",
     Status: "canceled",
     StatusBg: "#FF5C8E"
   },
@@ -4639,7 +4646,6 @@ export const ordersData = [
     AcceptedDate: "September 10, 2022",
     PayMethod: 'Venmo',
     OrderItems: "New Balance 990",
-    Location: "USA",
     Status: "active",
     StatusBg: "#03C9D7"
   },
@@ -4653,7 +4659,6 @@ export const ordersData = [
     AcceptedDate: "September 10, 2022",
     PayMethod: 'Credit Card',
     OrderItems: "Under Armour HOVR",
-    Location: "USA",
     Status: "complete",
     StatusBg: "#8BE78B"
   },
@@ -4667,7 +4672,6 @@ export const ordersData = [
     AcceptedDate: "September 9, 2022",
     PayMethod: 'Paypal',
     OrderItems: "Reebok Nano",
-    Location: "USA",
     Status: "canceled",
     StatusBg: "#FF5C8E"
   },
@@ -4681,7 +4685,6 @@ export const ordersData = [
     AcceptedDate: "September 9, 2024",
     PayMethod: 'Venmo',
     OrderItems: "Skechers Go Walk",
-    Location: "USA",
     Status: "active",
     StatusBg: "#03C9D7"
   },
@@ -4695,10 +4698,10 @@ export const ordersData = [
     AcceptedDate: "September 9, 2022",
     PayMethod: 'COD',
     OrderItems: "Adidas NMD",
-    Location: "Delhi",
     Status: "complete",
     StatusBg: "#8BE78B"
   }
+  
 ];
 
 export const scheduleData = [

@@ -76,7 +76,7 @@ const OrderInfoModal = ({ currentOrder }) => {
                         <div className="h-full p-3 w-full overflow-auto">
                             <div className="flex gap-3 mt-3">
                                 <div className="w-2/3">
-                                    <div className="p-3  border-1 rounded-md ">
+                                    <div className="p-3 mb-3 border-1 rounded-md ">
                                         <p className="text-xl font-semibold border-b-1 pb-1">
                                             Items Summary
                                         </p>
@@ -92,6 +92,11 @@ const OrderInfoModal = ({ currentOrder }) => {
                                                     ))}
                                                 </ColumnsDirective>
                                             </GridComponent>
+                                        </div>
+                                    </div>
+                                    <div className=" p-3 mb-3 border-1 rounded-md">
+                                        <div className="flex border-b-1 justify-between items-center">
+                                            <p className="text-xl font-semibold">Tracking Info</p>
                                         </div>
                                     </div>
                                 </div>
@@ -110,7 +115,7 @@ const OrderInfoModal = ({ currentOrder }) => {
                                         <div className="flex flex-col py-2 gap-y-1">
                                             <div className="flex text-xs">
                                                 <p className="w-5/12 font-semibold">Customer Name</p>
-                                                <p className="w-7/12">: {order.CustomerName}</p>
+                                                <p className="w-7/12">: {order.Customer.CustomerName}</p>
                                             </div>
                                             <div className="flex text-xs">
                                                 <p className="w-5/12 font-semibold">Payment method</p>
@@ -118,7 +123,7 @@ const OrderInfoModal = ({ currentOrder }) => {
                                             </div>
                                             <div className="flex text-xs">
                                                 <p className="w-5/12 font-semibold">Location</p>
-                                                <p className="w-7/12">: {order.Location}</p>
+                                                <p className="w-7/12">: {order.Customer.Country}</p>
                                             </div>
                                             <div className="flex text-xs">
                                                 <p className="w-5/12 font-semibold">Placed on</p>
@@ -143,19 +148,50 @@ const OrderInfoModal = ({ currentOrder }) => {
                                         <div className="flex flex-col py-2 gap-y-1">
                                             <div className="flex text-xs">
                                                 <p className="w-5/12 font-semibold">Name</p>
-                                                <p className="w-7/12">: {order.CustomerName}</p>
+                                                <p className="w-7/12">: {order.Customer.CustomerName}</p>
                                             </div>
                                             <div className="flex text-xs">
                                                 <p className="w-5/12 font-semibold">Email</p>
-                                                <p className="w-7/12">: {order.CustomerEmail}</p>
+                                                <p className="w-7/12">: {order.Customer.CustomerEmail}</p>
                                             </div>
                                             <div className="flex text-xs">
                                                 <p className="w-5/12 font-semibold">Phone Number</p>
-                                                <p className="w-7/12">: {order.PayMethod}</p>
+                                                <p className="w-7/12">: {order.Customer.PhoneNumber}</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div className=" p-3 mb-3 border-1 rounded-md">
+                                        <div className="flex border-b-1 justify-between items-center">
+                                            <p className="text-xl font-semibold">Delivery Information</p>
+                                        </div>
+                                        <div className="flex flex-col py-2 gap-y-1">
+                                            <div className="flex text-xs">
+                                                <p className="w-5/12 font-semibold">Name</p>
+                                                <p className="w-7/12">: {order.Customer.CustomerName}</p>
                                             </div>
                                             <div className="flex text-xs">
-                                                <p className="w-5/12 font-semibold">Address</p>
-                                                <p className="w-7/12">: {order.Location}</p>
+                                                <p className="w-5/12 font-semibold">Address Line</p>
+                                                <p className="w-7/12">: {order.Customer.AddressLine}</p>
+                                            </div>
+                                            <div className="flex text-xs">
+                                                <p className="w-5/12 font-semibold">Street Name</p>
+                                                <p className="w-7/12">: {order.Customer.StreetName}</p>
+                                            </div>
+                                            <div className="flex text-xs">
+                                                <p className="w-5/12 font-semibold">City</p>
+                                                <p className="w-7/12">: {order.Customer.City}</p>
+                                            </div>
+                                            <div className="flex text-xs">
+                                                <p className="w-5/12 font-semibold">State</p>
+                                                <p className="w-7/12">: {order.Customer.State}</p>
+                                            </div>
+                                            <div className="flex text-xs">
+                                                <p className="w-5/12 font-semibold">Country</p>
+                                                <p className="w-7/12">: {order.Customer.Country}</p>
+                                            </div>
+                                            <div className="flex text-xs">
+                                                <p className="w-5/12 font-semibold">Postal Code</p>
+                                                <p className="w-7/12">: {order.Customer.PostalCode}</p>
                                             </div>
                                         </div>
                                     </div>
