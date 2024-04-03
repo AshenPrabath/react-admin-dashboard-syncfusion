@@ -3,6 +3,7 @@ import React from "react";
 import { useStateContext } from "../context/ContextProvider";
 import { ordersData } from "../data/dummy";
 import { Button } from '../components'
+import ShippingTracker from "./ShippingTracker";
 const OrderInfoModal = ({ currentOrder }) => {
     const { setOrderInfoDialogVisible, currentColor } = useStateContext();
 
@@ -101,9 +102,40 @@ const OrderInfoModal = ({ currentOrder }) => {
                                         <div className="flex flex-col py-2 gap-y-1">
                                             <div className="flex text-xs">
                                                 <p className="w-5/12 font-semibold">Tracking ID</p>
-                                                <p className="w-7/12">: {order.Customer.CustomerName}</p>
+                                                <p className="w-7/12">: {order.tracking.trackingID}</p>
+                                            </div>
+                                            <div className="flex text-xs">
+                                                <p className="w-5/12 font-semibold">Customer Name</p>
+                                                <p className="w-7/12">: {order.tracking.customerName}</p>
+                                            </div>
+                                            <div className="flex text-xs">
+                                                <p className="w-5/12 font-semibold">Country</p>
+                                                <p className="w-7/12">: {order.tracking.customerLocation}</p>
+                                            </div>
+                                            <div className="flex text-xs">
+                                                <p className="w-5/12 font-semibold">Placed on</p>
+                                                <p className="w-7/12">: {order.tracking.placedOn}</p>
+                                            </div>
+                                            <div className="flex text-xs">
+                                                <p className="w-5/12 font-semibold">Estimated Delivery Date</p>
+                                                <p className="w-7/12">: {order.tracking.eta}</p>
+                                            </div>
+                                            <div className="flex text-xs">
+                                                <p className="w-5/12 font-semibold">Shipping via</p>
+                                                <p className="w-7/12">: {order.tracking.shippingVia}</p>
+                                            </div>
+                                            <div className="flex text-xs">
+                                                <p className="w-5/12 font-semibold">Status</p>
+                                                <button
+                                                className="text-white h-full py-0.5 px-3 capitalize rounded-2xl text-xs"
+                                                type="button"
+                                                style={{ background: order.tracking.statusBg }}
+                                            >
+                                                {order.tracking.status}
+                                            </button>
                                             </div>
                                         </div>
+                                        <ShippingTracker status={order.tracking.status}/>
                                     </div>
                                 </div>
                                 <div className="w-1/3">
