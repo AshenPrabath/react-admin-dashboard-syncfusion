@@ -4251,7 +4251,7 @@ export const trackingData = [
     eta: 'N/A',
     shippingVia: "N/A",
     status: "N/A",
-    statusBg: '#FFFFFF',
+    statusBg: '#999999',
   },
   {
     trackingID: "VWX2468013K",

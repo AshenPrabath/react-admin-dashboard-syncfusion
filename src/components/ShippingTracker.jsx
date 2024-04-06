@@ -52,8 +52,14 @@ const ShippingTracker = ({ status }) => {
         <div>
             ShippingTracker
             <div className='flex justify-between m-3 pt-4 text-3xl'>
-                <div className={`${bgColorArray[0]} rounded-full p-5 ${bgIconArray[0]}`}>
-                    <GrInProgress className=' ' />
+                <div className='w-full'>
+                    <div>
+                        <div className={`${bgColorArray[0]} rounded-full p-5 ${bgIconArray[0]} w-min`}>
+                            <GrInProgress className=' ' />
+                        </div>
+                    </div>
+
+                    <p className='text-xs'>Processing</p>
                 </div>
                 <div className={`${bgColorArray[1]} rounded-full p-5 ${bgIconArray[1]}`}>
                     <GiCargoShip className=' ' />
