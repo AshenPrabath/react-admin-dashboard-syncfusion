@@ -32,11 +32,31 @@ const OrdersTable = ({ dataSource, pageSize = 10 }) => {
       }
     }
   }
+  const ordersDataSource = dataSource.map((item) => ({
+    OrderID: item.OrderID,
+    CustomerID: item.Customer.CustomerID,
+    ItemsQuantity: item.ItemsQuantity,
+    TotalAmount: item.TotalAmount,
+    Date: item.Date,
+    AcceptedDate: item.AcceptedDate,
+    PayMethod: item.PayMethod,
+    Status: item.Status,
+    StatusBg: item.StatusBg,
+    CustomerName: item.Customer.CustomerName,
+    CustomerEmail: item.Customer.CustomerEmail,
+    PhoneNumber: item.Customer.PhoneNumber,
+    AddressLine: item.Customer.AddressLine,
+    StreetName: item.Customer.StreetName,
+    City: item.Customer.City,
+    State: item.Customer.State,
+    Country: item.Customer.Country,
+    PostalCode: item.Customer.PostalCode
+  }));
   return (
     <div>
       <GridComponent
         id='gridcomp'
-        dataSource={dataSource}
+        dataSource={ordersDataSource}
         allowPaging={true}
         allowSorting={true}
         toolbar={['Search']}
