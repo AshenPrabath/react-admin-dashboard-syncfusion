@@ -484,57 +484,40 @@ export const LinePrimaryYAxis = {
 };
 
 export const customersGrid = [
-  { type: 'checkbox', width: '50' },
+  {
+    headerText: 'ID',
+    field: 'CustomerID',
+    width: '100',
+    textAlign: 'left'
+  },
   {
     headerText: 'Name',
-    width: '150',
-    template: customerGridImage,
-    textAlign: 'Center'
+    field: 'CustomerName',
+    textAlign: 'left'
   },
   {
-    field: 'ProjectName',
-    headerText: 'Project Name',
-    width: '150',
-    textAlign: 'Center'
+    field: 'CustomerEmail',
+    headerText: 'Email Adress',
+    width: '200',
+    textAlign: 'left'
   },
   {
-    field: 'Status',
-    headerText: 'Status',
-    width: '130',
-    format: 'yMd',
-    textAlign: 'Center',
-    template: customerGridStatus
-  },
-  {
-    field: 'Weeks',
-    headerText: 'Weeks',
-    width: '100',
+    field: 'PhoneNumber',
+    headerText: 'Phone',
     format: 'C2',
-    textAlign: 'Center'
-  },
-  {
-    field: 'Budget',
-    headerText: 'Budget',
-    width: '100',
-    format: 'yMd',
-    textAlign: 'Center'
-  },
-
-  {
-    field: 'Location',
-    headerText: 'Location',
     width: '150',
-    textAlign: 'Center'
+    textAlign: 'left'
   },
-
   {
-    field: 'CustomerID',
-    headerText: 'Customer ID',
-    width: '120',
-    textAlign: 'Center',
-    isPrimaryKey: true,
+    field: 'City',
+    headerText: 'City',
+    textAlign: 'left'
   },
-
+  {
+    field: 'Country',
+    headerText: 'Country',
+    textAlign: 'left'
+  }
 ];
 
 export const employeesGrid = [
@@ -956,7 +939,7 @@ export const userProfileData = [
 export const trackingGrid = [
   {
     field: 'trackingID',
-    headerText: 'Tracking Number',
+    headerText: 'Tracking ID',
     width: '130',
     textAlign: 'left',
     editType: 'numericedit',
