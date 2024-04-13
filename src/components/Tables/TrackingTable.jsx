@@ -3,10 +3,11 @@ import React, { useState } from "react";
 import { useStateContext } from "../../context/ContextProvider";
 import { trackingGrid } from "../../data/dummy";
 import EditProductModal from "../EditProductModal";
+import TrackingInfoModal from "../TrackingInfoModal";
 
 const TrackingTable = ({ dataSource, pageSize = 10 }) => {
   const { dialogVisible, setDialogVisible } = useStateContext();
-  const [currentProduct, setCurrentProduct] = useState(null);
+  const [currentTracking, setCurrentTracking] = useState(null);
 
   let grid;
   let rowData;
@@ -24,8 +25,8 @@ const TrackingTable = ({ dataSource, pageSize = 10 }) => {
     if (grid) {
       rowData = args.rowData;
       if (rowData) {
-        setCurrentProduct(rowData.ProductID);
-        console.log(rowData.ProductID);
+        setCurrentTracking(rowData.TrackingID);
+        console.log(rowData.TrackingID);
         setDialogVisible(true);
         document.body.style.overflow = "hidden";
       }
@@ -53,7 +54,7 @@ const TrackingTable = ({ dataSource, pageSize = 10 }) => {
         <Inject services={[Resize, Sort, ContextMenu, Filter, Page, ExcelExport, PdfExport, Edit, Search, Toolbar, CommandColumn]} />
       </GridComponent>
       {dialogVisible ? (
-        <EditProductModal currentProduct={currentProduct} />
+        <TrackingInfoModal currentTracking={currentTracking} />
       ) : null}
     </div>
   );

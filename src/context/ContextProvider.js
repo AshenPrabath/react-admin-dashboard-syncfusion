@@ -20,6 +20,7 @@ export const ContextProvider = ({ children }) => {
     const [adddialogVisible, setAddDialogVisible] = useState(false);
     const [orderInfodialogVisible, setOrderInfoDialogVisible] = useState(false);
     const [customerInfoDialogVisible, setCustomerInfoDialogVisible] = useState(false);
+    const [trackingInfoDialogVisible, setTrackingInfoDialogVisible] = useState(false);
     
 
     const setMode = (e) => {
@@ -55,7 +56,8 @@ export const ContextProvider = ({ children }) => {
                 dialogVisible, setDialogVisible,
                 adddialogVisible, setAddDialogVisible,
                 orderInfodialogVisible, setOrderInfoDialogVisible,
-                customerInfoDialogVisible, setCustomerInfoDialogVisible
+                customerInfoDialogVisible, setCustomerInfoDialogVisible,
+                trackingInfoDialogVisible, setTrackingInfoDialogVisible
                 
 
             }}>

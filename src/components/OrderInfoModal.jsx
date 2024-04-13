@@ -4,6 +4,7 @@ import { useStateContext } from "../context/ContextProvider";
 import { ordersData } from "../data/dummy";
 import { Button } from '../components'
 import ShippingTracker from "./ShippingTracker";
+
 const OrderInfoModal = ({ currentOrder }) => {
     const { setOrderInfoDialogVisible, currentColor } = useStateContext();
 
