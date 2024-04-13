@@ -1,7 +1,7 @@
-import React, { useEffect } from 'react';
-import { GrInProgress } from "react-icons/gr";
-import { GiCargoShip } from "react-icons/gi";
+import React from 'react';
 import { FaVanShuttle } from "react-icons/fa6";
+import { GiCargoShip } from "react-icons/gi";
+import { GrInProgress } from "react-icons/gr";
 import { MdOutlineDone } from "react-icons/md";
 
 
@@ -52,14 +52,8 @@ const ShippingTracker = ({ status }) => {
         <div>
             ShippingTracker
             <div className='flex justify-between m-3 pt-4 text-3xl'>
-                <div className='w-full'>
-                    <div>
-                        <div className={`${bgColorArray[0]} rounded-full p-5 ${bgIconArray[0]} w-min`}>
-                            <GrInProgress className=' ' />
-                        </div>
-                    </div>
-
-                    <p className='text-xs'>Processing</p>
+                <div className={`${bgColorArray[0]} rounded-full p-5 ${bgIconArray[0]}`}>
+                    <GrInProgress className=' ' />
                 </div>
                 <div className={`${bgColorArray[1]} rounded-full p-5 ${bgIconArray[1]}`}>
                     <GiCargoShip className=' ' />

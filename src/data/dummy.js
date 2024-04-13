@@ -965,32 +965,27 @@ export const trackingGrid = [
     field: 'orderID',
     headerText: 'Order ID',
     textAlign: 'Center',
-    width: '100',
   },
   {
     field: 'customerName',
     headerText: 'Customer Name',
-    width: '120',
     textAlign: 'Center',
   },
   {
     field: 'customerLocation',
     headerText: 'Location',
-    width: '100',
     textAlign: 'Center',
   },
   {
     field: 'status',
     headerText: 'Status',
     template: gridTrackingStatus,
-    width: '100',
     textAlign: 'Center',
     editType: 'numericedit',
   },
   {
     field: 'shippingVia',
     headerText: 'Shipping Via',
-    width: '120',
     textAlign: 'Center',
   },
 ]
