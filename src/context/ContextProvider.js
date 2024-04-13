@@ -19,6 +19,7 @@ export const ContextProvider = ({ children }) => {
     const [dialogVisible, setDialogVisible] = useState(false);
     const [adddialogVisible, setAddDialogVisible] = useState(false);
     const [orderInfodialogVisible, setOrderInfoDialogVisible] = useState(false);
+    const [customerInfoDialogVisible, setCustomerInfoDialogVisible] = useState(false);
     
 
     const setMode = (e) => {
@@ -53,7 +54,8 @@ export const ContextProvider = ({ children }) => {
                 setMode,setColor,
                 dialogVisible, setDialogVisible,
                 adddialogVisible, setAddDialogVisible,
-                orderInfodialogVisible, setOrderInfoDialogVisible
+                orderInfodialogVisible, setOrderInfoDialogVisible,
+                customerInfoDialogVisible, setCustomerInfoDialogVisible
                 
 
             }}>

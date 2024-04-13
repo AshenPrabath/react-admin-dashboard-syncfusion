@@ -3,12 +3,13 @@ import React, { useState } from 'react';
 import { useStateContext } from '../../context/ContextProvider';
 import { customersGrid , customersData} from '../../data/dummy';
 import OrderInfoModal from '../OrderInfoModal';
+import CustomerInfoModal from '../CustomerInfoModal';
 
 
 const CustomersTable = ({ dataSource, pageSize = 10 }) => {
 
-  const {  orderInfodialogVisible, setOrderInfoDialogVisible } = useStateContext();
-  const [currentOrder, setCurrentOrder] = useState(null);
+  const {  customerInfoDialogVisible, setCustomerInfoDialogVisible } = useStateContext();
+  const [currentCustomer, setCurrentCustomer] = useState(null);
 
   let grid;
   let rowData;
@@ -25,8 +26,8 @@ const CustomersTable = ({ dataSource, pageSize = 10 }) => {
     if (grid) {
       rowData = args.rowData;
       if (rowData) {
-        setCurrentOrder(rowData.CustomerID);
-        setOrderInfoDialogVisible(true);
+        setCurrentCustomer(rowData.CustomerID);
+        setCustomerInfoDialogVisible(true);
         document.body.style.overflow = 'hidden';
       }
     }
@@ -52,9 +53,9 @@ const CustomersTable = ({ dataSource, pageSize = 10 }) => {
         </ColumnsDirective>
         <Inject services={[Resize, Sort, ContextMenu, Filter, Page, ExcelExport, PdfExport, Edit, Search, Toolbar, CommandColumn]} />
       </GridComponent>
-      {orderInfodialogVisible ? (
-        <OrderInfoModal
-        currentOrder={currentOrder}
+      {customerInfoDialogVisible ? (
+        <CustomerInfoModal
+        currentCustomer={currentCustomer}
         />
       ) :
         null
