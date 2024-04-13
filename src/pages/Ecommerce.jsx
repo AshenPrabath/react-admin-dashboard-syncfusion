@@ -1,9 +1,9 @@
-import React from 'react'
+import React from 'react';
 import { GoDotFill } from 'react-icons/go';
-import { Stacked, Button, SparkLine, LineChart, OrdersTable } from '../components';
-import { earningData, SparklineAreaData, ordersData, productsPerformanceData, recentTransactionsData } from '../data/dummy';
+import { Button, LineChart, OrdersTable, SparkLine, Stacked } from '../components';
 import ProgressBar from '../components/ProgressBar';
 import { useStateContext } from '../context/ContextProvider';
+import { SparklineAreaData, earningData, ordersData, productsPerformanceData, recentTransactionsData } from '../data/dummy';
 
 
 const Ecommerce = () => {

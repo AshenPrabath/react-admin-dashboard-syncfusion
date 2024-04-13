@@ -1,12 +1,12 @@
+import { DropDownListComponent } from '@syncfusion/ej2-react-dropdowns';
+import { TabComponent, TabItemDirective, TabItemsDirective } from '@syncfusion/ej2-react-navigations';
+import { TooltipComponent } from '@syncfusion/ej2-react-popups';
+import { HtmlEditor, Image, Inject, Link, QuickToolbar, RichTextEditorComponent, Toolbar } from '@syncfusion/ej2-react-richtexteditor';
 import React, { useState } from 'react';
 import { useParams } from 'react-router-dom';
-import { productsData } from '../data/dummy';
-import { Header, ImageSlider, RatingStars, Button, ImagesViewer } from '../components';
-import { TooltipComponent } from '@syncfusion/ej2-react-popups';
-import { DropDownListComponent } from '@syncfusion/ej2-react-dropdowns';
+import { Button, Header, ImageSlider, ImagesViewer, RatingStars } from '../components';
 import { useStateContext } from '../context/ContextProvider';
-import { TabComponent, TabItemDirective, TabItemsDirective } from '@syncfusion/ej2-react-navigations';
-import { HtmlEditor, Image, Inject, Link, QuickToolbar, RichTextEditorComponent, Toolbar } from '@syncfusion/ej2-react-richtexteditor'
+import { productsData } from '../data/dummy';
 
 
 const ProductDetails = () => {
@@ -145,6 +145,24 @@ const ProductDetails = () => {
                 </div>
             </div>
             <div className='m-2 md:m-8 mt-24 p-10 bg-white dark:bg-secondary-dark-bg rounded-3xl dark:text-white'>
+                <div className=''>
+                    {product.productImages[0].productDetailImages.map((image, index) => (
+                        <div key={index}>
+                            <img
+                                src={image}
+                                className='w-full h-full rounded-lg cursor-pointer'
+                                onClick={() => {
+                                    handleImageClick(product.productImages[0].productDetailImages);
+                                    setSelectedImageIndex(index);
+                                }}
+                            />
+                        </div>
+                    ))}
+
+                </div>
+
+            </div>
+            <div className='m-2 md:m-8 mt-24 p-10 bg-white dark:bg-secondary-dark-bg rounded-3xl dark:text-white'>
                 <div>
                     <TabComponent >
                         <TabItemsDirective>
@@ -231,24 +249,7 @@ const ProductDetails = () => {
                     </TabComponent>
                 </div>
             </div>
-            <div className='m-2 md:m-8 mt-24 p-10 bg-white dark:bg-secondary-dark-bg rounded-3xl dark:text-white'>
-                <div className=''>
-                    {product.productImages[0].productDetailImages.map((image, index) => (
-                        <div key={index}>
-                            <img
-                                src={image}
-                                className='w-full h-full rounded-lg cursor-pointer'
-                                onClick={() => {
-                                    handleImageClick(product.productImages[0].productDetailImages);
-                                    setSelectedImageIndex(index);
-                                }}
-                            />
-                        </div>
-                    ))}
-
-                </div>
-
-            </div>
+            
         </div>
     );
 }
