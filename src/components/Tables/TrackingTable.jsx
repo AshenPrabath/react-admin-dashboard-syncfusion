@@ -1,7 +1,7 @@
+import { ColumnDirective, ColumnsDirective, CommandColumn, ContextMenu, Edit, ExcelExport, Filter, GridComponent, Inject, Page, PdfExport, Resize, Search, Sort, Toolbar } from "@syncfusion/ej2-react-grids";
 import React, { useState } from "react";
-import { GridComponent, ColumnsDirective, ColumnDirective, Resize, Sort, ContextMenu, Filter, Page, ExcelExport, PdfExport, Edit, Inject, Search, Toolbar, CommandColumn } from "@syncfusion/ej2-react-grids";
-import { trackingGrid } from "../../data/dummy";
 import { useStateContext } from "../../context/ContextProvider";
+import { trackingGrid } from "../../data/dummy";
 import EditProductModal from "../EditProductModal";
 
 const TrackingTable = ({ dataSource, pageSize = 10 }) => {
@@ -14,7 +14,7 @@ const TrackingTable = ({ dataSource, pageSize = 10 }) => {
   const commands = [
     {
       buttonOption: {
-        content: "View Details",
+        content: "Details",
         cssClass: "e-flat",
       },
     },
