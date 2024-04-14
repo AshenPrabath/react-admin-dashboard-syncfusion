@@ -6,7 +6,7 @@ import EditProductModal from "../EditProductModal";
 import TrackingInfoModal from "../TrackingInfoModal";
 
 const TrackingTable = ({ dataSource, pageSize = 10 }) => {
-  const { dialogVisible, setDialogVisible } = useStateContext();
+  const { trackingInfoDialogVisible, setTrackingInfoDialogVisible} = useStateContext();
   const [currentTracking, setCurrentTracking] = useState(null);
 
   let grid;
@@ -25,9 +25,9 @@ const TrackingTable = ({ dataSource, pageSize = 10 }) => {
     if (grid) {
       rowData = args.rowData;
       if (rowData) {
-        setCurrentTracking(rowData.TrackingID);
-        console.log(rowData.TrackingID);
-        setDialogVisible(true);
+        setCurrentTracking(rowData.orderID);
+        console.log(currentTracking);
+        setTrackingInfoDialogVisible(true);
         document.body.style.overflow = "hidden";
       }
     }
@@ -53,8 +53,8 @@ const TrackingTable = ({ dataSource, pageSize = 10 }) => {
         </ColumnsDirective>
         <Inject services={[Resize, Sort, ContextMenu, Filter, Page, ExcelExport, PdfExport, Edit, Search, Toolbar, CommandColumn]} />
       </GridComponent>
-      {dialogVisible ? (
-        <TrackingInfoModal currentTracking={currentTracking} />
+      {trackingInfoDialogVisible ? (
+        <TrackingInfoModal currentOrder={currentTracking} />
       ) : null}
     </div>
   );
