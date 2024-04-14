@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/react-admin-dashboard-syncfusion/static/css/main.80e2a496.css",
-    "main.js": "/react-admin-dashboard-syncfusion/static/js/main.28a6fb91.js",
+    "main.js": "/react-admin-dashboard-syncfusion/static/js/main.496485ba.js",
     "static/media/product4.jpg": "/react-admin-dashboard-syncfusion/static/media/product4.767417bea17688d6d8ce.jpg",
     "static/media/Product2D (3).jpg": "/react-admin-dashboard-syncfusion/static/media/Product2D (3).e3b6109323c56cdbadd6.jpg",
     "static/media/product2.jpg": "/react-admin-dashboard-syncfusion/static/media/product2.e93f12ec1b20980a1bd1.jpg",
@@ -87,10 +87,10 @@
     "static/media/product5.jpg": "/react-admin-dashboard-syncfusion/static/media/product5.f4c5d8f991b753ca0fcc.jpg",
     "index.html": "/react-admin-dashboard-syncfusion/index.html",
     "main.80e2a496.css.map": "/react-admin-dashboard-syncfusion/static/css/main.80e2a496.css.map",
-    "main.28a6fb91.js.map": "/react-admin-dashboard-syncfusion/static/js/main.28a6fb91.js.map"
+    "main.496485ba.js.map": "/react-admin-dashboard-syncfusion/static/js/main.496485ba.js.map"
   },
   "entrypoints": [
     "static/css/main.80e2a496.css",
-    "static/js/main.28a6fb91.js"
+    "static/js/main.496485ba.js"
   ]
 }
